@@ -1,0 +1,3 @@
+[submodule "nodejs.org_ja"]
+	path = nodejs.org_ja
+	url = https://github.com/nodejsjp/nodejs.org_ja.git
