@@ -1,35 +1,81 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>Node.js 日本ユーザグループ</title>
-  <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-2570409-8']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-  </script>
-</head>
-<body>
-    <h1>Node.js 日本ユーザグループ</h1>
-    <div>
-        <p>まだ工事中。このサイト自体をnode.jsで作りたい……。</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head> 
+    <style type="text/css"> 
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    </style> 
+    <script type="text/javascript" src="nodejs.org_ja/sh_main.js"></script> 
+    <script type="text/javascript" src="nodejs.org_ja/sh_javascript.min.js"></script> 
+    <link type="text/css" rel="stylesheet" href="nodejs.org_ja/pipe.css" /> 
+    <link type="text/css" rel="stylesheet" href="nodejs.org_ja/sh_vim-dark.css" /> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <title>Node.js 日本ユーザグループ</title>
+  </head> 
+  <body onload="sh_highlightDocument();"> 
+    <div id="toc"> 
+      <ol>
+        <li><a href="#mailinglist">メーリングリスト</a></li> 
+        <li><a href="#irc">IRC</a></li> 
+        <li><a href="#document">ドキュメント</a></li> 
+        <li><a href="#link">リンク</a></li> 
+      </ol> 
+    </div> 
+
+    <div id="content"> 
+
+      <!-- <h1><a href="http://nodejs.org/">Node</a></h1> --> 
+      <img id="logo" src="nodejs.org_ja/logo.png" alt="node.js"/> 
+ 
+      <h1>node.js 日本ユーザグループ</h1>
+      
+      <h2 id="mainlinglist">メーリングリスト</h2> 
+      <dl>
+        <dd><a href="http://groups.google.co.jp/group/nodejs_jp" target="_blank">node.js jp</a> (日本語)</dd>
+        <dd><a href="http://groups.google.co.jp/group/nodejs" target="_blank">node.js</a> (英語)</dd>
+        <dd><a href="http://groups.google.co.jp/group/nodejs-dev" target="_blank">node.js dev</a> (英語)</dd>
+        <!-- <dt><a href="">チャット (Skype)</a></dt> -->
+      </dl>
+
+      <h2 id="irc">IRC</h2> 
+      <dl>
+        <dd>irc.freenode.net #nodejs-ja (日本語)</dd>
+        <dd>irc.freenode.net #nodejs (英語)</dd>
+      </dl>
+      <h2 id="document">ドキュメント</h2>
+      <dl>
+        <dt><a href="http://nodejs.org" target="_blank">公式ドキュメント</a>の日本語訳 (2010/10/24)</dt>
+        <dd><a href="nodejs.org_ja">v0.3.0 (開発版)</a></dd>
+        <dd><a href="nodejs.org_ja/docs/v0.2">v0.2.4 (安定版)</a></dd>
+        <dt>node.js とは何か by <a href="http:/twitter.com/bad_at_math" target="_blank">@bad_at_math</a></dt>
+        <dd><a href="http://d.hatena.ne.jp/badatmath/20101020/1287587240" target="_blank">(1)</a>, 
+        <a href="http://d.hatena.ne.jp/badatmath/20101022/1287701281" target="_blank">(2)</a>, 
+        <a href="http://d.hatena.ne.jp/badatmath/20101026/1288109275" target="_blank">(3)</a>, 
+        <a href="http://d.hatena.ne.jp/badatmath/20101101/1288644245" target="_blank">(4)</a>
+        </dd>
+      </dl>
+      <h2 id="link">リンク</h2> 
+      <dl>
+        <dt>ブックマーク</dt>
+        <dd><a href="http://b.hatena.ne.jp/t/node.js?sort=eid" target="_blank">はてな</a></dd>
+        <dt>Twitter リスト</dt>
+        <dd><a href="http://twitter.com/masahiroh/nodejs" target="_blank">Node.js hackers</a></dd>
+        <dd><a href="http://twitter.com/masahiroh/nodejs-jp" target="_blank">Node.js hackers in Japan</a></dd>
+      </dl>
     </div>
-    
-    <div>
-        <h2>Link</h2>
-        <ul>
-            <li><a href="http://groups.google.co.jp/group/nodejs_jp">groups.google.co.jp/group/nodejs_jp</a> 当グループのメーリングリスト</li>
-            <br />
-            <li><a href="http://nodejs.org/">nodejs.org</a> node.js 公式サイト</li>
-            <br />
-            <li><a href="http://nodejs.jp/nodejs.org_ja/">nodejs.jp/nodejs.og_ja</a> 上記公式サイト(含APIドキュメント)の日本語訳(最新版。2010/10/27時点でv0.3.0)</li>
-            <li><a href="http://nodejs.jp/nodejs.org_ja/docs/v0.2">nodejs.jp/nodejs.og_ja/docs/v0.2</a> 上記公式サイト(含APIドキュメント)の日本語訳(v0.2系最新版。2010/10/27時点でv0.2.4)</li>
-        </ul>
-    </div>
-</body>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2570409-8']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
 </html>
