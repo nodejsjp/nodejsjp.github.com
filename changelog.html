@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <script type="text/javascript" src="nodejs.org_ja/sh_main.js"></script> 
+    <script type="text/javascript" src="nodejs.org_ja/sh_javascript.min.js"></script> 
+    <link type="image/x-icon" rel="icon" href="favicon.ico" />
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="nodejs.org_ja/pipe.css" /> 
+    <link type="text/css" rel="stylesheet" href="nodejs.org_ja/sh_vim-dark.css" /> 
+    <title>Node.js 日本ユーザグループ</title>
+    <style type="text/css">
+    img { 
+      padding-bottom: 3em;
+    }
+    h1 {
+      margin-top: 0em;
+      margin-bottom: 0em;
+    }
+    h2 {
+      margin-bottom: 1em;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      font-size: 80%;
+    }
+    body > div > ul {
+      margin-left: 1em;
+    }
+    #changelog ul {
+    	font-size: 80%;
+    }
+    </style> 
+  </head> 
+  <body onload="sh_highlightDocument();"> 
+    <div id="toc"> 
+      <ol>
+        <li><a href="index.html#mailinglist">メーリングリスト</a></li> 
+        <li><a href="index.html#document">ドキュメント</a></li> 
+        <li><a href="index.html#rel-document">関連ドキュメント</a></li>
+        <li><a href="index.html#link">リンク</a></li> 
+        <li><a href="index.html#irc">IRC</a></li>
+        <li><a href="index.html#blog">ブログ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <br />
+        <li><a href="nodejs.org_ja/api/">v0.5.2 docs</a></li> 
+        <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.10 docs</a></li> 
+        <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 docs</a></li> 
+        <li><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a></li>
+      </ol> 
+    </div> 
+
+    <div id="content"> 
+      <img id="logo" src="nodejs.org_ja/logo.png" alt="node.js"/> 
+
+      <h1>Node.js 日本ユーザグループ</h1>
+      
+      <h2 id="changelog">変更履歴</h2> 
+      <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
+      
+      <h3 id="v0.5.3">Node v0.5.3</h3>
+      <p>2011.08.01, バージョン 0.5.3 (開発版)</p>
+      <ul>
+        <li>crypto モジュールでの Base64 を用いた暗号化/復号化機能を修正しました (SAWADA Tadashi)</li>
+        <li>#243 Buffer.write() にオプションの length 引数を追加しました (koichik)</li>
+        <li>#657 fs.writeFile/Sync において、バッファでないデータを文字列に変換するようになりました (Daniel Pihlström)</li>
+        <li>process.features が追加され、process.useUV が削除されました (Ben Noordhuis)</li>
+        <li>#324 crypto モジュールの hmac がバイナリキーを受け付けるように修正され、RFC 2202と4231からテストケースが追加されました (Stefan Bühler)</li>
+        <li>Socket::bytesRead と Socket::bytesWritten が追加されました (Alexander Uvarov)</li>
+        <li>#572 --eval で CLI が実行された場合に、結果を出力しないようになりました (Ben Noordhuis)</li>
+        <li>#1223 end() が2回呼ばれると http.ClientRequest がクラッシュする問題が修正されました (koichik)</li>
+        <li>#1383 全ての接続が切られた後に close イベントを発生させるようになりました (Felix Geisendörfer)</li>
+        <li>sprintf に似た util.format() 関数が追加されました (Ben Noordhuis)</li>
+        <li>TLS SNI のサポートが追加されました (Fedor Indutny)</li>
+        <li>新しいHTTPエージェントが実装されました。デフォルトでは無効化されており、実行時に --use-http2 を指定することで有効化することができます。また、make test-http2 を実行すると新しい実装のためのテストを実行することができます (Mikeal Rogers)</li>
+        <li>AMD 互換機能を復元しました (isaacs)</li>
+        <li>Windows 対応を進め、child_process をサポートしました</li>
+        <li>pkg-config ファイルを削除しました</li>
+        <li>起動時に時間がかかる問題を修正しました</li>
+        <li>ドキュメントを更新しました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.5.3/node-v0.5.3.tar.gz">http://nodejs.org/dist/v0.5.3/node-v0.5.3.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.3/node.exe">http://nodejs.org/dist/v0.5.3/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.3/doc">http://nodejs.org/dist/v0.5.3/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.5.3/docs/api">http://nodejs.org/dist/v0.5.3/docs/api</a><br />
+      </p>
+      
+      <h3 id="v0.5.2">Node v0.5.2</h3>
+      <p>2011.07.22, バージョン 0.5.2 (開発版)</p>
+      <ul>
+        <li>libuv を改良し、名前付きパイプをサポートしました</li>
+        <li>#1242 SSL_COMP_get_compression_methods() の確認 (Ben Noordhuis)</li>
+        <li>#1348 require.paths を削除しました (isaacs)</li>
+        <li>#1349 Windows での ; によるNODE_PATH 区切りをサポートしました (isaacs)</li>
+        <li>#1335 C++ から EventEmitter を削除しました</li>
+        <li>#1357 require() によるJSONファイルの読み込みに対応しました (isaacs)</li>
+        <li>#1374 writeHead での ServerResponse.statusCode 設定を修正しました (Trent Mick)</li>
+        <li>GC が必要以上に実行されるのを修正しました</li>
+        <li>V8 を 3.4.14 にアップグレードしました</li>
+        <li>ドキュメントを更新しました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.5.2/node-v0.5.2.tar.gz">http://nodejs.org/dist/v0.5.2/node-v0.5.2.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.2/node.exe">http://nodejs.org/dist/v0.5.2/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.2/doc">http://nodejs.org/dist/v0.5.2/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.5.2/docs/api">http://nodejs.org/dist/v0.5.2/docs/api</a><br />
+      </p>
+            
+      <h3 id="v0.5.1">Node v0.5.1</h3>
+      <p>2011.07.14, バージョン 0.5.1 (開発版)</p>
+      <ul>
+        <li>#1233 FreeBSD amd64 での os.totalmem を修正しました (Artem Zaytsev)</li>
+        <li>#1149 url.parse が IDNA と Punycode をサポートしました (Jeremy Selier, Ben Noordhuis, isaacs)</li>
+        <li>uv と V8 ビルドシステム に $CC と $CXX をエクスポートしました</li>
+        <li>pthread-win32 静的ライブラリをビルドに含めるようになりました (Igor Zinkovsky)</li>
+        <li>#1199, #1094 64ビット環境で巨大なファイルを扱えない問題を修正しました (koichik)</li>
+        <li>#1281 module クラスのインスタンス変数に require を追加しました (isaacs)</li>
+        <li>#1303 Stream.pipe が接続先を返すようになりました (Elijah Insua)</li>
+        <li>#1229 アドオンは -DEV_MULTIPLICITY=0 をするべきではありません (Brian White)</li>
+        <li>libuv バックエンドの改善</li>
+        <li>V8 を 3.4.10 にアップグレードしました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz">http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.1/node.exe">http://nodejs.org/dist/v0.5.1/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.1/doc">http://nodejs.org/dist/v0.5.1/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.5.1/docs/api">http://nodejs.org/dist/v0.5.1/docs/api</a><br />
+      </p>
+              
+      <h3 id="v0.5.0">Node v0.5.0</h3>
+      <p>2011.07.05, バージョン 0.5.0 (開発版)</p>
+      <ul>
+        <li>Windows における IOCP サポートのための新しい libuv バックエンド。非標準のため、--use-uv オプションで有効化することができます</li>
+        <li>http.cat が非推奨になりました</li>
+        <li>ドキュメントを更新しました</li>
+        <li>child_process.fork を追加しました</li>
+        <li>fs.utimes() と fs.futimes() のサポートを追加しました (Ben Noordhuis)</li>
+        <li>process.uptime() を追加しました (Tom Huges)</li>
+        <li>path.relative を追加しました (Tony Huang)</li>
+        <li>os.getNetworkInterfaces() を追加しました</li>
+        <li>TCPクライアント接続のために remoteAddress と remotePort を追加しました (Brian White)</li>
+        <li>secureOptions フラグ、暗号化設定、SSL_OP_CRYPTOPRO_TLSEXT_BUG を TLS に追加しました (Theo Schlossnagle)</li>
+        <li>process.arch を追加しました(Nathan Rajlich)</li>
+        <li>バッファにおける float と double の読み書き機能を追加しました (Brian White)</li>
+        <li>stdin からのスクリプトの読み込みが可能になりました</li>
+        <li>#477 memset を実行するための Buffer::fill メソッドを追加しました (Konstantin Käfer)</li>
+        <li>#573 crypto モジュールが Diffie-Hellman 鍵交換方式をサポートしました (Håvard Stranden)</li>
+        <li>#695 buffer に 'hex' エンコーディングのサポートを追加しました (isaacs)</li>
+        <li>#851 REPLServer でのコンテキストの扱い方を更新しました (Ben Weaver)</li>
+        <li>#853 fs.lchow、fs.lchmod、fs.fchmod、fs.fchown を追加しました (isaacs)</li>
+        <li>#889 全ての EventEmitter リスナーを1度に削除することが可能になりました (Felix Geisendörfer)</li>
+        <li>#926 OpenSSL NPN をサポートしました (Fedor Indutny)</li>
+        <li>#955 REPL での ^C の扱いを変更しました (isaacs)</li>
+        <li>#979 UNIX ドメインソケットのサポートを HTTP モジュールに追加しました (Mark Cavage)</li>
+        <li>#1173 #1170 非同期モジュールの定義に AMD を追加しました (isaacs)</li>
+        <li>DTrace による計測: X-Forwarded-For をサポートしました (Dave Pacheco)</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/node-v0.5.0.tar.gz">http://nodejs.org/dist/node-v0.5.0.tar.gz</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.5.0">http://nodejs.org/docs/v0.5.0</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.5.0/api">http://nodejs.org/docs/v0.5.0/api</a><br />
+      </p>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2570409-8']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
