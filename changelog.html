@@ -75,7 +75,7 @@
         <li>sprintf に似た util.format() 関数が追加されました (Ben Noordhuis)</li>
         <li>TLS SNI のサポートが追加されました (Fedor Indutny)</li>
         <li>新しいHTTPエージェントが実装されました。デフォルトでは無効化されており、実行時に --use-http2 を指定することで有効化することができます。また、make test-http2 を実行すると新しい実装のためのテストを実行することができます (Mikeal Rogers)</li>
-        <li>AMD 互換機能を復元しました (isaacs)</li>
+        <li>AMD 互換機能を削除しました (isaacs)</li>
         <li>Windows 対応を進め、child_process をサポートしました</li>
         <li>pkg-config ファイルを削除しました</li>
         <li>起動時に時間がかかる問題を修正しました</li>
@@ -162,6 +162,79 @@
       ダウンロード: <a href="http://nodejs.org/dist/node-v0.5.0.tar.gz">http://nodejs.org/dist/node-v0.5.0.tar.gz</a><br />
       ウェブサイト: <a href="http://nodejs.org/docs/v0.5.0">http://nodejs.org/docs/v0.5.0</a><br />
       ドキュメント: <a href="http://nodejs.org/docs/v0.5.0/api">http://nodejs.org/docs/v0.5.0/api</a><br />
+      </p>
+      
+      <h3 id="v0.4.10">Node v0.4.10</h3>
+      <p>2011.07.19, バージョン 0.4.10 (安定版)</p>
+      <ul>
+        <li>#394 Buffer が UTF-8 の扱いおいて最後の NULL 文字をドロップする問題を修正しました</li>
+        <li>#829 V8 のリビジョン r8577 をバックポートしました (Ben Noordhuis)</li>
+        <li>#877 HTTP エージェントソケットプールが接続の確立を待たなくなりました</li>
+        <li>#915 FreeBSD の kqueue を確実に認識するようになりました (Brett Kiefer)</li>
+        <li>#1085 HTTP の abort/dispatch コードを修正しました (Stefan Rusu)</li>
+        <li>#1274 デバッガを改善しました (Yoshihiro Kikuchi)</li>
+        <li>#1291 HEAD メソッドでの end (body) が適切な応答を返すようになりました (Reid Burke)</li>
+        <li>#1304 TLS の abort/connection コードを修正しました (Stefan Rusu)</li>
+        <li>#1360 URL ホストネームにおいて _ が許容されるようになりました</li>
+        <li>37d529f8 の削除 – デバッガコマンドの構文解析を廃止しました</li>
+        <li>グローバルな execScript を復帰しました</li>
+        <li>ドキュメントの更新</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.10.tar.gz">http://nodejs.org/dist/node-v0.4.10.tar.gz</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.10">http://nodejs.org/docs/v0.4.10</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.4.10/api">http://nodejs.org/docs/v0.4.10/api</a><br />
+      </p>
+      
+      <h3 id="v0.4.9">Node v0.4.9</h3>
+      <p>2011.06.29, パージョン 0.4.9 (安定版)</p>
+      <ul>
+        <li>ドキュメントを改善しました</li>
+        <li>#1095 stream.pipe() におけるエラー処理のバグを修正しました  (Felix Geisendörfer)</li>
+        <li>#1097 node_crypto.cc におけるいくつかのメモリーリークを修正しました (Ben Noordhuis)</li>
+        <li>#562 #1078 適切に file:// で始まるURLをパースするようになりました (Ryan Petrello)</li>
+        <li>#880 SSLv2 を無効化するオプションを追加しました (Jérémy Lal)</li>
+        <li>#1087 古い OpenSSL での SSL 圧縮無効化処理を無効にしました</li>
+        <li>#1144 デバッガ: 不正なコマンドによる入力を無効化しました (Siddharth Mahendraker)</li>
+        <li>util.inherits のパフォーマンスを改善しました</li>
+        <li>#1166 RSA/DSA の公開鍵を利用した証明書をサポートしました (Mark Cavage)</li>
+        <li>#1177 入れ子状のプロジェクト構造をよりよくサポートするために、node_module 検索最適化処理を削除しました (Mathias Buus)</li>
+        <li>#1203 scope.Close を fs.sendfileSync に追加しました</li>
+        <li>#1187 複数の 'link' ヘッダーをサポートしました</li>
+        <li>#1196 -e/-eval で node_modules からモジュールを読み込みできない問題を修正しました (Koichi Kobayashi)</li>
+        <li>V8 を 3.1.8.25にアップグレードし、 http-parser もアップグレードしました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.9.tar.gz">http://nodejs.org/dist/node-v0.4.9.tar.gz</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.9">http://nodejs.org/docs/v0.4.9</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.4.9/api">http://nodejs.org/docs/v0.4.9/api</a><br />
+      </p>
+      
+      <h3 id="v0.4.8">Node v0.4.8</h3>
+      <p>2011.05.20, パージョン 0.4.8 (安定版)</p>
+      <ul>
+        <li>#974 トレースレスなエラーを正しく報告するようになりました (isaacs)</li>
+        <li>#983 REPL における、JSON.parse のエラー検出が改善されました (isaacs)</li>
+        <li>#836 req が存在する場合にのみ、エージェントソケットのエラーが req に通知されるようになりました</li>
+        <li>#1041 イベントリスナーのリークチェックタイミングが修正されました (koichik)</li>
+        <li>#1038 dns.resolve()に 'PTR' を渡した際に Unknown type "PTR" エラーが発生する問題を修正 (koichik)</li>
+        <li>#1073 サーバーコネクション間で SSL コンテキストが共有されるようになりました (Fedor Indutny)</li>
+        <li>OpenSSL を使った圧縮処理を無効にすることでメモリーパフォーマンスが向上しました</li>
+        <li>SunOS 用の os.totalmem() と os.freemem() が実装されました (Alexandre Marangone)</li>
+        <li>URLリグレッションにおける特殊文字を修正しました (isaacs)</li>
+        <li>HTTPSにおけるアイドルタイムアウトが修正されました (Felix Geisendörfer)</li>
+        <li>SlowBuffer.write() に 'ucs2' を渡した際に ReferenceError が発生する問題を修正しました (koichik)</li>
+        <li>http.ServerRequestの 'close' イベント時に、時々エラー引数が渡される問題を修正しました (Felix Geisendörfer)</li>
+        <li>ドキュメントを更新しました</li>
+        <li>cleartextstream.destroy() が socket を close(2) するようになりました。以前は shutdown(2) システムコールを利用していました</li>
+        <li>通常のビルド時に asserts や debug ステートメントをコンパイルしないようになりました</li>
+        <li>Debugger を改善しました</li>
+        <li>V8 エンジンを 3.1.8.16 にアップグレードしました。</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.8.tar.gz">http://nodejs.org/dist/node-v0.4.8.tar.gz</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.8">http://nodejs.org/docs/v0.4.8</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.4.8/api">http://nodejs.org/docs/v0.4.8/api</a><br />
       </p>
     </div>
     <script type="text/javascript">
