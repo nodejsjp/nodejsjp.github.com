@@ -44,7 +44,7 @@
         <li><a href="index.html#blog">ブログ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <br />
-        <li><a href="nodejs.org_ja/api/">v0.5.3 docs</a></li> 
+        <li><a href="nodejs.org_ja/api/">v0.5.4 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.10 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 docs</a></li> 
         <br />
@@ -59,6 +59,26 @@
       
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
+      
+      <h3 id="v0.5.4">Node v0.5.4</h3>
+      <p>2011.08.12, バージョン 0.5.4 (開発版)</p>
+      <ul>
+        <li>libuv と Windows の互換性を向上しました</li>
+        <li>GYP による Microsoft Visual Studio でのビルドに対応しました。sln ファイルを作成には generate-projects.bat を使用してください (Peter Bright, Igor Zinkovsky)</li>
+        <li>Make Mikeal が開発した HTTP クライアントが標準になりました。古い HTTP クライアントを利用する場合は  --use-http1 を使用てください</li>
+        <li>HTTPS における host ヘッダーの標準ポートの扱いを修正しました (Mikeal Rogers)</li>
+        <li>#1440 *.js や *.json ファイルの読み込み時にバイトオーダーマーカーを除去するようになりました (Ben Noordhuis)</li>
+        <li>#1434 util.format() を改善し、ブラウザとの互換性が向上しました (Koichi Kobayashi)</li>
+        <li>整数型用 Buffer.read/writeInt メソッドに unchecked uint 用のエントリーポイントが提供されました (Robert Mustacchi)</li>
+        <li>CMake を改善しました (Tom Huges)</li>
+        <li>V8 を 3.5.4 にアップグレードしました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.5.4/node-v0.5.4.tar.gz">http://nodejs.org/dist/v0.5.4/node-v0.5.4.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.4/node.exe">http://nodejs.org/dist/v0.5.4/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.4/docs">http://nodejs.org/dist/v0.5.4/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.5.4/docs/api">http://nodejs.org/dist/v0.5.4/docs/api</a><br />
+      </p>
       
       <h3 id="v0.5.3">Node v0.5.3</h3>
       <p>2011.08.01, バージョン 0.5.3 (開発版)</p>
@@ -84,7 +104,7 @@
       <p>
       ダウンロード: <a href="http://nodejs.org/dist/v0.5.3/node-v0.5.3.tar.gz">http://nodejs.org/dist/v0.5.3/node-v0.5.3.tar.gz</a><br />
       Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.3/node.exe">http://nodejs.org/dist/v0.5.3/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.3/doc">http://nodejs.org/dist/v0.5.3/docs</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.3/docs">http://nodejs.org/dist/v0.5.3/docs</a><br />
       ドキュメント: <a href="http://nodejs.org/dist/v0.5.3/docs/api">http://nodejs.org/dist/v0.5.3/docs/api</a><br />
       </p>
       
@@ -105,7 +125,7 @@
       <p>
       ダウンロード: <a href="http://nodejs.org/dist/v0.5.2/node-v0.5.2.tar.gz">http://nodejs.org/dist/v0.5.2/node-v0.5.2.tar.gz</a><br />
       Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.2/node.exe">http://nodejs.org/dist/v0.5.2/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.2/doc">http://nodejs.org/dist/v0.5.2/docs</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.2/docs">http://nodejs.org/dist/v0.5.2/docs</a><br />
       ドキュメント: <a href="http://nodejs.org/dist/v0.5.2/docs/api">http://nodejs.org/dist/v0.5.2/docs/api</a><br />
       </p>
             
@@ -126,7 +146,7 @@
       <p>
       ダウンロード: <a href="http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz">http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz</a><br />
       Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.1/node.exe">http://nodejs.org/dist/v0.5.1/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.1/doc">http://nodejs.org/dist/v0.5.1/docs</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.1/docs">http://nodejs.org/dist/v0.5.1/docs</a><br />
       ドキュメント: <a href="http://nodejs.org/dist/v0.5.1/docs/api">http://nodejs.org/dist/v0.5.1/docs/api</a><br />
       </p>
               
