@@ -65,7 +65,7 @@
       <ul>
         <li>libuv と Windows の互換性を向上しました</li>
         <li>GYP による Microsoft Visual Studio でのビルドに対応しました。sln ファイルを作成には generate-projects.bat を使用してください (Peter Bright, Igor Zinkovsky)</li>
-        <li>Mikeal が開発した HTTP クライアントが標準になりました。古い HTTP クライアントを利用する場合は  --use-http1 を使用してください</li>
+        <li>Mikeal が開発した HTTP クライアントが標準になりました。古い HTTP クライアントを利用する場合は --use-http1 を使用してください</li>
         <li>HTTPS における host ヘッダーの標準ポートの扱いを修正しました (Mikeal Rogers)</li>
         <li>#1440 *.js や *.json ファイルの読み込み時にバイトオーダーマーカーを除去するようになりました (Ben Noordhuis)</li>
         <li>#1434 util.format() を改善し、ブラウザとの互換性が向上しました (Koichi Kobayashi)</li>
@@ -140,7 +140,7 @@
         <li>#1281 module クラスのインスタンス変数に require を追加しました (isaacs)</li>
         <li>#1303 Stream.pipe が接続先を返すようになりました (Elijah Insua)</li>
         <li>#1229 アドオンは -DEV_MULTIPLICITY=0 をするべきではありません (Brian White)</li>
-        <li>libuv バックエンドの改善</li>
+        <li>libuv バックエンドの改善しました</li>
         <li>V8 を 3.4.10 にアップグレードしました</li>
       </ul>
       <p>
@@ -182,6 +182,27 @@
       ダウンロード: <a href="http://nodejs.org/dist/node-v0.5.0.tar.gz">http://nodejs.org/dist/node-v0.5.0.tar.gz</a><br />
       ウェブサイト: <a href="http://nodejs.org/docs/v0.5.0">http://nodejs.org/docs/v0.5.0</a><br />
       ドキュメント: <a href="http://nodejs.org/docs/v0.5.0/api">http://nodejs.org/docs/v0.5.0/api</a><br />
+      </p>
+      
+      <h3 id="v0.4.11">Node v0.4.11</h3>
+      <p>2011.08.17, バージョン 0.4.11 (安定版)</p>
+      <ul>
+        <li><a href="https://github.com/joyent/node/issues/738">#738</a> crypto モジュールでの Base64 を用いた暗号化/復号化機能を修正しました  (SAWADA Tadashi)</li>
+        <li><a href="https://github.com/joyent/node/issues/1202">#1202</a> net.createConnection の DNS ルックアップエラーイベントが、次の tick で発生するようになりました (Ben Noordhuis)</li>
+        <li><a href="https://github.com/joyent/node/issues/1374">#1374</a> writeHead 実行時に ServerResponse.statusCode が反映されるように修正しました (Ben Noordhuis)</li>
+        <li><a href="https://github.com/joyent/node/issues/1417">#1417</a> end() が2回呼ばれると http.ClientRequest がクラッシュする問題が修正されました</li>
+        <li><a href="https://github.com/joyent/node/issues/1497">#1497</a> querystring モジュールにおける 'in' を用いた判定処理が 'hasOwnProperty' に置き換えられました  (isaacs)</li>
+        <li><a href="https://github.com/joyent/node/issues/1546">#1546</a> http モジュールのパフォーマンスが改善されました</li>
+        <li>libeio のメモリリークが修正されました (Tom Hughes)</li>
+        <li>CMake を改善しました (Tom Hughes)</li>
+        <li>node_net.cc における不正な sizeof() を修正しました (Tom Hughes)</li>
+        <li>Windows XP/cygwin 環境において GetConsoleTitleW エラーが発生しないようになりました (Bert Belder)</li>
+        <li>ドキュメントを更新しました (koichik, Logan Smyth, Ben Noordhuis, Arnout Kazemier)</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.11.tar.gz">http://nodejs.org/dist/node-v0.4.11.tar.gz</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.11">http://nodejs.org/docs/v0.4.11</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.4.11/api">http://nodejs.org/docs/v0.4.11/api</a><br />
       </p>
       
       <h3 id="v0.4.10">Node v0.4.10</h3>
