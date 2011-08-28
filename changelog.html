@@ -60,6 +60,40 @@
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
       
+      <h3 id="v0.5.5">Node v0.5.5</h3>
+      <p>2011.08.26, バージョン 0.5.5 (開発版)</p>
+      <ul>
+        <li>typed array が Plesk によって実装されました</li>
+        <li>SunOS における IP マルチキャストを修正しました</li>
+        <li>DNS ルックアップの順序を IPv4、IPv6 の順に修正しました (-use-uv 使用時のみ)</li>
+        <li>UNIX データグラムソケットのサポートを削除しました (-use-uv 使用時のみ)</li>
+        <li>Windows において、UDP をサポートしました (Bert Belder)</li>
+        <li><a href="https://github.com/joyent/node/issues/1572">#1572</a> REPL における tab キーによるオブジェクトの補完を改善しました(Nathan Rajlich)</li>
+        <li><a href="https://github.com/joyent/node/issues/1563">#1563</a> child_process モジュールでのバッファオーバーフローを修正しました (Dean McNamee による報告)</li>
+        <li><a href="https://github.com/joyent/node/issues/1546">#1546</a> http モジュールにおけるパフォーマンス低下を修正しました (Brian Geffon による報告)</li>
+        <li><a href="https://github.com/joyent/node/issues/1491">#1491</a> PBKDF2 暗号化サポートを追加しました (Glen Low)</li>
+        <li><a href="https://github.com/joyent/node/issues/1447">#1447</a> 非推奨になっていた http.cat() メソッドを削除しました (Mikeal Rogers)</li>
+        <li><a href="https://github.com/joyent/node/issues/1140">#1140</a> vm.runInContext() における filename 引数の不正な処理を修正しました (Antranig Basman)</li>
+        <li><a href="https://github.com/joyent/node/issues/1140">#1140</a> vm.runInContext()  と vm.createContext() のドキュメントを追加しました (Antranig Basman)</li>
+        <li><a href="https://github.com/joyent/node/issues/1428">#1428</a> 64bit FreeBSD における os.freemem() を修正しました (Artem Zaytsev)</li>
+        <li><a href="https://github.com/joyent/node/issues/1164">#1164</a> 全ての DNS ルックアップを非同期化し、想定外の例外を修正しました (Koichi Kobayashi)</li>
+        <li>不正な SSL 終了確認処理を修正しました (Tom Hughes)</li>
+        <li>CMake の多くの部分を改善しました (Tom Hughes)</li>
+        <li>ドキュメントを更新しました (Koichi Kobayashi, Logan Smyth, Fedor Indutny, Mikeal Rogers, Maciej Małecki, Antranig Basman, Mickaël Delahaye)</li>
+        <li>libuv をコミット 835782a に更新しました</li>
+        <li>V8 を 3.5.8 に更新しました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.5.5/node-v0.5.5.tar.gz">http://nodejs.org/dist/v0.5.5/node-v0.5.5.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.5/node.exe">http://nodejs.org/dist/v0.5.5/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.5/docs">http://nodejs.org/dist/v0.5.5/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.5.5/docs/api">http://nodejs.org/dist/v0.5.5/docs/api</a><br />
+      </p>
+      <p>
+      上記の .exe には Windows XP と Windows Server 2003 に互換性がないというバグがあります。この問題は GitHub Issue の <a href="https://github.com/joyent/node/issues/1572">#1592</a> として報告され、すでに修正されています。古い Windows にも互換性がある新しいバイナリは下記の URL からダウンロードすることができます。<br />
+      <a href="http://nodejs.org/dist/v0.5.5/node-186364e.exe">http://nodejs.org/dist/v0.5.5/node-186364e.exe</a>
+      </p>
+      
       <h3 id="v0.5.4">Node v0.5.4</h3>
       <p>2011.08.12, バージョン 0.5.4 (開発版)</p>
       <ul>
@@ -71,7 +105,7 @@
         <li>#1434 util.format() を改善し、ブラウザとの互換性が向上しました (Koichi Kobayashi)</li>
         <li>整数型用 Buffer.read/writeInt メソッドに unchecked uint 用のエントリーポイントが提供されました (Robert Mustacchi)</li>
         <li>CMake を改善しました (Tom Huges)</li>
-        <li>V8 を 3.5.4 にアップグレードしました</li>
+        <li>V8 を 3.5.4 に更新しました</li>
       </ul>
       <p>
       ダウンロード: <a href="http://nodejs.org/dist/v0.5.4/node-v0.5.4.tar.gz">http://nodejs.org/dist/v0.5.4/node-v0.5.4.tar.gz</a><br />
@@ -119,7 +153,7 @@
         <li>#1357 require() によるJSONファイルの読み込みに対応しました (isaacs)</li>
         <li>#1374 writeHead での ServerResponse.statusCode 設定を修正しました (Trent Mick)</li>
         <li>GC が必要以上に実行されるのを修正しました</li>
-        <li>V8 を 3.4.14 にアップグレードしました</li>
+        <li>V8 を 3.4.14 に更新しました</li>
         <li>ドキュメントを更新しました</li>
       </ul>
       <p>
@@ -141,7 +175,7 @@
         <li>#1303 Stream.pipe が接続先を返すようになりました (Elijah Insua)</li>
         <li>#1229 アドオンは -DEV_MULTIPLICITY=0 をするべきではありません (Brian White)</li>
         <li>libuv バックエンドの改善しました</li>
-        <li>V8 を 3.4.10 にアップグレードしました</li>
+        <li>V8 を 3.4.10 に更新しました</li>
       </ul>
       <p>
       ダウンロード: <a href="http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz">http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz</a><br />
@@ -219,7 +253,7 @@
         <li>#1360 URL ホストネームにおいて _ が許容されるようになりました</li>
         <li>37d529f8 の削除 – デバッガコマンドの構文解析を廃止しました</li>
         <li>グローバルな execScript を復帰しました</li>
-        <li>ドキュメントの更新</li>
+        <li>ドキュメントを更新しました</li>
       </ul>
       <p>
       ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.10.tar.gz">http://nodejs.org/dist/node-v0.4.10.tar.gz</a><br />
@@ -243,7 +277,7 @@
         <li>#1203 scope.Close を fs.sendfileSync に追加しました</li>
         <li>#1187 複数の 'link' ヘッダーをサポートしました</li>
         <li>#1196 -e/-eval で node_modules からモジュールを読み込みできない問題を修正しました (Koichi Kobayashi)</li>
-        <li>V8 を 3.1.8.25にアップグレードし、 http-parser もアップグレードしました</li>
+        <li>V8 を 3.1.8.25に更新し、 http-parser も更新しました</li>
       </ul>
       <p>
       ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.9.tar.gz">http://nodejs.org/dist/node-v0.4.9.tar.gz</a><br />
@@ -270,7 +304,7 @@
         <li>cleartextstream.destroy() が socket を close(2) するようになりました。以前は shutdown(2) システムコールを利用していました</li>
         <li>通常のビルド時に asserts や debug ステートメントをコンパイルしないようになりました</li>
         <li>Debugger を改善しました</li>
-        <li>V8 エンジンを 3.1.8.16 にアップグレードしました。</li>
+        <li>V8 エンジンを 3.1.8.16 に更新しました。</li>
       </ul>
       <p>
       ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.8.tar.gz">http://nodejs.org/dist/node-v0.4.8.tar.gz</a><br />
