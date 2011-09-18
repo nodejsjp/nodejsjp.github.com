@@ -60,6 +60,32 @@
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
       
+      <h3 id="v0.5.7">Node v0.5.7</h3>
+      <p>2011.09.16, バージョン 0.5.7 (開発版)</p>
+      <ul>
+        <li>V8 を 3.6.4 に更新しました</li>
+        <li>Windows との互換性を向上しました</li>
+        <li>ドキュメントを更新しました</li>
+        <li>デバッガと REPL を改善しました (Fedor Indutny)</li>
+        <li>旧 API サポートの追加: net.Stream(fd)、process.stdout.writable、process.stdout.fd</li>
+        <li>mkdir での EEXIST の扱いを修正しました (isaacs)</li>
+        <li>標準出力用は net_legacy の代わりに net_uv が使われるようになりました</li>
+        <li>util.inspect から readline を読み込まないようになりました</li>
+        <li><a href="https://github.com/joyent/node/issues/1673">#1673</a> V8 context のアクセサに関連するバグを修正しました (Fedor Indutny)</li>
+        <li><a href="https://github.com/joyent/node/issues/1634">#1634</a> util モジュールにおける Error の文字列化処理のバグを修正しました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/1645">#1645</a> fs モジュールの WriteStream メソッドに、ファイルの位置指定書き込み機能を追加しました (Thomas Shinnick)</li>
+        <li><a href="https://github.com/joyent/node/issues/1637">#1637</a> fs モジュールの watchFile メソッドにおいて、statWatchers キャッシュが無防備な扱いになっているバグを修正しました (Thomas Shinnick)</li>
+        <li><a href="https://github.com/joyent/node/issues/1695">#1695</a> ChildProcess.spawn に customFds を送るようにしました</li>
+        <li><a href="https://github.com/joyent/node/issues/1707">#1707</a> querystring モジュールでの hasOwnProperty を利用した処理によるセキュリティホールを修正しました (isaacs)</li>
+        <li><a href="https://github.com/joyent/node/issues/1719">#1719</a> OpenSSL のエラーキューを出力するようになりました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.5.7/node-v0.5.7.tar.gz">http://nodejs.org/dist/v0.5.7/node-v0.5.7.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.7/node.exe">http://nodejs.org/dist/v0.5.7/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.7/docs">http://nodejs.org/dist/v0.5.7/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.5.7/docs/api">http://nodejs.org/dist/v0.5.7/docs/api</a><br />
+      </p>
+      
       <h3 id="v0.5.6">Node v0.5.6</h3>
       <p>2011.09.08, バージョン 0.5.6 (開発版)</p>
       <ul>
@@ -258,6 +284,26 @@
       ダウンロード: <a href="http://nodejs.org/dist/node-v0.5.0.tar.gz">http://nodejs.org/dist/node-v0.5.0.tar.gz</a><br />
       ウェブサイト: <a href="http://nodejs.org/docs/v0.5.0">http://nodejs.org/docs/v0.5.0</a><br />
       ドキュメント: <a href="http://nodejs.org/docs/v0.5.0/api">http://nodejs.org/docs/v0.5.0/api</a><br />
+      </p>
+      
+      <h3 id="v0.4.12">Node v0.4.12</h3>
+      <p>2011.09.15, バージョン 0.4.12 (安定版)</p>
+      <ul>
+        <li>ドキュメントを更新しました</li>
+        <li><a href="https://github.com/joyent/node/issues/1563">#1563</a> ChildProcess の custom_fd 利用時に発生するバッファオーバーフローを修正しました</li>
+        <li><a href="https://github.com/joyent/node/issues/1569">#1569</a> 複数行 HTTP ヘッダーのパースエラーを修正しました (Ben Noordhuis)</li>
+        <li><a href="https://github.com/joyent/node/issues/1586">#1586</a> net モジュールにおける socket.write() のエンコーディング指定で、大文字と小文字を区別しないようになりました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/1610">#1610</a> DigiNotar 認証局を信頼済みリストから削除しました (isaacs)</li>
+        <li><a href="https://github.com/joyent/node/issues/1624">#1624</a> buffer モジュールに ‘binary’ エンコーディングでのバッファオーバーランを回避する処理を追加しました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/1633">#1633</a> Buffer.write() において _charsWritten が常に設定されるようになりました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/1707">#1707</a> querystring モジュールでの hasOwnProperty を利用した処理によるセキュリティホールを修正しました (isaacs)</li>
+        <li><a href="https://github.com/joyent/node/issues/1719">#1719</a> OpenSSL のエラーキューを出力するようになりました</li>
+        <li>net.Server.listen におけるエラー出力を修正しました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.12.tar.gz">http://nodejs.org/dist/node-v0.4.12.tar.gz</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.12">http://nodejs.org/docs/v0.4.12</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.4.12/api">http://nodejs.org/docs/v0.4.12/api</a><br />
       </p>
       
       <h3 id="v0.4.11">Node v0.4.11</h3>
