@@ -60,6 +60,26 @@
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
       
+      <h3 id="v0.5.9">Node v0.5.9</h3>
+      <p>2011.10.10, バージョン 0.5.9 (開発版)</p>
+      <ul>
+        <li>fs.watch インタフェースが、kqueue、inotify、そして ReadDirectoryChangesW により実装されました (Igor Zinkovsky, Ben Noordhuis)</li>
+        <li>dns.resolveTxt が追加されました (Christian Tellnes)</li>
+        <li>古い HTTP モジュールが削除されました (Ben Noordhuis)</li>
+        <li>child_process.fork が Windows 上で再び動作するようになりました (Igor Zinkovsky, Bert Belder)</li>
+        <li><a href="https://github.com/joyent/node/issues/1774">#1774</a> –harmony_block_scoping のコードが見直され、最適化されました (Tyler Larson, Colton Baker)</li>
+        <li><a href="https://github.com/joyent/node/issues/1813">#1813</a> Windows における Ctrl+C の扱いが修正されました (Bert Belder)</li>
+        <li><a href="https://github.com/joyent/node/issues/1844">#1844</a> –use-legacy 使用時のバグが修正されました (Ben Noordhuis)</li>
+        <li>process.stderr が libuv 内で処理されるようになり、process.stdout と process.stderr が TTY を参照する場合はブロックするようになりました</li>
+        <li>net_uv のパフォーマンスを改善しました (Ben Noordhuis, Bert Belder)</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.5.9/node-v0.5.9.tar.gz">http://nodejs.org/dist/v0.5.9/node-v0.5.9.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.9/node.exe">http://nodejs.org/dist/v0.5.9/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.9/docs">http://nodejs.org/dist/v0.5.9/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.5.9/docs/api">http://nodejs.org/dist/v0.5.9/docs/api</a><br />
+      </p>
+      
       <h3 id="v0.5.8">Node v0.5.8</h3>
       <p>2011.09.30, バージョン 0.5.8 (開発版)</p>
       <ul>
