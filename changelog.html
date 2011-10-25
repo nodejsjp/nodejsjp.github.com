@@ -44,8 +44,8 @@
         <li><a href="index.html#blog">ブログ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <br />
-        <li><a href="nodejs.org_ja/api/">v0.5.4 docs</a></li> 
-        <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.10 docs</a></li> 
+        <li><a href="nodejs.org_ja/api/">v0.5.10 docs</a></li> 
+        <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 docs</a></li> 
         <br />
         <li><a href="index.html">TOP</a></li>
@@ -59,6 +59,39 @@
       
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
+      
+      <h3 id="v0.5.10">Node v0.5.10</h3>
+      <p>2011.10.21, バージョン 0.5.10 (開発版)</p>
+      <ul>
+        <li>cmake ビルドシステム、Cygwin サポート、古いコードベース、process.ENV、process.ARGV、process.memoryUsage().vsize、os.openOSHandle を削除しました</li>
+        <li>ドキュメントを更新しました (Igor Zinkovsky, Bert Belder, Ilya Dmitrichenko, koichik, Maciej Małecki, Guglielmo Ferri, isaacs)</li>
+        <li>パフォーマンスを向上しました (Daniel Ennis, Bert Belder, Ben Noordhuis)</li>
+        <li>process.title が長い文字列をサポートしました (Ben Noordhuis)</li>
+        <li>net モジュールの net.Server はコールバックを1度だけ登録するようになりました (Simen Brekken)</li>
+        <li>net モジュールにおける接続キューのバグを修正しました (Ben Noordhuis)</li>
+        <li>デバッガにおけるバックトレースのエラー処理を修正しました (Fedor Indutny)</li>
+        <li>dns.lookup は c-ares の代わりに getaddrinfo を使うようになりました</li>
+        <li>crypto モジュールでストリームを閉じると end イベントが発生するようになりました</li>
+        <li>repl モジュールが undefined を出力するようになりました (Nathan Rajlich)</li>
+        <li><a href="https://github.com/joyent/node/issues/1902">#1902</a> buffer モジュールで NO_NULL_TERMINATION フラグを使うようになりました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/1907">#1907</a> httpモジュールに HTTP PATCH verb のサポートを追加しました (Thomas Parslow)</li>
+        <li><a href="https://github.com/joyent/node/issues/1644">#1644</a> Windows 環境に GetCPUInfo を追加しました (Karl Skomski)</li>
+        <li><a href="https://github.com/joyent/node/issues/1484">#1484</a> <a href="https://github.com/joyent/node/issues/1834">#1834</a> <a href="https://github.com/joyent/node/issues/1482">#1482</a> <a href="https://github.com/joyent/node/issues/771">#771</a> repl モジュールで複数コンテキストを扱わないようになりました (isaacs)</li>
+        <li><a href="https://github.com/joyent/node/issues/1882">#1882</a> zlib モジュールの availOutBefore の値とそのテストを更新しました (isaacs)</li>
+        <li><a href="https://github.com/joyent/node/issues/1888">#1888</a> child_process.fork が引数を変更しないようになりました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/1516">#1516</a> tls モジュールにおいて Firefox と Chrome に対しては requestCert は使用しなくなりました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/1467">#1467</a> tls モジュールで TLS API が TCP API と矛盾する問題を解決しました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/1894">#1894</a> net モジュールにおける listen() メソッドのエラー処理を修正しました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/1860">#1860</a> console.error を uv_tty_t 内で処理するようになりました</li>
+        <li>V8 を 3.7.0 に更新しました</li>
+        <li>GYP を r1081 に更新しました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.5.10/node-v0.5.10.tar.gz">http://nodejs.org/dist/v0.5.10/node-v0.5.10.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.10/node.exe">http://nodejs.org/dist/v0.5.10/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.10/docs">http://nodejs.org/dist/v0.5.10/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.5.10/docs/api">http://nodejs.org/dist/v0.5.10/docs/api</a><br />
+      </p>
       
       <h3 id="v0.5.9">Node v0.5.9</h3>
       <p>2011.10.10, バージョン 0.5.9 (開発版)</p>
