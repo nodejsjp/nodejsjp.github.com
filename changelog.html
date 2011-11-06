@@ -60,6 +60,42 @@
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
       
+      <h3 id="v0.6.0">Node v0.6.0</h3>
+      <p>2011.11.04, バージョン 0.6.0 (安定版)</p>
+      <ul>
+        <li>REPL において undefined な値を undefeind として正しく表示するようになりました (Nathan Rajlich)</li>
+        <li>ドキュメントを更新しました (koichik, seebees, bnoordhuis, Maciej Małecki, Jacob Kragh)</li>
+        <li>Windows においてネイティブアドオンの読み込みをサポートしました (Bert Belder)</li>
+        <li>getNetworkInterfaces() を networkInterfaces() に名称変更しました (bnoordhuis)</li>
+        <li>Windows において接続待ち機能を追加しました (igorzi)</li>
+        <li>http.request(url.parse(x)) (seebees)</li>
+        <li><a href="https://github.com/joyent/node/issues/1929">#1929</a> zlib モジュールが resume イベント対して適切に反応するようになりました  (isaacs)</li>
+        <li>stream.pipe から resume と pause イベントが削除されました</li>
+        <li>Windows において一部のテストコードが修正されました (igorzi)</li>
+        <li>ビルドシステムを改善しました (bnoordhuis)</li>
+        <li><a href="https://github.com/joyent/node/issues/1936">#1936</a> tls モジュールにおいて EncryptedStream が end イベントを発生しない問題を修正しました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/758">#758</a> tls モジュールに address() メソッドと remoteAddress/remotePort プロパティが追加されました</li>
+        <li><a href="https://github.com/joyent/node/issues/1399">#1399</a> http モジュールの abort() メソッドが呼ばれると Error オブジェクトが渡されるようになりました (bnoordhuis)</li>
+        <li><a href="https://github.com/joyent/node/issues/1999">#1999</a> fs モジュールの mkdir() メソッドはデフォルトパーミッションが 0777 に変更されました (bnoordhuis)</li>
+        <li><a href="https://github.com/joyent/node/issues/2001">#2001</a> パイプエラーコードを修正しました</li>
+        <li><a href="https://github.com/joyent/node/issues/2002">#2002</a> Socket.write はタイムアウトタイマーを初期化するようになりました</li>
+        <li>stdout と stderr がファイルにつながる場合はブロックするようになりました</li>
+        <li>Windows においてリモートデバッガをサポートしました (Bert Belder)</li>
+        <li>zlib モジュールに便利なメソッドが追加されました (Matt Robenolt)</li>
+        <li>Windows において process.kill() をサポートしました (igorzi)</li>
+        <li>Windows において process.uptime() をサポートしました (igorzi)</li>
+        <li>getaddrinfo は IPv6アドレス よりも先に IPv4 アドレスを返すようになりました</li>
+        <li>util.inspect が改善されました (Nathan Rajlich)</li>
+        <li>cluster モジュールの API が変更されました</li>
+        <li>V8 が 3.6.6.6 にダウングレードされました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.6.0/node-v0.6.0.tar.gz">http://nodejs.org/dist/v0.6.0/node-v0.6.0.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.6.0/node.exe">http://nodejs.org/dist/v0.6.0/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.6.0/docs">http://nodejs.org/dist/v0.6.0/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.6.0/docs/api">http://nodejs.org/dist/v0.6.0/docs/api</a><br />
+      </p>
+      
       <h3 id="v0.5.10">Node v0.5.10</h3>
       <p>2011.10.21, バージョン 0.5.10 (開発版)</p>
       <ul>
