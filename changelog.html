@@ -60,6 +60,52 @@
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
       
+      <h3 id="v0.6.2">Node v0.6.2</h3>
+      <p>2011.11.18, バージョン 0.6.2 (安定版)</p>
+      <ul>
+        <li>ドキュメントを更新しました (Artur Adib, Trevor Burnham, Ryan Emery, Trent Mick)</li>
+        <li>timers モジュールにおいて timeout==0 が指定された setTimeout() の引数を記憶するようになりました</li>
+        <li>punycode モジュール は Mathias Bynens による、よりよい punycode ライブラリを使用するようになりました</li>
+        <li>repl モジュールのタブ補完機能を改善しました (Ryan Emery)</li>
+        <li>buffer モジュールの .writeInt() 関数における範囲確認処理を修正しました (Lukasz Walukiewicz)</li>
+        <li>tls モジュールの cipher リストが設定可能なものになりました</li>
+        <li>Windows アドオンから Buffer と ObjectWrap が参照可能になりました (Bert Belder)</li>
+        <li>crypto モジュールが RSA 公開鍵認証として知られる PKCS<a href="https://github.com/joyent/node/issues/1">#1</a> をサポートしました</li>
+        <li>Windows において null にリダイレクトされた際の標準出力への書き出しを修正しました</li>
+        <li>Solaris と Illumos でのビルドを改善しました</li>
+        <li>V8 を 3.6.6.8 に更新しました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.6.2/node-v0.6.2.tar.gz">http://nodejs.org/dist/v0.6.2/node-v0.6.2.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.6.2/node.exe">http://nodejs.org/dist/v0.6.2/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.6.2/docs">http://nodejs.org/dist/v0.6.2/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.6.2/docs/api">http://nodejs.org/dist/v0.6.2/docs/api</a><br />
+      </p>
+      
+      <h3 id="v0.6.1">Node v0.6.1</h3>
+      <p>2011.11.11, バージョン 0.6.1 (安定版)</p>
+      <ul>
+        <li>ドキュメントを更新しました (Eric Lovett, Ben Noordhuis, Scott Anderson, Yoji SHIDARA)</li>
+        <li>crypto モジュールがスレッドセーフになりました (Ben Noordhuis)</li>
+        <li>process.kill のエラーオブジェクトを修正しました</li>
+        <li>デバッガがマルチバイト文字を正しく扱うようになりました (Shigeki Ohtsu)</li>
+        <li>stdout と stderr が非破壊になりました (Igor Zinkovsky)</li>
+        <li>fs モジュールが初期化されていない fs.watch ハンドルを閉じないようになりました (Ben Noordhuis)</li>
+        <li><a href="https://github.com/joyent/node/issues/2026">#2026</a> BSD での man ページのインストールを修正しました (Ben Noordhuis)</li>
+        <li><a href="https://github.com/joyent/node/issues/2040">#2040</a> uv_err_name における存在しない errno の扱いを修正しました</li>
+        <li><a href="https://github.com/joyent/node/issues/2043">#2043</a> fs モジュールの mkdir() において mode オプションが指定された場合でも正しくコールバック関数が呼ばれるようになりました</li>
+        <li><a href="https://github.com/joyent/node/issues/2045">#2045</a> Windows における fs モジュールの fs.realpath が、エラー時に戻り値を正しく返すように修正しました (Benjamin Pasero)</li>
+        <li><a href="https://github.com/joyent/node/issues/2047">#2047</a> culster モジュールを一部改善しました</li>
+        <li><a href="https://github.com/joyent/node/issues/2052">#2052</a> readline モジュールがウインドウの幅を正しく取得するようになりました</li>
+        <li>V8 を 3.6.6.7 に更新しました</li>
+      </ul>
+      <p>
+      ダウンロード: <a href="http://nodejs.org/dist/v0.6.1/node-v0.6.1.tar.gz">http://nodejs.org/dist/v0.6.1/node-v0.6.1.tar.gz</a><br />
+      Windows 実行形式: <a href="http://nodejs.org/dist/v0.6.1/node.exe">http://nodejs.org/dist/v0.6.1/node.exe</a><br />
+      ウェブサイト: <a href="http://nodejs.org/dist/v0.6.1/docs">http://nodejs.org/dist/v0.6.1/docs</a><br />
+      ドキュメント: <a href="http://nodejs.org/dist/v0.6.1/docs/api">http://nodejs.org/dist/v0.6.1/docs/api</a><br />
+      </p>
+      
       <h3 id="v0.6.0">Node v0.6.0</h3>
       <p>2011.11.04, バージョン 0.6.0 (安定版)</p>
       <ul>
