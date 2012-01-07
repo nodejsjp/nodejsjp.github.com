@@ -44,7 +44,7 @@
         <li><a href="index.html#blog">ブログ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <br />
-        <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.6 docs</a></li> 
+        <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.7 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 docs</a></li> 
         <br />
@@ -59,6 +59,36 @@
       
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
+      
+      <h3 id="v0.6.7">Node v0.6.7</h3>
+      <p>2012.01.06, バージョン 0.6.7 (安定版)</p>
+      <ul>
+        <li>V8 のハッシュ衝突を修正しました (MIPSを中断する) (Bert Belder, Erik Corry)</li>
+        <li>V8 を 3.6.6.15 に更新しました</li>
+        <li>npm を 1.1.0-beta-10 に更新しました (isaacs)</li>
+        <li>ドキュメントの多くを更新しました (Ben Noordhuis, Jeremy Martin, koichik, Dave Irvine, Seong-Rak Choi, Shannen, Adam Malcontenti-Wilson)</li>
+        <li>node_http_parser.cc におけるセグメンテーションフォルトを修正しました</li>
+        <li>dgram と timers モジュールのメモリーリークを修正しました (Ben Noordhuis, Yoshihiro Kikuchi)</li>
+        <li>repl モジュールにおいて、repl.start が ignoreUndefined を通過しない問題を修正しました (Damon Oehlman)</li>
+        <li><a href="https://github.com/joyent/node/issues/1980">#1980</a> 閉じられたストリームに対して Socket.pause を呼び出したときに null を返すようになりました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/2263">#2263</a> XMLHttpRequest の呼び出し先がファイル出力ストリームにパイプされていた場合の不具合を修正しました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/2069">#2069</a> http モジュールにおける変数のリークを修正しました (koichik)</li>
+        <li>buffer.readInt によるグローバル汚染を修正しました (Phil Sung)</li>
+        <li>timers モジュールにおいてパフォーマンスが下がる問題を修正しました (Ben Noordhuis)</li>
+        <li><a href="https://github.com/joyent/node/issues/2308">#2308</a> <a href="https://github.com/joyent/node/issues/2246">#2246</a> リクエスト時の OpenSSL エラーを Node が取り消してしまう問題を修正しました (koichik)</li>
+        <li><a href="https://github.com/joyent/node/issues/2114">#2114</a> timers モジュールにおける .unenroll() 内の item 変数から _idleTimeout を削除しました (James Hartig)</li>
+        <li><a href="https://github.com/joyent/node/issues/2379">#2379</a> debugger モジュールにおけるリクエストバックトレースの入出力参照が修正されました (Fedor Indutny)</li>
+        <li>シンプルな DTrace ustack 関数のヘルパーが追加されました (Dave Pacheco)</li>
+        <li>crypto モジュールの HexDecode メソッドを snprintf を利用せずに再実装しました (Roman Shtylman)</li>
+        <li>crypto モジュールが DH 初期化エラーを無視しないようになりました (Ben Noordhuis)</li>
+      </ul>
+      <p>
+      ソースコード: <a href="http://nodejs.org/dist/v0.6.7/node-v0.6.7.tar.gz">http://nodejs.org/dist/v0.6.7/node-v0.6.7.tar.gz</a><br />
+      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.7/node-v0.6.7.msi">http://nodejs.org/dist/v0.6.7/node-v0.6.7.msi</a><br />
+      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.7/node-v0.6.7.pkg">http://nodejs.org/dist/v0.6.7/node-v0.6.7.pkg</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.7/">http://nodejs.org/docs/v0.6.7/</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.6.7/api/">http://nodejs.org/docs/v0.6.7/api/</a><br />
+      </p>
       
       <h3 id="v0.6.6">Node v0.6.6</h3>
       <p>2011.12.14, バージョン 0.6.6 (安定版)</p>
