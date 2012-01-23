@@ -60,6 +60,47 @@
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
       
+      <h3 id="v0.7.0">Node v0.7.0</h3>
+      <p>2012.01.16, バージョン 0.7.0 (開発版)</p>
+      <ul>
+        <li>V8 を 3.8.6 に更新しました</li>
+        <li>UNIX 環境で GYP ビルドシステムを利用するようになりました (Ben Noordhuis)</li>
+        <li>実験的な Isolate サポート (Ben Noordhuis)</li>
+        <li>Cluster API を改善しました (Andreas Madsen)</li>
+        <li>内部デバッガが Isolate を利用するようになりました (Fedor Indutny)</li>
+        <li>バグを修正しました</li>
+      </ul>
+      <p>
+      ソースコード: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.tar.gz">http://nodejs.org/dist/v0.7.0/node-v0.7.0.tar.gz</a><br />
+      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.msi">http://nodejs.org/dist/v0.7.0/node-v0.7.0.msi</a><br />
+      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg">http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.0/">http://nodejs.org/docs/v0.7.0/</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a><br />
+      </p>
+      
+      <h3 id="v0.6.8">Node v0.6.8</h3>
+      <p>2012.01.19, バージョン 0.6.8 (安定版)</p>
+      <ul>
+        <li>V8 を 3.6.6.19 に更新しました</li>
+        <li>V8 の整数キーによるハッシュ衝突を修正しました (Erik Corry, Fedor Indutny)</li>
+        <li>Windows における F1-F5 へのTTY キー変換を追加しました (Brandon Benvie)</li>
+        <li>. や .. を含むパスを用いた場合における path.extname のバグを修正しました (Bert Belder)</li>
+        <li>cluster モジュールにおいて、uncaughtException の中で Master がいつも Kill されないようになりました (Ben Noordhuis)</li>
+        <li>npm が 1.1.0-2 に更新されました (isaacs)</li>
+        <li>Typed Array にクラス名が設定されました (Ben Noordhuis)</li>
+        <li>zlib バインディングをきれいにしました (isaacs, Bert Belder)</li>
+        <li>dgram が slab メモリーアロケーターを利用するようになりました (Michael Bernstein)</li>
+        <li><a href="https://github.com/joyent/node/issues/2473">#2473</a> セグメンテーションフォールトを修正しました</li>
+        <li><a href="https://github.com/joyent/node/issues/2521">#2521</a> Windows における fs.stat が 60% 高速化しました (Igor Zinkovsky)</li>
+      </ul>
+      <p>
+      ソースコード: <a href="http://nodejs.org/dist/v0.6.8/node-v0.6.8.tar.gz">http://nodejs.org/dist/v0.6.8/node-v0.6.8.tar.gz</a><br />
+      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.8/node-v0.6.8.msi">http://nodejs.org/dist/v0.6.8/node-v0.6.8.msi</a><br />
+      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.8/node-v0.6.8.pkg">http://nodejs.org/dist/v0.6.8/node-v0.6.8.pkg</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.8/">http://nodejs.org/docs/v0.6.8/</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.6.8/api/">http://nodejs.org/docs/v0.6.8/api/</a><br />
+      </p>
+      
       <h3 id="v0.6.7">Node v0.6.7</h3>
       <p>2012.01.06, バージョン 0.6.7 (安定版)</p>
       <ul>
