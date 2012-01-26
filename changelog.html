@@ -44,7 +44,8 @@
         <li><a href="index.html#blog">ブログ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <br />
-        <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.7 docs</a></li> 
+        <li><a href="nodejs.org_ja/api/">v0.7.1 docs</a></li> 
+        <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.8 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 docs</a></li> 
         <br />
@@ -58,7 +59,27 @@
       <h1>Node.js 日本ユーザグループ</h1>
       
       <h2 id="changelog">変更履歴</h2> 
-      <p><a href="https://github.com/joyent/node/wiki/ChangeLog">ChangeLog</a>の日本語訳</p>
+      <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a>の日本語訳</p>
+      
+      <h3 id="v0.7.1">Node v0.7.1</h3>
+      <p>2012.01.23, バージョン 0.7.1 (開発版)</p>
+      <ul>
+        <li>V8 を 3.8.8 に更新しました</li>
+        <li>node-waf を標準でインストールするようになりました (Fedor Indutny)</li>
+        <li>crypto モジュールに PKCS パディングを無効にする機能を追加しました (Ingmar Runge)</li>
+        <li>v8 に SunOS 用の VirtualMemory クラスが実装されました (Ben Noordhuis)</li>
+        <li>cluster.setupMaster メソッドが追加されました (Andreas Madsen)</li>
+        <li>path.exists* が fs.exists* 移動されました (Maciej Małecki)</li>
+        <li>Typed Array のクラス名が設定されました (Ben Noordhuis)</li>
+        <li>libuv のバグを修正しました (Igor Zinkovsky, Ben Noordhuis, Dan VerWeire)</li>
+      </ul>
+      <p>
+      ソースコード: <a href="http://nodejs.org/dist/v0.7.1/node-v0.7.1.tar.gz">http://nodejs.org/dist/v0.7.1/node-v0.7.1.tar.gz</a><br />
+      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.1/node-v0.7.1.msi">http://nodejs.org/dist/v0.7.1/node-v0.7.1.msi</a><br />
+      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.1/node-v0.7.1.pkg">http://nodejs.org/dist/v0.7.1/node-v0.7.1.pkg</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.1/">http://nodejs.org/docs/v0.7.1/</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.7.1/api/">http://nodejs.org/docs/v0.7.1/api/</a><br />
+      </p>
       
       <h3 id="v0.7.0">Node v0.7.0</h3>
       <p>2012.01.16, バージョン 0.7.0 (開発版)</p>
@@ -87,7 +108,7 @@
         <li>. や .. を含むパスを用いた場合における path.extname のバグを修正しました (Bert Belder)</li>
         <li>cluster モジュールにおいて、uncaughtException の中で Master がいつも Kill されないようになりました (Ben Noordhuis)</li>
         <li>npm が 1.1.0-2 に更新されました (isaacs)</li>
-        <li>Typed Array にクラス名が設定されました (Ben Noordhuis)</li>
+        <li>Typed Array のクラス名が設定されました (Ben Noordhuis)</li>
         <li>zlib バインディングをきれいにしました (isaacs, Bert Belder)</li>
         <li>dgram が slab メモリーアロケーターを利用するようになりました (Michael Bernstein)</li>
         <li><a href="https://github.com/joyent/node/issues/2473">#2473</a> セグメンテーションフォールトを修正しました</li>
