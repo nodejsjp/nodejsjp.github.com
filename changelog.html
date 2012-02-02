@@ -60,6 +60,30 @@
       
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a>の日本語訳</p>
+
+      <h3 id="v0.7.2">Node v0.7.2</h3>
+      <p>2012.02.01, バージョン 0.7.2 (開発版)</p>
+      <ul>
+        <li>V8 を 3.8.9 に更新しました</li>
+        <li>Isolates 間の共有ストリームをサポートしました (Igor Zinkovsky)</li>
+        <li><a href="https://github.com/joyent/node/issues/2636">#2636</a> http_parser が予定よりも早く解放されてしまう場合がある問題を修正しました (koichik)</li>
+        <li>url モジュールが IPv6 アドレスを含む URL をサポートしました  (Łukasz Walukiewicz)</li>
+        <li>child_process モジュールの子プロセスに disconnect() メソッドが追加されました (Andreas Madsen)</li>
+        <li>fs モジュールにおいて、ファイルを開く場合に限定して O_EXCL サポートが追加されました  (Ben Noordhuis)</li>
+        <li>fs モジュールのエラーメッセージがより明確になりました (Tj Holowaychuk)</li>
+        <li>tty モジュールにおいてキーシーケンスが見つからなかった場合に 'unknown' キーイベントを発生するようになりました (Dan VerWeire, Nathan Rajlich)</li>
+        <li>ビルド時に BUILDTYPE=Debug が指定された場合でも Release ビルドをコンパイルするようになりました (Ben Noordhuis)</li>
+        <li>シンボリックリンクのスクリプトに対して –-debug-brk オプションを使用できない問題を修正しました (Fedor Indutny)</li>
+        <li>zlib モジュールにおいて辞書の設定が失敗する問題を修正しました (Fedor Indutny)</li>
+        <li>waf において OS X 向けの arch ターゲットが追加されました (Fedor Indutny)</li>
+      </ul>
+      <p>
+      ソースコード: <a href="http://nodejs.org/dist/v0.7.2/node-v0.7.2.tar.gz">http://nodejs.org/dist/v0.7.2/node-v0.7.2.tar.gz</a><br />
+      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.2/node-v0.7.2.msi">http://nodejs.org/dist/v0.7.2/node-v0.7.2.msi</a><br />
+      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.2/node-v0.7.2.pkg">http://nodejs.org/dist/v0.7.2/node-v0.7.2.pkg</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.2/">http://nodejs.org/docs/v0.7.2/</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.7.2/api/">http://nodejs.org/docs/v0.7.2/api/</a><br />
+      </p>
       
       <h3 id="v0.7.1">Node v0.7.1</h3>
       <p>2012.01.23, バージョン 0.7.1 (開発版)</p>
@@ -107,8 +131,8 @@
         注意: Windows における UDP サポートはまだ完了していません
         </li>
         <li><a href="https://github.com/joyent/node/issues/2577">#2577</a> http モジュールのパーサーがメモリーリークしていたのを修正しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/2365">#2365</a>: zlib モジュールで不正な入力があった場合にクラッシュする問題を修正しました (Nicolas LaCasse)</li>
-        <li><a href="https://github.com/joyent/node/issues/1519">#1519</a>: シンボリックリンクのスクリプトに対して –-debug-brk オプションを使用できない問題を修正しました (Fedor Indutny)</li>
+        <li><a href="https://github.com/joyent/node/issues/2365">#2365</a> zlib モジュールで不正な入力があった場合にクラッシュする問題を修正しました (Nicolas LaCasse)</li>
+        <li><a href="https://github.com/joyent/node/issues/1519">#1519</a> シンボリックリンクのスクリプトに対して –-debug-brk オプションを使用できない問題を修正しました (Fedor Indutny)</li>
         <li>ドキュメントのスタイルを修正しました (Matthew Fitzsimmons)</li>
         <li>npm を 1.1.0-3 に更新しました (isaacs)</li>
         <li>Windows において C ドライブに対する stat() 呼び出しの不具合が再現していたのを修正しました (Bert Belder)</li>
