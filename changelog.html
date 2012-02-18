@@ -45,7 +45,7 @@
         <li><a href="index.html#contact">Contact</a></li>
         <br />
         <li><a href="nodejs.org_ja/api/">v0.7.4 docs</a></li> 
-        <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.10 docs</a></li> 
+        <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.11 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 docs</a></li> 
         <br />
@@ -163,20 +163,54 @@
       ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a><br />
       </p>
 
+      <h3 id="v0.6.11">Node v0.6.11</h3> 
+      <p>2012.02.17, バージョン 0.6.11 (安定版)</p>
+      <ul>
+        <li>http モジュールにおいて、複数の WebSocket RFC6455 ヘッダーに対応しました (Einar Otto Stangvik)</li>
+        <li>http モジュールにおいて、複数の WWW-Authenticate ヘッダーに対応しました (Ben Noordhuis)</li>
+        <li>Windows 環境において、ユニコード形式の argv と環境変数をサポートしました  (Bert Belder)</li>
+        <li>tls モジュールにおいてセッション再ネゴシエーション攻撃を緩和する機能を追加しました (Ben Noordhuis)</li>
+        <li>tcp モジュールと pipe モジュールにおいて uv_accept() エラーのアサートを削除しました (Ben Noordhuis)</li>
+        <li>tls モジュールが、既存のソケットでセキュア接続を確立できるようになりました (koichik)</li>
+        <li>dgram モジュールが、DNS ルックアップが完了する前にデータグラムソケットを閉じることができるようになりました (Seth Fitzsimmons)</li>
+        <li>Windows 環境において半二重パイプをサポートしました (Igor Zinkovsky)</li>
+        <li>Solaris 環境において、ビルドに関する omit-frame-pointer を無効化するようになりました (Dave Pacheco)</li>
+        <li>デバッガの –debug-brk を修正しました (Ben Noordhuis)</li>
+        <li>net モジュールにおいて、巨大なファイルのダウンロードが失敗する問題を修正しました failing (koichik)</li>
+        <li>fs モジュールの ReadStream において、既存のファイルディスクリプタからの読み込みが失敗する問題を修正しました (Christopher Jeffrey)</li>
+        <li>net モジュールが、DNS エラー時にソケットを削除するようになりました (Stefan Rusu)</li>
+        <li>dtrace ファイルに不足していたトランスレーターが追加されました (Dave Pacheco)</li>
+        <li>UNIX 環境において、raw モード切替時に tty がフラッシュされないようになりました (Ben Noordhuis)</li>
+        <li>Windows 環境において、デフォルトのテキストカラーに復帰した際に明るさを初期化するようになりました (Bert Belder)</li>
+        <li>npm が 1.1.1 に更新されました
+          <ul>
+            <li>fstream、mkdirp、request、rimraf を更新しました</li>
+            <li><a href="https://github.com/isaacs/npm/issues/2123">#2123</a> Windows 環境でのライフサイクルスクリプトのためのパスを適切に設定するようになりました</li>
+            <li><a href="https://github.com/isaacs/npm/issues/1838">#1838</a> 依存確認処理中に root を seen として記録し、再帰処理をしないようにしました (Martin Cooper)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+      ソースコード: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz">http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz</a><br />                                                                                                 
+      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.msi">http://nodejs.org/dist/v0.6.11/node-v0.6.11.msi</a><br />
+      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.pkg">http://nodejs.org/dist/v0.6.11/node-v0.6.11.pkg</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.11/">http://nodejs.org/docs/v0.6.11/</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.6.11/api/">http://nodejs.org/docs/v0.6.11/api/</a><br />
+      </p>
+
       <h3 id="v0.6.10">Node v0.6.10</h3> 
       <p>2012.02.02, バージョン 0.6.10 (安定版)</p>
       <ul>
-          <li></li>
-          <li>V8 を 3.6.6.20 に更新しました</li>
-          <li>msysgit bash 向けの npm 設定を MSI インストーラーに追加しました (isaacs)</li>
-          <li>buffers で一時的に "out of bounds" エラーが発生してしまう問題を修正しました (Ben Noordhuis)</li>
-          <li>buffers の Base64 デコーダーが length 引数の値を優先するようになりました (Ben Noordhuis)</li>
-          <li>Windows における path.exists の不具合が再現していたのを修正しました (Bert Belder)</li>
-          <li>QueryString.parse の実行速度を高速化しました (Philip Tellis)</li>
-          <li>http モジュールの http-parser オブジェクトが予定よりも早く解放されてしまう問題を修正しました (koichik)</li>
-          <li>timers に v0.4 互換ハックを追加しました (Ben Noordhuis)</li>
-          <li>正しい EPERM エラーコードをサポートしました (Igor Zinkovsky, Brandon Philips)</li>
-          <li>dgram に Windows 環境向けの UDP マルチキャストメソッドを実装しました (Bert Belder)</li>
+        <li>V8 を 3.6.6.20 に更新しました</li>
+        <li>msysgit bash 向けの npm 設定を MSI インストーラーに追加しました (isaacs)</li>
+        <li>buffers で一時的に "out of bounds" エラーが発生してしまう問題を修正しました (Ben Noordhuis)</li>
+        <li>buffers の Base64 デコーダーが length 引数の値を優先するようになりました (Ben Noordhuis)</li>
+        <li>Windows における path.exists の不具合が再現していたのを修正しました (Bert Belder)</li>
+        <li>QueryString.parse の実行速度を高速化しました (Philip Tellis)</li>
+        <li>http モジュールの http-parser オブジェクトが予定よりも早く解放されてしまう問題を修正しました (koichik)</li>
+        <li>timers に v0.4 互換ハックを追加しました (Ben Noordhuis)</li>
+        <li>正しい EPERM エラーコードをサポートしました (Igor Zinkovsky, Brandon Philips)</li>
+        <li>dgram に Windows 環境向けの UDP マルチキャストメソッドを実装しました (Bert Belder)</li>
       </ul>
       <p>
       ソースコード: <a href="http://nodejs.org/dist/v0.6.10/node-v0.6.10.tar.gz">http://nodejs.org/dist/v0.6.10/node-v0.6.10.tar.gz</a><br />
@@ -185,7 +219,6 @@
       ウェブサイト: <a href="http://nodejs.org/docs/v0.6.10/">http://nodejs.org/docs/v0.6.10/</a><br />
       ドキュメント: <a href="http://nodejs.org/docs/v0.6.10/api/">http://nodejs.org/docs/v0.6.10/api/</a><br />
       </p>
-
       
       <h3 id="v0.6.9">Node v0.6.9</h3>
       <p>2012.01.27, バージョン 0.6.9 (安定版)</p>
