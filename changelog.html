@@ -44,7 +44,7 @@
         <li><a href="index.html#blog">ブログ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <br />
-        <li><a href="nodejs.org_ja/api/">v0.7.4 docs</a></li> 
+        <li><a href="nodejs.org_ja/api/">v0.7.5 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.11 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 docs</a></li> 
         <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 docs</a></li> 
@@ -60,6 +60,34 @@
       
       <h2 id="changelog">変更履歴</h2> 
       <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a>の日本語訳</p>
+
+      <h3 id="v0.7.5">Node v0.7.5</h3>
+      <p>2012.02.23, バージョン 0.7.5 (開発版)</p>
+      <ul>
+        <li>起動時間が改善されました (Maciej Małecki)</li>
+        <li>crypto モジュールに getDiffieHellman() 関数が追加されました (Tomasz Buchert)</li>
+        <li>buffer モジュールが URL セーフな Base64 のデコードをサポートしました (Ben Noordhuis)</li>
+        <li>QueryString.parse() を高速化しました (Brian White)</li>
+        <li>url モジュールが auth セクションのURLエンティティをデコードするようになりました (Ben Noordhuis)</li>
+        <li>http モジュールが PURGE リクエストメソッドをサポートしました (Ben Noordhuis)</li>
+        <li>http モジュールがレスポンスの Date ヘッダーを生成するようになりました (Mark Nottingham)</li>
+        <li><a href="https://github.com/joyent/node/issues/2762">#2762</a> net モジュールの close 関数にコールバックを追加しました (Mikeal Rogers)</li>
+        <li>dgram モジュールがメモリー外の読み出しをおこなってしまう問題を修正しました (Ben Noordhuis)</li>
+        <li>repl モジュールにビルトインモジュールの自動読み込み機能を追加しました (Brandon Benvie)</li>
+        <li>repl モジュールにおいて、可能な場合にコードが2度評価される機能を削除しました (Fedor Indutny)</li>
+        <li><a href="https://github.com/joyent/node/issues/2737">#2737</a> <a href="https://github.com/joyent/node/issues/2756">#2756</a> Readline を改善しました (Colton Baker)</li>
+        <li>Solaris においてビルド時の -fomit-frame-pointer を無効化しました (Dave Pacheco)</li>
+        <li>ビルド時のアーキテクチャ検出を向上しました (Nathan Rajlich)</li>
+        <li>Fat バイナリを生成するように OS X パッケージのビルド用 Makefile を変更しました (Nathan Rajlich)</li>
+        <li>'make test' 時に src/ と lib/ に対して JSLint が実行されるようになりました (isaacs)</li>
+      </ul>
+      <p> 
+      ソースコード: <a href="http://nodejs.org/dist/v0.7.5/node-v0.7.5.tar.gz">http://nodejs.org/dist/v0.7.5/node-v0.7.5.tar.gz</a><br />                                                                                                     
+      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.5/node-v0.7.5.msi">http://nodejs.org/dist/v0.7.5/node-v0.7.5.msi</a><br />
+      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.5/node-v0.7.5.pkg">http://nodejs.org/dist/v0.7.5/node-v0.7.5.pkg</a><br />
+      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.5/">http://nodejs.org/docs/v0.7.5/</a><br />
+      ドキュメント: <a href="http://nodejs.org/docs/v0.7.5/api/">http://nodejs.org/docs/v0.7.5/api/</a><br />
+      </p>
 
       <h3 id="v0.7.4">Node v0.7.4</h3>
       <p>2012.02.14, バージョン 0.7.4 (開発版)</p>
