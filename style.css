@@ -28,7 +28,8 @@ a:hover {
 }
 
 #header,
-#main {
+#main,
+#changelog {
   margin-left: 280px;
 }
 
@@ -36,8 +37,13 @@ a:hover {
   padding: 25px 0 40px;
 }
 
+#header a:hover {
+  text-decoration: none;
+}
+
 #nav {
   width: 200px;
+  font-size: 11px;
   position: absolute;
   top: 40px;
   left: 30px;
@@ -90,4 +96,32 @@ a:hover {
 
 .section dl dd {
   margin: 0;
+}
+
+#changelog .section {
+  padding: 20px 0;
+}
+
+#changelog .section dl {
+  padding: 0 0 20px;
+  list-style-type: disc;
+}
+
+#changelog .section dl dt {
+  padding: 0 0 10px;
+}
+
+#changelog .section dl dd {
+  margin: 0 25px 0;
+  display: list-item;
+}
+
+#changelog .section dl dd ul {
+  padding: 0 25px 0;
+  list-style-type: disc;
+}
+
+#changelog .section ul {
+  padding: 0;
+  list-style: none;
 }

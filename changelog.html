@@ -1,916 +1,976 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml"> 
+<!doctype html>
+<html>
   <head> 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
-    <script type="text/javascript" src="nodejs.org_ja/sh_main.js"></script> 
-    <script type="text/javascript" src="nodejs.org_ja/sh_javascript.min.js"></script> 
+    <meta charset="UTF-8">
+    <title>Node.js 日本ユーザグループ</title>
     <link type="image/x-icon" rel="icon" href="favicon.ico" />
     <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="nodejs.org_ja/pipe.css" /> 
+    <link type="text/css" rel="stylesheet" href="style.css" /> 
     <link type="text/css" rel="stylesheet" href="nodejs.org_ja/sh_vim-dark.css" /> 
-    <title>Node.js 日本ユーザグループ</title>
-    <style type="text/css">
-    img { 
-      padding-bottom: 3em;
-    }
-    h1 {
-      margin-top: 0em;
-      margin-bottom: 0em;
-    }
-    h2 {
-      margin-bottom: 1em;
-    }
-    ul {
-      padding: 0;
-      margin: 0;
-      font-size: 80%;
-    }
-    body > div > ul {
-      margin-left: 1em;
-    }
-    #changelog ul {
-    	font-size: 80%;
-    }
-    </style> 
-  </head> 
+    <script src="nodejs.org_ja/sh_main.js"></script> 
+    <script src="nodejs.org_ja/sh_javascript.min.js"></script> 
+  </head>
+
   <body onload="sh_highlightDocument();"> 
-    <div id="toc"> 
-      <ul>
-        <li><a href="index.html#mailinglist">メーリングリスト</a></li> 
-        <li><a href="index.html#document">ドキュメント</a></li> 
-        <li><a href="index.html#rel-document">関連ドキュメント</a></li>
-        <li><a href="index.html#link">リンク</a></li> 
-        <li><a href="index.html#irc">IRC</a></li>
-        <li><a href="index.html#blog">ブログ</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <br />
-        <li><a href="nodejs.org_ja/api/">v0.7.5 docs</a></li> 
-        <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.11 docs</a></li> 
-        <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 docs</a></li> 
-        <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 docs</a></li> 
-        <br />
-        <li><a href="index.html">Top</a></li>
-      </ul> 
-    </div> 
+    <div id="content">
+      <div id="header">
+        <a href="index.html">
+          <p><img id="logo" src="nodejs.org_ja/logo.png" alt="Node.js" /></p>
+          <h1>Node.js 日本ユーザグループ</h1>
+        </a>
+      </div>
 
-    <div id="content"> 
-      <img id="logo" src="nodejs.org_ja/logo.png" alt="node.js"/> 
-
-      <h1>Node.js 日本ユーザグループ</h1>
-      
-      <h2 id="changelog">変更履歴</h2> 
-      <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a>の日本語訳</p>
-
-      <h3 id="v0.7.5">Node v0.7.5</h3>
-      <p>2012.02.23, バージョン 0.7.5 (開発版)</p>
-      <ul>
-        <li>起動時間が改善されました (Maciej Małecki)</li>
-        <li>crypto モジュールに getDiffieHellman() 関数が追加されました (Tomasz Buchert)</li>
-        <li>buffer モジュールが URL セーフな Base64 のデコードをサポートしました (Ben Noordhuis)</li>
-        <li>QueryString.parse() を高速化しました (Brian White)</li>
-        <li>url モジュールが auth セクションのURLエンティティをデコードするようになりました (Ben Noordhuis)</li>
-        <li>http モジュールが PURGE リクエストメソッドをサポートしました (Ben Noordhuis)</li>
-        <li>http モジュールがレスポンスの Date ヘッダーを生成するようになりました (Mark Nottingham)</li>
-        <li><a href="https://github.com/joyent/node/issues/2762">#2762</a> net モジュールの close 関数にコールバックを追加しました (Mikeal Rogers)</li>
-        <li>dgram モジュールがメモリー外の読み出しをおこなってしまう問題を修正しました (Ben Noordhuis)</li>
-        <li>repl モジュールにビルトインモジュールの自動読み込み機能を追加しました (Brandon Benvie)</li>
-        <li>repl モジュールにおいて、可能な場合にコードが2度評価される機能を削除しました (Fedor Indutny)</li>
-        <li><a href="https://github.com/joyent/node/issues/2737">#2737</a> <a href="https://github.com/joyent/node/issues/2756">#2756</a> Readline を改善しました (Colton Baker)</li>
-        <li>Solaris においてビルド時の -fomit-frame-pointer を無効化しました (Dave Pacheco)</li>
-        <li>ビルド時のアーキテクチャ検出を向上しました (Nathan Rajlich)</li>
-        <li>Fat バイナリを生成するように OS X パッケージのビルド用 Makefile を変更しました (Nathan Rajlich)</li>
-        <li>'make test' 時に src/ と lib/ に対して JSLint が実行されるようになりました (isaacs)</li>
-      </ul>
-      <p> 
-      ソースコード: <a href="http://nodejs.org/dist/v0.7.5/node-v0.7.5.tar.gz">http://nodejs.org/dist/v0.7.5/node-v0.7.5.tar.gz</a><br />                                                                                                     
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.5/node-v0.7.5.msi">http://nodejs.org/dist/v0.7.5/node-v0.7.5.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.5/node-v0.7.5.pkg">http://nodejs.org/dist/v0.7.5/node-v0.7.5.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.5/">http://nodejs.org/docs/v0.7.5/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.7.5/api/">http://nodejs.org/docs/v0.7.5/api/</a><br />
-      </p>
-
-      <h3 id="v0.7.4">Node v0.7.4</h3>
-      <p>2012.02.14, バージョン 0.7.4 (開発版)</p>
-      <ul>
-        <li>V8 を 3.9.5 に更新しました</li>
-        <li>npm を 1.1.1 に更新しました</li>
-        <li>build 時の host_arch の検出を改善しました (Karl Skomski)</li>
-        <li>debugger 用の debug_port プロパティを process モジュールに移動しました (Fedor Indutny)</li>
-        <li>API ドキュメントの CSS バグを修正しました (isaacs)</li>
-        <li>UNIX 環境において native アドオンのビルド時に -fPIC を設定するようになりました (Nathan Rajlich)</li>
-        <li>処理の先頭で v8::Locker を再び使用するようになりました (Marcel Laverdet)</li>
-        <li>API ドキュメントの画像が配布用の tar ボールに含まれないようになりました (isaacs)</li>
-        <li>libuv の uv_export と uv_import を削除しました (Ben Noordhuis)</li>
-        <li>Windows において x64 ビルドをサポートしました (Igor Zinkovsky)</li>
-      </ul>
-      <p> 
-      ソースコード: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.tar.gz">http://nodejs.org/dist/v0.7.4/node-v0.7.4.tar.gz</a><br />                                                        
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.msi">http://nodejs.org/dist/v0.7.4/node-v0.7.4.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.pkg">http://nodejs.org/dist/v0.7.4/node-v0.7.4.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.4/">http://nodejs.org/docs/v0.7.4/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.7.4/api/">http://nodejs.org/docs/v0.7.4/api/</a><br />
-      </p>
-
-      <h3 id="v0.7.3">Node v0.7.3</h3>
-      <p>2012.02.07, バージョン 0.7.3 (開発版)</p>
-      <ul>
-        <li>V8 を 3.9.2 に更新しました</li>
-        <li>isolate のサポートを削除しました (Ben Noordhuis)</li>
-        <li>cluster モジュールについてドキュメントの整理、イベント処理の最適化、process.disconnect を使用するように変更しました (Andreas Madsen)</li>
-        <li>Windows 環境での gyp_addon において node.lib をリンクするようになりました (Nathan Rajlich)</li>
-        <li>http モジュールの http-parser が2回解放されてしまう場合があるのを修正しました (koichik)</li>
-        <li>Windows 環境で RTTI と例外処理が無効化されました (Bert Belder)</li>
-      </ul>
-      <p> 
-      ソースコード: <a href="http://nodejs.org/dist/v0.7.3/node-v0.7.3.tar.gz">http://nodejs.org/dist/v0.7.3/node-v0.7.3.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.3/node-v0.7.3.msi">http://nodejs.org/dist/v0.7.3/node-v0.7.3.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.3/node-v0.7.3.pkg">http://nodejs.org/dist/v0.7.3/node-v0.7.3.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.3/">http://nodejs.org/docs/v0.7.3/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.7.3/api/">http://nodejs.org/docs/v0.7.3/api/</a><br />
-      </p>
-
-      <h3 id="v0.7.2">Node v0.7.2</h3>
-      <p>2012.02.01, バージョン 0.7.2 (開発版)</p>
-      <ul>
-        <li>V8 を 3.8.9 に更新しました</li>
-        <li>Isolates 間の共有ストリームをサポートしました (Igor Zinkovsky)</li>
-        <li><a href="https://github.com/joyent/node/issues/2636">#2636</a> http_parser が予定よりも早く解放されてしまう場合がある問題を修正しました (koichik)</li>
-        <li>url モジュールが IPv6 アドレスを含む URL をサポートしました  (Łukasz Walukiewicz)</li>
-        <li>child_process モジュールの子プロセスに disconnect() メソッドが追加されました (Andreas Madsen)</li>
-        <li>fs モジュールにおいて、ファイルを開く場合に限定して O_EXCL サポートが追加されました  (Ben Noordhuis)</li>
-        <li>fs モジュールのエラーメッセージがより明確になりました (Tj Holowaychuk)</li>
-        <li>tty モジュールにおいてキーシーケンスが見つからなかった場合に 'unknown' キーイベントを発生するようになりました (Dan VerWeire, Nathan Rajlich)</li>
-        <li>ビルド時に BUILDTYPE=Debug が指定された場合でも Release ビルドをコンパイルするようになりました (Ben Noordhuis)</li>
-        <li>シンボリックリンクのスクリプトに対して –-debug-brk オプションを使用できない問題を修正しました (Fedor Indutny)</li>
-        <li>zlib モジュールにおいて辞書の設定が失敗する問題を修正しました (Fedor Indutny)</li>
-        <li>waf において OS X 向けの arch ターゲットが追加されました (Fedor Indutny)</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.7.2/node-v0.7.2.tar.gz">http://nodejs.org/dist/v0.7.2/node-v0.7.2.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.2/node-v0.7.2.msi">http://nodejs.org/dist/v0.7.2/node-v0.7.2.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.2/node-v0.7.2.pkg">http://nodejs.org/dist/v0.7.2/node-v0.7.2.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.2/">http://nodejs.org/docs/v0.7.2/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.7.2/api/">http://nodejs.org/docs/v0.7.2/api/</a><br />
-      </p>
-      
-      <h3 id="v0.7.1">Node v0.7.1</h3>
-      <p>2012.01.23, バージョン 0.7.1 (開発版)</p>
-      <ul>
-        <li>V8 を 3.8.8 に更新しました</li>
-        <li>node-waf を標準でインストールするようになりました (Fedor Indutny)</li>
-        <li>crypto モジュールに PKCS パディングを無効にする機能を追加しました (Ingmar Runge)</li>
-        <li>v8 に SunOS 用の VirtualMemory クラスが実装されました (Ben Noordhuis)</li>
-        <li>cluster.setupMaster メソッドが追加されました (Andreas Madsen)</li>
-        <li>path.exists* が fs.exists* 移動されました (Maciej Małecki)</li>
-        <li>Typed Array のクラス名が設定されました (Ben Noordhuis)</li>
-        <li>libuv のバグを修正しました (Igor Zinkovsky, Ben Noordhuis, Dan VerWeire)</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.7.1/node-v0.7.1.tar.gz">http://nodejs.org/dist/v0.7.1/node-v0.7.1.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.1/node-v0.7.1.msi">http://nodejs.org/dist/v0.7.1/node-v0.7.1.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.1/node-v0.7.1.pkg">http://nodejs.org/dist/v0.7.1/node-v0.7.1.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.1/">http://nodejs.org/docs/v0.7.1/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.7.1/api/">http://nodejs.org/docs/v0.7.1/api/</a><br />
-      </p>
-      
-      <h3 id="v0.7.0">Node v0.7.0</h3>
-      <p>2012.01.16, バージョン 0.7.0 (開発版)</p>
-      <ul>
-        <li>V8 を 3.8.6 に更新しました</li>
-        <li>UNIX 環境で GYP ビルドシステムを利用するようになりました (Ben Noordhuis)</li>
-        <li>実験的な Isolate サポート (Ben Noordhuis)</li>
-        <li>Cluster API を改善しました (Andreas Madsen)</li>
-        <li>内部デバッガが Isolate を利用するようになりました (Fedor Indutny)</li>
-        <li>バグを修正しました</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.tar.gz">http://nodejs.org/dist/v0.7.0/node-v0.7.0.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.msi">http://nodejs.org/dist/v0.7.0/node-v0.7.0.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg">http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.7.0/">http://nodejs.org/docs/v0.7.0/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a><br />
-      </p>
-
-      <h3 id="v0.6.11">Node v0.6.11</h3> 
-      <p>2012.02.17, バージョン 0.6.11 (安定版)</p>
-      <ul>
-        <li>http モジュールにおいて、複数の WebSocket RFC6455 ヘッダーに対応しました (Einar Otto Stangvik)</li>
-        <li>http モジュールにおいて、複数の WWW-Authenticate ヘッダーに対応しました (Ben Noordhuis)</li>
-        <li>Windows 環境において、ユニコード形式の argv と環境変数をサポートしました  (Bert Belder)</li>
-        <li>tls モジュールにおいてセッション再ネゴシエーション攻撃を緩和する機能を追加しました (Ben Noordhuis)</li>
-        <li>tcp モジュールと pipe モジュールにおいて uv_accept() エラーのアサートを削除しました (Ben Noordhuis)</li>
-        <li>tls モジュールが、既存のソケットでセキュア接続を確立できるようになりました (koichik)</li>
-        <li>dgram モジュールが、DNS ルックアップが完了する前にデータグラムソケットを閉じることができるようになりました (Seth Fitzsimmons)</li>
-        <li>Windows 環境において半二重パイプをサポートしました (Igor Zinkovsky)</li>
-        <li>Solaris 環境において、ビルドに関する omit-frame-pointer を無効化するようになりました (Dave Pacheco)</li>
-        <li>デバッガの –debug-brk を修正しました (Ben Noordhuis)</li>
-        <li>net モジュールにおいて、巨大なファイルのダウンロードが失敗する問題を修正しました failing (koichik)</li>
-        <li>fs モジュールの ReadStream において、既存のファイルディスクリプタからの読み込みが失敗する問題を修正しました (Christopher Jeffrey)</li>
-        <li>net モジュールが、DNS エラー時にソケットを削除するようになりました (Stefan Rusu)</li>
-        <li>dtrace ファイルに不足していたトランスレーターが追加されました (Dave Pacheco)</li>
-        <li>UNIX 環境において、raw モード切替時に tty がフラッシュされないようになりました (Ben Noordhuis)</li>
-        <li>Windows 環境において、デフォルトのテキストカラーに復帰した際に明るさを初期化するようになりました (Bert Belder)</li>
-        <li>npm が 1.1.1 に更新されました
+      <div id="nav">
+        <div id="toc">
+          <h2>ナビゲーション</h2>
           <ul>
-            <li>fstream、mkdirp、request、rimraf を更新しました</li>
-            <li><a href="https://github.com/isaacs/npm/issues/2123">#2123</a> Windows 環境でのライフサイクルスクリプトのためのパスを適切に設定するようになりました</li>
-            <li><a href="https://github.com/isaacs/npm/issues/1838">#1838</a> 依存確認処理中に root を seen として記録し、再帰処理をしないようにしました (Martin Cooper)</li>
+            <li><a href="index.html#mailinglist">メーリングリスト</a></li> 
+            <li><a href="index.html#document">ドキュメント</a></li> 
+            <li><a href="index.html#rel-document">関連ドキュメント</a></li>
+            <li><a href="index.html#link">リンク</a></li> 
+            <li><a href="index.html#irc">IRC</a></li>
+            <li><a href="index.html#blog">ブログ</a></li>
+            <li><a href="index.html#contact">連絡先</a></li>
           </ul>
-        </li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz">http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz</a><br />                                                                                                 
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.msi">http://nodejs.org/dist/v0.6.11/node-v0.6.11.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.pkg">http://nodejs.org/dist/v0.6.11/node-v0.6.11.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.11/">http://nodejs.org/docs/v0.6.11/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.11/api/">http://nodejs.org/docs/v0.6.11/api/</a><br />
-      </p>
+        </div>
+        
+        <div id="docs"> 
+          <h2>日本語訳ドキュメント</h2>
+          <ul>
+            <li><a href="nodejs.org_ja/api/">v0.7.5 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.11 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
+            <li><a href="changelog.html">ChangeLog</a></li>
+          </ul> 
+        </div> 
+      </div>
 
-      <h3 id="v0.6.10">Node v0.6.10</h3> 
-      <p>2012.02.02, バージョン 0.6.10 (安定版)</p>
-      <ul>
-        <li>V8 を 3.6.6.20 に更新しました</li>
-        <li>msysgit bash 向けの npm 設定を MSI インストーラーに追加しました (isaacs)</li>
-        <li>buffers で一時的に "out of bounds" エラーが発生してしまう問題を修正しました (Ben Noordhuis)</li>
-        <li>buffers の Base64 デコーダーが length 引数の値を優先するようになりました (Ben Noordhuis)</li>
-        <li>Windows における path.exists の不具合が再現していたのを修正しました (Bert Belder)</li>
-        <li>QueryString.parse の実行速度を高速化しました (Philip Tellis)</li>
-        <li>http モジュールの http-parser オブジェクトが予定よりも早く解放されてしまう問題を修正しました (koichik)</li>
-        <li>timers に v0.4 互換ハックを追加しました (Ben Noordhuis)</li>
-        <li>正しい EPERM エラーコードをサポートしました (Igor Zinkovsky, Brandon Philips)</li>
-        <li>dgram に Windows 環境向けの UDP マルチキャストメソッドを実装しました (Bert Belder)</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.10/node-v0.6.10.tar.gz">http://nodejs.org/dist/v0.6.10/node-v0.6.10.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.10/node-v0.6.10.msi">http://nodejs.org/dist/v0.6.10/node-v0.6.10.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.10/node-v0.6.10.pkg">http://nodejs.org/dist/v0.6.10/node-v0.6.10.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.10/">http://nodejs.org/docs/v0.6.10/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.10/api/">http://nodejs.org/docs/v0.6.10/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.9">Node v0.6.9</h3>
-      <p>2012.01.27, バージョン 0.6.9 (安定版)</p>
-      <ul>
-        <li>
-        dgram モジュールの未実装だった一部の機能を Unix 用に実装しました (Dan VerWeire, Roman Shtylman, Ben Noordhuis)<br />
-        注意: Windows における UDP サポートはまだ完了していません
-        </li>
-        <li><a href="https://github.com/joyent/node/issues/2577">#2577</a> http モジュールのパーサーがメモリーリークしていたのを修正しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/2365">#2365</a> zlib モジュールで不正な入力があった場合にクラッシュする問題を修正しました (Nicolas LaCasse)</li>
-        <li><a href="https://github.com/joyent/node/issues/1519">#1519</a> シンボリックリンクのスクリプトに対して –-debug-brk オプションを使用できない問題を修正しました (Fedor Indutny)</li>
-        <li>ドキュメントのスタイルを修正しました (Matthew Fitzsimmons)</li>
-        <li>npm を 1.1.0-3 に更新しました (isaacs)</li>
-        <li>Windows において C ドライブに対する stat() 呼び出しの不具合が再現していたのを修正しました (Bert Belder)</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.9/node-v0.6.9.tar.gz">http://nodejs.org/dist/v0.6.9/node-v0.6.9.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.9/node-v0.6.9.msi">http://nodejs.org/dist/v0.6.9/node-v0.6.9.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.9/node-v0.6.9.pkg">http://nodejs.org/dist/v0.6.9/node-v0.6.9.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.9/">http://nodejs.org/docs/v0.6.9/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.9/api/">http://nodejs.org/docs/v0.6.9/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.8">Node v0.6.8</h3>
-      <p>2012.01.19, バージョン 0.6.8 (安定版)</p>
-      <ul>
-        <li>V8 を 3.6.6.19 に更新しました</li>
-        <li>V8 の整数キーによるハッシュ衝突を修正しました (Erik Corry, Fedor Indutny)</li>
-        <li>Windows における F1-F5 へのTTY キー変換を追加しました (Brandon Benvie)</li>
-        <li>. や .. を含むパスを用いた場合における path.extname のバグを修正しました (Bert Belder)</li>
-        <li>cluster モジュールにおいて、uncaughtException の中で Master がいつも Kill されないようになりました (Ben Noordhuis)</li>
-        <li>npm が 1.1.0-2 に更新されました (isaacs)</li>
-        <li>Typed Array のクラス名が設定されました (Ben Noordhuis)</li>
-        <li>zlib バインディングをきれいにしました (isaacs, Bert Belder)</li>
-        <li>dgram が slab メモリーアロケーターを利用するようになりました (Michael Bernstein)</li>
-        <li><a href="https://github.com/joyent/node/issues/2473">#2473</a> セグメンテーションフォールトを修正しました</li>
-        <li><a href="https://github.com/joyent/node/issues/2521">#2521</a> Windows における fs.stat が 60% 高速化しました (Igor Zinkovsky)</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.8/node-v0.6.8.tar.gz">http://nodejs.org/dist/v0.6.8/node-v0.6.8.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.8/node-v0.6.8.msi">http://nodejs.org/dist/v0.6.8/node-v0.6.8.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.8/node-v0.6.8.pkg">http://nodejs.org/dist/v0.6.8/node-v0.6.8.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.8/">http://nodejs.org/docs/v0.6.8/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.8/api/">http://nodejs.org/docs/v0.6.8/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.7">Node v0.6.7</h3>
-      <p>2012.01.06, バージョン 0.6.7 (安定版)</p>
-      <ul>
-        <li>V8 のハッシュ衝突を修正しました (MIPS上では動作しないようになりました) (Bert Belder, Erik Corry)</li>
-        <li>V8 を 3.6.6.15 に更新しました</li>
-        <li>npm を 1.1.0-beta-10 に更新しました (isaacs)</li>
-        <li>ドキュメントの多くを更新しました (Ben Noordhuis, Jeremy Martin, koichik, Dave Irvine, Seong-Rak Choi, Shannen, Adam Malcontenti-Wilson)</li>
-        <li>node_http_parser.cc におけるセグメンテーションフォルトを修正しました</li>
-        <li>dgram と timers モジュールのメモリーリークを修正しました (Ben Noordhuis, Yoshihiro Kikuchi)</li>
-        <li>repl モジュールにおいて、repl.start が ignoreUndefined を通過しない問題を修正しました (Damon Oehlman)</li>
-        <li><a href="https://github.com/joyent/node/issues/1980">#1980</a> 閉じられたストリームに対して Socket.pause を呼び出したときに null を参照する問題を修正しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/2263">#2263</a> XMLHttpRequest の呼び出し先がファイル出力ストリームにパイプされていた場合の不具合を修正しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/2069">#2069</a> http モジュールにおける変数のリークを修正しました (koichik)</li>
-        <li>buffer.readInt によるグローバル汚染を修正しました (Phil Sung)</li>
-        <li>timers モジュールにおいてパフォーマンスが下がる問題を修正しました (Ben Noordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/2308">#2308</a> <a href="https://github.com/joyent/node/issues/2246">#2246</a> リクエスト時の OpenSSL エラーを表示せずに Node が取り込んでしまう問題を修正しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/2114">#2114</a> timers モジュールにおける .unenroll() 内の item 変数から _idleTimeout を削除しました (James Hartig)</li>
-        <li><a href="https://github.com/joyent/node/issues/2379">#2379</a> debugger モジュールにおけるリクエストバックトレースの入出力参照が修正されました (Fedor Indutny)</li>
-        <li>シンプルな DTrace ustack 関数のヘルパーが追加されました (Dave Pacheco)</li>
-        <li>crypto モジュールの HexDecode メソッドを snprintf を利用せずに再実装しました (Roman Shtylman)</li>
-        <li>crypto モジュールが DH 初期化エラーを無視しないようになりました (Ben Noordhuis)</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.7/node-v0.6.7.tar.gz">http://nodejs.org/dist/v0.6.7/node-v0.6.7.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.7/node-v0.6.7.msi">http://nodejs.org/dist/v0.6.7/node-v0.6.7.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.7/node-v0.6.7.pkg">http://nodejs.org/dist/v0.6.7/node-v0.6.7.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.7/">http://nodejs.org/docs/v0.6.7/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.7/api/">http://nodejs.org/docs/v0.6.7/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.6">Node v0.6.6</h3>
-      <p>2011.12.14, バージョン 0.6.6 (安定版)</p>
-      <ul>
-        <li>npm を 1.1.0-beta-4 に更新しました (Isaac Z. Schlueter)</li>
-        <li>cli モジュールにおける -help オプションの出力を修正しました (Ben Noordhuis)</li>
-        <li>Web サイトが新しくなりました</li>
-        <li>標準入力で pause/resume が利用できるようになりました (Isaac Z. Schlueter)</li>
-        <li>Travis CI が統合されました (Maciej Małecki)</li>
-        <li>child_process での標準入力を閉じる処理に関するバグが修正されました (Ben Noordhuis)</li>
-        <li>MSI における更新が有効化されました (Igor Zinkovsky)</li>
-        <li>net モジュールにおけるメモリーリークが修正されました (Ben Noordhuis)</li>
-        <li>fs モジュールの ReadStream バッファサイズが小数点数や数字以外の値を扱うようになりました (Ben Noordhuis)</li>
-        <li>crypto モジュールにおける PBKDF2 のエラーパスのメモリーリークが修正されました (Ben Noordhuis)</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.6/node-v0.6.6.tar.gz">http://nodejs.org/dist/v0.6.6/node-v0.6.6.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.6/node-v0.6.6.msi">http://nodejs.org/dist/v0.6.6/node-v0.6.6.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.6/node-v0.6.6.pkg">http://nodejs.org/dist/v0.6.6/node-v0.6.6.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.6/">http://nodejs.org/docs/v0.6.6/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.6/api/">http://nodejs.org/docs/v0.6.6/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.5">Node v0.6.5</h3>
-      <p>2011.12.04, バージョン 0.6.5 (安定版)</p>
-      <ul>
-        <li>npm が Windows のアンチウイルスソフトウェアを回避するようになりました</li>
-        <li>V8 を 3.6.6.11 に更新しました</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.5/node-v0.6.5.tar.gz">http://nodejs.org/dist/v0.6.5/node-v0.6.5.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.5/node-v0.6.5.msi">http://nodejs.org/dist/v0.6.5/node-v0.6.5.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.5/node-v0.6.5.pkg">http://nodejs.org/dist/v0.6.5/node-v0.6.5.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.5/">http://nodejs.org/docs/v0.6.5/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.5/api/">http://nodejs.org/docs/v0.6.5/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.4">Node v0.6.4</h3>
-      <p>2011.12.02, バージョン 0.6.4 (安定版)</p>
-      <ul>
-        <li>ドキュメントを更新しました (Kyle Young, Tim Oxley, Roman Shtylman, Mathias Bynens)</li>
-        <li>同梱されている npm を更新しました (Isaac Schlueter)</li>
-        <li>Windows インストーラーをよりよく改善しました (Igor Zinkovsky, Isaac Schlueter)</li>
-        <li>punycode モジュールを v0.2.1 に更新しました (Mathias Bynens)</li>
-        <li>ビルド用の configure スクリプトに –without-npm を追加しました</li>
-        <li>sys モジュールをさらに非推奨にし、NODE_DEBUG=sys の場合はスタックトレースを表示するようになりました</li>
-        <li>CLI に -p オプションを追加し、-eval の結果を表示するようになりました</li>
-        <li><a href="https://github.com/joyent/node/issues/1997">#1997</a> Blowfish ECB 暗号化/復号化処理を改善しました (Ingmar Runge)</li>
-        <li><a href="https://github.com/joyent/node/issues/2223">#2223</a> Socket の 'close' イベントが2回発生する問題を修正しました</li>
-        <li><a href="https://github.com/joyent/node/issues/2224">#2224</a> RSS メモリー使用量が 4GB を超える場合の問題を修正しました (Russ Bradberry)</li>
-        <li><a href="https://github.com/joyent/node/issues/2225">#2225</a> util.inspect() のオブジェクトの文字列化処理におけるバグを修正しました  (Nathan Rajlich)</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.4/node-v0.6.4.tar.gz">http://nodejs.org/dist/v0.6.4/node-v0.6.4.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.4/node-v0.6.4.msi">http://nodejs.org/dist/v0.6.4/node-v0.6.4.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.4/node-v0.6.4.pkg">http://nodejs.org/dist/v0.6.4/node-v0.6.4.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.4/">http://nodejs.org/docs/v0.6.4/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.4/api/">http://nodejs.org/docs/v0.6.4/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.3">Node v0.6.3</h3>
-      <p>2011.11.25, バージョン 0.6.3 (安定版)</p>
-      <ul>
-        <li><a href="https://github.com/joyent/node/issues/2083">#2083</a> npm を Node に同梱しました。packages/installers 内に含まれ、'make install' でインストールされます</li>
-        <li><a href="https://github.com/joyent/node/issues/2076">#2076</a> Windows インストーラーにロゴの表示を追加しました</li>
-        <li><a href="https://github.com/joyent/node/issues/1711">#1711</a> ヘッダーがない状況でも HTT Pリクエストを正しく扱うようになりました (Ben Noordhuis, Felix Geisendörfer)</li>
-        <li>TLS モジュールにおいて OpenSSL の SSL コンテキストオプションや定数に、よりアクセスできるようになりました (Ben Noordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/2177">#2177</a> Windows において UDP パケットが対象に届かなかった場合でもパケットを破棄しなくなりました (Bert Belder)</li>
-        <li>Windows において 260 文字以上のパスをサポートしました (Bert Belder)</li>
-        <li>Windows において ドライブ相対パスを正しく解決するようになりました (Bert Belder)</li>
-        <li><a href="https://github.com/joyent/node/issues/2166">#2166</a> lchmod 後にファイルディスクリプタが閉じられない不具合を修正しました (Isaac Schlueter)</li>
-        <li><a href="https://github.com/joyent/node/issues/2084">#2084</a> Makefile に OS X 用 .pkg のビルドスクリプトを追加しました</li>
-        <li><a href="https://github.com/joyent/node/issues/2160">#2160</a> ドキュメントを更新しました (Ben Noordhuis)</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.3/node-v0.6.3.tar.gz">http://nodejs.org/dist/v0.6.3/node-v0.6.3.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.3/node-v0.6.3.msi">http://nodejs.org/dist/v0.6.3/node-v0.6.3.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.3/node-v0.6.3.pkg">http://nodejs.org/dist/v0.6.3/node-v0.6.3.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.3/">http://nodejs.org/docs/v0.6.3/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.3/api/">http://nodejs.org/docs/v0.6.3/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.2">Node v0.6.2</h3>
-      <p>2011.11.18, バージョン 0.6.2 (安定版)</p>
-      <ul>
-        <li>ドキュメントを更新しました (Artur Adib, Trevor Burnham, Ryan Emery, Trent Mick)</li>
-        <li>timers モジュールにおいて timeout==0 が指定された setTimeout() の引数を記憶するようになりました</li>
-        <li>punycode モジュール は Mathias Bynens による、よりよい punycode ライブラリを使用するようになりました</li>
-        <li>repl モジュールのタブ補完機能を改善しました (Ryan Emery)</li>
-        <li>buffer モジュールの .writeInt() 関数における範囲確認処理を修正しました (Lukasz Walukiewicz)</li>
-        <li>tls モジュールの cipher リストが設定可能なものになりました</li>
-        <li>Windows アドオンから Buffer と ObjectWrap が参照可能になりました (Bert Belder)</li>
-        <li>crypto モジュールが RSA 公開鍵認証として知られる PKCS<a href="https://github.com/joyent/node/issues/1">#1</a> をサポートしました</li>
-        <li>Windows において null にリダイレクトされた際の標準出力への書き出しを修正しました</li>
-        <li>Solaris と Illumos でのビルドを改善しました</li>
-        <li>V8 を 3.6.6.8 に更新しました</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.2/node-v0.6.2.tar.gz">http://nodejs.org/dist/v0.6.2/node-v0.6.2.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.2/node-v0.6.2.msi">http://nodejs.org/dist/v0.6.2/node-v0.6.2.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.2/node-v0.6.2.pkg">http://nodejs.org/dist/v0.6.2/node-v0.6.2.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.2/">http://nodejs.org/docs/v0.6.2/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.2/api/">http://nodejs.org/docs/v0.6.2/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.1">Node v0.6.1</h3>
-      <p>2011.11.11, バージョン 0.6.1 (安定版)</p>
-      <ul>
-        <li>ドキュメントを更新しました (Eric Lovett, Ben Noordhuis, Scott Anderson, Yoji SHIDARA)</li>
-        <li>crypto モジュールがスレッドセーフになりました (Ben Noordhuis)</li>
-        <li>process.kill のエラーオブジェクトを修正しました</li>
-        <li>デバッガがマルチバイト文字を正しく扱うようになりました (Shigeki Ohtsu)</li>
-        <li>stdout と stderr が非破壊になりました (Igor Zinkovsky)</li>
-        <li>fs モジュールが初期化されていない fs.watch ハンドルを閉じないようになりました (Ben Noordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/2026">#2026</a> BSD での man ページのインストールを修正しました (Ben Noordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/2040">#2040</a> uv_err_name における存在しない errno の扱いを修正しました</li>
-        <li><a href="https://github.com/joyent/node/issues/2043">#2043</a> fs モジュールの mkdir() において mode オプションが指定された場合でも正しくコールバック関数が呼ばれるようになりました</li>
-        <li><a href="https://github.com/joyent/node/issues/2045">#2045</a> Windows における fs モジュールの fs.realpath が、エラー時に戻り値を正しく返すように修正しました (Benjamin Pasero)</li>
-        <li><a href="https://github.com/joyent/node/issues/2047">#2047</a> culster モジュールを一部改善しました</li>
-        <li><a href="https://github.com/joyent/node/issues/2052">#2052</a> readline モジュールがウインドウの幅を正しく取得するようになりました</li>
-        <li>V8 を 3.6.6.7 に更新しました</li>
-      </ul>
-      <p>
-      ソースコード: <a href="http://nodejs.org/dist/v0.6.1/node-v0.6.1.tar.gz">http://nodejs.org/dist/v0.6.1/node-v0.6.1.tar.gz</a><br />
-      Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.1/node-v0.6.1.msi">http://nodejs.org/dist/v0.6.1/node-v0.6.1.msi</a><br />
-      Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.1/node-v0.6.1.pkg">http://nodejs.org/dist/v0.6.1/node-v0.6.1.pkg</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.1/">http://nodejs.org/docs/v0.6.1/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.1/api/">http://nodejs.org/docs/v0.6.1/api/</a><br />
-      </p>
-      
-      <h3 id="v0.6.0">Node v0.6.0</h3>
-      <p>2011.11.04, バージョン 0.6.0 (安定版)</p>
-      <ul>
-        <li>REPL において undefined な値を undefeind として正しく表示するようになりました (Nathan Rajlich)</li>
-        <li>ドキュメントを更新しました (koichik, seebees, bnoordhuis, Maciej Małecki, Jacob Kragh)</li>
-        <li>Windows においてネイティブアドオンの読み込みをサポートしました (Bert Belder)</li>
-        <li>getNetworkInterfaces() を networkInterfaces() に名称変更しました (bnoordhuis)</li>
-        <li>Windows において接続待ち機能を追加しました (igorzi)</li>
-        <li>http.request(url.parse(x)) (seebees)</li>
-        <li><a href="https://github.com/joyent/node/issues/1929">#1929</a> zlib モジュールが resume イベント対して適切に反応するようになりました  (isaacs)</li>
-        <li>stream.pipe から resume と pause イベントが削除されました</li>
-        <li>Windows において一部のテストコードが修正されました (igorzi)</li>
-        <li>ビルドシステムを改善しました (bnoordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/1936">#1936</a> tls モジュールにおいて EncryptedStream が end イベントを発生しない問題を修正しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/758">#758</a> tls モジュールに address() メソッドと remoteAddress/remotePort プロパティが追加されました</li>
-        <li><a href="https://github.com/joyent/node/issues/1399">#1399</a> http モジュールの abort() メソッドが呼ばれると Error オブジェクトが渡されるようになりました (bnoordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/1999">#1999</a> fs モジュールの mkdir() メソッドはデフォルトパーミッションが 0777 に変更されました (bnoordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/2001">#2001</a> パイプエラーコードを修正しました</li>
-        <li><a href="https://github.com/joyent/node/issues/2002">#2002</a> Socket.write はタイムアウトタイマーを初期化するようになりました</li>
-        <li>stdout と stderr がファイルにつながる場合はブロックするようになりました</li>
-        <li>Windows においてリモートデバッガをサポートしました (Bert Belder)</li>
-        <li>zlib モジュールに便利なメソッドが追加されました (Matt Robenolt)</li>
-        <li>Windows において process.kill() をサポートしました (igorzi)</li>
-        <li>Windows において process.uptime() をサポートしました (igorzi)</li>
-        <li>getaddrinfo は IPv6アドレス よりも先に IPv4 アドレスを返すようになりました</li>
-        <li>util.inspect が改善されました (Nathan Rajlich)</li>
-        <li>cluster モジュールの API が変更されました</li>
-        <li>V8 が 3.6.6.6 にダウングレードされました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.6.0/node-v0.6.0.tar.gz">http://nodejs.org/dist/v0.6.0/node-v0.6.0.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.6.0/node.exe">http://nodejs.org/dist/v0.6.0/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.6.0/">http://nodejs.org/docs/v0.6.0/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.6.0/api/">http://nodejs.org/docs/v0.6.0/api/</a><br />
-      </p>
-      
-      <h3 id="v0.5.10">Node v0.5.10</h3>
-      <p>2011.10.21, バージョン 0.5.10 (開発版)</p>
-      <ul>
-        <li>cmake ビルドシステム、Cygwin サポート、古いコードベース、process.ENV、process.ARGV、process.memoryUsage().vsize、os.openOSHandle を削除しました</li>
-        <li>ドキュメントを更新しました (Igor Zinkovsky, Bert Belder, Ilya Dmitrichenko, koichik, Maciej Małecki, Guglielmo Ferri, isaacs)</li>
-        <li>パフォーマンスを向上しました (Daniel Ennis, Bert Belder, Ben Noordhuis)</li>
-        <li>process.title が長い文字列をサポートしました (Ben Noordhuis)</li>
-        <li>net モジュールの net.Server はコールバックを1度だけ登録するようになりました (Simen Brekken)</li>
-        <li>net モジュールにおける接続キューのバグを修正しました (Ben Noordhuis)</li>
-        <li>デバッガにおけるバックトレースのエラー処理を修正しました (Fedor Indutny)</li>
-        <li>dns.lookup は c-ares の代わりに getaddrinfo を使うようになりました</li>
-        <li>crypto モジュールでストリームを閉じると end イベントが発生するようになりました</li>
-        <li>repl モジュールが undefined を出力するようになりました (Nathan Rajlich)</li>
-        <li><a href="https://github.com/joyent/node/issues/1902">#1902</a> buffer モジュールで NO_NULL_TERMINATION フラグを使うようになりました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/1907">#1907</a> httpモジュールに HTTP PATCH verb のサポートを追加しました (Thomas Parslow)</li>
-        <li><a href="https://github.com/joyent/node/issues/1644">#1644</a> Windows 環境に GetCPUInfo を追加しました (Karl Skomski)</li>
-        <li><a href="https://github.com/joyent/node/issues/1484">#1484</a> <a href="https://github.com/joyent/node/issues/1834">#1834</a> <a href="https://github.com/joyent/node/issues/1482">#1482</a> <a href="https://github.com/joyent/node/issues/771">#771</a> repl モジュールで複数コンテキストを扱わないようになりました (isaacs)</li>
-        <li><a href="https://github.com/joyent/node/issues/1882">#1882</a> zlib モジュールの availOutBefore の値とそのテストを更新しました (isaacs)</li>
-        <li><a href="https://github.com/joyent/node/issues/1888">#1888</a> child_process.fork が引数を変更しないようになりました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/1516">#1516</a> tls モジュールにおいて Firefox と Chrome に対しても requestCert を使用するようになりました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/1467">#1467</a> tls モジュールで TLS API が TCP API と矛盾する問題を解決しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/1894">#1894</a> net モジュールにおける listen() メソッドのエラー処理を修正しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/1860">#1860</a> console.error を uv_tty_t 内で処理するようになりました</li>
-        <li>V8 を 3.7.0 に更新しました</li>
-        <li>GYP を r1081 に更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.10/node-v0.5.10.tar.gz">http://nodejs.org/dist/v0.5.10/node-v0.5.10.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.10/node.exe">http://nodejs.org/dist/v0.5.10/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.5.10/">http://nodejs.org/docs/v0.5.10/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.5.10/api/">http://nodejs.org/docs/v0.5.10/api/</a><br />
-      </p>
-      
-      <h3 id="v0.5.9">Node v0.5.9</h3>
-      <p>2011.10.10, バージョン 0.5.9 (開発版)</p>
-      <ul>
-        <li>fs.watch インタフェースが、kqueue、inotify、そして ReadDirectoryChangesW により実装されました (Igor Zinkovsky, Ben Noordhuis)</li>
-        <li>dns.resolveTxt が追加されました (Christian Tellnes)</li>
-        <li>古い HTTP モジュールが削除されました (Ben Noordhuis)</li>
-        <li>child_process.fork が Windows 上で再び動作するようになりました (Igor Zinkovsky, Bert Belder)</li>
-        <li><a href="https://github.com/joyent/node/issues/1774">#1774</a> –harmony_block_scoping のコードが見直され、最適化されました (Tyler Larson, Colton Baker)</li>
-        <li><a href="https://github.com/joyent/node/issues/1813">#1813</a> Windows における Ctrl+C の扱いが修正されました (Bert Belder)</li>
-        <li><a href="https://github.com/joyent/node/issues/1844">#1844</a> –use-legacy 使用時のバグが修正されました (Ben Noordhuis)</li>
-        <li>process.stderr が libuv 内で処理されるようになり、process.stdout と process.stderr が TTY を参照する場合はブロックするようになりました</li>
-        <li>net_uv のパフォーマンスを改善しました (Ben Noordhuis, Bert Belder)</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.9/node-v0.5.9.tar.gz">http://nodejs.org/dist/v0.5.9/node-v0.5.9.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.9/node.exe">http://nodejs.org/dist/v0.5.9/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.5.9/">http://nodejs.org/docs/v0.5.9/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.5.9/api/">http://nodejs.org/docs/v0.5.9/api/</a><br />
-      </p>
-      
-      <h3 id="v0.5.8">Node v0.5.8</h3>
-      <p>2011.09.30, バージョン 0.5.8 (開発版)</p>
-      <ul>
-        <li>zlib バインディングを追加しました (isaacs)</li>
-        <li>Windows 版において TTY ANSI エスケープコードをサポートしました (Bert Belder)</li>
-        <li>Debugger を改善しました (Fedor Indutny)</li>
-        <li>crypto モジュールにおいて ERR_print_errors() による SSL エラーの参照をサポートしました (Ben Noordhuis)</li>
-        <li>DNS コールバックが MakeCallback を利用するようになりました</li>
-        <li>不正な package.json ファイルが見つかった場合にエラーを発生するようになりました (Ben Leslie)</li>
-        <li>buffer モジュールのコンストラクタが不正な長さの引数を扱うようになりました (Ben Noordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/1726">#1726</a> process.stdout を unref するようになりました</li>
-        <li>ドキュメントを更新しました</li>
-        <li>libuv を fe18438 に更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.8/node-v0.5.8.tar.gz">http://nodejs.org/dist/v0.5.8/node-v0.5.8.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.8/node.exe">http://nodejs.org/dist/v0.5.8/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.5.8/">http://nodejs.org/docs/v0.5.8/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.5.8/api/">http://nodejs.org/docs/v0.5.8/api/</a><br />
-      </p>
+      <div id="changelog">
+        <h2>変更履歴</h2> 
+        <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
 
-      <h3 id="v0.5.7">Node v0.5.7</h3>
-      <p>2011.09.16, バージョン 0.5.7 (開発版)</p>
-      <ul>
-        <li>V8 を 3.6.4 に更新しました</li>
-        <li>Windows との互換性を向上しました</li>
-        <li>ドキュメントを更新しました</li>
-        <li>デバッガと REPL を改善しました (Fedor Indutny)</li>
-        <li>旧 API サポートの追加: net.Stream(fd)、process.stdout.writable、process.stdout.fd</li>
-        <li>mkdir での EEXIST の扱いを修正しました (isaacs)</li>
-        <li>標準出力用は net_legacy の代わりに net_uv が使われるようになりました</li>
-        <li>util.inspect から readline を読み込まないようになりました</li>
-        <li><a href="https://github.com/joyent/node/issues/1673">#1673</a> V8 context のアクセサに関連するバグを修正しました (Fedor Indutny)</li>
-        <li><a href="https://github.com/joyent/node/issues/1634">#1634</a> util モジュールにおける Error の文字列化処理のバグを修正しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/1645">#1645</a> fs モジュールの WriteStream メソッドに、ファイルの位置指定書き込み機能を追加しました (Thomas Shinnick)</li>
-        <li><a href="https://github.com/joyent/node/issues/1637">#1637</a> fs モジュールの watchFile メソッドにおいて、statWatchers キャッシュが無防備な扱いになっているバグを修正しました (Thomas Shinnick)</li>
-        <li><a href="https://github.com/joyent/node/issues/1695">#1695</a> ChildProcess.spawn に customFds を送るようにしました</li>
-        <li><a href="https://github.com/joyent/node/issues/1707">#1707</a> querystring モジュールでの hasOwnProperty を利用した処理によるセキュリティホールを修正しました (isaacs)</li>
-        <li><a href="https://github.com/joyent/node/issues/1719">#1719</a> OpenSSL のエラーキューを出力するようになりました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.7/node-v0.5.7.tar.gz">http://nodejs.org/dist/v0.5.7/node-v0.5.7.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.7/node.exe">http://nodejs.org/dist/v0.5.7/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.5.7/">http://nodejs.org/docs/v0.5.7/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.5.7/api/">http://nodejs.org/docs/v0.5.7/api/</a><br />
-      </p>
-      
-      <h3 id="v0.5.6">Node v0.5.6</h3>
-      <p>2011.09.08, バージョン 0.5.6 (開発版)</p>
-      <ul>
-        <li><a href="https://github.com/joyent/node/issues/345">#345</a>, <a href="https://github.com/joyent/node/issues/1635">#1635</a>, <a href="https://github.com/joyent/node/issues/1648">#1648</a> ドキュメントを更新しました (Thomas Shinnick, Abimanyu Raja, AJ ONeal, Koichi Kobayashi, Michael Jackson, Logan Smyth, Ben Noordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/650">#650</a> Windows におけるパスのパース処理を改善しました (Bert Belder)</li>
-        <li><a href="https://github.com/joyent/node/issues/752">#752</a> OutgoingMessage.getHeader() でのヘッダー送信チェック処理を削除しました (Peter Lyons)</li>
-        <li><a href="https://github.com/joyent/node/issues/1236">#1236</a>, <a href="https://github.com/joyent/node/issues/1438">#1438</a>, <a href="https://github.com/joyent/node/issues/1506">#1506</a>, <a href="https://github.com/joyent/node/issues/1513">#1513</a>, <a href="https://github.com/joyent/node/issues/1621">#1621</a>, <a href="https://github.com/joyent/node/issues/1640">#1640</a>, <a href="https://github.com/joyent/node/issues/1647">#1647</a> libuv に関連する複数のバグを修正しました (Jorge Chamorro Bieling, Peter Bright, Luis Lavena, Igor Zinkovsky)</li>
-        <li><a href="https://github.com/joyent/node/issues/1296">#1296</a>, <a href="https://github.com/joyent/node/issues/1612">#1612</a> crypto モジュールでの BIO の扱いを修正しました (Koichi Kobayashi)</li>
-        <li><a href="https://github.com/joyent/node/issues/1345">#1345</a> libuv バックエンド使用時に socket.remoteAddress が正しく設定されるようになりました (Bert Belder)</li>
-        <li><a href="https://github.com/joyent/node/issues/1429">#1429</a> Windows のコンソールにおいて Quick Edit モードを勝手に変更しないようになりました (Peter Bright)</li>
-        <li><a href="https://github.com/joyent/node/issues/1503">#1503</a> Unix 環境において libuv バックエンドが標準になりました。以前のバックエンドを使用するには、–use-legacy オプションを指定して実行します</li>
-        <li><a href="https://github.com/joyent/node/issues/1565">#1565</a> Windows での fs.stat における \ で終わるパスの扱いを修正しました (Igor Zinkovsky)</li>
-        <li><a href="https://github.com/joyent/node/issues/1568">#1568</a> x509 証明書の所有者名のパース処理を修正しました (Koichi Kobayashi)</li>
-        <li><a href="https://github.com/joyent/node/issues/1586">#1586</a> socket.write() のエンコーディング指定で、大文字と小文字を区別しないようになりました (Koichi Kobayashi)</li>
-        <li><a href="https://github.com/joyent/node/issues/1591">#1591</a>, <a href="https://github.com/joyent/node/issues/1656">#1656</a>, <a href="https://github.com/joyent/node/issues/1657">#1657</a> libuv に fs モジュールを実装し、Windows における libeio と pthread-win32 への依存を無くしました (Igor Zinkovsky, Ben Noordhuis, Ryan Dahl, Isaac Schlueter)</li>
-        <li><a href="https://github.com/joyent/node/issues/1592">#1592</a> Windows における起動時に CreateSymbolicLink を読み込まないようにしました (Peter Bright)</li>
-        <li><a href="https://github.com/joyent/node/issues/1601">#1601</a> HTTPクライアントリクエストを扱うソケット処理のAPI整合性を改善しました (Mikeal Rogers)</li>
-        <li><a href="https://github.com/joyent/node/issues/1610">#1610</a> DigiNotar 認証局を信頼済みリストから削除しました (Isaac Schlueter)</li>
-        <li><a href="https://github.com/joyent/node/issues/1617">#1617</a> いくつかの Win32 プラットフォーム関数を追加しました (Karl Skomski)</li>
-        <li><a href="https://github.com/joyent/node/issues/1624">#1624</a> ‘binary’ エンコーディングでのバッファオーバーランを回避する処理が追加されました (Koichi Kobayashi)</li>
-        <li><a href="https://github.com/joyent/node/issues/1633">#1633</a> Buffer.write() において _charsWritten が常に設定されるようになりました (Koichi Kobayashi)</li>
-        <li><a href="https://github.com/joyent/node/issues/1644">#1644</a> Windows 用 node.exe がコンソールプログラム用の実行可能形式になりました (Peter Bright)</li>
-        <li><a href="https://github.com/joyent/node/issues/1651">#1651</a> 疎な配列の文字列化処理を改善しました (Koichi Kobayashi)</li>
-        <li><a href="https://github.com/joyent/node/issues/1672">#1672</a> ソケットのハングアップエラー時の code プロパティに ’ECONNRESET’ が設定されるようになりました (Ben Noordhuis)</li>
-        <li>foaf+ssl クライアント証明書のテストケースを追加しました (Niclas Hoyer)</li>
-        <li>実行時のライブラリパスを上書きするために RPATH 環境変数を追加しました (Ashok Mudukutore)</li>
-        <li>TLS client-side session resumption をサポートしました (Sean Cunningham)</li>
-        <li>getPeerCertificate にさらなるプロパティを追加しました (Nathan Rixham, Niclas Hoyer)</li>
-        <li>REPL においてエラーが発生した場合に、コマンドを2回評価しないようになりました (Nathan Rajlich)</li>
-        <li>util.isDate() を改善しました (Nathan Rajlich)</li>
-        <li>libuv バックエンドとそのバインディングを改善し、bd6066cb349a9b3a1b0d87b146ddaee06db31d10 にアップグレードしました</li>
-        <li>lib/sys.js 使用時に警告を表示するようになりました (Maciej Malecki)</li>
-        <li>URL のプロトコルでプラス記号 (+) が利用可能になりました (Maciej Malecki)</li>
-        <li>V8 を 3.6.2 に更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.6/node-v0.5.6.tar.gz">http://nodejs.org/dist/v0.5.6/node-v0.5.6.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.6/node.exe">http://nodejs.org/dist/v0.5.6/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.5.6/">http://nodejs.org/docs/v0.5.6/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.5.6/api/">http://nodejs.org/docs/v0.5.6/api/</a><br />
-      </p>
-      
-      <h3 id="v0.5.5">Node v0.5.5</h3>
-      <p>2011.08.26, バージョン 0.5.5 (開発版)</p>
-      <ul>
-        <li>typed array が Plesk によって実装されました</li>
-        <li>SunOS における IP マルチキャストを修正しました</li>
-        <li>DNS ルックアップの順序を IPv4、IPv6 の順に修正しました (-use-uv 使用時のみ)</li>
-        <li>UNIX データグラムソケットのサポートを削除しました (-use-uv 使用時のみ)</li>
-        <li>Windows において、UDP をサポートしました (Bert Belder)</li>
-        <li><a href="https://github.com/joyent/node/issues/1572">#1572</a> REPL における tab キーによるオブジェクトの補完を改善しました(Nathan Rajlich)</li>
-        <li><a href="https://github.com/joyent/node/issues/1563">#1563</a> child_process モジュールでのバッファオーバーフローを修正しました (Dean McNamee による報告)</li>
-        <li><a href="https://github.com/joyent/node/issues/1546">#1546</a> http モジュールにおけるパフォーマンス低下を修正しました (Brian Geffon による報告)</li>
-        <li><a href="https://github.com/joyent/node/issues/1491">#1491</a> PBKDF2 暗号化サポートを追加しました (Glen Low)</li>
-        <li><a href="https://github.com/joyent/node/issues/1447">#1447</a> 非推奨になっていた http.cat() メソッドを削除しました (Mikeal Rogers)</li>
-        <li><a href="https://github.com/joyent/node/issues/1140">#1140</a> vm.runInContext() における filename 引数の不正な処理を修正しました (Antranig Basman)</li>
-        <li><a href="https://github.com/joyent/node/issues/1140">#1140</a> vm.runInContext()  と vm.createContext() のドキュメントを追加しました (Antranig Basman)</li>
-        <li><a href="https://github.com/joyent/node/issues/1428">#1428</a> 64bit FreeBSD における os.freemem() を修正しました (Artem Zaytsev)</li>
-        <li><a href="https://github.com/joyent/node/issues/1164">#1164</a> 全ての DNS ルックアップを非同期化し、想定外の例外を修正しました (Koichi Kobayashi)</li>
-        <li>不正な SSL 終了確認処理を修正しました (Tom Hughes)</li>
-        <li>CMake の多くの部分を改善しました (Tom Hughes)</li>
-        <li>ドキュメントを更新しました (Koichi Kobayashi, Logan Smyth, Fedor Indutny, Mikeal Rogers, Maciej Małecki, Antranig Basman, Mickaël Delahaye)</li>
-        <li>libuv をコミット 835782a に更新しました</li>
-        <li>V8 を 3.5.8 に更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.5/node-v0.5.5.tar.gz">http://nodejs.org/dist/v0.5.5/node-v0.5.5.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.5/node.exe">http://nodejs.org/dist/v0.5.5/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.5.5/">http://nodejs.org/docs/v0.5.5/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.5.5/api/">http://nodejs.org/docs/v0.5.5/api/</a><br />
-      </p>
-      <p>
-      上記の .exe には Windows XP と Windows Server 2003 に互換性がないというバグがあります。この問題は GitHub Issue の <a href="https://github.com/joyent/node/issues/1572">#1592</a> として報告され、すでに修正されています。古い Windows にも互換性がある新しいバイナリは下記の URL からダウンロードすることができます。<br />
-      <a href="http://nodejs.org/dist/v0.5.5/node-186364e.exe">http://nodejs.org/dist/v0.5.5/node-186364e.exe</a>
-      </p>
-      
-      <h3 id="v0.5.4">Node v0.5.4</h3>
-      <p>2011.08.12, バージョン 0.5.4 (開発版)</p>
-      <ul>
-        <li>libuv と Windows の互換性を向上しました</li>
-        <li>GYP による Microsoft Visual Studio でのビルドに対応しました。sln ファイルを作成には generate-projects.bat を使用してください (Peter Bright, Igor Zinkovsky)</li>
-        <li>Mikeal が開発した HTTP クライアントが標準になりました。古い HTTP クライアントを利用する場合は --use-http1 を使用してください</li>
-        <li>HTTPS における host ヘッダーの標準ポートの扱いを修正しました (Mikeal Rogers)</li>
-        <li>#1440 *.js や *.json ファイルの読み込み時にバイトオーダーマーカーを除去するようになりました (Ben Noordhuis)</li>
-        <li>#1434 util.format() を改善し、ブラウザとの互換性が向上しました (Koichi Kobayashi)</li>
-        <li>整数型用 Buffer.read/writeInt メソッドに unchecked uint 用のエントリーポイントが提供されました (Robert Mustacchi)</li>
-        <li>CMake を改善しました (Tom Huges)</li>
-        <li>V8 を 3.5.4 に更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.4/node-v0.5.4.tar.gz">http://nodejs.org/dist/v0.5.4/node-v0.5.4.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.4/node.exe">http://nodejs.org/dist/v0.5.4/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.4/docs/">http://nodejs.org/dist/v0.5.4/docs/</a><br />
-      ドキュメント: <a href="http://nodejs.org/dist/v0.5.4/docs/api/">http://nodejs.org/dist/v0.5.4/docs/api/</a><br />
-      </p>
-      
-      <h3 id="v0.5.3">Node v0.5.3</h3>
-      <p>2011.08.01, バージョン 0.5.3 (開発版)</p>
-      <ul>
-        <li>crypto モジュールでの Base64 を用いた暗号化/復号化機能を修正しました (SAWADA Tadashi)</li>
-        <li>#243 Buffer.write() にオプションの length 引数を追加しました (koichik)</li>
-        <li>#657 fs.writeFile/Sync において、バッファでないデータを文字列に変換するようになりました (Daniel Pihlström)</li>
-        <li>process.features が追加され、process.useUV が削除されました (Ben Noordhuis)</li>
-        <li>#324 crypto モジュールの hmac がバイナリキーを受け付けるように修正され、RFC 2202と4231からテストケースが追加されました (Stefan Bühler)</li>
-        <li>Socket::bytesRead と Socket::bytesWritten が追加されました (Alexander Uvarov)</li>
-        <li>#572 --eval で CLI が実行された場合に、結果を出力しないようになりました (Ben Noordhuis)</li>
-        <li>#1223 end() が2回呼ばれると http.ClientRequest がクラッシュする問題が修正されました (koichik)</li>
-        <li>#1383 全ての接続が切られた後に close イベントを発生させるようになりました (Felix Geisendörfer)</li>
-        <li>sprintf に似た util.format() 関数が追加されました (Ben Noordhuis)</li>
-        <li>TLS SNI のサポートが追加されました (Fedor Indutny)</li>
-        <li>新しいHTTPエージェントが実装されました。デフォルトでは無効化されており、実行時に --use-http2 を指定することで有効化することができます。また、make test-http2 を実行すると新しい実装のためのテストを実行することができます (Mikeal Rogers)</li>
-        <li>AMD 互換機能を削除しました (isaacs)</li>
-        <li>Windows 対応を進め、child_process をサポートしました</li>
-        <li>pkg-config ファイルを削除しました</li>
-        <li>起動時に時間がかかる問題を修正しました</li>
-        <li>ドキュメントを更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.3/node-v0.5.3.tar.gz">http://nodejs.org/dist/v0.5.3/node-v0.5.3.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.3/node.exe">http://nodejs.org/dist/v0.5.3/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.3/docs">http://nodejs.org/dist/v0.5.3/docs</a><br />
-      ドキュメント: <a href="http://nodejs.org/dist/v0.5.3/docs/api">http://nodejs.org/dist/v0.5.3/docs/api</a><br />
-      </p>
-      
-      <h3 id="v0.5.2">Node v0.5.2</h3>
-      <p>2011.07.22, バージョン 0.5.2 (開発版)</p>
-      <ul>
-        <li>libuv を改良し、名前付きパイプをサポートしました</li>
-        <li>#1242 SSL_COMP_get_compression_methods() の確認 (Ben Noordhuis)</li>
-        <li>#1348 require.paths を削除しました (isaacs)</li>
-        <li>#1349 Windows での ; によるNODE_PATH 区切りをサポートしました (isaacs)</li>
-        <li>#1335 C++ から EventEmitter を削除しました</li>
-        <li>#1357 require() によるJSONファイルの読み込みに対応しました (isaacs)</li>
-        <li>#1374 writeHead での ServerResponse.statusCode 設定を修正しました (Trent Mick)</li>
-        <li>GC が必要以上に実行されるのを修正しました</li>
-        <li>V8 を 3.4.14 に更新しました</li>
-        <li>ドキュメントを更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.2/node-v0.5.2.tar.gz">http://nodejs.org/dist/v0.5.2/node-v0.5.2.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.2/node.exe">http://nodejs.org/dist/v0.5.2/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.2/docs/">http://nodejs.org/dist/v0.5.2/docs/</a><br />
-      ドキュメント: <a href="http://nodejs.org/dist/v0.5.2/docs/api/">http://nodejs.org/dist/v0.5.2/docs/api/</a><br />
-      </p>
-            
-      <h3 id="v0.5.1">Node v0.5.1</h3>
-      <p>2011.07.14, バージョン 0.5.1 (開発版)</p>
-      <ul>
-        <li>#1233 FreeBSD amd64 での os.totalmem を修正しました (Artem Zaytsev)</li>
-        <li>#1149 url.parse が IDNA と Punycode をサポートしました (Jeremy Selier, Ben Noordhuis, isaacs)</li>
-        <li>uv と V8 ビルドシステム に $CC と $CXX をエクスポートしました</li>
-        <li>pthread-win32 静的ライブラリをビルドに含めるようになりました (Igor Zinkovsky)</li>
-        <li>#1199, #1094 64ビット環境で巨大なファイルを扱えない問題を修正しました (koichik)</li>
-        <li>#1281 module クラスのインスタンス変数に require を追加しました (isaacs)</li>
-        <li>#1303 Stream.pipe が接続先を返すようになりました (Elijah Insua)</li>
-        <li>#1229 アドオンは -DEV_MULTIPLICITY=0 をするべきではありません (Brian White)</li>
-        <li>libuv バックエンドの改善しました</li>
-        <li>V8 を 3.4.10 に更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz">http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz</a><br />
-      Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.1/node.exe">http://nodejs.org/dist/v0.5.1/node.exe</a><br />
-      ウェブサイト: <a href="http://nodejs.org/dist/v0.5.1/docs/">http://nodejs.org/dist/v0.5.1/docs/</a><br />
-      ドキュメント: <a href="http://nodejs.org/dist/v0.5.1/docs/api/">http://nodejs.org/dist/v0.5.1/docs/api/</a><br />
-      </p>
-              
-      <h3 id="v0.5.0">Node v0.5.0</h3>
-      <p>2011.07.05, バージョン 0.5.0 (開発版)</p>
-      <ul>
-        <li>Windows における IOCP サポートのための新しい libuv バックエンド。非標準のため、--use-uv オプションで有効化することができます</li>
-        <li>http.cat が非推奨になりました</li>
-        <li>ドキュメントを更新しました</li>
-        <li>child_process.fork を追加しました</li>
-        <li>fs.utimes() と fs.futimes() のサポートを追加しました (Ben Noordhuis)</li>
-        <li>process.uptime() を追加しました (Tom Huges)</li>
-        <li>path.relative を追加しました (Tony Huang)</li>
-        <li>os.getNetworkInterfaces() を追加しました</li>
-        <li>TCPクライアント接続のために remoteAddress と remotePort を追加しました (Brian White)</li>
-        <li>secureOptions フラグ、暗号化設定、SSL_OP_CRYPTOPRO_TLSEXT_BUG を TLS に追加しました (Theo Schlossnagle)</li>
-        <li>process.arch を追加しました(Nathan Rajlich)</li>
-        <li>バッファにおける float と double の読み書き機能を追加しました (Brian White)</li>
-        <li>stdin からのスクリプトの読み込みが可能になりました</li>
-        <li>#477 memset を実行するための Buffer::fill メソッドを追加しました (Konstantin Käfer)</li>
-        <li>#573 crypto モジュールが Diffie-Hellman 鍵交換方式をサポートしました (Håvard Stranden)</li>
-        <li>#695 buffer に 'hex' エンコーディングのサポートを追加しました (isaacs)</li>
-        <li>#851 REPLServer でのコンテキストの扱い方を更新しました (Ben Weaver)</li>
-        <li>#853 fs.lchow、fs.lchmod、fs.fchmod、fs.fchown を追加しました (isaacs)</li>
-        <li>#889 全ての EventEmitter リスナーを1度に削除することが可能になりました (Felix Geisendörfer)</li>
-        <li>#926 OpenSSL NPN をサポートしました (Fedor Indutny)</li>
-        <li>#955 REPL での ^C の扱いを変更しました (isaacs)</li>
-        <li>#979 UNIX ドメインソケットのサポートを HTTP モジュールに追加しました (Mark Cavage)</li>
-        <li>#1173 #1170 非同期モジュールの定義に AMD を追加しました (isaacs)</li>
-        <li>DTrace による計測: X-Forwarded-For をサポートしました (Dave Pacheco)</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/node-v0.5.0.tar.gz">http://nodejs.org/dist/node-v0.5.0.tar.gz</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.5.0/">http://nodejs.org/docs/v0.5.0/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.5.0/api/">http://nodejs.org/docs/v0.5.0/api/</a><br />
-      </p>
-      
-      <h3 id="v0.4.12">Node v0.4.12</h3>
-      <p>2011.09.15, バージョン 0.4.12 (安定版)</p>
-      <ul>
-        <li>ドキュメントを更新しました</li>
-        <li><a href="https://github.com/joyent/node/issues/1563">#1563</a> ChildProcess の custom_fd 利用時に発生するバッファオーバーフローを修正しました</li>
-        <li><a href="https://github.com/joyent/node/issues/1569">#1569</a> 複数行 HTTP ヘッダーのパースエラーを修正しました (Ben Noordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/1586">#1586</a> net モジュールにおける socket.write() のエンコーディング指定で、大文字と小文字を区別しないようになりました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/1610">#1610</a> DigiNotar 認証局を信頼済みリストから削除しました (isaacs)</li>
-        <li><a href="https://github.com/joyent/node/issues/1624">#1624</a> buffer モジュールに ‘binary’ エンコーディングでのバッファオーバーランを回避する処理を追加しました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/1633">#1633</a> Buffer.write() において _charsWritten が常に設定されるようになりました (koichik)</li>
-        <li><a href="https://github.com/joyent/node/issues/1707">#1707</a> querystring モジュールでの hasOwnProperty を利用した処理によるセキュリティホールを修正しました (isaacs)</li>
-        <li><a href="https://github.com/joyent/node/issues/1719">#1719</a> OpenSSL のエラーキューを出力するようになりました</li>
-        <li>net.Server.listen におけるエラー出力を修正しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.12.tar.gz">http://nodejs.org/dist/node-v0.4.12.tar.gz</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.12/">http://nodejs.org/docs/v0.4.12/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.4.12/api/">http://nodejs.org/docs/v0.4.12/api/</a><br />
-      </p>
-      
-      <h3 id="v0.4.11">Node v0.4.11</h3>
-      <p>2011.08.17, バージョン 0.4.11 (安定版)</p>
-      <ul>
-        <li><a href="https://github.com/joyent/node/issues/738">#738</a> crypto モジュールでの Base64 を用いた暗号化/復号化機能を修正しました  (SAWADA Tadashi)</li>
-        <li><a href="https://github.com/joyent/node/issues/1202">#1202</a> net.createConnection の DNS ルックアップエラーイベントが、次の tick で発生するようになりました (Ben Noordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/1374">#1374</a> writeHead 実行時に ServerResponse.statusCode が反映されるように修正しました (Ben Noordhuis)</li>
-        <li><a href="https://github.com/joyent/node/issues/1417">#1417</a> end() が2回呼ばれると http.ClientRequest がクラッシュする問題が修正されました</li>
-        <li><a href="https://github.com/joyent/node/issues/1497">#1497</a> querystring モジュールにおける 'in' を用いた判定処理が 'hasOwnProperty' に置き換えられました  (isaacs)</li>
-        <li><a href="https://github.com/joyent/node/issues/1546">#1546</a> http モジュールのパフォーマンスが改善されました</li>
-        <li>libeio のメモリリークが修正されました (Tom Hughes)</li>
-        <li>CMake を改善しました (Tom Hughes)</li>
-        <li>node_net.cc における不正な sizeof() を修正しました (Tom Hughes)</li>
-        <li>Windows XP/cygwin 環境において GetConsoleTitleW エラーが発生しないようになりました (Bert Belder)</li>
-        <li>ドキュメントを更新しました (koichik, Logan Smyth, Ben Noordhuis, Arnout Kazemier)</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.11.tar.gz">http://nodejs.org/dist/node-v0.4.11.tar.gz</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.11/">http://nodejs.org/docs/v0.4.11/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.4.11/api/">http://nodejs.org/docs/v0.4.11/api/</a><br />
-      </p>
-      
-      <h3 id="v0.4.10">Node v0.4.10</h3>
-      <p>2011.07.19, バージョン 0.4.10 (安定版)</p>
-      <ul>
-        <li>#394 Buffer が UTF-8 の扱いおいて最後の NULL 文字をドロップする問題を修正しました</li>
-        <li>#829 V8 のリビジョン r8577 をバックポートしました (Ben Noordhuis)</li>
-        <li>#877 HTTP エージェントソケットプールが接続の確立を待たなくなりました</li>
-        <li>#915 FreeBSD の kqueue を確実に認識するようになりました (Brett Kiefer)</li>
-        <li>#1085 HTTP の abort/dispatch コードを修正しました (Stefan Rusu)</li>
-        <li>#1274 デバッガを改善しました (Yoshihiro Kikuchi)</li>
-        <li>#1291 HEAD メソッドでの end (body) が適切な応答を返すようになりました (Reid Burke)</li>
-        <li>#1304 TLS の abort/connection コードを修正しました (Stefan Rusu)</li>
-        <li>#1360 URL ホストネームにおいて _ が許容されるようになりました</li>
-        <li>37d529f8 の削除 – デバッガコマンドの構文解析を廃止しました</li>
-        <li>グローバルな execScript を復帰しました</li>
-        <li>ドキュメントを更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.10.tar.gz">http://nodejs.org/dist/node-v0.4.10.tar.gz</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.10/">http://nodejs.org/docs/v0.4.10/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.4.10/api/">http://nodejs.org/docs/v0.4.10/api/</a><br />
-      </p>
-      
-      <h3 id="v0.4.9">Node v0.4.9</h3>
-      <p>2011.06.29, パージョン 0.4.9 (安定版)</p>
-      <ul>
-        <li>ドキュメントを改善しました</li>
-        <li>#1095 stream.pipe() におけるエラー処理のバグを修正しました  (Felix Geisendörfer)</li>
-        <li>#1097 node_crypto.cc におけるいくつかのメモリーリークを修正しました (Ben Noordhuis)</li>
-        <li>#562 #1078 適切に file:// で始まるURLをパースするようになりました (Ryan Petrello)</li>
-        <li>#880 SSLv2 を無効化するオプションを追加しました (Jérémy Lal)</li>
-        <li>#1087 古い OpenSSL での SSL 圧縮無効化処理を無効にしました</li>
-        <li>#1144 デバッガ: 不正なコマンドによる入力を無効化しました (Siddharth Mahendraker)</li>
-        <li>util.inherits のパフォーマンスを改善しました</li>
-        <li>#1166 RSA/DSA の公開鍵を利用した証明書をサポートしました (Mark Cavage)</li>
-        <li>#1177 入れ子状のプロジェクト構造をよりよくサポートするために、node_module 検索最適化処理を削除しました (Mathias Buus)</li>
-        <li>#1203 scope.Close を fs.sendfileSync に追加しました</li>
-        <li>#1187 複数の 'link' ヘッダーをサポートしました</li>
-        <li>#1196 -e/-eval で node_modules からモジュールを読み込みできない問題を修正しました (Koichi Kobayashi)</li>
-        <li>V8 を 3.1.8.25に更新し、 http-parser も更新しました</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.9.tar.gz">http://nodejs.org/dist/node-v0.4.9.tar.gz</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.9/">http://nodejs.org/docs/v0.4.9/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.4.9/api/">http://nodejs.org/docs/v0.4.9/api/</a><br />
-      </p>
-      
-      <h3 id="v0.4.8">Node v0.4.8</h3>
-      <p>2011.05.20, パージョン 0.4.8 (安定版)</p>
-      <ul>
-        <li>#974 トレースレスなエラーを正しく報告するようになりました (isaacs)</li>
-        <li>#983 REPL における、JSON.parse のエラー検出が改善されました (isaacs)</li>
-        <li>#836 req が存在する場合にのみ、エージェントソケットのエラーが req に通知されるようになりました</li>
-        <li>#1041 イベントリスナーのリークチェックタイミングが修正されました (koichik)</li>
-        <li>#1038 dns.resolve()に 'PTR' を渡した際に Unknown type "PTR" エラーが発生する問題を修正 (koichik)</li>
-        <li>#1073 サーバーコネクション間で SSL コンテキストが共有されるようになりました (Fedor Indutny)</li>
-        <li>OpenSSL を使った圧縮処理を無効にすることでメモリーパフォーマンスが向上しました</li>
-        <li>SunOS 用の os.totalmem() と os.freemem() が実装されました (Alexandre Marangone)</li>
-        <li>URLリグレッションにおける特殊文字を修正しました (isaacs)</li>
-        <li>HTTPSにおけるアイドルタイムアウトが修正されました (Felix Geisendörfer)</li>
-        <li>SlowBuffer.write() に 'ucs2' を渡した際に ReferenceError が発生する問題を修正しました (koichik)</li>
-        <li>http.ServerRequestの 'close' イベント時に、時々エラー引数が渡される問題を修正しました (Felix Geisendörfer)</li>
-        <li>ドキュメントを更新しました</li>
-        <li>cleartextstream.destroy() が socket を close(2) するようになりました。以前は shutdown(2) システムコールを利用していました</li>
-        <li>通常のビルド時に asserts や debug ステートメントをコンパイルしないようになりました</li>
-        <li>Debugger を改善しました</li>
-        <li>V8 エンジンを 3.1.8.16 に更新しました。</li>
-      </ul>
-      <p>
-      ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.8.tar.gz">http://nodejs.org/dist/node-v0.4.8.tar.gz</a><br />
-      ウェブサイト: <a href="http://nodejs.org/docs/v0.4.8/">http://nodejs.org/docs/v0.4.8/</a><br />
-      ドキュメント: <a href="http://nodejs.org/docs/v0.4.8/api/">http://nodejs.org/docs/v0.4.8/api/</a><br />
-      </p>
-    </div>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-2570409-8']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+        <div class="section">
+          <h3 id="v0.7.5">Node v0.7.5</h3>
+          <dl>
+            <dt>2012.02.23, バージョン 0.7.5 (開発版)</dt>
+            <dd>起動時間が改善されました (Maciej Małecki)</dd>
+            <dd>crypto モジュールに getDiffieHellman() 関数が追加されました (Tomasz Buchert)</dd>
+            <dd>buffer モジュールが URL セーフな Base64 のデコードをサポートしました (Ben Noordhuis)</dd>
+            <dd>QueryString.parse() を高速化しました (Brian White)</dd>
+            <dd>url モジュールが auth セクションのURLエンティティをデコードするようになりました (Ben Noordhuis)</dd>
+            <dd>http モジュールが PURGE リクエストメソッドをサポートしました (Ben Noordhuis)</dd>
+            <dd>http モジュールがレスポンスの Date ヘッダーを生成するようになりました (Mark Nottingham)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2762">#2762</a> net モジュールの close 関数にコールバックを追加しました (Mikeal Rogers)</dd>
+            <dd>dgram モジュールがメモリー外の読み出しをおこなってしまう問題を修正しました (Ben Noordhuis)</dd>
+            <dd>repl モジュールにビルトインモジュールの自動読み込み機能を追加しました (Brandon Benvie)</dd>
+            <dd>repl モジュールにおいて、可能な場合にコードが2度評価される機能を削除しました (Fedor Indutny)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2737">#2737</a> <a href="https://github.com/joyent/node/issues/2756">#2756</a> Readline を改善しました (Colton Baker)</dd>
+            <dd>Solaris においてビルド時の -fomit-frame-pointer を無効化しました (Dave Pacheco)</dd>
+            <dd>ビルド時のアーキテクチャ検出を向上しました (Nathan Rajlich)</dd>
+            <dd>Fat バイナリを生成するように OS X パッケージのビルド用 Makefile を変更しました (Nathan Rajlich)</dd>
+            <dd>'make test' 時に src/ と lib/ に対して JSLint が実行されるようになりました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.5/node-v0.7.5.tar.gz">http://nodejs.org/dist/v0.7.5/node-v0.7.5.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.5/node-v0.7.5.msi">http://nodejs.org/dist/v0.7.5/node-v0.7.5.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.5/node-v0.7.5.pkg">http://nodejs.org/dist/v0.7.5/node-v0.7.5.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.5/">http://nodejs.org/docs/v0.7.5/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.5/api/">http://nodejs.org/docs/v0.7.5/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.7.4">Node v0.7.4</h3>
+          <dl>
+            <dt>2012.02.14, バージョン 0.7.4 (開発版)</dt>
+            <dd>V8 を 3.9.5 に更新しました</dd>
+            <dd>npm を 1.1.1 に更新しました</dd>
+            <dd>build 時の host_arch の検出を改善しました (Karl Skomski)</dd>
+            <dd>debugger 用の debug_port プロパティを process モジュールに移動しました (Fedor Indutny)</dd>
+            <dd>API ドキュメントの CSS バグを修正しました (isaacs)</dd>
+            <dd>UNIX 環境において native アドオンのビルド時に -fPIC を設定するようになりました (Nathan Rajlich)</dd>
+            <dd>処理の先頭で v8::Locker を再び使用するようになりました (Marcel Laverdet)</dd>
+            <dd>API ドキュメントの画像が配布用の tar ボールに含まれないようになりました (isaacs)</dd>
+            <dd>libuv の uv_export と uv_import を削除しました (Ben Noordhuis)</dd>
+            <dd>Windows において x64 ビルドをサポートしました (Igor Zinkovsky)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.tar.gz">http://nodejs.org/dist/v0.7.4/node-v0.7.4.tar.gz</a></li> 
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.msi">http://nodejs.org/dist/v0.7.4/node-v0.7.4.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.pkg">http://nodejs.org/dist/v0.7.4/node-v0.7.4.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.4/">http://nodejs.org/docs/v0.7.4/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.4/api/">http://nodejs.org/docs/v0.7.4/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.7.3">Node v0.7.3</h3>
+          <dl>
+            <dt>2012.02.07, バージョン 0.7.3 (開発版)</dt>
+            <dd>V8 を 3.9.2 に更新しました</dd>
+            <dd>isolate のサポートを削除しました (Ben Noordhuis)</dd>
+            <dd>cluster モジュールについてドキュメントの整理、イベント処理の最適化、process.disconnect を使用するように変更しました (Andreas Madsen)</dd>
+            <dd>Windows 環境での gyp_addon において node.lib をリンクするようになりました (Nathan Rajlich)</dd>
+            <dd>http モジュールの http-parser が2回解放されてしまう場合があるのを修正しました (koichik)</dd>
+            <dd>Windows 環境で RTTI と例外処理が無効化されました (Bert Belder)</dd>
+          </dl>
+          <ul> 
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.3/node-v0.7.3.tar.gz">http://nodejs.org/dist/v0.7.3/node-v0.7.3.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.3/node-v0.7.3.msi">http://nodejs.org/dist/v0.7.3/node-v0.7.3.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.3/node-v0.7.3.pkg">http://nodejs.org/dist/v0.7.3/node-v0.7.3.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.3/">http://nodejs.org/docs/v0.7.3/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.3/api/">http://nodejs.org/docs/v0.7.3/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.7.2">Node v0.7.2</h3>
+          <dl>
+            <dt>2012.02.01, バージョン 0.7.2 (開発版)</dt>
+            <dd>V8 を 3.8.9 に更新しました</dd>
+            <dd>Isolates 間の共有ストリームをサポートしました (Igor Zinkovsky)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2636">#2636</a> http_parser が予定よりも早く解放されてしまう場合がある問題を修正しました (koichik)</dd>
+            <dd>url モジュールが IPv6 アドレスを含む URL をサポートしました  (Łukasz Walukiewicz)</dd>
+            <dd>child_process モジュールの子プロセスに disconnect() メソッドが追加されました (Andreas Madsen)</dd>
+            <dd>fs モジュールにおいて、ファイルを開く場合に限定して O_EXCL サポートが追加されました  (Ben Noordhuis)</dd>
+            <dd>fs モジュールのエラーメッセージがより明確になりました (Tj Holowaychuk)</dd>
+            <dd>tty モジュールにおいてキーシーケンスが見つからなかった場合に 'unknown' キーイベントを発生するようになりました (Dan VerWeire, Nathan Rajlich)</dd>
+            <dd>ビルド時に BUILDTYPE=Debug が指定された場合でも Release ビルドをコンパイルするようになりました (Ben Noordhuis)</dd>
+            <dd>シンボリックリンクのスクリプトに対して –-debug-brk オプションを使用できない問題を修正しました (Fedor Indutny)</dd>
+            <dd>zlib モジュールにおいて辞書の設定が失敗する問題を修正しました (Fedor Indutny)</dd>
+            <dd>waf において OS X 向けの arch ターゲットが追加されました (Fedor Indutny)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.2/node-v0.7.2.tar.gz">http://nodejs.org/dist/v0.7.2/node-v0.7.2.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.2/node-v0.7.2.msi">http://nodejs.org/dist/v0.7.2/node-v0.7.2.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.2/node-v0.7.2.pkg">http://nodejs.org/dist/v0.7.2/node-v0.7.2.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.2/">http://nodejs.org/docs/v0.7.2/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.2/api/">http://nodejs.org/docs/v0.7.2/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.7.1">Node v0.7.1</h3>
+          <dl>
+            <dt>2012.01.23, バージョン 0.7.1 (開発版)</dt>
+            <dd>V8 を 3.8.8 に更新しました</dd>
+            <dd>node-waf を標準でインストールするようになりました (Fedor Indutny)</dd>
+            <dd>crypto モジュールに PKCS パディングを無効にする機能を追加しました (Ingmar Runge)</dd>
+            <dd>v8 に SunOS 用の VirtualMemory クラスが実装されました (Ben Noordhuis)</dd>
+            <dd>cluster.setupMaster メソッドが追加されました (Andreas Madsen)</dd>
+            <dd>path.exists* が fs.exists* 移動されました (Maciej Małecki)</dd>
+            <dd>Typed Array のクラス名が設定されました (Ben Noordhuis)</dd>
+            <dd>libuv のバグを修正しました (Igor Zinkovsky, Ben Noordhuis, Dan VerWeire)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.1/node-v0.7.1.tar.gz">http://nodejs.org/dist/v0.7.1/node-v0.7.1.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.1/node-v0.7.1.msi">http://nodejs.org/dist/v0.7.1/node-v0.7.1.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.1/node-v0.7.1.pkg">http://nodejs.org/dist/v0.7.1/node-v0.7.1.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.1/">http://nodejs.org/docs/v0.7.1/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.1/api/">http://nodejs.org/docs/v0.7.1/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.7.0">Node v0.7.0</h3>
+          <dl>
+            <dt>2012.01.16, バージョン 0.7.0 (開発版)</dt>
+            <dd>V8 を 3.8.6 に更新しました</dd>
+            <dd>UNIX 環境で GYP ビルドシステムを利用するようになりました (Ben Noordhuis)</dd>
+            <dd>実験的な Isolate サポート (Ben Noordhuis)</dd>
+            <dd>Cluster API を改善しました (Andreas Madsen)</dd>
+            <dd>内部デバッガが Isolate を利用するようになりました (Fedor Indutny)</dd>
+            <dd>バグを修正しました</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.tar.gz">http://nodejs.org/dist/v0.7.0/node-v0.7.0.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.msi">http://nodejs.org/dist/v0.7.0/node-v0.7.0.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg">http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.0/">http://nodejs.org/docs/v0.7.0/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.6.11">Node v0.6.11</h3> 
+          <dl>
+            <dt>2012.02.17, バージョン 0.6.11 (安定版)</dt>
+            <dd>http モジュールにおいて、複数の WebSocket RFC6455 ヘッダーに対応しました (Einar Otto Stangvik)</dd>
+            <dd>http モジュールにおいて、複数の WWW-Authenticate ヘッダーに対応しました (Ben Noordhuis)</dd>
+            <dd>Windows 環境において、ユニコード形式の argv と環境変数をサポートしました  (Bert Belder)</dd>
+            <dd>tls モジュールにおいてセッション再ネゴシエーション攻撃を緩和する機能を追加しました (Ben Noordhuis)</dd>
+            <dd>tcp モジュールと pipe モジュールにおいて uv_accept() エラーのアサートを削除しました (Ben Noordhuis)</dd>
+            <dd>tls モジュールが、既存のソケットでセキュア接続を確立できるようになりました (koichik)</dd>
+            <dd>dgram モジュールが、DNS ルックアップが完了する前にデータグラムソケットを閉じることができるようになりました (Seth Fitzsimmons)</dd>
+            <dd>Windows 環境において半二重パイプをサポートしました (Igor Zinkovsky)</dd>
+            <dd>Solaris 環境において、ビルドに関する omit-frame-pointer を無効化するようになりました (Dave Pacheco)</dd>
+            <dd>デバッガの –debug-brk を修正しました (Ben Noordhuis)</dd>
+            <dd>net モジュールにおいて、巨大なファイルのダウンロードが失敗する問題を修正しました failing (koichik)</dd>
+            <dd>fs モジュールの ReadStream において、既存のファイルディスクリプタからの読み込みが失敗する問題を修正しました (Christopher Jeffrey)</dd>
+            <dd>net モジュールが、DNS エラー時にソケットを削除するようになりました (Stefan Rusu)</dd>
+            <dd>dtrace ファイルに不足していたトランスレーターが追加されました (Dave Pacheco)</dd>
+            <dd>UNIX 環境において、raw モード切替時に tty がフラッシュされないようになりました (Ben Noordhuis)</dd>
+            <dd>Windows 環境において、デフォルトのテキストカラーに復帰した際に明るさを初期化するようになりました (Bert Belder)</dd>
+            <dd>npm が 1.1.1 に更新されました
+              <ul>
+                <li>fstream、mkdirp、request、rimraf を更新しました</li>
+                <li><a href="https://github.com/isaacs/npm/issues/2123">#2123</a> Windows 環境でのライフサイクルスクリプトのためのパスを適切に設定するようになりました</li>
+                <li><a href="https://github.com/isaacs/npm/issues/1838">#1838</a> 依存確認処理中に root を seen として記録し、再帰処理をしないようにしました (Martin Cooper)</li>
+              </ul>
+            </dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz">http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz</a></li>                                                                                                 
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.msi">http://nodejs.org/dist/v0.6.11/node-v0.6.11.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.pkg">http://nodejs.org/dist/v0.6.11/node-v0.6.11.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.11/">http://nodejs.org/docs/v0.6.11/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.11/api/">http://nodejs.org/docs/v0.6.11/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.6.10">Node v0.6.10</h3> 
+          <dl>
+            <dt>2012.02.02, バージョン 0.6.10 (安定版)</dt>
+            <dd>V8 を 3.6.6.20 に更新しました</dd>
+            <dd>msysgit bash 向けの npm 設定を MSI インストーラーに追加しました (isaacs)</dd>
+            <dd>buffers で一時的に "out of bounds" エラーが発生してしまう問題を修正しました (Ben Noordhuis)</dd>
+            <dd>buffers の Base64 デコーダーが length 引数の値を優先するようになりました (Ben Noordhuis)</dd>
+            <dd>Windows における path.exists の不具合が再現していたのを修正しました (Bert Belder)</dd>
+            <dd>QueryString.parse の実行速度を高速化しました (Philip Tellis)</dd>
+            <dd>http モジュールの http-parser オブジェクトが予定よりも早く解放されてしまう問題を修正しました (koichik)</dd>
+            <dd>timers に v0.4 互換ハックを追加しました (Ben Noordhuis)</dd>
+            <dd>正しい EPERM エラーコードをサポートしました (Igor Zinkovsky, Brandon Philips)</dd>
+            <dd>dgram に Windows 環境向けの UDP マルチキャストメソッドを実装しました (Bert Belder)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.10/node-v0.6.10.tar.gz">http://nodejs.org/dist/v0.6.10/node-v0.6.10.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.10/node-v0.6.10.msi">http://nodejs.org/dist/v0.6.10/node-v0.6.10.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.10/node-v0.6.10.pkg">http://nodejs.org/dist/v0.6.10/node-v0.6.10.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.10/">http://nodejs.org/docs/v0.6.10/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.10/api/">http://nodejs.org/docs/v0.6.10/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.9">Node v0.6.9</h3>
+          <dl>
+            <dt>2012.01.27, バージョン 0.6.9 (安定版)</dt>
+            <dd>
+            dgram モジュールの未実装だった一部の機能を Unix 用に実装しました (Dan VerWeire, Roman Shtylman, Ben Noordhuis)<br />
+            注意: Windows における UDP サポートはまだ完了していません
+            </dd>
+            <dd><a href="https://github.com/joyent/node/issues/2577">#2577</a> http モジュールのパーサーがメモリーリークしていたのを修正しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2365">#2365</a> zlib モジュールで不正な入力があった場合にクラッシュする問題を修正しました (Nicolas LaCasse)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1519">#1519</a> シンボリックリンクのスクリプトに対して –-debug-brk オプションを使用できない問題を修正しました (Fedor Indutny)</dd>
+            <dd>ドキュメントのスタイルを修正しました (Matthew Fitzsimmons)</dd>
+            <dd>npm を 1.1.0-3 に更新しました (isaacs)</dd>
+            <dd>Windows において C ドライブに対する stat() 呼び出しの不具合が再現していたのを修正しました (Bert Belder)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.9/node-v0.6.9.tar.gz">http://nodejs.org/dist/v0.6.9/node-v0.6.9.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.9/node-v0.6.9.msi">http://nodejs.org/dist/v0.6.9/node-v0.6.9.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.9/node-v0.6.9.pkg">http://nodejs.org/dist/v0.6.9/node-v0.6.9.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.9/">http://nodejs.org/docs/v0.6.9/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.9/api/">http://nodejs.org/docs/v0.6.9/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.8">Node v0.6.8</h3>
+          <dl>
+            <dt>2012.01.19, バージョン 0.6.8 (安定版)</dt>
+            <dd>V8 を 3.6.6.19 に更新しました</dd>
+            <dd>V8 の整数キーによるハッシュ衝突を修正しました (Erik Corry, Fedor Indutny)</dd>
+            <dd>Windows における F1-F5 へのTTY キー変換を追加しました (Brandon Benvie)</dd>
+            <dd>. や .. を含むパスを用いた場合における path.extname のバグを修正しました (Bert Belder)</dd>
+            <dd>cluster モジュールにおいて、uncaughtException の中で Master がいつも Kill されないようになりました (Ben Noordhuis)</dd>
+            <dd>npm が 1.1.0-2 に更新されました (isaacs)</dd>
+            <dd>Typed Array のクラス名が設定されました (Ben Noordhuis)</dd>
+            <dd>zlib バインディングをきれいにしました (isaacs, Bert Belder)</dd>
+            <dd>dgram が slab メモリーアロケーターを利用するようになりました (Michael Bernstein)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2473">#2473</a> セグメンテーションフォールトを修正しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2521">#2521</a> Windows における fs.stat が 60% 高速化しました (Igor Zinkovsky)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.8/node-v0.6.8.tar.gz">http://nodejs.org/dist/v0.6.8/node-v0.6.8.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.8/node-v0.6.8.msi">http://nodejs.org/dist/v0.6.8/node-v0.6.8.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.8/node-v0.6.8.pkg">http://nodejs.org/dist/v0.6.8/node-v0.6.8.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.8/">http://nodejs.org/docs/v0.6.8/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.8/api/">http://nodejs.org/docs/v0.6.8/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.7">Node v0.6.7</h3>
+          <dl>
+            <dt>2012.01.06, バージョン 0.6.7 (安定版)</dt>
+            <dd>V8 のハッシュ衝突を修正しました (MIPS上では動作しないようになりました) (Bert Belder, Erik Corry)</dd>
+            <dd>V8 を 3.6.6.15 に更新しました</dd>
+            <dd>npm を 1.1.0-beta-10 に更新しました (isaacs)</dd>
+            <dd>ドキュメントの多くを更新しました (Ben Noordhuis, Jeremy Martin, koichik, Dave Irvine, Seong-Rak Choi, Shannen, Adam Malcontenti-Wilson)</dd>
+            <dd>node_http_parser.cc におけるセグメンテーションフォルトを修正しました</dd>
+            <dd>dgram と timers モジュールのメモリーリークを修正しました (Ben Noordhuis, Yoshihiro Kikuchi)</dd>
+            <dd>repl モジュールにおいて、repl.start が ignoreUndefined を通過しない問題を修正しました (Damon Oehlman)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1980">#1980</a> 閉じられたストリームに対して Socket.pause を呼び出したときに null を参照する問題を修正しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2263">#2263</a> XMLHttpRequest の呼び出し先がファイル出力ストリームにパイプされていた場合の不具合を修正しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2069">#2069</a> http モジュールにおける変数のリークを修正しました (koichik)</dd>
+            <dd>buffer.readInt によるグローバル汚染を修正しました (Phil Sung)</dd>
+            <dd>timers モジュールにおいてパフォーマンスが下がる問題を修正しました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2308">#2308</a> <a href="https://github.com/joyent/node/issues/2246">#2246</a> リクエスト時の OpenSSL エラーを表示せずに Node が取り込んでしまう問題を修正しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2114">#2114</a> timers モジュールにおける .unenroll() 内の item 変数から _idleTimeout を削除しました (James Hartig)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2379">#2379</a> debugger モジュールにおけるリクエストバックトレースの入出力参照が修正されました (Fedor Indutny)</dd>
+            <dd>シンプルな DTrace ustack 関数のヘルパーが追加されました (Dave Pacheco)</dd>
+            <dd>crypto モジュールの HexDecode メソッドを snprintf を利用せずに再実装しました (Roman Shtylman)</dd>
+            <dd>crypto モジュールが DH 初期化エラーを無視しないようになりました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.7/node-v0.6.7.tar.gz">http://nodejs.org/dist/v0.6.7/node-v0.6.7.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.7/node-v0.6.7.msi">http://nodejs.org/dist/v0.6.7/node-v0.6.7.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.7/node-v0.6.7.pkg">http://nodejs.org/dist/v0.6.7/node-v0.6.7.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.7/">http://nodejs.org/docs/v0.6.7/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.7/api/">http://nodejs.org/docs/v0.6.7/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.6">Node v0.6.6</h3>
+          <dl>
+            <dt>2011.12.14, バージョン 0.6.6 (安定版)</dt>
+            <dd>npm を 1.1.0-beta-4 に更新しました (Isaac Z. Schlueter)</dd>
+            <dd>cli モジュールにおける -help オプションの出力を修正しました (Ben Noordhuis)</dd>
+            <dd>Web サイトが新しくなりました</dd>
+            <dd>標準入力で pause/resume が利用できるようになりました (Isaac Z. Schlueter)</dd>
+            <dd>Travis CI が統合されました (Maciej Małecki)</dd>
+            <dd>child_process での標準入力を閉じる処理に関するバグが修正されました (Ben Noordhuis)</dd>
+            <dd>MSI における更新が有効化されました (Igor Zinkovsky)</dd>
+            <dd>net モジュールにおけるメモリーリークが修正されました (Ben Noordhuis)</dd>
+            <dd>fs モジュールの ReadStream バッファサイズが小数点数や数字以外の値を扱うようになりました (Ben Noordhuis)</dd>
+            <dd>crypto モジュールにおける PBKDF2 のエラーパスのメモリーリークが修正されました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.6/node-v0.6.6.tar.gz">http://nodejs.org/dist/v0.6.6/node-v0.6.6.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.6/node-v0.6.6.msi">http://nodejs.org/dist/v0.6.6/node-v0.6.6.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.6/node-v0.6.6.pkg">http://nodejs.org/dist/v0.6.6/node-v0.6.6.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.6/">http://nodejs.org/docs/v0.6.6/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.6/api/">http://nodejs.org/docs/v0.6.6/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.5">Node v0.6.5</h3>
+          <dl>
+            <dt>2011.12.04, バージョン 0.6.5 (安定版)</dt>
+            <dd>npm が Windows のアンチウイルスソフトウェアを回避するようになりました</dd>
+            <dd>V8 を 3.6.6.11 に更新しました</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.5/node-v0.6.5.tar.gz">http://nodejs.org/dist/v0.6.5/node-v0.6.5.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.5/node-v0.6.5.msi">http://nodejs.org/dist/v0.6.5/node-v0.6.5.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.5/node-v0.6.5.pkg">http://nodejs.org/dist/v0.6.5/node-v0.6.5.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.5/">http://nodejs.org/docs/v0.6.5/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.5/api/">http://nodejs.org/docs/v0.6.5/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.4">Node v0.6.4</h3>
+          <dl>
+            <dt>2011.12.02, バージョン 0.6.4 (安定版)</dt>
+            <dd>ドキュメントを更新しました (Kyle Young, Tim Oxley, Roman Shtylman, Mathias Bynens)</dd>
+            <dd>同梱されている npm を更新しました (Isaac Schlueter)</dd>
+            <dd>Windows インストーラーをよりよく改善しました (Igor Zinkovsky, Isaac Schlueter)</dd>
+            <dd>punycode モジュールを v0.2.1 に更新しました (Mathias Bynens)</dd>
+            <dd>ビルド用の configure スクリプトに –without-npm を追加しました</dd>
+            <dd>sys モジュールをさらに非推奨にし、NODE_DEBUG=sys の場合はスタックトレースを表示するようになりました</dd>
+            <dd>CLI に -p オプションを追加し、-eval の結果を表示するようになりました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1997">#1997</a> Blowfish ECB 暗号化/復号化処理を改善しました (Ingmar Runge)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2223">#2223</a> Socket の 'close' イベントが2回発生する問題を修正しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2224">#2224</a> RSS メモリー使用量が 4GB を超える場合の問題を修正しました (Russ Bradberry)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2225">#2225</a> util.inspect() のオブジェクトの文字列化処理におけるバグを修正しました (Nathan Rajlich)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.4/node-v0.6.4.tar.gz">http://nodejs.org/dist/v0.6.4/node-v0.6.4.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.4/node-v0.6.4.msi">http://nodejs.org/dist/v0.6.4/node-v0.6.4.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.4/node-v0.6.4.pkg">http://nodejs.org/dist/v0.6.4/node-v0.6.4.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.4/">http://nodejs.org/docs/v0.6.4/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.4/api/">http://nodejs.org/docs/v0.6.4/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.3">Node v0.6.3</h3>
+          <dl>
+            <dt>2011.11.25, バージョン 0.6.3 (安定版)</dt>
+            <dd><a href="https://github.com/joyent/node/issues/2083">#2083</a> npm を Node に同梱しました。packages/installers 内に含まれ、'make install' でインストールされます</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2076">#2076</a> Windows インストーラーにロゴの表示を追加しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1711">#1711</a> ヘッダーがない状況でも HTT Pリクエストを正しく扱うようになりました (Ben Noordhuis, Felix Geisendörfer)</dd>
+            <dd>TLS モジュールにおいて OpenSSL の SSL コンテキストオプションや定数に、よりアクセスできるようになりました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2177">#2177</a> Windows において UDP パケットが対象に届かなかった場合でもパケットを破棄しなくなりました (Bert Belder)</dd>
+            <dd>Windows において 260 文字以上のパスをサポートしました (Bert Belder)</dd>
+            <dd>Windows において ドライブ相対パスを正しく解決するようになりました (Bert Belder)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2166">#2166</a> lchmod 後にファイルディスクリプタが閉じられない不具合を修正しました (Isaac Schlueter)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2084">#2084</a> Makefile に OS X 用 .pkg のビルドスクリプトを追加しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2160">#2160</a> ドキュメントを更新しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.3/node-v0.6.3.tar.gz">http://nodejs.org/dist/v0.6.3/node-v0.6.3.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.3/node-v0.6.3.msi">http://nodejs.org/dist/v0.6.3/node-v0.6.3.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.3/node-v0.6.3.pkg">http://nodejs.org/dist/v0.6.3/node-v0.6.3.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.3/">http://nodejs.org/docs/v0.6.3/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.3/api/">http://nodejs.org/docs/v0.6.3/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.2">Node v0.6.2</h3>
+          <dl>
+            <dt>2011.11.18, バージョン 0.6.2 (安定版)</dt>
+            <dd>ドキュメントを更新しました (Artur Adib, Trevor Burnham, Ryan Emery, Trent Mick)</dd>
+            <dd>timers モジュールにおいて timeout==0 が指定された setTimeout() の引数を記憶するようになりました</dd>
+            <dd>punycode モジュール は Mathias Bynens による、よりよい punycode ライブラリを使用するようになりました</dd>
+            <dd>repl モジュールのタブ補完機能を改善しました (Ryan Emery)</dd>
+            <dd>buffer モジュールの .writeInt() 関数における範囲確認処理を修正しました (Lukasz Walukiewicz)</dd>
+            <dd>tls モジュールの cipher リストが設定可能なものになりました</dd>
+            <dd>Windows アドオンから Buffer と ObjectWrap が参照可能になりました (Bert Belder)</dd>
+            <dd>crypto モジュールが RSA 公開鍵認証として知られる PKCS<a href="https://github.com/joyent/node/issues/1">#1</a> をサポートしました</dd>
+            <dd>Windows において null にリダイレクトされた際の標準出力への書き出しを修正しました</dd>
+            <dd>Solaris と Illumos でのビルドを改善しました</dd>
+            <dd>V8 を 3.6.6.8 に更新しました</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.2/node-v0.6.2.tar.gz">http://nodejs.org/dist/v0.6.2/node-v0.6.2.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.2/node-v0.6.2.msi">http://nodejs.org/dist/v0.6.2/node-v0.6.2.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.2/node-v0.6.2.pkg">http://nodejs.org/dist/v0.6.2/node-v0.6.2.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.2/">http://nodejs.org/docs/v0.6.2/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.2/api/">http://nodejs.org/docs/v0.6.2/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.1">Node v0.6.1</h3>
+          <dl>
+            <dt>2011.11.11, バージョン 0.6.1 (安定版)</dt>
+            <dd>ドキュメントを更新しました (Eric Lovett, Ben Noordhuis, Scott Anderson, Yoji SHIDARA)</dd>
+            <dd>crypto モジュールがスレッドセーフになりました (Ben Noordhuis)</dd>
+            <dd>process.kill のエラーオブジェクトを修正しました</dd>
+            <dd>デバッガがマルチバイト文字を正しく扱うようになりました (Shigeki Ohtsu)</dd>
+            <dd>stdout と stderr が非破壊になりました (Igor Zinkovsky)</dd>
+            <dd>fs モジュールが初期化されていない fs.watch ハンドルを閉じないようになりました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2026">#2026</a> BSD での man ページのインストールを修正しました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2040">#2040</a> uv_err_name における存在しない errno の扱いを修正しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2043">#2043</a> fs モジュールの mkdir() において mode オプションが指定された場合でも正しくコールバック関数が呼ばれるようになりました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2045">#2045</a> Windows における fs モジュールの fs.realpath が、エラー時に戻り値を正しく返すように修正しました (Benjamin Pasero)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2047">#2047</a> culster モジュールを一部改善しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2052">#2052</a> readline モジュールがウインドウの幅を正しく取得するようになりました</dd>
+            <dd>V8 を 3.6.6.7 に更新しました</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.1/node-v0.6.1.tar.gz">http://nodejs.org/dist/v0.6.1/node-v0.6.1.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.1/node-v0.6.1.msi">http://nodejs.org/dist/v0.6.1/node-v0.6.1.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.1/node-v0.6.1.pkg">http://nodejs.org/dist/v0.6.1/node-v0.6.1.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.1/">http://nodejs.org/docs/v0.6.1/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.1/api/">http://nodejs.org/docs/v0.6.1/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.6.0">Node v0.6.0</h3>
+          <dl>
+            <dt>2011.11.04, バージョン 0.6.0 (安定版)</dt>
+            <dd>REPL において undefined な値を undefeind として正しく表示するようになりました (Nathan Rajlich)</dd>
+            <dd>ドキュメントを更新しました (koichik, seebees, bnoordhuis, Maciej Małecki, Jacob Kragh)</dd>
+            <dd>Windows においてネイティブアドオンの読み込みをサポートしました (Bert Belder)</dd>
+            <dd>getNetworkInterfaces() を networkInterfaces() に名称変更しました (bnoordhuis)</dd>
+            <dd>Windows において接続待ち機能を追加しました (igorzi)</dd>
+            <dd>http.request(url.parse(x)) (seebees)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1929">#1929</a> zlib モジュールが resume イベント対して適切に反応するようになりました  (isaacs)</dd>
+            <dd>stream.pipe から resume と pause イベントが削除されました</dd>
+            <dd>Windows において一部のテストコードが修正されました (igorzi)</dd>
+            <dd>ビルドシステムを改善しました (bnoordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1936">#1936</a> tls モジュールにおいて EncryptedStream が end イベントを発生しない問題を修正しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/758">#758</a> tls モジュールに address() メソッドと remoteAddress/remotePort プロパティが追加されました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1399">#1399</a> http モジュールの abort() メソッドが呼ばれると Error オブジェクトが渡されるようになりました (bnoordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1999">#1999</a> fs モジュールの mkdir() メソッドはデフォルトパーミッションが 0777 に変更されました (bnoordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2001">#2001</a> パイプエラーコードを修正しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2002">#2002</a> Socket.write はタイムアウトタイマーを初期化するようになりました</dd>
+            <dd>stdout と stderr がファイルにつながる場合はブロックするようになりました</dd>
+            <dd>Windows においてリモートデバッガをサポートしました (Bert Belder)</dd>
+            <dd>zlib モジュールに便利なメソッドが追加されました (Matt Robenolt)</dd>
+            <dd>Windows において process.kill() をサポートしました (igorzi)</dd>
+            <dd>Windows において process.uptime() をサポートしました (igorzi)</dd>
+            <dd>getaddrinfo は IPv6アドレス よりも先に IPv4 アドレスを返すようになりました</dd>
+            <dd>util.inspect が改善されました (Nathan Rajlich)</dd>
+            <dd>cluster モジュールの API が変更されました</dd>
+            <dd>V8 が 3.6.6.6 にダウングレードされました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.6.0/node-v0.6.0.tar.gz">http://nodejs.org/dist/v0.6.0/node-v0.6.0.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.6.0/node.exe">http://nodejs.org/dist/v0.6.0/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.0/">http://nodejs.org/docs/v0.6.0/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.0/api/">http://nodejs.org/docs/v0.6.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.5.10">Node v0.5.10</h3>
+          <dl>
+            <dt>2011.10.21, バージョン 0.5.10 (開発版)</dt>
+            <dd>cmake ビルドシステム、Cygwin サポート、古いコードベース、process.ENV、process.ARGV、process.memoryUsage().vsize、os.openOSHandle を削除しました</dd>
+            <dd>ドキュメントを更新しました (Igor Zinkovsky, Bert Belder, Ilya Dmitrichenko, koichik, Maciej Małecki, Guglielmo Ferri, isaacs)</dd>
+            <dd>パフォーマンスを向上しました (Daniel Ennis, Bert Belder, Ben Noordhuis)</dd>
+            <dd>process.title が長い文字列をサポートしました (Ben Noordhuis)</dd>
+            <dd>net モジュールの net.Server はコールバックを1度だけ登録するようになりました (Simen Brekken)</dd>
+            <dd>net モジュールにおける接続キューのバグを修正しました (Ben Noordhuis)</dd>
+            <dd>デバッガにおけるバックトレースのエラー処理を修正しました (Fedor Indutny)</dd>
+            <dd>dns.lookup は c-ares の代わりに getaddrinfo を使うようになりました</dd>
+            <dd>crypto モジュールでストリームを閉じると end イベントが発生するようになりました</dd>
+            <dd>repl モジュールが undefined を出力するようになりました (Nathan Rajlich)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1902">#1902</a> buffer モジュールで NO_NULL_TERMINATION フラグを使うようになりました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1907">#1907</a> httpモジュールに HTTP PATCH verb のサポートを追加しました (Thomas Parslow)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1644">#1644</a> Windows 環境に GetCPUInfo を追加しました (Karl Skomski)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1484">#1484</a> <a href="https://github.com/joyent/node/issues/1834">#1834</a> <a href="https://github.com/joyent/node/issues/1482">#1482</a> <a href="https://github.com/joyent/node/issues/771">#771</a> repl モジュールで複数コンテキストを扱わないようになりました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1882">#1882</a> zlib モジュールの availOutBefore の値とそのテストを更新しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1888">#1888</a> child_process.fork が引数を変更しないようになりました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1516">#1516</a> tls モジュールにおいて Firefox と Chrome に対しても requestCert を使用するようになりました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1467">#1467</a> tls モジュールで TLS API が TCP API と矛盾する問題を解決しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1894">#1894</a> net モジュールにおける listen() メソッドのエラー処理を修正しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1860">#1860</a> console.error を uv_tty_t 内で処理するようになりました</dd>
+            <dd>V8 を 3.7.0 に更新しました</dd>
+            <dd>GYP を r1081 に更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.10/node-v0.5.10.tar.gz">http://nodejs.org/dist/v0.5.10/node-v0.5.10.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.10/node.exe">http://nodejs.org/dist/v0.5.10/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.5.10/">http://nodejs.org/docs/v0.5.10/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.5.10/api/">http://nodejs.org/docs/v0.5.10/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.5.9">Node v0.5.9</h3>
+          <dl>
+            <dt>2011.10.10, バージョン 0.5.9 (開発版)</dt>
+            <dd>fs.watch インタフェースが、kqueue、inotify、そして ReadDirectoryChangesW により実装されました (Igor Zinkovsky, Ben Noordhuis)</dd>
+            <dd>dns.resolveTxt が追加されました (Christian Tellnes)</dd>
+            <dd>古い HTTP モジュールが削除されました (Ben Noordhuis)</dd>
+            <dd>child_process.fork が Windows 上で再び動作するようになりました (Igor Zinkovsky, Bert Belder)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1774">#1774</a> –harmony_block_scoping のコードが見直され、最適化されました (Tyler Larson, Colton Baker)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1813">#1813</a> Windows における Ctrl+C の扱いが修正されました (Bert Belder)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1844">#1844</a> –use-legacy 使用時のバグが修正されました (Ben Noordhuis)</dd>
+            <dd>process.stderr が libuv 内で処理されるようになり、process.stdout と process.stderr が TTY を参照する場合はブロックするようになりました</dd>
+            <dd>net_uv のパフォーマンスを改善しました (Ben Noordhuis, Bert Belder)</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.9/node-v0.5.9.tar.gz">http://nodejs.org/dist/v0.5.9/node-v0.5.9.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.9/node.exe">http://nodejs.org/dist/v0.5.9/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.5.9/">http://nodejs.org/docs/v0.5.9/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.5.9/api/">http://nodejs.org/docs/v0.5.9/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.5.8">Node v0.5.8</h3>
+          <dl>
+            <dt>2011.09.30, バージョン 0.5.8 (開発版)</dt>
+            <dd>zlib バインディングを追加しました (isaacs)</dd>
+            <dd>Windows 版において TTY ANSI エスケープコードをサポートしました (Bert Belder)</dd>
+            <dd>Debugger を改善しました (Fedor Indutny)</dd>
+            <dd>crypto モジュールにおいて ERR_print_errors() による SSL エラーの参照をサポートしました (Ben Noordhuis)</dd>
+            <dd>DNS コールバックが MakeCallback を利用するようになりました</dd>
+            <dd>不正な package.json ファイルが見つかった場合にエラーを発生するようになりました (Ben Leslie)</dd>
+            <dd>buffer モジュールのコンストラクタが不正な長さの引数を扱うようになりました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1726">#1726</a> process.stdout を unref するようになりました</dd>
+            <dd>ドキュメントを更新しました</dd>
+            <dd>libuv を fe18438 に更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.8/node-v0.5.8.tar.gz">http://nodejs.org/dist/v0.5.8/node-v0.5.8.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.8/node.exe">http://nodejs.org/dist/v0.5.8/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.5.8/">http://nodejs.org/docs/v0.5.8/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.5.8/api/">http://nodejs.org/docs/v0.5.8/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.5.7">Node v0.5.7</h3>
+          <dl>
+            <dt>2011.09.16, バージョン 0.5.7 (開発版)</dt>
+            <dd>V8 を 3.6.4 に更新しました</dd>
+            <dd>Windows との互換性を向上しました</dd>
+            <dd>ドキュメントを更新しました</dd>
+            <dd>デバッガと REPL を改善しました (Fedor Indutny)</dd>
+            <dd>旧 API サポートの追加: net.Stream(fd)、process.stdout.writable、process.stdout.fd</dd>
+            <dd>mkdir での EEXIST の扱いを修正しました (isaacs)</dd>
+            <dd>標準出力用は net_legacy の代わりに net_uv が使われるようになりました</dd>
+            <dd>util.inspect から readline を読み込まないようになりました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1673">#1673</a> V8 context のアクセサに関連するバグを修正しました (Fedor Indutny)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1634">#1634</a> util モジュールにおける Error の文字列化処理のバグを修正しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1645">#1645</a> fs モジュールの WriteStream メソッドに、ファイルの位置指定書き込み機能を追加しました (Thomas Shinnick)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1637">#1637</a> fs モジュールの watchFile メソッドにおいて、statWatchers キャッシュが無防備な扱いになっているバグを修正しました (Thomas Shinnick)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1695">#1695</a> ChildProcess.spawn に customFds を送るようにしました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1707">#1707</a> querystring モジュールでの hasOwnProperty を利用した処理によるセキュリティホールを修正しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1719">#1719</a> OpenSSL のエラーキューを出力するようになりました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.7/node-v0.5.7.tar.gz">http://nodejs.org/dist/v0.5.7/node-v0.5.7.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.7/node.exe">http://nodejs.org/dist/v0.5.7/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.5.7/">http://nodejs.org/docs/v0.5.7/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.5.7/api/">http://nodejs.org/docs/v0.5.7/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.5.6">Node v0.5.6</h3>
+          <dl>
+            <dt>2011.09.08, バージョン 0.5.6 (開発版)</dt>
+            <dd><a href="https://github.com/joyent/node/issues/345">#345</a> <a href="https://github.com/joyent/node/issues/1635">#1635</a> <a href="https://github.com/joyent/node/issues/1648">#1648</a> ドキュメントを更新しました (Thomas Shinnick, Abimanyu Raja, AJ ONeal, Koichi Kobayashi, Michael Jackson, Logan Smyth, Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/650">#650</a> Windows におけるパスのパース処理を改善しました (Bert Belder)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/752">#752</a> OutgoingMessage.getHeader() でのヘッダー送信チェック処理を削除しました (Peter Lyons)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1236">#1236</a> <a href="https://github.com/joyent/node/issues/1438">#1438</a> <a href="https://github.com/joyent/node/issues/1506">#1506</a> <a href="https://github.com/joyent/node/issues/1513">#1513</a>, <a href="https://github.com/joyent/node/issues/1621">#1621</a> <a href="https://github.com/joyent/node/issues/1640">#1640</a> <a href="https://github.com/joyent/node/issues/1647">#1647</a> libuv に関連する複数のバグを修正しました (Jorge Chamorro Bieling, Peter Bright, Luis Lavena, Igor Zinkovsky)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1296">#1296</a> <a href="https://github.com/joyent/node/issues/1612">#1612</a> crypto モジュールでの BIO の扱いを修正しました (Koichi Kobayashi)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1345">#1345</a> libuv バックエンド使用時に socket.remoteAddress が正しく設定されるようになりました (Bert Belder)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1429">#1429</a> Windows のコンソールにおいて Quick Edit モードを勝手に変更しないようになりました (Peter Bright)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1503">#1503</a> Unix 環境において libuv バックエンドが標準になりました。以前のバックエンドを使用するには、–use-legacy オプションを指定して実行します</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1565">#1565</a> Windows での fs.stat における \ で終わるパスの扱いを修正しました (Igor Zinkovsky)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1568">#1568</a> x509 証明書の所有者名のパース処理を修正しました (Koichi Kobayashi)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1586">#1586</a> socket.write() のエンコーディング指定で、大文字と小文字を区別しないようになりました (Koichi Kobayashi)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1591">#1591</a> <a href="https://github.com/joyent/node/issues/1656">#1656</a> <a href="https://github.com/joyent/node/issues/1657">#1657</a> libuv に fs モジュールを実装し、Windows における libeio と pthread-win32 への依存を無くしました (Igor Zinkovsky, Ben Noordhuis, Ryan Dahl, Isaac Schlueter)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1592">#1592</a> Windows における起動時に CreateSymbolicLink を読み込まないようにしました (Peter Bright)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1601">#1601</a> HTTPクライアントリクエストを扱うソケット処理のAPI整合性を改善しました (Mikeal Rogers)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1610">#1610</a> DigiNotar 認証局を信頼済みリストから削除しました (Isaac Schlueter)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1617">#1617</a> いくつかの Win32 プラットフォーム関数を追加しました (Karl Skomski)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1624">#1624</a> ‘binary’ エンコーディングでのバッファオーバーランを回避する処理が追加されました (Koichi Kobayashi)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1633">#1633</a> Buffer.write() において _charsWritten が常に設定されるようになりました (Koichi Kobayashi)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1644">#1644</a> Windows 用 node.exe がコンソールプログラム用の実行可能形式になりました (Peter Bright)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1651">#1651</a> 疎な配列の文字列化処理を改善しました (Koichi Kobayashi)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1672">#1672</a> ソケットのハングアップエラー時の code プロパティに ’ECONNRESET’ が設定されるようになりました (Ben Noordhuis)</dd>
+            <dd>foaf+ssl クライアント証明書のテストケースを追加しました (Niclas Hoyer)</dd>
+            <dd>実行時のライブラリパスを上書きするために RPATH 環境変数を追加しました (Ashok Mudukutore)</dd>
+            <dd>TLS client-side session resumption をサポートしました (Sean Cunningham)</dd>
+            <dd>getPeerCertificate にさらなるプロパティを追加しました (Nathan Rixham, Niclas Hoyer)</dd>
+            <dd>REPL においてエラーが発生した場合に、コマンドを2回評価しないようになりました (Nathan Rajlich)</dd>
+            <dd>util.isDate() を改善しました (Nathan Rajlich)</dd>
+            <dd>libuv バックエンドとそのバインディングを改善し、bd6066cb349a9b3a1b0d87b146ddaee06db31d10 にアップグレードしました</dd>
+            <dd>lib/sys.js 使用時に警告を表示するようになりました (Maciej Malecki)</dd>
+            <dd>URL のプロトコルでプラス記号 (+) が利用可能になりました (Maciej Malecki)</dd>
+            <dd>V8 を 3.6.2 に更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.6/node-v0.5.6.tar.gz">http://nodejs.org/dist/v0.5.6/node-v0.5.6.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.6/node.exe">http://nodejs.org/dist/v0.5.6/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.5.6/">http://nodejs.org/docs/v0.5.6/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.5.6/api/">http://nodejs.org/docs/v0.5.6/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.5.5">Node v0.5.5</h3>
+          <dl>
+            <dt>2011.08.26, バージョン 0.5.5 (開発版)</dt>
+            <dd>typed array が Plesk によって実装されました</dd>
+            <dd>SunOS における IP マルチキャストを修正しました</dd>
+            <dd>DNS ルックアップの順序を IPv4、IPv6 の順に修正しました (-use-uv 使用時のみ)</dd>
+            <dd>UNIX データグラムソケットのサポートを削除しました (-use-uv 使用時のみ)</dd>
+            <dd>Windows において、UDP をサポートしました (Bert Belder)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1572">#1572</a> REPL における tab キーによるオブジェクトの補完を改善しました(Nathan Rajlich)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1563">#1563</a> child_process モジュールでのバッファオーバーフローを修正しました (Dean McNamee による報告)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1546">#1546</a> http モジュールにおけるパフォーマンス低下を修正しました (Brian Geffon による報告)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1491">#1491</a> PBKDF2 暗号化サポートを追加しました (Glen Low)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1447">#1447</a> 非推奨になっていた http.cat() メソッドを削除しました (Mikeal Rogers)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1140">#1140</a> vm.runInContext() における filename 引数の不正な処理を修正しました (Antranig Basman)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1140">#1140</a> vm.runInContext()  と vm.createContext() のドキュメントを追加しました (Antranig Basman)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1428">#1428</a> 64bit FreeBSD における os.freemem() を修正しました (Artem Zaytsev)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1164">#1164</a> 全ての DNS ルックアップを非同期化し、想定外の例外を修正しました (Koichi Kobayashi)</dd>
+            <dd>不正な SSL 終了確認処理を修正しました (Tom Hughes)</dd>
+            <dd>CMake の多くの部分を改善しました (Tom Hughes)</dd>
+            <dd>ドキュメントを更新しました (Koichi Kobayashi, Logan Smyth, Fedor Indutny, Mikeal Rogers, Maciej Małecki, Antranig Basman, Mickaël Delahaye)</dd>
+            <dd>libuv をコミット 835782a に更新しました</dd>
+            <dd>V8 を 3.5.8 に更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.5/node-v0.5.5.tar.gz">http://nodejs.org/dist/v0.5.5/node-v0.5.5.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.5/node.exe">http://nodejs.org/dist/v0.5.5/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.5.5/">http://nodejs.org/docs/v0.5.5/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.5.5/api/">http://nodejs.org/docs/v0.5.5/api/</a></li>
+          </ul>
+          <p>
+          上記の .exe には Windows XP と Windows Server 2003 に互換性がないというバグがあります。<br>
+          この問題は GitHub Issue の <a href="https://github.com/joyent/node/issues/1572">#1592</a> として報告され、すでに修正されています。<br>
+          古い Windows にも互換性がある新しいバイナリは下記の URL からダウンロードすることができます。<br>
+          <a href="http://nodejs.org/dist/v0.5.5/node-186364e.exe">http://nodejs.org/dist/v0.5.5/node-186364e.exe</a>
+          </p>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.5.4">Node v0.5.4</h3>
+          <dl>
+            <dt>2011.08.12, バージョン 0.5.4 (開発版)</dt>
+            <dd>libuv と Windows の互換性を向上しました</dd>
+            <dd>GYP による Microsoft Visual Studio でのビルドに対応しました。sln ファイルを作成には generate-projects.bat を使用してください (Peter Bright, Igor Zinkovsky)</dd>
+            <dd>Mikeal が開発した HTTP クライアントが標準になりました。古い HTTP クライアントを利用する場合は --use-http1 を使用してください</dd>
+            <dd>HTTPS における host ヘッダーの標準ポートの扱いを修正しました (Mikeal Rogers)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1440">#1440</a> *.js や *.json ファイルの読み込み時にバイトオーダーマーカーを除去するようになりました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1434">#1434</a> util.format() を改善し、ブラウザとの互換性が向上しました (Koichi Kobayashi)</dd>
+            <dd>整数型用 Buffer.read/writeInt メソッドに unchecked uint 用のエントリーポイントが提供されました (Robert Mustacchi)</dd>
+            <dd>CMake を改善しました (Tom Huges)</dd>
+            <dd>V8 を 3.5.4 に更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.4/node-v0.5.4.tar.gz">http://nodejs.org/dist/v0.5.4/node-v0.5.4.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.4/node.exe">http://nodejs.org/dist/v0.5.4/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/dist/v0.5.4/docs/">http://nodejs.org/dist/v0.5.4/docs/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/dist/v0.5.4/docs/api/">http://nodejs.org/dist/v0.5.4/docs/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.5.3">Node v0.5.3</h3>
+          <dl>
+            <dt>2011.08.01, バージョン 0.5.3 (開発版)</dt>     
+            <dd>crypto モジュールでの Base64 を用いた暗号化/復号化機能を修正しました (SAWADA Tadashi)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/243">#243</a> Buffer.write() にオプションの length 引数を追加しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/657">#657</a> fs.writeFile/Sync において、バッファでないデータを文字列に変換するようになりました (Daniel Pihlström)</dd>
+            <dd>process.features が追加され、process.useUV が削除されました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/324">#324</a> crypto モジュールの hmac がバイナリキーを受け付けるように修正され、RFC 2202と4231からテストケースが追加されました (Stefan Bühler)</dd>
+            <dd>Socket::bytesRead と Socket::bytesWritten が追加されました (Alexander Uvarov)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/572">#572</a> --eval で CLI が実行された場合に、結果を出力しないようになりました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1223">#1223</a> end() が2回呼ばれると http.ClientRequest がクラッシュする問題が修正されました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1383">#1383</a> 全ての接続が切られた後に close イベントを発生させるようになりました (Felix Geisendörfer)</dd>
+            <dd>sprintf に似た util.format() 関数が追加されました (Ben Noordhuis)</dd>
+            <dd>TLS SNI のサポートが追加されました (Fedor Indutny)</dd>
+            <dd>新しいHTTPエージェントが実装されました。デフォルトでは無効化されており、実行時に --use-http2 を指定することで有効化することができます。また、make test-http2 を実行すると新しい実装のためのテストを実行することができます (Mikeal Rogers)</dd>
+            <dd>AMD 互換機能を削除しました (isaacs)</dd>
+            <dd>Windows 対応を進め、child_process をサポートしました</dd>
+            <dd>pkg-config ファイルを削除しました</dd>
+            <dd>起動時に時間がかかる問題を修正しました</dd>
+            <dd>ドキュメントを更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.3/node-v0.5.3.tar.gz">http://nodejs.org/dist/v0.5.3/node-v0.5.3.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.3/node.exe">http://nodejs.org/dist/v0.5.3/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/dist/v0.5.3/docs">http://nodejs.org/dist/v0.5.3/docs</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/dist/v0.5.3/docs/api">http://nodejs.org/dist/v0.5.3/docs/api</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.5.2">Node v0.5.2</h3>
+          <dl>
+            <dt>2011.07.22, バージョン 0.5.2 (開発版)</dt>
+            <dd>libuv を改良し、名前付きパイプをサポートしました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1242">#1242</a> SSL_COMP_get_compression_methods() の確認 (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1348">#1348</a> require.paths を削除しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1349">#1349</a> Windows での ; によるNODE_PATH 区切りをサポートしました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1335">#1335</a> C++ から EventEmitter を削除しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1357">#1357</a> require() によるJSONファイルの読み込みに対応しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1374">#1374</a> writeHead での ServerResponse.statusCode 設定を修正しました (Trent Mick)</dd>
+            <dd>GC が必要以上に実行されるのを修正しました</dd>
+            <dd>V8 を 3.4.14 に更新しました</dd>
+            <dd>ドキュメントを更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.2/node-v0.5.2.tar.gz">http://nodejs.org/dist/v0.5.2/node-v0.5.2.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.2/node.exe">http://nodejs.org/dist/v0.5.2/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/dist/v0.5.2/docs/">http://nodejs.org/dist/v0.5.2/docs/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/dist/v0.5.2/docs/api/">http://nodejs.org/dist/v0.5.2/docs/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">            
+          <h3 id="v0.5.1">Node v0.5.1</h3>
+          <dl>
+            <dt>2011.07.14, バージョン 0.5.1 (開発版)</dt>
+            <dd><a href="https://github.com/joyent/node/issues/1233">#1233</a> FreeBSD amd64 での os.totalmem を修正しました (Artem Zaytsev)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1149">#1149</a> url.parse が IDNA と Punycode をサポートしました (Jeremy Selier, Ben Noordhuis, isaacs)</dd>
+            <dd>uv と V8 ビルドシステム に $CC と $CXX をエクスポートしました</dd>
+            <dd>pthread-win32 静的ライブラリをビルドに含めるようになりました (Igor Zinkovsky)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1199">#1199</a> <a href="https://github.com/joyent/node/issues/1094">#1094</a> 64ビット環境で巨大なファイルを扱えない問題を修正しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1281">#1281</a> module クラスのインスタンス変数に require を追加しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1303">#1303</a> Stream.pipe が接続先を返すようになりました (Elijah Insua)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1229">#1229</a> アドオンは -DEV_MULTIPLICITY=0 をするべきではありません (Brian White)</dd>
+            <dd>libuv バックエンドの改善しました</dd>
+            <dd>V8 を 3.4.10 に更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz">http://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz</a></li>
+            <li>Windows 実行形式: <a href="http://nodejs.org/dist/v0.5.1/node.exe">http://nodejs.org/dist/v0.5.1/node.exe</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/dist/v0.5.1/docs/">http://nodejs.org/dist/v0.5.1/docs/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/dist/v0.5.1/docs/api/">http://nodejs.org/dist/v0.5.1/docs/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">              
+          <h3 id="v0.5.0">Node v0.5.0</h3>
+          <dl>
+            <dt>2011.07.05, バージョン 0.5.0 (開発版)</dt>
+            <dd>Windows における IOCP サポートのための新しい libuv バックエンド。非標準のため、--use-uv オプションで有効化することができます</dd>
+            <dd>http.cat が非推奨になりました</dd>
+            <dd>ドキュメントを更新しました</dd>
+            <dd>child_process.fork を追加しました</dd>
+            <dd>fs.utimes() と fs.futimes() のサポートを追加しました (Ben Noordhuis)</dd>
+            <dd>process.uptime() を追加しました (Tom Huges)</dd>
+            <dd>path.relative を追加しました (Tony Huang)</dd>
+            <dd>os.getNetworkInterfaces() を追加しました</dd>
+            <dd>TCPクライアント接続のために remoteAddress と remotePort を追加しました (Brian White)</dd>
+            <dd>secureOptions フラグ、暗号化設定、SSL_OP_CRYPTOPRO_TLSEXT_BUG を TLS に追加しました (Theo Schlossnagle)</dd>
+            <dd>process.arch を追加しました(Nathan Rajlich)</dd>
+            <dd>バッファにおける float と double の読み書き機能を追加しました (Brian White)</dd>
+            <dd>stdin からのスクリプトの読み込みが可能になりました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/477">#477</a> memset を実行するための Buffer::fill メソッドを追加しました (Konstantin Käfer)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/573">#573</a> crypto モジュールが Diffie-Hellman 鍵交換方式をサポートしました (Håvard Stranden)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/695">#695</a> buffer に 'hex' エンコーディングのサポートを追加しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/851">#851</a> REPLServer でのコンテキストの扱い方を更新しました (Ben Weaver)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/853">#853</a> fs.lchow、fs.lchmod、fs.fchmod、fs.fchown を追加しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/889">#889</a> 全ての EventEmitter リスナーを1度に削除することが可能になりました (Felix Geisendörfer)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/926">#926</a> OpenSSL NPN をサポートしました (Fedor Indutny)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/955">#955</a> REPL での ^C の扱いを変更しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/979">#979</a> UNIX ドメインソケットのサポートを HTTP モジュールに追加しました (Mark Cavage)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1173">#1173</a> <a href="https://github.com/joyent/node/issues/1170">#1170</a> 非同期モジュールの定義に AMD を追加しました (isaacs)</dd>
+            <dd>DTrace による計測: X-Forwarded-For をサポートしました (Dave Pacheco)</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/node-v0.5.0.tar.gz">http://nodejs.org/dist/node-v0.5.0.tar.gz</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.5.0/">http://nodejs.org/docs/v0.5.0/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.5.0/api/">http://nodejs.org/docs/v0.5.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.4.12">Node v0.4.12</h3>
+          <dl>
+            <dt>2011.09.15, バージョン 0.4.12 (安定版)</dt>
+            <dd>ドキュメントを更新しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1563">#1563</a> ChildProcess の custom_fd 利用時に発生するバッファオーバーフローを修正しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1569">#1569</a> 複数行 HTTP ヘッダーのパースエラーを修正しました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1586">#1586</a> net モジュールにおける socket.write() のエンコーディング指定で、大文字と小文字を区別しないようになりました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1610">#1610</a> DigiNotar 認証局を信頼済みリストから削除しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1624">#1624</a> buffer モジュールに ‘binary’ エンコーディングでのバッファオーバーランを回避する処理を追加しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1633">#1633</a> Buffer.write() において _charsWritten が常に設定されるようになりました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1707">#1707</a> querystring モジュールでの hasOwnProperty を利用した処理によるセキュリティホールを修正しました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1719">#1719</a> OpenSSL のエラーキューを出力するようになりました</dd>
+            <dd>net.Server.listen におけるエラー出力を修正しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.12.tar.gz">http://nodejs.org/dist/node-v0.4.12.tar.gz</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.4.12/">http://nodejs.org/docs/v0.4.12/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.4.12/api/">http://nodejs.org/docs/v0.4.12/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.4.11">Node v0.4.11</h3>
+          <dl>
+            <dt>2011.08.17, バージョン 0.4.11 (安定版)</dt>
+            <dd><a href="https://github.com/joyent/node/issues/738">#738</a> crypto モジュールでの Base64 を用いた暗号化/復号化機能を修正しました  (SAWADA Tadashi)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1202">#1202</a> net.createConnection の DNS ルックアップエラーイベントが、次の tick で発生するようになりました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1374">#1374</a> writeHead 実行時に ServerResponse.statusCode が反映されるように修正しました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1417">#1417</a> end() が2回呼ばれると http.ClientRequest がクラッシュする問題が修正されました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1497">#1497</a> querystring モジュールにおける 'in' を用いた判定処理が 'hasOwnProperty' に置き換えられました  (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1546">#1546</a> http モジュールのパフォーマンスが改善されました</dd>
+            <dd>libeio のメモリリークが修正されました (Tom Hughes)</dd>
+            <dd>CMake を改善しました (Tom Hughes)</dd>
+            <dd>node_net.cc における不正な sizeof() を修正しました (Tom Hughes)</dd>
+            <dd>Windows XP/cygwin 環境において GetConsoleTitleW エラーが発生しないようになりました (Bert Belder)</dd>
+            <dd>ドキュメントを更新しました (koichik, Logan Smyth, Ben Noordhuis, Arnout Kazemier)</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.11.tar.gz">http://nodejs.org/dist/node-v0.4.11.tar.gz</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.4.11/">http://nodejs.org/docs/v0.4.11/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.4.11/api/">http://nodejs.org/docs/v0.4.11/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.4.10">Node v0.4.10</h3>
+          <dl>
+            <dt>2011.07.19, バージョン 0.4.10 (安定版)</dt>
+            <dd><a href="https://github.com/joyent/node/issues/394">#394</a> Buffer が UTF-8 の扱いおいて最後の NULL 文字をドロップする問題を修正しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/829">#829</a> V8 のリビジョン r8577 をバックポートしました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/877">#877</a> HTTP エージェントソケットプールが接続の確立を待たなくなりました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/915">#915</a> FreeBSD の kqueue を確実に認識するようになりました (Brett Kiefer)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1085">#1085</a> HTTP の abort/dispatch コードを修正しました (Stefan Rusu)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1274">#1274</a> デバッガを改善しました (Yoshihiro Kikuchi)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1291">#1291</a> HEAD メソッドでの end (body) が適切な応答を返すようになりました (Reid Burke)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1304">#1304</a> TLS の abort/connection コードを修正しました (Stefan Rusu)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1360">#1360</a> URL ホストネームにおいて _ が許容されるようになりました</dd>
+            <dd>37d529f8 の削除 – デバッガコマンドの構文解析を廃止しました</dd>
+            <dd>グローバルな execScript を復帰しました</dd>
+            <dd>ドキュメントを更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.10.tar.gz">http://nodejs.org/dist/node-v0.4.10.tar.gz</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.4.10/">http://nodejs.org/docs/v0.4.10/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.4.10/api/">http://nodejs.org/docs/v0.4.10/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.4.9">Node v0.4.9</h3>
+          <dl>
+            <dt>2011.06.29, パージョン 0.4.9 (安定版)</dt>
+            <dd>ドキュメントを改善しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1095">#1095</a> stream.pipe() におけるエラー処理のバグを修正しました  (Felix Geisendörfer)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1097">#1097</a> node_crypto.cc におけるいくつかのメモリーリークを修正しました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/562">#562</a> <a href="https://github.com/joyent/node/issues/1078">#1078</a> 適切に file:// で始まるURLをパースするようになりました (Ryan Petrello)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/880">#880</a> SSLv2 を無効化するオプションを追加しました (Jérémy Lal)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1087">#1087</a> 古い OpenSSL での SSL 圧縮無効化処理を無効にしました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1144">#1144</a> デバッガ: 不正なコマンドによる入力を無効化しました (Siddharth Mahendraker)</dd>
+            <dd>util.inherits のパフォーマンスを改善しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1166">#1166</a> RSA/DSA の公開鍵を利用した証明書をサポートしました (Mark Cavage)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1177">#1177</a> 入れ子状のプロジェクト構造をよりよくサポートするために、node_module 検索最適化処理を削除しました (Mathias Buus)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1203">#1203</a> scope.Close を fs.sendfileSync に追加しました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1187">#1187</a> 複数の 'link' ヘッダーをサポートしました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1196">#1196</a> -e/-eval で node_modules からモジュールを読み込みできない問題を修正しました (Koichi Kobayashi)</dd>
+            <dd>V8 を 3.1.8.25に更新し、 http-parser も更新しました</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.9.tar.gz">http://nodejs.org/dist/node-v0.4.9.tar.gz</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.4.9/">http://nodejs.org/docs/v0.4.9/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.4.9/api/">http://nodejs.org/docs/v0.4.9/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">      
+          <h3 id="v0.4.8">Node v0.4.8</h3>
+          <dl>
+            <dt>2011.05.20, パージョン 0.4.8 (安定版)</dt>
+            <dd><a href="https://github.com/joyent/node/issues/974">#974</a> トレースレスなエラーを正しく報告するようになりました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/983">#983</a> REPL における、JSON.parse のエラー検出が改善されました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/836">#836</a> req が存在する場合にのみ、エージェントソケットのエラーが req に通知されるようになりました</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1041">#1041</a> イベントリスナーのリークチェックタイミングが修正されました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1038">#1038</a> dns.resolve()に 'PTR' を渡した際に Unknown type "PTR" エラーが発生する問題を修正 (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/1073">#1073</a> サーバーコネクション間で SSL コンテキストが共有されるようになりました (Fedor Indutny)</dd>
+            <dd>OpenSSL を使った圧縮処理を無効にすることでメモリーパフォーマンスが向上しました</dd>
+            <dd>SunOS 用の os.totalmem() と os.freemem() が実装されました (Alexandre Marangone)</dd>
+            <dd>URLリグレッションにおける特殊文字を修正しました (isaacs)</dd>
+            <dd>HTTPSにおけるアイドルタイムアウトが修正されました (Felix Geisendörfer)</dd>
+            <dd>SlowBuffer.write() に 'ucs2' を渡した際に ReferenceError が発生する問題を修正しました (koichik)</dd>
+            <dd>http.ServerRequestの 'close' イベント時に、時々エラー引数が渡される問題を修正しました (Felix Geisendörfer)</dd>
+            <dd>ドキュメントを更新しました</dd>
+            <dd>cleartextstream.destroy() が socket を close(2) するようになりました。以前は shutdown(2) システムコールを利用していました</dd>
+            <dd>通常のビルド時に asserts や debug ステートメントをコンパイルしないようになりました</dd>
+            <dd>Debugger を改善しました</dd>
+            <dd>V8 エンジンを 3.1.8.16 に更新しました。</dd>
+          </dl>
+          <ul>
+            <li>ダウンロード: <a href="http://nodejs.org/dist/node-v0.4.8.tar.gz">http://nodejs.org/dist/node-v0.4.8.tar.gz</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.4.8/">http://nodejs.org/docs/v0.4.8/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.4.8/api/">http://nodejs.org/docs/v0.4.8/api/</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2570409-8']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         })();
+</script>
   </body>
 </html>
