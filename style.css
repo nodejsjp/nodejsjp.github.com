@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  border-top: 6px #8CC84B solid;
+  color: #D2D8BA;
+  background-color: #46483E;
+  font-size: 13px;
+}
+
+h1, h2, h3, h4, 
+ul, ol, dl {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #fff;
+  font-size: 26px;
+}
+
+a {
+  color: #8cc84b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#header,
+#main {
+  margin-left: 280px;
+}
+
+#header {
+  padding: 25px 0 40px;
+}
+
+#nav {
+  width: 200px;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+}
+
+#nav h2 {
+  font-size: 14px;
+  padding: 6px 15px 3px;
+  border-bottom: 1px solid #494a40;
+}
+
+#nav ul {
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+}
+
+#nav ul li {
+  padding: 1px 15px;
+}
+
+#toc,
+#docs {
+  margin: 0 0 20px;
+  border: 1px solid #494a40;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px #333;
+  background-color: #33342D;
+}
+
+.section {
+  padding: 0 0 40px; 
+}
+
+.section h2 {
+  padding: 0 0 5px;
+}
+
+.section ul {
+  padding: 0 25px 0;
+}
+
+.section dl {
+  margin: -13px 0 0;
+}
+
+.section dl dt {
+  margin-top: 18px;
+}
+
+.section dl dd {
+  margin: 0;
+}
