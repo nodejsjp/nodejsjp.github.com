@@ -38,7 +38,7 @@
           <h2>日本語訳ドキュメント</h2>
           <ul>
             <li><a href="nodejs.org_ja/api/">v0.7.5 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.11 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
             <li><a href="changelog.html">ChangeLog</a></li>
@@ -191,6 +191,45 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a></li>
           </ul>
         </div>
+        
+        <div class="section">
+          <h3 id="v0.6.12">Node v0.6.12</h3> 
+          <dl>
+            <dt>2012.03.02 バージョン 0.6.12 (安定版)</dt>
+            <dd>V8 を 3.6.6.24 に更新しました</dd>
+            <dd>DTrace ustack ヘルパーを改善しました (Dave Pacheco)</dd>
+            <dd>API ドキュメントをリファクタリングしました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2827">#2827</a> net モジュールにおける write() 前または後の connect() による競合を修正しました (koichik)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2554">#2554</a> <a href="https://github.com/joyent/node/issues/2567">#2567</a> fs モジュールの 'start' や 'end' 引数が文字列だった場合に、例外を発生するようになりました (AJ ONeal)</dd>
+            <dd>punycode を v1.0.0 に更新しました (Mathias Bynens)</dd>
+            <dd>Fat バイナリを生成するように OS X パッケージを変更しました (isaacs)</dd>
+            <dd>process.stdin へのアクセス時に停止してしまう問題を修正しました (isaacs)</dd>
+            <dd>repl モジュールにおいて、非オブジェクトに対してもタブ補完が動作するようになりました (Nathan Rajlich)</dd>
+            <dd>OS X での fs.watch の動作を改善しました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2515">#2515</a> ネストされた setTimeout() がプロセス終了を早めてしまう問題を修正しました (Ben Noordhuis)</dd>
+            <dd>Windows における stat の時刻変換を改善しました (Igor Zinkovsky)</dd>
+            <dd>Windows において fs モジュールが読み込み時に EOF を扱うようになりました (Igor Zinkovsky)</dd>
+            <dd>Windows において IFS 非互換の LSP による IOCP の中断を回避するようになりました (Igor Zinkovsky)</dd>
+            <dd>npm を 1.1.4 に更新しました (isaacs)</dd>
+              <ul>
+                <li>Windows における動作を修正</li>
+                <li>ネストされた bundleDependencies プロパティをまとめて扱うようになりました</li>
+                <li>–-save オプションでの URL によるインストール対象の指定をサポートしました</li>
+                <li>shrinkwrap が URL 指定でインストールされたモジュールに対しても適切に動作するようになりました</li>
+                <li>無圧縮の tar ファイルや1つのファイルで構成されるモジュールのインストールをサポートしました</li>
+                <li>rebuild 時に clean を実行しないようになりました</li>
+                <li>HTTPS-over-HTTP プロキシトンネリングをサポートしました</li>
+              </ul>
+            </dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.12/node-v0.6.12.tar.gz">http://nodejs.org/dist/v0.6.12/node-v0.6.12.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.12/node-v0.6.12.msi">http://nodejs.org/dist/v0.6.12/node-v0.6.12.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.12/node-v0.6.12.pkg">http://nodejs.org/dist/v0.6.12/node-v0.6.12.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.12/">http://nodejs.org/docs/v0.6.12/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.12/api/">http://nodejs.org/docs/v0.6.12/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.6.11">Node v0.6.11</h3> 
@@ -221,7 +260,7 @@
             </dd>
           </dl>
           <ul>
-            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz">http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz</a></li>                                                                                                 
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz">http://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz</a></li>
             <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.msi">http://nodejs.org/dist/v0.6.11/node-v0.6.11.msi</a></li>
             <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.6.11/node-v0.6.11.pkg">http://nodejs.org/dist/v0.6.11/node-v0.6.11.pkg</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.11/">http://nodejs.org/docs/v0.6.11/</a></li>
