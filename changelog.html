@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.7.5 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/api/">v0.7.6 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -49,6 +49,44 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.7.6">Node v0.7.6</h3>
+          <dl>
+            <dt>2012.03.13, バージョン 0.7.6 (開発版)</dt>
+            <dd>v8 を 3.9.17 に更新しました</dd>
+            <dd>npm を 1.1.8 に更新しました
+              <ul>
+                <li>package.json での os/cpu フィールドに対応しました (Adam Blackburn)</li>
+                <li>binding.gyp を含む場合は自動的に node-gyp パッケージとしてビルドするようになりました</li>
+                <li>UNC 共有でのファイル展開に失敗する問題を修正しました</li>
+                <li>読み込みができないディレクトリが生成される問題を修正しました</li>
+                <li>optionalDependency のビルドが失敗することがあるのを修正しました</li>
+              </ul>
+            </dd>
+            <dd>イベント処理で 'once' が利用された場合に、正しいコールバック関数が呼び出されるようになりました (Roly Fentanes)</dd>
+            <dd>url モジュールが空のポート番号を無視するようになりました (Łukasz Walukiewicz)</dd>
+            <dd>モジュールの 'children' 配列を置き換えました (isaacs)</dd>
+            <dd>tls モジュールが SSL 証明書のキーに含まれる複数の値をパースするようになりました (Sambasiva Suda)</dd>
+            <dd>cluster モジュールが名前付きパイプによる通信をサポートしました (Ben Noordhuis)</dd>
+            <dd>Windows におけるファイルシステムエラーが syscall を含むようになりました (Bert Belder)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/2888">#2888</a> http モジュールが end イベントを一度だけ発生させるようになりました (Igor Zinkovsky)</dd>
+            <dd>readline モジュールが複数行の入力をサポートしました (Rlidwka)</dd>
+            <dd>process.hrtime() が追加されました (Nathan Rajlich)</dd>
+            <dd>net, http, https モジュールに localAddress オプションが追加されました (Dmitry Nizovtsev)</dd>
+            <dd>アドオン関連の機能が改善されました (Nathan Rajlich)</dd>
+            <dd>ビルド処理が改善されました (Ben Noordhuis, Sadique Ali, T.C. Hollingsworth, Nathan Rajlich)</dd>
+            <dd>"SEARCH" リクエストメソッドのサポートを追加しました (Nathan Rajlich)</dd>
+            <dd>process.version に zlib と http_parser のバージョンを含めるようになりました (Nathan Rajlich)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.6/node-v0.7.6.tar.gz">http://nodejs.org/dist/v0.7.6/node-v0.7.6.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.6/node-v0.7.6.msi">http://nodejs.org/dist/v0.7.6/node-v0.7.6.msi</a></li>
+            <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.6/node-v0.7.6.pkg">http://nodejs.org/dist/v0.7.6/node-v0.7.6.pkg</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.6/">http://nodejs.org/docs/v0.7.6/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.6/api/">http://nodejs.org/docs/v0.7.6/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.7.5">Node v0.7.5</h3>
