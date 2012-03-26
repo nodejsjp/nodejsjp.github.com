@@ -38,7 +38,7 @@
           <h2>日本語訳ドキュメント</h2>
           <ul>
             <li><a href="nodejs.org_ja/api/">v0.7.6 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.13 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.14 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
             <li><a href="changelog.html">ChangeLog</a></li>
@@ -229,6 +229,38 @@
             <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg">http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.0/">http://nodejs.org/docs/v0.7.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a></li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3 id="v0.6.14">Node v0.6.14</h3> 
+          <dl>
+            <dt>2012.03.22, バージョン 0.6.14 (安定版)</dt>
+            <dd>net モジュールが、キューへの出力に失敗した場合にクラッシュしないようになりました (Igor Zinkovsky)</dd>
+            <dd>SunOS における process.memoryUsage() での EMFILE を修正しました (Bryan Cantrill)</dd>
+            <dd>crypto モジュールが OpenSSL 0.9.7e との組み合わせでコンパイルタイムエラーになる問題を修正しました (Ben Noordhuis)</dd>
+            <dd>Unix において accept() による ECONNABORTED エラーを無視するようになりました (Ben Noordhuis)</dd>
+            <dd>UV_ENOSPC を追加してマッピングしました (Bert Belder)</dd>
+            <dd>http-parser で レスポンスの body が読み込まれない問題を修正しました (koichik)</dd>
+            <dd>npm を 1.1.12 に更新しました
+              <ul>
+                <li>node-gyp を 0.3.7 に更新しました</li>
+                <li>Windows においてアンチウイルスソフトウェアにロックされたディレクトリに対処しました</li>
+                <li><a href="https://github.com/isaacs/npm/issues/2293">#2293</a> 'uninstall' / が実行されないようになりました</li>
+                <li>パッケージのシンボリックリンクを除外するようになりました</li>
+                <li><a href="https://github.com/isaacs/npm/issues/2275">#2275</a> 誤った 'unresolvable cycle' エラーに対応しました</li>
+                <li>通常のファイルと同様にドットファイルが除外/包含するようになりました</li>
+              </ul>
+            </dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.14/node-v0.6.14.tar.gz">http://nodejs.org/dist/v0.6.14/node-v0.6.14.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.14/node-v0.6.14.msi">http://nodejs.org/dist/v0.6.14/node-v0.6.14.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.6.14/x64/">http://nodejs.org/dist/v0.6.14/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.6.14/node-v0.6.14.pkg">http://nodejs.org/dist/v0.6.14/node-v0.6.14.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.6.14/">http://nodejs.org/dist/v0.6.14/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.14/">http://nodejs.org/docs/v0.6.14/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.14/api/">http://nodejs.org/docs/v0.6.14/api/</a></li>
           </ul>
         </div>
         
