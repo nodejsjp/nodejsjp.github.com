@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.7.6 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/api/">v0.7.7 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.14 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -49,6 +49,41 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.7.7">Node v0.7.7</h3>
+          <dl>
+            <dt>2012.03.30, バージョン 0.7.7 (開発版)</dt>
+            <dd>V8 を 3.9.24.7 に更新しました</dd>
+            <dd>npm を 1.1.15 に更新しました</dd>
+            <dd>適切に絵文字を扱うようになりました (Erik Corry, Bert Belder)</dd>
+            <dd>ANSI/vt100 の機能を tty から readline モジュールに移行しました (Nathan Rajlich)</dd>
+            <dd>readline モジュールの複数行の扱いを修正しました (Alex Kocharin)</dd>
+            <dd>REPL を強制するための -i/-interactive フラグを追加しました (Nathan Rajlich)</dd>
+            <dd>debugger に breakOnException コマンドを追加しました (Fedor Indutny)</dd>
+            <dd>cluster モジュールにおいて、マスタープロセスが終了した場合にワーカープロセスも終了するようになりました (Andreas Madsen)</dd>
+            <dd>cluster モジュールが緩やかな切断をサポートしました (Andreas Madsen)</dd>
+            <dd>child_process モジュールの 'close' イベントを 'exit' から分離しました (Charlie McConnell)</dd>
+            <dd>typed array に Uint8ClampedArray を追加しました (Mikael Bourges-Sevenier)</dd>
+            <dd>buffer モジュールにおける、バイトアラインメントの問題を修正しました (Ben Noordhuis, Erik Lundin)</dd>
+            <dd>tls モジュールの CryptoStream.setKeepAlive() を修正しました (Shigeki Ohtsu)</dd>
+            <dd>http パーサーのエラーコードが取得可能になりました (Felix Geisendörfer)</dd>
+            <dd>イベントリスナーの配列を削除しないようになりました (Ben Noordhuis, Nathan Rajlich)</dd>
+            <dd>node の ./configure 設定を表示するために process.config を追加しました (Nathan Rajlich)</dd>
+            <dd>node コマンドの引数を取得するために process.execArgv を追加しました (Micheil Smith)</dd>
+            <dd>process.title のセッターを修正しました (Ben Noordhuis)</dd>
+            <dd>タイマーにおいて、負数や数値でないタイムアウト値を扱うようになりました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.7/node-v0.7.7.tar.gz">http://nodejs.org/dist/v0.7.7/node-v0.7.7.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.7/node-v0.7.7.msi">http://nodejs.org/dist/v0.7.7/node-v0.7.7.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.7.7/x64/">http://nodejs.org/dist/v0.7.7/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.7.7/node-v0.7.7.pkg">http://nodejs.org/dist/v0.7.7/node-v0.7.7.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.7.7/">http://nodejs.org/dist/v0.7.7/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.7/">http://nodejs.org/docs/v0.7.7/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.7/api/">http://nodejs.org/docs/v0.7.7/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.7.6">Node v0.7.6</h3>
