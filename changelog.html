@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.7.7 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/api/">v0.7.8 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.15 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -49,6 +49,41 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.7.8">Node v0.7.8</h3>
+          <dl>
+            <dt>2012.04.18, バージョン 0.7.8 (開発版)</dt>
+            <dd>V8 を 3.9.24.9 に更新しました</dd>
+            <dd>OpenSSL を 1.0.0f に更新しました</dd>
+            <dd>npm を 1.1.18 に更新しました</dd>
+            <dd>バイナリインストーラーでライセンスを表示するようになりました</dd>
+            <dd>Domains が追加されました (isaacs)</dd>
+            <dd>readline モジュールの "end" イベントが "close" イベントに変更されました (Nathan Rajlich)</dd>
+            <dd>tcp モジュールの getsockname() がアドレスファミリーを文字列として返すようになりました (Shigeki Ohtsu)</dd>
+            <dd>http モジュール、https モジュールの .setTimeout() を修正しました (ssuda)</dd>
+            <dd>クロスプラットフォームな EOL 文字を追加しました (Mustansir Golawala)</dd>
+            <dd>typed arrays の SizeOfArrayElementForType() を削除しました (Aaron Jacobs)</dd>
+            <dd>net モジュールの .setNoDelay() メソッドが 'enable' フラグの値を正しく利用するようになりました (Ben Noordhuis)</dd>
+            <dd>child_process モジュールの .kill() が失敗した場合に error イベントを発生するようになりました (Andreas Madsen)</dd>
+            <dd>gyp において 'argument list too long' ビルドエラーが発生する問題を修正しました (Ben Noordhuis)</dd>
+            <dd>fs.WriteStream の fs.open の扱いを修正しました (isaacs)</dd>
+            <dd>repl モジュール、readline モジュールが、新しい行をよりよく扱うようになりました (Nathan Rajlich, Nathan Friedly)</dd>
+            <dd>darwin でのビルド実行時のターゲットが OSX 10.5 になりました (Nathan Rajlich)</dd>
+            <dd><a href="https://github.com/isaacs/npm/issues/3052">#3052</a> zlib のエラーを適切に扱うようになりました (isaacs)</dd>
+            <dd>ビルド処理に DTrace と Postmortem のサポートを追加しました (Dave Pacheco)</dd>
+            <dd>core に再利用可能なスラブアロケーターが追加されました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.8/node-v0.7.8.tar.gz">http://nodejs.org/dist/v0.7.8/node-v0.7.8.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.8/node-v0.7.8.msi">http://nodejs.org/dist/v0.7.8/node-v0.7.8.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.7.8/x64/">http://nodejs.org/dist/v0.7.8/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.7.8/node-v0.7.8.pkg">http://nodejs.org/dist/v0.7.8/node-v0.7.8.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.7.8/">http://nodejs.org/dist/v0.7.8/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.8/">http://nodejs.org/docs/v0.7.8/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.8/api/">http://nodejs.org/docs/v0.7.8/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.7.7">Node v0.7.7</h3>
