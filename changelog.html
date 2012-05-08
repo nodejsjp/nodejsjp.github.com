@@ -38,7 +38,7 @@
           <h2>日本語訳ドキュメント</h2>
           <ul>
             <li><a href="nodejs.org_ja/api/">v0.7.8 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.15 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.17 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
             <li><a href="changelog.html">ChangeLog</a></li>
@@ -299,6 +299,57 @@
             <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg">http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.0/">http://nodejs.org/docs/v0.7.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a></li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3 id="v0.6.17">Node v0.6.17</h3> 
+          <dl>
+            <dt>2012.05.04, バージョン 0.6.17 (安定版)</dt>
+            <dd>npm を 1.1.21 に更新しました</dd>
+            <dd>libuv に EROFS エラーのサポートを追加しました (Ben Noordhuis, Maciej Małecki)</dd>
+            <dd>libuv に EIO と ENOSPC エラーのサポートを追加しました (Fedor Indutny)</dd>
+            <dd>Windows 環境における EXDEV エラーのサポートを追加しました (Bert Belder)</dd>
+            <dd>http モジュールのクライアントで発生するメモリーリークを修正しました (isaacs, Vincent Voyer)</dd>
+            <dd>fs モジュールの sync 関数で発生するファイルディスクリプタのリークを修正しました (Ben Noordhuis)</dd>
+            <dd>fs モジュールにおいて ReadStream / WriteStream が二重に閉じられるバグを修正しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.17/node-v0.6.17.tar.gz">http://nodejs.org/dist/v0.6.17/node-v0.6.17.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.17/node-v0.6.17.msi">http://nodejs.org/dist/v0.6.17/node-v0.6.17.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.6.17/x64/">http://nodejs.org/dist/v0.6.17/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.6.17/node-v0.6.17.pkg">http://nodejs.org/dist/v0.6.17/node-v0.6.17.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.6.17/">http://nodejs.org/dist/v0.6.17/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.17/">http://nodejs.org/docs/v0.6.17/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.17/api/">http://nodejs.org/docs/v0.6.17/api/</a></li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3 id="v0.6.16">Node v0.6.16</h3> 
+          <dl>
+            <dt>2012.04.30, バージョン 0.6.16 (安定版)</dt>
+            <dd>V8 を 3.6.6.25 に更新しました</dd>
+            <dd>npm を 1.1.18 に更新しました</dd>
+            <dd>Windows 環境向けに UV_ENOENT のマッピングを追加しました (Bert Belder)</dd>
+            <dd>Linux 環境において inotify イベントマスクに IN_MOVE_SELF を追加しました (Ben Noordhuis)</dd>
+            <dd>UNIX 環境において accept() がエラーになった際に、パイプに紐づく接続コールバックが呼ばれるようになりました (Ben Noordhuis)</dd>
+            <dd>UNIX 環境において EWOULDBLOCK を扱うようになりました (Ben Noordhuis)</dd>
+            <dd>EWOULDBLOCK を UV_EAGAIN にマッピングしました (Ben Noordhuis)</dd>
+            <dd>child_process モジュールに gid と uid オプションを追加しました (Bert Belder)</dd>
+            <dd>cluster モジュールの Worker の death イベントに関するテストを追加しました (Ben Noordhuis)</dd>
+            <dd>node_http_parser のタイポを修正しました (isaacs)</dd>
+            <dd>http_parser が接続から切断までのリクエストで CRLF を扱うようになりました (Ben Noordhuis)</dd>
+            <dd>unsetenv の戻り値を確認しないようになりました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.16/node-v0.6.16.tar.gz">http://nodejs.org/dist/v0.6.16/node-v0.6.16.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.16/node-v0.6.16.msi">http://nodejs.org/dist/v0.6.16/node-v0.6.16.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.6.16/x64/">http://nodejs.org/dist/v0.6.16/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.6.16/node-v0.6.16.pkg">http://nodejs.org/dist/v0.6.16/node-v0.6.16.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.6.16/">http://nodejs.org/dist/v0.6.16/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.16/">http://nodejs.org/docs/v0.6.16/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.16/api/">http://nodejs.org/docs/v0.6.16/api/</a></li>
           </ul>
         </div>
         
