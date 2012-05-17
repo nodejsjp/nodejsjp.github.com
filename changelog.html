@@ -38,7 +38,7 @@
           <h2>日本語訳ドキュメント</h2>
           <ul>
             <li><a href="nodejs.org_ja/api/">v0.7.8 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.17 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.18 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
             <li><a href="changelog.html">ChangeLog</a></li>
@@ -299,6 +299,35 @@
             <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg">http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.0/">http://nodejs.org/docs/v0.7.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a></li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3 id="v0.6.18">Node v0.6.18</h3> 
+          <dl>
+            <dt>2012.05.15, バージョン 0.6.18 (安定版)</dt>
+            <dd>Windows 環境において、ファイルを開く際の GetFileAttributes の呼び出しをスキップするようになりました (Bert Belder)</dd>
+            <dd>crypto モジュールに PKCS12/PFX のサポートが追加されました (Sambasiva Suda)</dd>
+            <dd><a href="https://github.com/isaacs/npm/issues/3240">#3240</a> child_process の spawn で起動したプロセスの環境変数から NODE_CHANNEL_FD を削除するようになりました (Ben Noordhuis)</dd>
+            <dd>Windows 環境向けにUNC パスを使った path.normalize のテストを追加しました (Bert Belder)</dd>
+            <dd>Windows 環境において path.normalize が全てのスラッシュをバックスラッシュに変換するようになりました (Bert Belder)</dd>
+            <dd>fs モジュールがエラー時に自動的に FSWatcher を終了させるようになりました (Bert Belder)</dd>
+            <dd><a href="https://github.com/isaacs/npm/issues/3258">#3258</a> fs.ReadStream.pause() が同じ data イベントを発生される問題を修正しました (koichik)</dd>
+            <dd>pipe_wrap がパイプ受け入れエラー時に assert() を使用しないようになりました (Ben Noordhuis)</dd>
+            <dd>モジュールの読み込みや process.nextTick 向けによりよい例外出力がおこなわれるようになりました (Felix Geisendörfer)</dd>
+            <dd>zlib モジュールのエラー通知が修正されました (Ben Noordhuis)</dd>
+            <dd>http モジュールがタイムアウト時に削除しないようになりました (isaacs)</dd>
+            <dd><a href="https://github.com/isaacs/npm/issues/3231">#3231</a> http モジュールが null のリクエストオブジェクトに error イベントを発生しないようになりました  (isaacs)</dd>
+            <dd><a href="https://github.com/isaacs/npm/issues/3236">#3236</a> http モジュールの ClientRequest.onSocket をリファクタリングしました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.18/node-v0.6.18.tar.gz">http://nodejs.org/dist/v0.6.18/node-v0.6.18.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.18/node-v0.6.18.msi">http://nodejs.org/dist/v0.6.18/node-v0.6.18.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.6.18/x64/">http://nodejs.org/dist/v0.6.18/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.6.18/node-v0.6.18.pkg">http://nodejs.org/dist/v0.6.18/node-v0.6.18.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.6.18/">http://nodejs.org/dist/v0.6.18/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.18/">http://nodejs.org/docs/v0.6.18/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.18/api/">http://nodejs.org/docs/v0.6.18/api/</a></li>
           </ul>
         </div>
         
