@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.7.9 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/api/">v0.7.10 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.19 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -51,29 +51,68 @@
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
 
         <div class="section">
+          <h3 id="v0.7.10">Node v0.7.10</h3>
+          <dl>
+            <dt>2012.06.11, バージョン 0.7.10 (開発版)</dt>
+            <dd>V8 を 3.9.24.31 に戻しました</dd>
+            <dd>x64 ターゲットのビルド時に -m64 を常に設定ようになりました (Robert Mustacchi)</dd>
+            <dd>NODE_EXTERN を node::Start に追加しました (Joel Brandt)</dd>
+            <dd>repl モジュールが npm コマンドの実行について警告するようになりました (isaacs)</dd>
+            <dd>スラブアロケーターにおいて、V8が停止した場合に dtor でクラッシュする問題を修正しました (Ben Noordhuis)</dd>
+            <dd>スラブアロケーターにおける永続的なハンドルのリークを修正しました (Shigeki Ohtsu)</dd>
+            <dd>Windows 環境において、スタートメニューに Node.js プロンプトを追加するようになりました (Jeroen Janssen)</dd>
+            <dd>Windows 環境における node コマンドの PATH への追加を修正しました (Jeroen Janssen)</dd>
+            <dd>Windows 環境でのインストール時にリンクをスタートメニューに追加するようになりました (Jeroen Janssen)</dd>
+            <dd>Windows 環境において 'program files (x86)' フォルダに x64 バージョンをインストールしないようになりました (Matt Gollob)</dd>
+            <dd><a href="https://github.com/isaacs/npm/issues/3379">#3379</a> domain モジュールの domain.intercept がコールバックにエラー引数を渡さないようになりました (Marc Harter)</dd>
+            <dd>fs モジュールのコールバックがグローバルコンテキストで実行されるようになりました (Ben Noordhuis)</dd>
+            <dd>fs モジュールの fs.realpath が Windows 環境において有効になりました (isaacs)</dd>
+            <dd>child_process モジュールにおいて UV_PROCESS_DETACHED が options.detached として利用可能になりました (Charlie McConnell)</dd>
+            <dd>child_process モジュールの .spawn() メソッドに新しい標準入出力 API が追加されました (Fedor Indutny)</dd>
+            <dd>child_process モジュールで spawn().ref() と spawn().unref() が利用可能になりました (Fedor Indutny)</dd>
+            <dd>npm を 1.1.25 に更新しました
+              <ul>
+                <li>Windows 環境で npm link が利用可能になりました</li>
+                <li>Windows 環境で sh-shim を適切に削除するようになりました</li>
+                <li>レジストリクライアントとロガーを抽象化しました</li>
+              </ul>
+            </dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.10/node-v0.7.10.tar.gz">http://nodejs.org/dist/v0.7.10/node-v0.7.10.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.10/node-v0.7.10.msi">http://nodejs.org/dist/v0.7.10/node-v0.7.10.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.7.10/x64/">http://nodejs.org/dist/v0.7.10/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.7.10/node-v0.7.10.pkg">http://nodejs.org/dist/v0.7.10/node-v0.7.10.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.7.10/">http://nodejs.org/dist/v0.7.10/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.10/">http://nodejs.org/docs/v0.7.10/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.10/api/">http://nodejs.org/docs/v0.7.10/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
           <h3 id="v0.7.9">Node v0.7.9</h3>
           <dl>
             <dt>2012.05.28, バージョン 0.7.9 (開発版)</dt>
-              <dd>V8 を 3.11.1 に更新しました</dd>
-              <dd>npm を 1.1.23 に更新しました</dd>
-              <dd>libuv の参照カウント処理のやり方を見直しました (Ben Noordhuis)</dd>
-              <dd>libuv に外部イベントループを接続するためのインターフェースを追加しました (Bert Belder)</dd>
-              <dd>repl, readline モジュールが Ctrl+Z と SIGCONT を適切に扱うようになりました (Nathan Rajlich)</dd>
-              <dd>fs モジュールの呼び出しが 64bit オフセットに対応しました (Igor Zinkovsky)</dd>
-              <dd>fs モジュールにおける同期版 open のフラグに 'rs' と 'rs+' が追加されました (Kevin Bowman)</dd>
-              <dd>Windows において fs.symlink でディレクトリのリンクを作成できるようになりました (Igor Zinkovsky, Bert Belder)</dd>
-              <dd>Windows において fs.lstat が適切にシンボリックリンクを認識するようになりました (Igor Zinkovsky)</dd>
-              <dd><a href="https://github.com/joyent/node/issues/3270">#3270</a> url.parse がデリミタをエスケープするようになりました (isaacs)</dd>
-              <dd>http モジュールの http.get() が URL を受け取るようになりました (Adam Malcontenti-Wilson)</dd>
-              <dd>vm モジュールのメモリーリークを修正しました (Marcel Laverdet)</dd>
-              <dd>Socket.write での文字列の書き込み処理を最適化しました (Bert Belder)</dd>
-              <dd>CESU-8 と UTF-16LE のエンコードサポートを追加しました (koichik)</dd>
-              <dd>path モジュールにパスの区切り文字を取得するための path.sep を追加しました (Yi, EungJun)</dd>
-              <dd>net および http モジュールの .listen() にブロッキングパラメーターを追加しました (Erik Dubbelboer)</dd>
-              <dd>デバッガが Date オブジェクトのミラーリングに対応しました (Fedor Indutny)</dd>
-              <dd>アドオンに AtExit() 関数が追加されました (Ben Noordhuis)</dd>
-              <dd>net モジュールの接続時に localAddress の割り当ての失敗を通知するようになりました (Brian Schroeder)</dd>
-              <dd>util モジュールの .inspect() が文字列ではない戻り値を扱うようになりました (Alex Kocharin)</dd>
+            <dd>V8 を 3.11.1 に更新しました</dd>
+            <dd>npm を 1.1.23 に更新しました</dd>
+            <dd>libuv の参照カウント処理のやり方を見直しました (Ben Noordhuis)</dd>
+            <dd>libuv に外部イベントループを接続するためのインターフェースを追加しました (Bert Belder)</dd>
+            <dd>repl, readline モジュールが Ctrl+Z と SIGCONT を適切に扱うようになりました (Nathan Rajlich)</dd>
+            <dd>fs モジュールの呼び出しが 64bit オフセットに対応しました (Igor Zinkovsky)</dd>
+            <dd>fs モジュールにおける同期版 open のフラグに 'rs' と 'rs+' が追加されました (Kevin Bowman)</dd>
+            <dd>Windows において fs.symlink でディレクトリのリンクを作成できるようになりました (Igor Zinkovsky, Bert Belder)</dd>
+            <dd>Windows において fs.lstat が適切にシンボリックリンクを認識するようになりました (Igor Zinkovsky)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/3270">#3270</a> url.parse がデリミタをエスケープするようになりました (isaacs)</dd>
+            <dd>http モジュールの http.get() が URL を受け取るようになりました (Adam Malcontenti-Wilson)</dd>
+            <dd>vm モジュールのメモリーリークを修正しました (Marcel Laverdet)</dd>
+            <dd>Socket.write での文字列の書き込み処理を最適化しました (Bert Belder)</dd>
+            <dd>CESU-8 と UTF-16LE のエンコードサポートを追加しました (koichik)</dd>
+            <dd>path モジュールにパスの区切り文字を取得するための path.sep を追加しました (Yi, EungJun)</dd>
+            <dd>net および http モジュールの .listen() にブロッキングパラメーターを追加しました (Erik Dubbelboer)</dd>
+            <dd>デバッガが Date オブジェクトのミラーリングに対応しました (Fedor Indutny)</dd>
+            <dd>アドオンに AtExit() 関数が追加されました (Ben Noordhuis)</dd>
+            <dd>net モジュールの接続時に localAddress の割り当ての失敗を通知するようになりました (Brian Schroeder)</dd>
+            <dd>util モジュールの .inspect() が文字列ではない戻り値を扱うようになりました (Alex Kocharin)</dd>
           </dl>
           <ul>
             <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.9/node-v0.7.9.tar.gz">http://nodejs.org/dist/v0.7.9/node-v0.7.9.tar.gz</a></li>
