@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.7.10 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/api/">v0.7.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.19 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -49,6 +49,80 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.7.12">Node v0.7.12</h3>
+          <dl>
+            <dt>2012.06.19, Version 0.7.12 (unstable)</dt>
+            <dd>npm を 1.1.30 に更新しました
+            <ul>
+              <li>'npm init' を改善しました</li>
+              <li>'oudated' と 'update' を使用した際に 'cb never called' エラーが発生する問題を修正しました</li>
+              <li>-save-bundle/-B 設定を追加しました</li>
+              <li><a href="https://github.com/joyent/npm/issues/2465">#2465</a> npm スクリプトが cygwin 上でも動作できるように修正しました</li>
+              <li><a href="https://github.com/joyent/npm/issues/2452">#2452</a> npm rm で –save(-dev|-optional) を使用するようになりました</li>
+              <li>すでに削除されている logfd を置き換えるための logstream オプションを追加しました (Rod Vagg)</li>
+              <li>README.md ファイルから概要を読み込むようになりました</li>
+            </ul>
+            </dd>
+            <dd>非推奨になった ev_* と eio_*  メソッドをサポートするための修正をおこないました (Ben Noordhuis)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/3118">#3118</a> net.Socket の pause/resume は接続するまで遅延するようになりました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/3465">#3465</a> ./configure に –no-ifaddrs フラグを追加しました (isaacs)
+            </dd>
+            <dd>child_process モジュールに fork のための .stdin ストリームが追加されました (Fedor Indutny)</dd>
+            <dd>DESTDIR=/path を使用した make install を修正しました (Ben Noordhuis)</dd>
+            <dd>tls モジュールにおいて再ネゴシエーション確認での off-by-one エラーを修正しました (Ben Noordhuis)</dd>
+            <dd>crypto モジュールの diffie-hellman 鍵生成における UTF-8 エラーを修正しました (Fedor Indutny)</dd>
+            <dd>process のコンストラクタ名を EventEmitter から process に変更しました (Andreas Madsen)</dd>
+            <dd>net モジュールの切断時におけるプロパティアクセス例外を防ぐ処理を追加しました (Reid Burke)</dd>
+            <dd>querystring モジュールの速度を改善し、コードを整理しました (Felix Böhm)</dd>
+            <dd>SunOS 環境での fs.watch() を停止させるアサーションエラーを修正しました (Fedor Indutny)</dd>
+            <dd>UNIX環境において、stat が1秒以内の変更を検出できるようになりました (Ben Noordhuis)</dd>
+            <dd>stat() ベースのファイル監視を追加しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.12/node-v0.7.12.tar.gz">http://nodejs.org/dist/v0.7.12/node-v0.7.12.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.12/node-v0.7.12.msi">http://nodejs.org/dist/v0.7.12/node-v0.7.12.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.7.12/x64/">http://nodejs.org/dist/v0.7.12/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.7.12/node-v0.7.12.pkg">http://nodejs.org/dist/v0.7.12/node-v0.7.12.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.7.12/">http://nodejs.org/dist/v0.7.12/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.12/">http://nodejs.org/docs/v0.7.12/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.12/api/">http://nodejs.org/docs/v0.7.12/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.7.11">Node v0.7.11</h3>
+          <dl>
+            <dt>2012.06.15, バージョン 0.7.11 (開発版)</dt>
+            <dd>V8 を 3.11.10 に更新しました</dd>
+            <dd>npm を 1.1.26 に更新しました</dd>
+            <dd>Markdown による API ドキュメントの相互リンクを改善しました (Ben Kelly)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/3425">#3425</a> removeAllListeners が配列を削除するようになりました (Reid Burke)</dd>
+            <dd>cluster においてキューの書き込みが増加した際のメッセージの処理落ちが発生しないようになりました (Bert Belder)</dd>
+            <dd>Buffer.concat メソッドを追加しました (isaacs)</dd>
+            <dd>Windows 環境におけるシンボリックリンクの作成について、スラッシュを含むことを許容するようになりました (Bert Belder)</dd>
+            <dd>node.d および node.1 をインストーラーに追加しました (isaacs)</dd>
+            <dd>cluster モジュールの worker.unqiueID が worker.id に変更されました (Andreas Madsen)</dd>
+            <dd>WIndows 環境において既存の DTrace プローブのために ETW イベントが有効化されました (Igor Zinkovsky)</dd>
+            <dd>ダウンロードを不要とするために、node-weak を test/gc 配下に追加しました (Nathan Rajlich)</dd>
+            <dd>Windows 環境での多くのテストがパスするようになりました (Bert Belder)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/3388">#3388</a> ファイルディスクリプタの待ち受けをサポートしました (isaacs)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/3407">#3407</a> os.tmpDir() を追加しました (isaacs)</dd>
+            <dd>Windows でのスナップショットビルドを回復しました (Bert Belder)</dd>
+            <dd>child_process.kill をクリーンアップしました (Bert Belder)</dd>
+            <dd>crypto モジュールの cipher/decipher  が buffer 引数を受け付けるようになりました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.11/node-v0.7.11.tar.gz">http://nodejs.org/dist/v0.7.11/node-v0.7.11.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.11/node-v0.7.11.msi">http://nodejs.org/dist/v0.7.11/node-v0.7.11.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.7.11/x64/">http://nodejs.org/dist/v0.7.11/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.7.11/node-v0.7.11.pkg">http://nodejs.org/dist/v0.7.11/node-v0.7.11.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.7.11/">http://nodejs.org/dist/v0.7.11/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.11/">http://nodejs.org/docs/v0.7.11/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.11/api/">http://nodejs.org/docs/v0.7.11/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.7.10">Node v0.7.10</h3>
