@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.7.12 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.0 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.19 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -51,24 +51,52 @@
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
 
         <div class="section">
+          <h3 id="v0.8.0">Node v0.8.0</h3>
+          <dl>
+            <dt>2012.06.25, バージョン 0.8.0 (安定版)</dt>
+            <dd>V8 を 3.11.10.10 に更新しました</dd>
+            <dd>npm を 1.1.32 に更新しました</dd>
+            <dd>iowatcher を非推奨にしました (Ben Noordhuis)</dd>
+            <dd>Windows 環境用のアイコンを更新しました (Bert Belder)</dd>
+            <dd>http モジュールの 'MUST NOT have a body' 警告を debug() で出力するようになりました (isaacs)</dd>
+            <dd>blog.nodejs.org のコンテンツをリポジトリに移動しました (isaacs)</dd>
+            <dd>#3503 標準入出力で pipe(dest) をした際に自動で resume() するようになりました</dd>
+            <dd>crypto モジュールにおける SetKey() のエラー通知を修正しました (Fedor Indutny)</dd>
+            <dd>--no-deprecation と --trace-deprecation コマンドラインを追加しました (isaacs)</dd>
+            <dd>fs モジュールの fs.watchFile() を修正しました (Ben Noordhuis)</dd>
+            <dd>fs モジュールにおける pipes での fs.readfile() を修正しました (isaacs)</dd>
+            <dd>node_use_system_openssl の GYP 変数を定数化しました (Ryan Dahl)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.0/node-v0.8.0.tar.gz">http://nodejs.org/dist/v0.8.0/node-v0.8.0.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.0/node-v0.8.0.pkg">http://nodejs.org/dist/v0.8.0/node-v0.8.0.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.0/node-v0.8.0-x86.msi">http://nodejs.org/dist/v0.8.0/node-v0.8.0-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.0/x64/node-v0.8.0-x64.msi">http://nodejs.org/dist/v0.8.0/x64/node-v0.8.0-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.0/x64/">http://nodejs.org/dist/v0.8.0/x64/</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.0/">http://nodejs.org/dist/v0.8.0/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.0/">http://nodejs.org/docs/v0.8.0/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.0/api/">http://nodejs.org/docs/v0.8.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
           <h3 id="v0.7.12">Node v0.7.12</h3>
           <dl>
             <dt>2012.06.19, Version 0.7.12 (unstable)</dt>
             <dd>npm を 1.1.30 に更新しました
-            <ul>
-              <li>'npm init' を改善しました</li>
-              <li>'oudated' と 'update' を使用した際に 'cb never called' エラーが発生する問題を修正しました</li>
-              <li>-save-bundle/-B 設定を追加しました</li>
-              <li><a href="https://github.com/joyent/npm/issues/2465">#2465</a> npm スクリプトが cygwin 上でも動作できるように修正しました</li>
-              <li><a href="https://github.com/joyent/npm/issues/2452">#2452</a> npm rm で –save(-dev|-optional) を使用するようになりました</li>
-              <li>すでに削除されている logfd を置き換えるための logstream オプションを追加しました (Rod Vagg)</li>
-              <li>README.md ファイルから概要を読み込むようになりました</li>
-            </ul>
+              <ul>
+                <li>'npm init' を改善しました</li>
+                <li>'oudated' と 'update' を使用した際に 'cb never called' エラーが発生する問題を修正しました</li>
+                <li>-save-bundle/-B 設定を追加しました</li>
+                <li><a href="https://github.com/joyent/npm/issues/2465">#2465</a> npm スクリプトが cygwin 上でも動作できるように修正しました</li>
+                <li><a href="https://github.com/joyent/npm/issues/2452">#2452</a> npm rm で –save(-dev|-optional) を使用するようになりました</li>
+                <li>すでに削除されている logfd を置き換えるための logstream オプションを追加しました (Rod Vagg)</li>
+                <li>README.md ファイルから概要を読み込むようになりました</li>
+              </ul>
             </dd>
             <dd>非推奨になった ev_* と eio_*  メソッドをサポートするための修正をおこないました (Ben Noordhuis)</dd>
             <dd><a href="https://github.com/joyent/node/issues/3118">#3118</a> net.Socket の pause/resume は接続するまで遅延するようになりました (isaacs)</dd>
-            <dd><a href="https://github.com/joyent/node/issues/3465">#3465</a> ./configure に –no-ifaddrs フラグを追加しました (isaacs)
-            </dd>
+            <dd><a href="https://github.com/joyent/node/issues/3465">#3465</a> ./configure に –no-ifaddrs フラグを追加しました (isaacs)</dd>
             <dd>child_process モジュールに fork のための .stdin ストリームが追加されました (Fedor Indutny)</dd>
             <dd>DESTDIR=/path を使用した make install を修正しました (Ben Noordhuis)</dd>
             <dd>tls モジュールにおいて再ネゴシエーション確認での off-by-one エラーを修正しました (Ben Noordhuis)</dd>
