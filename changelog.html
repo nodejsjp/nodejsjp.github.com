@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.0 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.1 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.19 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -49,6 +49,45 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.8.1">Node v0.8.1</h3>
+          <dl>
+              <dt>2012.06.29, バージョン 0.8.1 (開発版)</dt>
+              <dd>V8 を 3.11.10.12 に更新しました</dd>
+              <dd>npm を 1.1.33 に更新しました
+                <ul>
+                    <li>キャッシュディレクトリの並列処理をサポートしました</li>
+                    <li>レジストリがタイムアウトまたはネットワークエラーになった際にリトライするようになりました (Trent Mick)</li>
+                    <li>'engines' の指定による失敗を警告の扱いに変更しました</li>
+                    <li>入手可能であれば新しい zsh 補完を使用するようになりました (Jeremy Cantrell)</li>
+                    <li>#3577 require('sys') により動作しない不具合を修正しました</li>
+                </ul>
+              </dd>
+              <dd>util モジュールによる巨大な配列やオブジェクトのフォーマット化が高速になりました (Ben Noordhuis)</dd>
+              <dd>Windows 環境において fs.realpath(Sync) が UNC パスでも動作するようになりました (Bert Belder)</dd>
+              <dd>ビルド時の --shared-v8 オプションを修正しました (Ben Noordhuis)</dd>
+              <dd>ドキュメントの detached の値を boolean に変更しました (Andreas Madsen)</dd>
+              <dd>ビルド時に最適な python インタプリタを使用するようになりました (Ben Noordhuis)</dd>
+              <dd> ./configure --prefix=~/a/b/c における ~ のパスを展開するようになりました (Ben Noordhuis)</dd>
+              <dd>ビルド時に空白を含む CC 環境変数を扱うようになりました (Gabriel de Perthuis)</dd>
+              <dd>gcc 4.5 を利用したコンパイル時の V8 のビルド処理を修正しました (Ben Noordhuis)</dd>
+              <dd>Windows 用 msi のサイズが巨大なファイルにより発生するアイコンの問題を修正しました (Bert Belder)</dd>
+              <dd>UNIX環境において dlopen() が dlerror() が呼び出される可能性があることを想定するようになりました (Ben Noordhuis)</dd>
+              <dd>Sun OS 環境におけるメモリー汚染のバグを修正しました (Ben Noordhuis)</dd>
+              <dd>Windows 環境での (f)utimes および (f)stat を修正しました (Bert Belder)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.1/node-v0.8.1.tar.gz">http://nodejs.org/dist/v0.8.1/node-v0.8.1.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.1/node-v0.8.1.pkg">http://nodejs.org/dist/v0.8.1/node-v0.8.1.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.1/node-v0.8.1-x86.msi">http://nodejs.org/dist/v0.8.1/node-v0.8.1-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.1/x64/node-v0.8.1-x64.msi">http://nodejs.org/dist/v0.8.1/x64/node-v0.8.1-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.1/x64/">http://nodejs.org/dist/v0.8.1/x64/</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.1/">http://nodejs.org/dist/v0.8.1/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.1/">http://nodejs.org/docs/v0.8.1/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.1/api/">http://nodejs.org/docs/v0.8.1/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.8.0">Node v0.8.0</h3>
