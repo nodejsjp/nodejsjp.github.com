@@ -37,8 +37,8 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.1 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.19 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.2 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.20 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
             <li><a href="changelog.html">ChangeLog</a></li>
@@ -49,6 +49,39 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.8.2">Node v0.8.2</h3>
+          <dl>
+            <dt>2012.07.09, バージョン 0.8.2 (安定版)</dt>
+            <dd>npm を 1.1.36 に更新しました</dd>
+            <dd>readline モジュールで Function#call() を使用しないようになりました (Nathan Rajlich)</dd>
+            <dd>'use strict' で実行できるようにコードを見直しました (Jonas Westerlund)</dd>
+            <dd>require() における JSON エラーにファイル名を追加しました (TJ Holowaychuk)</dd>
+            <dd>readline モジュールの Unicode プロンプトを修正しました (Tim Macfarlane)</dd>
+            <dd>timers における非常に長い時間のタイムアウトの扱いを修正しました (Ben Noordhuis)</dd>
+            <dd>repl モジュールにおいて空白行がバッファに "undefined" を挿入してしまう問題を修正しました (Nathan Rajlich)</dd>
+            <dd>repl モジュールがコマンドのバッファリング時にクラッシュする問題を修正しました (Maciej Małecki)</dd>
+            <dd>ビルドでの strict_aliasing を node_no_strict_aliasing に名前変更しました (Ben Noordhuis)</dd>
+            <dd>ビルドにおいて gcc が 4.6.0 以下の場合は -fstrict-aliasing が無効になるようになりました (Ben Noordhuis)</dd>
+            <dd>ビルドにおいて -dumpversion により cc のバージョンを検知するようになりました (Ben Noordhuis)</dd>
+            <dd>ビルドでの gcc や clang のローカライズされた出力を扱うようになりました (Ben Noordhuis)</dd>
+            <dd>freebsd.c のメモリー汚染を修正しました (Ben Noordhuis)</dd>
+            <dd>UNIX 環境における 'zero handles, one request' ビジーループを修正しました (Ben Noordhuis)</dd>
+            <dd>UNIX 環境における予期しない TCP メッセージによるビジーループを修正しました (Ben Noordhuis)</dd>
+            <dd>UNIX 環境における EINPROGRESS ビジーループを修正しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.2/node-v0.8.2.tar.gz">http://nodejs.org/dist/v0.8.2/node-v0.8.2.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.2/node-v0.8.2.pkg">http://nodejs.org/dist/v0.8.2/node-v0.8.2.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.2/node-v0.8.2-x86.msi">http://nodejs.org/dist/v0.8.2/node-v0.8.2-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.2/x64/node-v0.8.2-x64.msi">http://nodejs.org/dist/v0.8.2/x64/node-v0.8.2-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.2/x64/">http://nodejs.org/dist/v0.8.2/x64/</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.2/">http://nodejs.org/dist/v0.8.2/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.2/">http://nodejs.org/docs/v0.8.2/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.2/api/">http://nodejs.org/docs/v0.8.2/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.8.1">Node v0.8.1</h3>
@@ -515,6 +548,28 @@
             <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg">http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.0/">http://nodejs.org/docs/v0.7.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a></li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3 id="v0.6.20">Node v0.6.20</h3> 
+          <dl>
+            <dt>2012.07.10, バージョン 0.6.20 (メンテナンス版)</dt>
+            <dd>npm を 1.1.37 に更新しました (isaacs)</dd>
+            <dd>master ブランチでの作業を取り込むことでベンチマークを改善しました (isaacs)</dd>
+            <dd>ビルドでは常に -lz を指定してリンクするようになりました (Trent Mick)</dd>
+            <dd>最適な #include ディレクティブを使用するようになりました (Ben Noordhuis)</dd>
+            <dd>cluster モジュールの書き込みキューが巨大になった場合に、メッセージの取りこぼしを発生しないようになりました (Bert Belder)</dd>
+            <dd>Windows 環境において GetConsoleTitleW が空の文字列を返した場合でもエラーを表示しないようになりました (Bert Belder)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.20/node-v0.6.20.tar.gz">http://nodejs.org/dist/v0.6.20/node-v0.6.20.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.20/node-v0.6.20.msi">http://nodejs.org/dist/v0.6.20/node-v0.6.20.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.6.20/x64/">http://nodejs.org/dist/v0.6.20/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.6.20/node-v0.6.20.pkg">http://nodejs.org/dist/v0.6.20/node-v0.6.20.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.6.20/">http://nodejs.org/dist/v0.6.20/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.20/">http://nodejs.org/docs/v0.6.20/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.20/api/">http://nodejs.org/docs/v0.6.20/api/</a></li>
           </ul>
         </div>
         
