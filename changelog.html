@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.2 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.3 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.20 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -49,6 +49,65 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.9.0">Node v0.9.0</h3>
+          <dl>
+            <dt>2012.07.20, バージョン 0.9.0 (開発版)</dt>
+            <dd>punycode モジュールを v1.1.1 に更新しました (Mathias Bynens)</dd>
+            <dd>c-ares を 1.9.0 に更新しました (Saúl Ibarra Corretgé)</dd>
+            <dd>dns モジュールが Windows により報告される不正な DNS サーバーを無視するようになりました (Saúl Ibarra Corretgé)</dd>
+            <dd>UNIX 環境において uv_async_send() が高速化しました (Ben Noordhuis)</dd>
+            <dd>Mac OS X 上で CPU モデルを正しく取得するようになりましたc (Xidorn Quan)</dd>
+            <dd>nextTick があらゆる I/O よりも前にコールバックを処理するようになりました (isaacs)</dd>
+            <dd>util.inspect の色カスタマイズが有効化されました (Pavel Lang)</dd>
+            <dd>tls モジュールのメモリー使用を改善し、高速化しました (Fedor Indutny)</dd>
+            <dd>readline モジュールにおいて再入力行に履歴アイテムを使用するようになりました (Vladimir Beloborodov)</dd>
+            <dd><a href="https://github.com/joyent/node/issues/3521">#3521</a> process.env をより一般的なオブジェクトとして扱えるようにしました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.9.0/node-v0.9.0.tar.gz">http://nodejs.org/dist/v0.9.0/node-v0.9.0.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.9.0/node-v0.9.0.pkg">http://nodejs.org/dist/v0.9.0/node-v0.9.0.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.9.0/node-v0.9.0-x86.msi">http://nodejs.org/dist/v0.9.0/node-v0.9.0-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.9.0/x64/node-v0.9.0-x64.msi">http://nodejs.org/dist/v0.9.0/x64/node-v0.9.0-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.9.0/x64/">http://nodejs.org/dist/v0.9.0/x64/</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.0/">http://nodejs.org/dist/v0.9.0/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.0/">http://nodejs.org/docs/v0.9.0/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.0/api/">http://nodejs.org/docs/v0.9.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.3">Node v0.8.3</h3>
+          <dl>
+            <dt>2012.07.19, バージョン 0.8.3 (安定版)</dt>
+            <dd>V8 を 3.11.10.15 に更新しました</dd>
+            <dd>npm を 1.1.43 に更新しました</dd>
+            <dd>net モジュールにおける net.Server.listen({fd:x}) のエラー報告を修正しました (Ben Noordhuis)</dd>
+            <dd>net モジュールが誤ったエラーを報告する問題を修正しました (Ben Noordhuis)</dd>
+            <dd>npm シェバングのロジックを npm スクリプトに移動しました (isaacs)</dd>
+            <dd>FreeBSD でのアドオンの読み込みを修正しました (Ben Noordhuis)</dd>
+            <dd>ビルドにおける危険な最適化を無効化しました (Ben Noordhuis)</dd>
+            <dd>ビルドにおける擬似的な mksnapshot クラッシュを修正しました (Ben Noordhuis)</dd>
+            <dd>ビルド時の genv8constants を高速化しました (Dave Pacheco)</dd>
+            <dd>fs モジュールの unwatchFile() が固有のリスナーを削除するようになりました (Ben Noordhuis)</dd>
+            <dd>domain モジュールの intercept コールバックから最初の引数を削除しました (Toshihiro Nakamura)</dd>
+            <dd>domain モジュールがエラー時にメモリーリークする問題を修正しました (isaacs)</dd>
+            <dd>events モジュールの removeAllListeners によるメモリーリークを修正しました (Nathan Rajlich)</dd>
+            <dd>zlib モジュールの Unzip クラス内でのメモリーリークを修正しました (isaacs)</dd>
+            <dd>crypto モジュールの DecipherUpdate() でのメモリーリークを修正しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.3/node-v0.8.3.tar.gz">http://nodejs.org/dist/v0.8.3/node-v0.8.3.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.3/node-v0.8.3.pkg">http://nodejs.org/dist/v0.8.3/node-v0.8.3.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.3/node-v0.8.3-x86.msi">http://nodejs.org/dist/v0.8.3/node-v0.8.3-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.3/x64/node-v0.8.3-x64.msi">http://nodejs.org/dist/v0.8.3/x64/node-v0.8.3-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.3/x64/">http://nodejs.org/dist/v0.8.3/x64/</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.3/">http://nodejs.org/dist/v0.8.3/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.3/">http://nodejs.org/docs/v0.8.3/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.3/api/">http://nodejs.org/docs/v0.8.3/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.8.2">Node v0.8.2</h3>
