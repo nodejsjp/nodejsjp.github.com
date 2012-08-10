@@ -38,8 +38,8 @@
           <h2>日本語訳ドキュメント</h2>
           <ul>
             <li><a href="nodejs.org_ja/api/">v0.9.0 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.4 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.20 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.5 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
             <li><a href="changelog.html">ChangeLog</a></li>
@@ -75,6 +75,40 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.0/">http://nodejs.org/dist/v0.9.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.0/">http://nodejs.org/docs/v0.9.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.0/api/">http://nodejs.org/docs/v0.9.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.5">Node v0.8.5</h3>
+          <dl>
+            <dt>2012.08.02, バージョン 0.8.5 (安定版)</dt>
+            <dd>Node 本体の Encode に NODE_EXTERN をタグ付けしました (Ben Noordhuis)</dd>
+            <dd>fs モジュールの ReadStream / WriteStream が正しくコールバックを実行しない問題を修正しました (Gil Pedersen)</dd>
+            <dd>fs モジュールの readFileSync("/proc/cpuinfo") に関する不具合を修正しました (Ben Noordhuis)</dd>
+            <dd>インストーラーが bash をインストールされている環境を必須としないようになりました (Ben Noordhuis)</dd>
+            <dd>標準入力と --eval の組み合わせ時に適切にエラーを報告するようになりました (isaacs)</dd>
+            <dd>assert の throws() が message プロパティなしにエラーを発生する問題を修正しました (koichik)</dd>
+            <dd>cluster モジュールの net.listen() において libuv の判定に問題が発生するのを修正しました (Ben Noordhuis)</dd>
+            <dd>SunOS ビルドは常に libumem をリンクするようになりました (Trent Mick)</dd>
+            <dd>ARM v7 向けのビルドを改善し、hard-float を検出するようになりました (Adam Malcontenti-Wilson)</dd>
+            <dd>https モジュールが有効なサーバー名を host ヘッダーに使用するようになりました (isaacs)</dd>
+            <dd>SunOS において OS のバグにより fs.watch() が発動してしまうのを防ぐようになりました (Bryan Cantrill)</dd>
+            <dd>Linux 環境において1つのパスに2つの Watcher があるとセグメンテーションフォールトが発生する問題を修正しました (Ben Noordhuis)</dd>
+            <dd>Windows 環境における fs モジュールの多くの関数で発生するメモリーリークを修正しました (Bert Belder)</dd>
+            <dd>Windows 環境において、書き込み/追記のためにディレクトリをオープンすることは許可しないようになりました (Bert Belder)</dd>
+            <dd>Windows 環境において、全ての標準入力ハンドルが妥当なものでなくても fork() が動作するようになりました (Bert Belder)</dd>
+            <dd>Windows 環境において unlink() のパフォーマンスを改善し、またマウントポイントを削除しないようになりました (Bert Belder)</dd>
+            <dd>OS X 向けに認証済み pkg インストーラーを用意しました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.5/node-v0.8.5.tar.gz">http://nodejs.org/dist/v0.8.5/node-v0.8.5.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.5/node-v0.8.5.pkg">http://nodejs.org/dist/v0.8.5/node-v0.8.5.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.5/node-v0.8.5-x86.msi">http://nodejs.org/dist/v0.8.5/node-v0.8.5-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.5/x64/node-v0.8.5-x64.msi">http://nodejs.org/dist/v0.8.5/x64/node-v0.8.5-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.5/x64/">http://nodejs.org/dist/v0.8.5/x64/</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.5/">http://nodejs.org/dist/v0.8.5/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.5/">http://nodejs.org/docs/v0.8.5/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.5/api/">http://nodejs.org/docs/v0.8.5/api/</a></li>
           </ul>
         </div>
 
@@ -633,6 +667,24 @@
             <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg">http://nodejs.org/dist/v0.7.0/node-v0.7.0.pkg</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.0/">http://nodejs.org/docs/v0.7.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a></li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3 id="v0.6.21">Node v0.6.21</h3> 
+          <dl>
+            <dt>2012.08.03, バージョン 0.6.21 (メンテナンス版)</dt>
+            <dd>SunOS において OS のバグにより fs.watch() が発動してしまうのを防ぐようになりました (Bryan Cantrill)</dd>
+            <dd>net モジュールの接続中のソケットで pause/resume が動作するようになりました (Bert Belder)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.6.21/node-v0.6.21.tar.gz">http://nodejs.org/dist/v0.6.21/node-v0.6.21.tar.gz</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.6.21/node-v0.6.21.msi">http://nodejs.org/dist/v0.6.21/node-v0.6.21.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.6.21/x64/">http://nodejs.org/dist/v0.6.21/x64/</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.6.21/node-v0.6.21.pkg">http://nodejs.org/dist/v0.6.21/node-v0.6.21.pkg</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.6.21/">http://nodejs.org/dist/v0.6.21/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.6.21/">http://nodejs.org/docs/v0.6.21/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.21/api/">http://nodejs.org/docs/v0.6.21/api/</a></li>
           </ul>
         </div>
         
