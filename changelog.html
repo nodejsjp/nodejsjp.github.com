@@ -38,7 +38,7 @@
           <h2>日本語訳ドキュメント</h2>
           <ul>
             <li><a href="nodejs.org_ja/api/">v0.9.0 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.5 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.6 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -75,6 +75,37 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.0/">http://nodejs.org/dist/v0.9.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.0/">http://nodejs.org/docs/v0.9.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.0/api/">http://nodejs.org/docs/v0.9.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.6">Node v0.8.6</h3>
+          <dl>
+            <dt>2012.08.07, バージョン 0.8.6 (安定版)</dt>
+            <dd>npm を v1.1.48 に更新しました</dd>
+            <dd>UNIX環境用 バイナリ tar ボールの作成用に 'make binary' を追加しました (Nathan Rajlich)</dd>
+            <dd>zlib モジュールの destroy() 時に 'close' イベントが発生するようになりました (Dominic Tarr)</dd>
+            <dd>child_process モジュールにおいて stdio=['pipe'] の時に stdout=null になる問題を修正しました (Tyler Neylon)</dd>
+            <dd>インストーラーで ETXTBSY が発生するのを防止しました (Ben Noordhuis)</dd>
+            <dd>インストーラーが --without-npm を正しく扱うようになり、標準のインストールパスを修正しました (Ben Noordhuis)</dd>
+            <dd>net モジュールの接続中のソケットにおいて、pause が動作するようになりました (Bert Belder)</dd>
+            <dd>インストーラーのクロスコンパイルインストールを修正しました (Ben Noordhuis)</dd>
+            <dd>net モジュールの .listen({fd:0}) を修正しました (Ben Noordhuis)</dd>
+            <dd>Windows 環境において WSANO_DATA を UV_ENOENT に割り当てました (Bert Belder)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.6/node-v0.8.6.tar.gz">http://nodejs.org/dist/v0.8.6/node-v0.8.6.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.6/node-v0.8.6.pkg">http://nodejs.org/dist/v0.8.6/node-v0.8.6.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.6/node-v0.8.6-x86.msi">http://nodejs.org/dist/v0.8.6/node-v0.8.6-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.6/x64/node-v0.8.6-x64.msi">http://nodejs.org/dist/v0.8.6/x64/node-v0.8.6-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.6/x64/">http://nodejs.org/dist/v0.8.6/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.6/node-v0.8.6-linux-x86.tar.gz">http://nodejs.org/dist/v0.8.6/node-v0.8.6-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.6/node-v0.8.6-linux-x64.tar.gz">http://nodejs.org/dist/v0.8.6/node-v0.8.6-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.6/node-v0.8.6-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.6/node-v0.8.6-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.6/node-v0.8.6-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.6/node-v0.8.6-sunos-x86.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.6/">http://nodejs.org/dist/v0.8.6/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.6/">http://nodejs.org/docs/v0.8.6/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.6/api/">http://nodejs.org/docs/v0.8.6/api/</a></li>
           </ul>
         </div>
 
