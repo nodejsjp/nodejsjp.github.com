@@ -38,7 +38,7 @@
           <h2>日本語訳ドキュメント</h2>
           <ul>
             <li><a href="nodejs.org_ja/api/">v0.9.1 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.8 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.9 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
@@ -127,6 +127,48 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.0/">http://nodejs.org/dist/v0.9.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.0/">http://nodejs.org/docs/v0.9.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.0/api/">http://nodejs.org/docs/v0.9.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.9">Node v0.8.9</h3>
+          <dl>
+            <dt>2012.09.11, バージョン 0.8.9 (安定版)</dt>
+            <dd>v8: 3.11.10.22 に更新しました</dd>
+            <dd>GYP: r1477 に更新しました</dd>
+            <dd>npm: 1.1.61 に更新しました</dd>
+            <dd>npm: 全書き込み権限のあるファイルを作成しないようになりました (isaacs)</dd>
+            <dd>windows: 共有サーバーソケット向けに single-accept モードを修正しました (Bert Belder)</dd>
+            <dd>windows: uv_update_time() における初期化されていないメモリーへのアクセスを修正しました (Bert Belder)</dd>
+            <dd>windows: シグナルハンドラが設定されている場合に例外を発生しないようになりました (Bert Belder)</dd>
+            <dd>unix: udp モジュールのメモリーリークを修正しました (Ben Noordhuis)</dd>
+            <dd>unix: ESPIPE エラーをマッピングしました (Ben Noordhuis)</dd>
+            <dd>unix, windows: fs-poll.c のメモリー汚染を修正しました (Ben Noordhuis)</dd>
+            <dd>sunos: x86_64 環境での os.cpus() を修正しました (Ben Noordhuis)</dd>
+            <dd>child process: IPC チャンネルのプロセスで 'close' イベントが発生しない問題を修正しました (Bert Belder)</dd>
+            <dd>build: gyp "flavor" を強制するための "--dest-os" オプションを追加しました (Nathan Rajlich)</dd>
+            <dd>build: SunOS では process.platform に "sunos" が設定されるようになりました (Nathan Rajlich)</dd>
+            <dd>build: make clean 後に make -j が失敗するのを修正しました (Bearice Ren)</dd>
+            <dd>build: "arm" ビルドの OpenSSL 設定が失敗するのを修正しました builds (Nathan Rajlich)</dd>
+            <dd>tls: tls.connect で UNIX ドメインソケット/名前付きパイプ をサポートしました (Shigeki Ohtsu)</dd>
+            <dd>https: https.get() が URL を受け付けるようになりました (koichik)</dd>
+            <dd>http: HTTP/1.0 TE ヘッダーに配慮するようになりました (Ben Noordhuis)</dd>
+            <dd>crypto, tls: setSNICallback, pbkdf2, randomBytes が Domains に対応しました (Ben Noordhuis)</dd>
+            <dd>stream.pipe: destroy プロパティが関数でない場合は destroy() が呼ばれないようになりました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.9/node-v0.8.9.tar.gz">http://nodejs.org/dist/v0.8.9/node-v0.8.9.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.9/node-v0.8.9.pkg">http://nodejs.org/dist/v0.8.9/node-v0.8.9.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.9/node-v0.8.9-x86.msi">http://nodejs.org/dist/v0.8.9/node-v0.8.9-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.9/x64/node-v0.8.9-x64.msi">http://nodejs.org/dist/v0.8.9/x64/node-v0.8.9-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.9/x64/">http://nodejs.org/dist/v0.8.9/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.9/node-v0.8.9-linux-x86.tar.gz">http://nodejs.org/dist/v0.8.9/node-v0.8.9-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.9/node-v0.8.9-linux-x64.tar.gz">http://nodejs.org/dist/v0.8.9/node-v0.8.9-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.9/node-v0.8.9-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.9/node-v0.8.9-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.9/node-v0.8.9-sunos-x64.tar.gz">http://nodejs.org/dist/v0.8.9/node-v0.8.9-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.9/">http://nodejs.org/dist/v0.8.9/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.9/">http://nodejs.org/docs/v0.8.9/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.9/api/">http://nodejs.org/docs/v0.8.9/api/</a></li>
           </ul>
         </div>
 
