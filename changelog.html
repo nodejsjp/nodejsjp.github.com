@@ -24,10 +24,10 @@
         <div id="toc">
           <h2>ナビゲーション</h2>
           <ul>
-            <li><a href="index.html#mailinglist">メーリングリスト</a></li> 
-            <li><a href="index.html#document">ドキュメント</a></li> 
+            <li><a href="index.html#mailinglist">メーリングリスト</a></li>
+            <li><a href="index.html#document">ドキュメント</a></li>
             <li><a href="index.html#rel-document">関連ドキュメント</a></li>
-            <li><a href="index.html#link">リンク</a></li> 
+            <li><a href="index.html#link">リンク</a></li>
             <li><a href="index.html#irc">IRC</a></li>
             <li><a href="index.html#blog">ブログ</a></li>
             <li><a href="index.html#contact">連絡先</a></li>
@@ -37,11 +37,11 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.9.1 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.9 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li> 
-            <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li> 
+            <li><a href="nodejs.org_ja/api/">v0.9.2 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.9 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li>
             <li><a href="changelog.html">ChangeLog</a></li>
           </ul> 
         </div> 
@@ -50,6 +50,48 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.9.2">Node v0.9.2</h3>
+          <dl>
+            <dt>2012.09.17, バージョン 0.9.2 (開発版)</dt>
+            <dd>http_parser: ad3b631 に更新しました</dd>
+            <dd>openssl: 1.0.1c に更新しました</dd>
+            <dd>darwin: ディレクトリの変更監視に FSEvents を使用するようになりました (Fedor Indutny)</dd>
+            <dd>unix: NetBSD 上で未対応だった API をサポートしました (Shigeki Ohtsu)</dd>
+            <dd>unix: EMFILE によるビジーループを修正しました (Ben Noordhuis)</dd>
+            <dd>windows: 書き込み可能な tty ハンドルを壊さないようにしました (Bert Belder)</dd>
+            <dd>windows: WSAESHUTDOWN を UV_EPIPE に割り当てました (Bert Belder)</dd>
+            <dd>windows: 一部の特殊な環境で spawn が再び動作するようになりました (Bert Belder)</dd>
+            <dd>windows: ERROR_DIRECTORY を UV_ENOENT に割り当てました (Bert Belder)</dd>
+            <dd>tls, https: サーバー証明書の検証をデフォルトでおこなうようになりました (Ben Noordhuis)</dd>
+            <dd>tls, https: 暗号鍵や証明書が見つからない場合は例外が発生するようになりました (Ben Noordhuis)</dd>
+            <dd>tls: 非同期セッションストレージが追加されました (Fedor Indutny)</dd>
+            <dd>installer: ヘッダーファイルをインストールしないようになりました (Ben Noordhuis)</dd>
+            <dd>buffer: Buffer.prototype.toJSON() が実装されました (Nathan Rajlich)</dd>
+            <dd>buffer: NaN と Infinity の書き込みをサポートしました (koichik)</dd>
+            <dd>http: http.ServerResponse が 'end' イベントを発生するようになりました (Ben Noordhuis)</dd>
+            <dd>build: ./configure --ninja (Ben Noordhuis, Timothy J Fontaine)</dd>
+            <dd>installer: --without-npm を修正しました (Ben Noordhuis)</dd>
+            <dd>cli: -p オプションを -pe オプションと等価にしました (Ben Noordhuis)</dd>
+            <dd>url: Url クラスを使用することでより高速になりました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.9.2/node-v0.9.2.tar.gz">http://nodejs.org/dist/v0.9.2/node-v0.9.2.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.9.2/node-v0.9.2.pkg">http://nodejs.org/dist/v0.9.2/node-v0.9.2.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.9.2/node-v0.9.2-x86.msi">http://nodejs.org/dist/v0.9.2/node-v0.9.2-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.9.2/x64/node-v0.9.2-x64.msi">http://nodejs.org/dist/v0.9.2/x64/node-v0.9.2-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.9.2/x64/">http://nodejs.org/dist/v0.9.2/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.2/node-v0.9.2-linux-x86.tar.gz">http://nodejs.org/dist/v0.9.2/node-v0.9.2-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.2/node-v0.9.2-linux-x64.tar.gz">http://nodejs.org/dist/v0.9.2/node-v0.9.2-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.2/node-v0.9.2-sunos-x86.tar.gz">http://nodejs.org/dist/v0.9.2/node-v0.9.2-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.2/node-v0.9.2-sunos-x64.tar.gz">http://nodejs.org/dist/v0.9.2/node-v0.9.2-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.2/">http://nodejs.org/dist/v0.9.2/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.2/">http://nodejs.org/docs/v0.9.2/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.2/api/">http://nodejs.org/docs/v0.9.2/api/</a></li>
+          </ul>
+        </div>
+
 
         <div class="section">
           <h3 id="v0.9.1">Node v0.9.1</h3>
