@@ -38,7 +38,7 @@
           <h2>日本語訳ドキュメント</h2>
           <ul>
             <li><a href="nodejs.org_ja/api/">v0.9.2 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.9 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.11 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li>
@@ -169,6 +169,68 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.0/">http://nodejs.org/dist/v0.9.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.0/">http://nodejs.org/docs/v0.9.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.0/api/">http://nodejs.org/docs/v0.9.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.11">Node v0.8.11</h3>
+          <dl>
+            <dt>2012.09.27, バージョン 0.8.11 (安定版)</dt>
+            <dd>fs: stat() において巨大なファイルのサイズが正しくない問題を修正しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.11/node-v0.8.11.tar.gz">http://nodejs.org/dist/v0.8.11/node-v0.8.11.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.11/node-v0.8.11.pkg">http://nodejs.org/dist/v0.8.11/node-v0.8.11.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.11/node-v0.8.11-x86.msi">http://nodejs.org/dist/v0.8.11/node-v0.8.11-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.11/x64/node-v0.8.11-x64.msi">http://nodejs.org/dist/v0.8.11/x64/node-v0.8.11-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.11/x64/">http://nodejs.org/dist/v0.8.11/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.11/node-v0.8.11-linux-x86.tar.gz">http://nodejs.org/dist/v0.8.11/node-v0.8.11-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.11/node-v0.8.11-linux-x64.tar.gz">http://nodejs.org/dist/v0.8.11/node-v0.8.11-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.11/node-v0.8.11-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.11/node-v0.8.11-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.11/node-v0.8.11-sunos-x64.tar.gz">http://nodejs.org/dist/v0.8.11/node-v0.8.11-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.11/">http://nodejs.org/dist/v0.8.11/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.11/">http://nodejs.org/docs/v0.8.11/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.11/api/">http://nodejs.org/docs/v0.8.11/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.10">Node v0.8.10</h3>
+          <dl>
+            <dt>2012.09.25, バージョン 0.8.10 (安定版)</dt>
+            <dd>npm: 1.1.62 に更新しました</dd>
+            <dd>repl: REPL において不正な正規表現が使用された場合に例外が発生するようになりました (Nathan Rajlich)</dd>
+            <dd>v8: 意図的な mmap 制約を緩和しました (Bryan Cantrill)</dd>
+            <dd>process: setuid() と setgid() のエラー通知を修正しました (Ben Noordhuis)</dd>
+            <dd>domain: Domain での処理において適切に exit() するようになりました (isaacs)</dd>
+            <dd>fs: watchFile() が削除イベントを検知できない問題を修正しました (Ben Noordhuis)</dd>
+            <dd>fs: fs.watch() における assert 処理を修正しました (Ben Noordhuis)</dd>
+            <dd>fs: 深い再帰的な stat() 処理で segfault が起こらないようになりました (Ben Noordhuis)</dd>
+            <dd>http: データを受信した際にはタイムアウトハンドラを削除するようになりました (Frédéric Germain)</dd>
+            <dd>http: クライアントのレスポンスオブジェクトの Domain は、リクエストオブジェクトと同一の Domain になりました (Nathan Rajlich)</dd>
+            <dd>windows: 起動時に不正なファイルディスクリプタが使用された場合は、無視するようになりました (Bert Belder)</dd>
+            <dd>unix: EDQUOT を UV_ENOSPC に割り当てました (Charlie McConnell)</dd>
+            <dd>linux: /proc/cpuinfo パーサーを改善しました (Ben Noordhuis)</dd>
+            <dd>win/tty: 色がデフォルトに設定された場合に、バックグラウンドの明るさを初期化するようになりました (Bert Belder)</dd>
+            <dd>unix: ブロッキングモード時に子プロセスの標準入出力ファイルディスクリプタを設定するようになりました (Ben Noordhuis)</dd>
+            <dd>unix: EMFILE によるビジーループを修正しました (Ben Noordhuis)</dd>
+            <dd>sunos: TCP_KEEPALIVE を設定しないようになりました (Ben Noordhuis)</dd>
+            <dd>tls: メモリー管理のためにスラブアロケーターを使用するようになりました (Fedor Indutny)</dd>
+            <dd>openssl: x86 と x64 に最適化したアセンブリコードを使用するようになりました (Bert Belder)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.10/node-v0.8.10.tar.gz">http://nodejs.org/dist/v0.8.10/node-v0.8.10.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.10/node-v0.8.10.pkg">http://nodejs.org/dist/v0.8.10/node-v0.8.10.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.10/node-v0.8.10-x86.msi">http://nodejs.org/dist/v0.8.10/node-v0.8.10-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.10/x64/node-v0.8.10-x64.msi">http://nodejs.org/dist/v0.8.10/x64/node-v0.8.10-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.10/x64/">http://nodejs.org/dist/v0.8.10/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.10/node-v0.8.10-linux-x86.tar.gz">http://nodejs.org/dist/v0.8.10/node-v0.8.10-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.10/node-v0.8.10-linux-x64.tar.gz">http://nodejs.org/dist/v0.8.10/node-v0.8.10-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.10/node-v0.8.10-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.10/node-v0.8.10-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.10/node-v0.8.10-sunos-x64.tar.gz">http://nodejs.org/dist/v0.8.10/node-v0.8.10-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.10/">http://nodejs.org/dist/v0.8.10/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.10/">http://nodejs.org/docs/v0.8.10/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.10/api/">http://nodejs.org/docs/v0.8.10/api/</a></li>
           </ul>
         </div>
 
