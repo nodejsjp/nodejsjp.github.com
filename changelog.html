@@ -37,8 +37,8 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.9.2 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.12 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.9.3 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.14 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li>
@@ -50,6 +50,43 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.9.3">Node v0.9.3</h3>
+          <dl>
+            <dt>2012.10.24, バージョン 0.9.3 (開発版)</dt>
+            <dd>V8: 3.13.7.4 に更新しました</dd>
+            <dd>crypto: バイナリ文字列のかわりに buffer が標準になりました (isaacs, Fedor Indutny)</dd>
+            <dd>crypto: getHashes() と getCiphers() を追加しました (Ben Noordhuis)</dd>
+            <dd>unix: 独自のスレッドプールを追加し、libeio を削除しました (Ben Noordhuis)</dd>
+            <dd>util: inspect() が "options" 引数を受け取るようになりました (Nathan Rajlich)</dd>
+            <dd>https: 再ネゴシエーション攻撃からの保護機能を修正しました (Ben Noordhuis)</dd>
+            <dd>cluster: 'listening' ハンドラが物理ポートを扱うようになりました (Aaditya Bhatia)</dd>
+            <dd>windows: ユーザーのホームディレクトリを取得するために USERPROFILE を使用するようになりました (Bert Belder)</dd>
+            <dd>path: プラットフォーム固有のパス区切り文字を追加しました (Paul Serby)</dd>
+            <dd>http: response.headersSent プロパティを追加しました (Pavel Lang)</dd>
+            <dd>child_process: .fork() された子プロセスを自動的に終了するようにしました (Ben Noordhuis)</dd>
+            <dd>events: 'removeListener' イベントを追加しました (Ben Noordhuis)</dd>
+            <dd>string_decoder: 'end' メソッドを追加し、base64 を適切に扱うようになりました (isaacs)</dd>
+            <dd>buffer: 不正時の例外にエンコード値を含めるようになりました (Ricky Ng-Adam)</dd>
+            <dd>http: http.ServerResponse が 'end' イベントを発生しないようになりました (isaacs)</dd>
+            <dd>streams: 送信先からの 'end' イベントでパイプが破壊されるのを修正しました (koichik)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.9.3/node-v0.9.3.tar.gz">http://nodejs.org/dist/v0.9.3/node-v0.9.3.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.9.3/node-v0.9.3.pkg">http://nodejs.org/dist/v0.9.3/node-v0.9.3.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.9.3/node-v0.9.3-x86.msi">http://nodejs.org/dist/v0.9.3/node-v0.9.3-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.9.3/x64/node-v0.9.3-x64.msi">http://nodejs.org/dist/v0.9.3/x64/node-v0.9.3-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.9.3/x64/">http://nodejs.org/dist/v0.9.3/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.3/node-v0.9.3-linux-x86.tar.gz">http://nodejs.org/dist/v0.9.3/node-v0.9.3-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.3/node-v0.9.3-linux-x64.tar.gz">http://nodejs.org/dist/v0.9.3/node-v0.9.3-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.3/node-v0.9.3-sunos-x86.tar.gz">http://nodejs.org/dist/v0.9.3/node-v0.9.3-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.3/node-v0.9.3-sunos-x64.tar.gz">http://nodejs.org/dist/v0.9.3/node-v0.9.3-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.3/">http://nodejs.org/dist/v0.9.3/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.3/">http://nodejs.org/docs/v0.9.3/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.3/api/">http://nodejs.org/docs/v0.9.3/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.9.2">Node v0.9.2</h3>
@@ -91,7 +128,6 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.2/api/">http://nodejs.org/docs/v0.9.2/api/</a></li>
           </ul>
         </div>
-
 
         <div class="section">
           <h3 id="v0.9.1">Node v0.9.1</h3>
@@ -169,6 +205,58 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.0/">http://nodejs.org/dist/v0.9.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.0/">http://nodejs.org/docs/v0.9.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.0/api/">http://nodejs.org/docs/v0.9.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.14">Node v0.8.14</h3>
+          <dl>
+            <dt>2012.10.25, バージョン 0.8.14 (安定版)</dt>
+            <dd>events: EE ctor において終了前の _events オブジェクトを破壊しないようにしました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.14/node-v0.8.14.tar.gz">http://nodejs.org/dist/v0.8.14/node-v0.8.14.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.14/node-v0.8.14.pkg">http://nodejs.org/dist/v0.8.14/node-v0.8.14.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.14/node-v0.8.14-x86.msi">http://nodejs.org/dist/v0.8.14/node-v0.8.14-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.14/x64/node-v0.8.14-x64.msi">http://nodejs.org/dist/v0.8.14/x64/node-v0.8.14-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.14/x64/">http://nodejs.org/dist/v0.8.14/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.14/node-v0.8.14-linux-x86.tar.gz">http://nodejs.org/dist/v0.8.14/node-v0.8.14-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.14/node-v0.8.14-linux-x64.tar.gz">http://nodejs.org/dist/v0.8.14/node-v0.8.14-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.14/node-v0.8.14-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.14/node-v0.8.14-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.14/node-v0.8.14-sunos-x64.tar.gz">http://nodejs.org/dist/v0.8.14/node-v0.8.14-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.14/">http://nodejs.org/dist/v0.8.14/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.14/">http://nodejs.org/docs/v0.8.14/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.14/api/">http://nodejs.org/docs/v0.8.14/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.13">Node v0.8.13</h3>
+          <dl>
+            <dt>2012.10.25, バージョン 0.8.13 (安定版)</dt>
+            <dd>V8: 3.11.10.25 に更新しました</dd>
+            <dd>npm: 1.1.65 に更新しました</dd>
+            <dd>url: - や _ で始まるホスト名をパースするようになりました (Ben Noordhuis)</dd>
+            <dd>repl: Windows 8 ターミナルにおける問題を修正しました (Bert Belder)</dd>
+            <dd>typed arrays: signed int8s に signed char を使用するようになりました (Aaron Jacobs)</dd>
+            <dd>crypto: DiffieHellman のバグを修正しました (Ben Noordhuis)</dd>
+            <dd>configure: ARMv7 で VFPv3 を有効化しました (Ben Noordhuis)</dd>
+            <dd>tty でのパスフレーズ入力のために OpenSSL UI が再び有効化されました (Ben Noordhuis)</dd>
+            <dd>repl: 各 REPL インスタンスが自身の "context" を保持することを保証しました (Nathan Rajlich)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.13/node-v0.8.13.tar.gz">http://nodejs.org/dist/v0.8.13/node-v0.8.13.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.13/node-v0.8.13.pkg">http://nodejs.org/dist/v0.8.13/node-v0.8.13.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.13/node-v0.8.13-x86.msi">http://nodejs.org/dist/v0.8.13/node-v0.8.13-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.13/x64/node-v0.8.13-x64.msi">http://nodejs.org/dist/v0.8.13/x64/node-v0.8.13-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.13/x64/">http://nodejs.org/dist/v0.8.13/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.13/node-v0.8.13-linux-x86.tar.gz">http://nodejs.org/dist/v0.8.13/node-v0.8.13-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.13/node-v0.8.13-linux-x64.tar.gz">http://nodejs.org/dist/v0.8.13/node-v0.8.13-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.13/node-v0.8.13-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.13/node-v0.8.13-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.13/node-v0.8.13-sunos-x64.tar.gz">http://nodejs.org/dist/v0.8.13/node-v0.8.13-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.13/">http://nodejs.org/dist/v0.8.13/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.13/">http://nodejs.org/docs/v0.8.13/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.13/api/">http://nodejs.org/docs/v0.8.13/api/</a></li>
           </ul>
         </div>
 
