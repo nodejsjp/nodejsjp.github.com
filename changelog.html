@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.9.3 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.9.4 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.16 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
@@ -52,6 +52,46 @@
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
 
         <div class="section">
+          <h3 id="v0.9.4">Node v0.9.4</h3>
+          <dl>
+            <dt>2012.12.21, バージョン 0.9.4 (開発版)</dt>
+            <dd>streams: 新しいクラスを使うために全てのストリーミングインターフェースを更新しました (isaacs)</dd>
+            <dd>node: アイドル時のGC処理を削除しました (Ben Noordhuis)</dd>
+            <dd>http: HTTP Response Splitting 攻撃に対する保護を追加しました (Bert Belder)</dd>
+            <dd>fs: パスにおいて null バイトを検出した際にエラーを発生するようになりました (isaacs)</dd>
+            <dd>fs: 'object is not a function' コールバックエラーを修正しました (Ben Noordhuis)</dd>
+            <dd>fs: fs.createReadStream に autoClose=true オプションを追加しました (Farid Neshat)</dd>
+            <dd>process: getgroups()、setgroups()、initgroups() を追加しました (Ben Noordhuis)</dd>
+            <dd>openssl: x86 および x64 向けの asm コードを最適化しました (Bert Belder)</dd>
+            <dd>crypto: GetPeerCertificate におけるリークを修正しました (Fedor Indutny)</dd>
+            <dd>SystemTap のサポートを追加しました (Jan Wynholds)</dd>
+            <dd>windows: ETW と PerfCounters のサポートを追加しました (Scott Blomquist)</dd>
+            <dd>windows: UNC パスの正規化処理を修正しました (Bert Belder)</dd>
+            <dd>crypto: SSL エラー処理を修正しました (Sergey Kholodilov)</dd>
+            <dd>node: eio-emul.h を削除しました (Ben Noordhuis)</dd>
+            <dd>os: os.endianness() 関数を追加しました (Nathan Rajlich)</dd>
+            <dd>readline: 終端に 'n' 文字が追加された "line" イベントを発生しないようになりました (Nathan Rajlich)</dd>
+            <dd>build: XCode ビルドファイルを生成するための configure オプションを追加しました (Timothy J Fontaine)</dd>
+            <dd>build: システムの libuv, cares, http_parser に対するリンクを許可しました (Stephen Gallagher)</dd>
+            <dd>typed arrays: ArrayBuffer に slice() サポートを追加しました (Anthony Pesch)</dd>
+            <dd>debugger: SIGTERM や SIGHUP が発生した際に子プロセスと共に終了するようになりました (Fedor Indutny)</dd>
+            <dd>url: url.format がパスやクエリ内のデリミタをエスケープするようになりました (J. Lee Coltrane)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.9.4/node-v0.9.4.tar.gz">http://nodejs.org/dist/v0.9.4/node-v0.9.4.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.9.4/node-v0.9.4.pkg">http://nodejs.org/dist/v0.9.4/node-v0.9.4.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.9.4/node-v0.9.4-x86.msi">http://nodejs.org/dist/v0.9.4/node-v0.9.4-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.9.4/x64/node-v0.9.4-x64.msi">http://nodejs.org/dist/v0.9.4/x64/node-v0.9.4-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.9.4/x64/">http://nodejs.org/dist/v0.9.4/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.4/node-v0.9.4-linux-x86.tar.gz">http://nodejs.org/dist/v0.9.4/node-v0.9.4-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.4/node-v0.9.4-linux-x64.tar.gz">http://nodejs.org/dist/v0.9.4/node-v0.9.4-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.4/node-v0.9.4-sunos-x86.tar.gz">http://nodejs.org/dist/v0.9.4/node-v0.9.4-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.4/node-v0.9.4-sunos-x64.tar.gz">http://nodejs.org/dist/v0.9.4/node-v0.9.4-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.4/">http://nodejs.org/dist/v0.9.4/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.4/">http://nodejs.org/docs/v0.9.4/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.4/api/">http://nodejs.org/docs/v0.9.4/api/</a></li>
+          </ul>
+
           <h3 id="v0.9.3">Node v0.9.3</h3>
           <dl>
             <dt>2012.10.24, バージョン 0.9.3 (開発版)</dt>
