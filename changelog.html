@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.9.4 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.9.5 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.16 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
@@ -50,6 +50,40 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.9.5">Node v0.9.5</h3>
+          <dl>
+            <dt>2012.12.30, バージョン 0.9.5 (開発版)</dt>
+            <dd>assert: 新しい実行コンテキストのサポートを改善しました (lukebayes)</dd>
+            <dd>domain: スネークケースの代わりにキャメルケースを使用するようになりました (isaacs)</dd>
+            <dd>domain: uncaughtException ハンドラを使用しないようになりました (isaacs)</dd>
+            <dd>fs: 'start' イベントなしに ReadStream の 'end' が動作するようになりました (Ben Noordhuis)</dd>
+            <dd>https: createConnection() を最適化しました (Ryunosuke SATO)</dd>
+            <dd>buffer: base64 エンコーディングが 20% 高速化しました (Ben Noordhuis)</dd>
+            <dd>doc: ドキュメントにおける API stabilitity index ヘッダを色付けしました (Luke Arduini)</dd>
+            <dd>net: socket.readyState を修正しました (bentaber)</dd>
+            <dd>http: stream2 での HTTP のパフォーマンスを改善しました (isaacs)</dd>
+            <dd>stream: http.ClientResponse で 'end' イベントを発生するように修正しました (Shigeki Ohtsu)</dd>
+            <dd>stream: readstream の pipe と unpipe におけるイベントハンドラのリークを修正しました (Andreas Madsen)</dd>
+            <dd>build: ./configure --tag スイッチをサポートしました (Maciej Małecki)</dd>
+            <dd>repl: require.cache を更新しないように修正しました (Nathan Rajlich)</dd>
+            <dd>node: uncaught exception による終了時に 'exit' イベントを発生するようになりました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.9.5/node-v0.9.5.tar.gz">http://nodejs.org/dist/v0.9.5/node-v0.9.5.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.9.5/node-v0.9.5.pkg">http://nodejs.org/dist/v0.9.5/node-v0.9.5.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.9.5/node-v0.9.5-x86.msi">http://nodejs.org/dist/v0.9.5/node-v0.9.5-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.9.5/x64/node-v0.9.5-x64.msi">http://nodejs.org/dist/v0.9.5/x64/node-v0.9.5-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.9.5/x64/">http://nodejs.org/dist/v0.9.5/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.5/node-v0.9.5-linux-x86.tar.gz">http://nodejs.org/dist/v0.9.5/node-v0.9.5-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.5/node-v0.9.5-linux-x64.tar.gz">http://nodejs.org/dist/v0.9.5/node-v0.9.5-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.5/node-v0.9.5-sunos-x86.tar.gz">http://nodejs.org/dist/v0.9.5/node-v0.9.5-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.5/node-v0.9.5-sunos-x64.tar.gz">http://nodejs.org/dist/v0.9.5/node-v0.9.5-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.5/">http://nodejs.org/dist/v0.9.5/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.5/">http://nodejs.org/docs/v0.9.5/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.5/api/">http://nodejs.org/docs/v0.9.5/api/</a></li>
+          </ul>
 
         <div class="section">
           <h3 id="v0.9.4">Node v0.9.4</h3>
