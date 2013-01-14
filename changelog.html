@@ -37,8 +37,8 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.9.5 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.16 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.9.6 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.17 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li>
@@ -50,6 +50,43 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.9.6">Node v0.9.6</h3>
+          <dl>
+            <dt>2013.01.11, バージョン 0.9.6 (開発版)</dt>
+            <dd>V8: 3.15.11.5 に更新しました</dd>
+            <dd>node: ev-emul.h を削除しました (Ben Noordhuis)</dd>
+            <dd>path: basename と extname が末尾のスラッシュを無視するようになりました (Bert Belder)</dd>
+            <dd>typed arrays: SunOS での符号付き/符号なし char の問題を修正しました (Ben Noordhuis)</dd>
+            <dd>child_process: {stdio:'inherit'} の問題を再度修正しました (Ben Noordhuis)</dd>
+            <dd>child_process: 子プロセスの標準入力ストリームからの pipe() を修正しました (Maciej Małecki)</dd>
+            <dd>child_process: fork() 時に execPath を設定可能にしました (Bradley Meck)</dd>
+            <dd>stream: readable.push(chunk) メソッドを追加しました (isaacs)</dd>
+            <dd>dtrace: x64 向けの ustack ヘルパーを追加しました (Fedor Indutny)</dd>
+            <dd>repl: 浮動小数点数のパースを修正しました (Nirk Niggler)</dd>
+            <dd>repl: ビルトインライブラリ変数の上書きを可能にしました  (Ben Noordhuis)</dd>
+            <dd>net: localAddress と localPort を Socket に追加しました (James Hight)</dd>
+            <dd>fs: プールサイズを ReadStream の bufferSize に一致させました (Shigeki Ohtsu)</dd>
+            <dd>typed arrays: ロード/ストア命令による入れ替えを実装しました (Dean McNamee)</dd>
+            <dd>windows: XP や 2003 における perfctr クラッシュを修正しました (Scott Blomquist)</dd>
+            <dd>dgram: 2重の暗黙的バインドエラーを修正しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.9.6/node-v0.9.6.tar.gz">http://nodejs.org/dist/v0.9.6/node-v0.9.6.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.9.6/node-v0.9.6.pkg">http://nodejs.org/dist/v0.9.6/node-v0.9.6.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.9.6/node-v0.9.6-x86.msi">http://nodejs.org/dist/v0.9.6/node-v0.9.6-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.9.6/x64/node-v0.9.6-x64.msi">http://nodejs.org/dist/v0.9.6/x64/node-v0.9.6-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.9.6/x64/">http://nodejs.org/dist/v0.9.6/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.6/node-v0.9.6-linux-x86.tar.gz">http://nodejs.org/dist/v0.9.6/node-v0.9.6-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.6/node-v0.9.6-linux-x64.tar.gz">http://nodejs.org/dist/v0.9.6/node-v0.9.6-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.6/node-v0.9.6-sunos-x86.tar.gz">http://nodejs.org/dist/v0.9.6/node-v0.9.6-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.6/node-v0.9.6-sunos-x64.tar.gz">http://nodejs.org/dist/v0.9.6/node-v0.9.6-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.6/">http://nodejs.org/dist/v0.9.6/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.6/">http://nodejs.org/docs/v0.9.6/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.6/api/">http://nodejs.org/docs/v0.9.6/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.9.5">Node v0.9.5</h3>
@@ -84,6 +121,7 @@
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.5/">http://nodejs.org/docs/v0.9.5/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.5/api/">http://nodejs.org/docs/v0.9.5/api/</a></li>
           </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.9.4">Node v0.9.4</h3>
@@ -125,7 +163,9 @@
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.4/">http://nodejs.org/docs/v0.9.4/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.4/api/">http://nodejs.org/docs/v0.9.4/api/</a></li>
           </ul>
+        </div>
 
+        <div class="section">
           <h3 id="v0.9.3">Node v0.9.3</h3>
           <dl>
             <dt>2012.10.24, バージョン 0.9.3 (開発版)</dt>
@@ -279,6 +319,38 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.0/">http://nodejs.org/dist/v0.9.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.0/">http://nodejs.org/docs/v0.9.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.0/api/">http://nodejs.org/docs/v0.9.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.17">Node v0.8.17</h3>
+          <dl>
+            <dt>2013.01.09, バージョン 0.8.17 (安定版)</dt>
+            <dd>npm: v1.2.0 に更新しました
+              <ul>
+                <li>peerDependencies を追加しました (Domenic Denicola)</li>
+                <li>node-gyp を v0.8.2 に更新しました (Nathan Rajlich)</li>
+                <li>GitHub の user/project ショートハンドによるインストールを高速化しました (Nathan Zadoks)</li>
+              </ul>
+            </dd>
+            <dd>typed arrays: fix 32ビットのサイズ/インデックスオーバーフローを修正しました (Ben Noordhuis)</dd>
+            <dd>http: シングルパケットレスポンスのパフォーマンスを高速化しました (Ben Noordhuis)</dd>
+            <dd>install: OpenBSD における man ページの場所を修正しました (Ben Noordhuis)</dd>
+            <dd>http: ClientRequest にパーサーのエラーを伝えるようになりました (Brian White)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.17/node-v0.8.17.tar.gz">http://nodejs.org/dist/v0.8.17/node-v0.8.17.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.17/node-v0.8.17.pkg">http://nodejs.org/dist/v0.8.17/node-v0.8.17.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.17/node-v0.8.17-x86.msi">http://nodejs.org/dist/v0.8.17/node-v0.8.17-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.17/x64/node-v0.8.17-x64.msi">http://nodejs.org/dist/v0.8.17/x64/node-v0.8.17-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.17/x64/">http://nodejs.org/dist/v0.8.17/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.17/node-v0.8.17-linux-x86.tar.gz">http://nodejs.org/dist/v0.8.17/node-v0.8.17-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.17/node-v0.8.17-linux-x64.tar.gz">http://nodejs.org/dist/v0.8.17/node-v0.8.17-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.17/node-v0.8.17-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.17/node-v0.8.17-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.17/node-v0.8.17-sunos-x64.tar.gz">http://nodejs.org/dist/v0.8.17/node-v0.8.17-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.17/">http://nodejs.org/dist/v0.8.17/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.17/">http://nodejs.org/docs/v0.8.17/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.17/api/">http://nodejs.org/docs/v0.8.17/api/</a></li>
           </ul>
         </div>
 
