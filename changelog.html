@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.9.7 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.9.8 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.18 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
@@ -50,6 +50,37 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.9.8">Node v0.9.8</h3>
+          <dl>
+            <dt>2013.01.24, バージョン 0.9.8 (開発版)</dt>
+            <dd>npm: v1.2.3 に更新しました</dd>
+            <dd>V8: 3.15.11.10 に更新しました</dd>
+            <dd>streams: Buffers 以外のオブジェクトをサポートしました (Jake Verbaten)</dd>
+            <dd>buffer: 浮動小数点書き込み時の範囲チェックを削除しました (Trevor Norris)</dd>
+            <dd>http: chunked エンコーディングでの 304/204 レスポンス時にコネクションを切断するようになりました (Ben Noordhuis)</dd>
+            <dd>build: FreeBSD における dtrace サポート付きビルドを修正しました (Fedor Indutny)</dd>
+            <dd>console: trace() におけるフォーマットオプションをサポートしました (isaacs)</dd>
+            <dd>domain: 全ての例外発生時にスタックを空にするようになりました (Dave Olszewski)</dd>
+            <dd>unix, windows: uv_*_bind() エラーコードを一致させました (Andrius Bentkus)</dd>
+            <dd>linux: futimes() にフォールバック処理を追加しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.9.8/node-v0.9.8.tar.gz">http://nodejs.org/dist/v0.9.8/node-v0.9.8.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.9.8/node-v0.9.8.pkg">http://nodejs.org/dist/v0.9.8/node-v0.9.8.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.9.8/node-v0.9.8-x86.msi">http://nodejs.org/dist/v0.9.8/node-v0.9.8-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.9.8/x64/node-v0.9.8-x64.msi">http://nodejs.org/dist/v0.9.8/x64/node-v0.9.8-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.9.8/x64/">http://nodejs.org/dist/v0.9.8/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.8/node-v0.9.8-linux-x86.tar.gz">http://nodejs.org/dist/v0.9.8/node-v0.9.8-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.8/node-v0.9.8-linux-x64.tar.gz">http://nodejs.org/dist/v0.9.8/node-v0.9.8-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.8/node-v0.9.8-sunos-x86.tar.gz">http://nodejs.org/dist/v0.9.8/node-v0.9.8-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.8/node-v0.9.8-sunos-x64.tar.gz">http://nodejs.org/dist/v0.9.8/node-v0.9.8-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.8/">http://nodejs.org/dist/v0.9.8/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.8/">http://nodejs.org/docs/v0.9.8/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.8/api/">http://nodejs.org/docs/v0.9.8/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.9.7">Node v0.9.7</h3>
