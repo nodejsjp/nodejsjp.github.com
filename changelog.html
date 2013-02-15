@@ -37,7 +37,7 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.9.8 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.9.9 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.18 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
@@ -50,6 +50,39 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.9.9">Node v0.9.9</h3>
+          <dl>
+            <dt>2013.02.07, バージョン 0.9.9 (開発版)</dt>
+            <dd>tls: CryptoStream を streams2 に移行しました (Fedor Indutny)</dd>
+            <dd>typed arrays: ArrayBuffer がバッキングストアのみ共有するようになりました (Ben Noordhuis)</dd>
+            <dd>stream: Writable#end() がコールバック関数を受け付けるようになりました (Nathan Rajlich)</dd>
+            <dd>buffer: 'hex' の扱いを最適化しました (Ben Noordhuis)</dd>
+            <dd>dns, cares: NOTIMP、REFUSED、SERVFAIL をフィルターしないようになりました (Ben Noordhuis)</dd>
+            <dd>readline: \r を行の終わりとして扱うようになりました (isaacs)</dd>
+            <dd>readline: \r\n を1つの 'line' イベントとするようになりました (Ben Noordhuis)</dd>
+            <dd>cluster: datagram ソケットをサポートしました (Bert Belder)</dd>
+            <dd>stream: Transform クラスのバックプレッシャーを修正しました (isaacs)</dd>
+            <dd>addon: NODE_MODULE の初期化関数に module オブジェクトを渡すようになりました (isaacs, Rod Vagg)</dd>
+            <dd>buffer: slow buffer の copy メソッドの互換性を修正しました (Trevor Norris)</dd>
+            <dd>tls.CryptoStream に bytesWritten を追加しました (Andy Burke)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.9.9/node-v0.9.9.tar.gz">http://nodejs.org/dist/v0.9.9/node-v0.9.9.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.9.9/node-v0.9.9.pkg">http://nodejs.org/dist/v0.9.9/node-v0.9.9.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.9.9/node-v0.9.9-x86.msi">http://nodejs.org/dist/v0.9.9/node-v0.9.9-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.9.9/x64/node-v0.9.9-x64.msi">http://nodejs.org/dist/v0.9.9/x64/node-v0.9.9-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.9.9/x64/">http://nodejs.org/dist/v0.9.9/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.9/node-v0.9.9-linux-x86.tar.gz">http://nodejs.org/dist/v0.9.9/node-v0.9.9-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.9/node-v0.9.9-linux-x64.tar.gz">http://nodejs.org/dist/v0.9.9/node-v0.9.9-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.9/node-v0.9.9-sunos-x86.tar.gz">http://nodejs.org/dist/v0.9.9/node-v0.9.9-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.9.9/node-v0.9.9-sunos-x64.tar.gz">http://nodejs.org/dist/v0.9.9/node-v0.9.9-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.9/">http://nodejs.org/dist/v0.9.9/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.9/">http://nodejs.org/docs/v0.9.9/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.9/api/">http://nodejs.org/docs/v0.9.9/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.9.8">Node v0.9.8</h3>
