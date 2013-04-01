@@ -37,8 +37,8 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.9.12 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.0 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.11.0 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.2 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.22 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
@@ -51,6 +51,115 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.11.0">Node v0.11.0</h3>
+          <dl>
+            <dt>2013.03.28, バージョン 0.11.0 (開発版)</dt>
+            <dd>V8: 3.17.13 に更新しました</dd>
+            <dd>os: os.tmpdir() において %SystemRoot% や %windir% を使用するようになりました (Suwon Chae)</dd>
+            <dd>util: util.inspect() の行幅計算を修正しました (Marcin Kostrzewa)</dd>
+            <dd>buffer: _charsWritten を削除しました (Trevor Norris)</dd>
+            <dd>fs: uv_[fl]stat が1秒以下の解像度で通知するようになりました (Timothy J Fontaine)</dd>
+            <dd>fs: エラーが発生し、コールバックが存在しない場合に例外を発生するようになりました (bnoordhuis)</dd>
+            <dd>tls: tls.createServer から SSL_CTX_set_timeout にアクセスできるようになりました (Manav Rathi)</dd>
+            <dd>tls: 有害で不要な境界チェックを削除しました (Marcel Laverdet)</dd>
+            <dd>buffer: ASCII 文字列の書き込みに WriteOneByte を使用するようになりました (Trevor Norris)</dd>
+            <dd>dtrace: FreeBSD における v8 定数の生成を修正しました (Fedor Indutny)</dd>
+            <dd>dtrace: x64 向け ustack ヘルパーを追加しました (Fedor Indutny)</dd>
+            <dd>readline: ワイド文字を適切に扱うようにしました (Nao Iizuka)</dd>
+            <dd>repl: 非同期エラーを受けるために domein を使用するようになりました (isaacs)</dd>
+            <dd>repl: context がリセットされた際に 'reset' イベントを発生するようになりました (Sami Samhuri)</dd>
+            <dd>util: カスタム inspect() メソッドは場合によっては Object を返すようになりました (Nathan Rajlich)</dd>
+            <dd>console: console.dir() が inspect() メソッドにバイパスするようになりました (Nathan Rajlich)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.11.0/node-v0.11.0.tar.gz">http://nodejs.org/dist/v0.11.0/node-v0.11.0.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.11.0/node-v0.11.0.pkg">http://nodejs.org/dist/v0.11.0/node-v0.11.0.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.11.0/node-v0.11.0-x86.msi">http://nodejs.org/dist/v0.11.0/node-v0.11.0-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.11.0/x64/node-v0.11.0-x64.msi">http://nodejs.org/dist/v0.11.0/x64/node-v0.11.0-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.11.0/x64/">http://nodejs.org/dist/v0.11.0/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.0/node-v0.11.0-linux-x86.tar.gz">http://nodejs.org/dist/v0.11.0/node-v0.11.0-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.0/node-v0.11.0-linux-x64.tar.gz">http://nodejs.org/dist/v0.11.0/node-v0.11.0-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.0/node-v0.11.0-sunos-x86.tar.gz">http://nodejs.org/dist/v0.11.0/node-v0.11.0-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.0/node-v0.11.0-sunos-x64.tar.gz">http://nodejs.org/dist/v0.11.0/node-v0.11.0-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.0/">http://nodejs.org/dist/v0.11.0/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.0/">http://nodejs.org/docs/v0.11.0/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.0/api/">http://nodejs.org/docs/v0.11.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.2">Node v0.10.2</h3>
+          <dl>
+            <dt>2013.03.28, バージョン 0.10.2 (安定版)</dt>
+            <dd>npm: 1.2.15 に更新しました</dd>
+            <dd>uv: 0.10.3 に更新しました</dd>
+            <dd>tls: SSL_ERROR_ZERO_RETURN を扱うようになりました (Fedor Indutny)</dd>
+            <dd>tls: C++ メソッド呼び出し前のエラーを扱うようになりました (Fedor Indutny)</dd>
+            <dd>tls: 有害で不要な境界チェックを削除しました (Marcel Laverdet)</dd>
+            <dd>crypto: getCiphers() が非SSL ciphers を返すようになりました (Ben Noordhuis)</dd>
+            <dd>crypto: randomBytes() の size 引数を確認するようになりました (Ben Noordhuis)</dd>
+            <dd>timers: Timeout._when プロパティを計算しないようになりました (Alexey Kupershtokh)</dd>
+            <dd>timers: ミリ秒の off-by-one エラーを修正しました (Alexey Kupershtokh)</dd>
+            <dd>timers: enroll() における符号付き int32 オーバーフローを扱うようになりました (Fedor Indutny)</dd>
+            <dd>stream: 特定の条件下での Transform におけるストールを修正しました (Gil Pedersen)</dd>
+            <dd>stream: 後から設定された 'readable' イベントリスナーを扱うようになりました (isaacs)</dd>
+            <dd>stream: Writables での長さが 0 の書き込みにおいて、早期に end が呼び出されてしまう問題を修正しました (isaacs)</dd>
+            <dd>domain: MakeCallback による domain コールバックを修正しました (Trevor Norris)</dd>
+            <dd>child_process: 同一のハンドルが2度実行しないようになりました (Ben Noordhuis)</dd>
+            <dd>child_process: 子プロセスに対する utf-8 の送信処理を修正しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.2/node-v0.10.2.tar.gz">http://nodejs.org/dist/v0.10.2/node-v0.10.2.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.2/node-v0.10.2.pkg">http://nodejs.org/dist/v0.10.2/node-v0.10.2.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.2/node-v0.10.2-x86.msi">http://nodejs.org/dist/v0.10.2/node-v0.10.2-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.2/x64/node-v0.10.2-x64.msi">http://nodejs.org/dist/v0.10.2/x64/node-v0.10.2-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.2/x64/">http://nodejs.org/dist/v0.10.2/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.2/node-v0.10.2-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.2/node-v0.10.2-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.2/node-v0.10.2-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.2/node-v0.10.2-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.2/node-v0.10.2-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.2/node-v0.10.2-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.2/node-v0.10.2-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.2/node-v0.10.2-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.2/">http://nodejs.org/dist/v0.10.2/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.2/">http://nodejs.org/docs/v0.10.2/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.2/api/">http://nodejs.org/docs/v0.10.2/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.1">Node v0.10.1</h3>
+          <dl>
+            <dt>2013.03.21, バージョン 0.10.1 (安定版)</dt>
+            <dd>npm: 1.2.15 に更新しました</dd>
+            <dd>crypto: ストリーム API 以外のパフォーマンスを向上しました (Fedor Indutny)</dd>
+            <dd>tls: 処理後に this.ssl.error を常に初期化するようになりました (Fedor Indutny)</dd>
+            <dd>tls: mid-stream ハングを防ぐようになりました (Fedor Indutny, isaacs)</dd>
+            <dd>net: 任意 TCP ソケットのサポートを向上しました (Ben Noordhuis)</dd>
+            <dd>net: 'connect' の後にのみ 'finish' イベントを処理するようになりました (Fedor Indutny)</dd>
+            <dd>http: 巨大なバッファに対して hot-path end() をしないようになりました (isaacs)</dd>
+            <dd>fs: cb が存在しないエラーを廃止し、例外を発生しないようになりました (isaacs)</dd>
+            <dd>fs: write/appendFileSync においてファイルモードを適切に設定するようにしました (Raymond Feng)</dd>
+            <dd>stream: readable.wrap が self を返すようにしました (isaacs)</dd>
+            <dd>stream: decoder.end() を複数回呼び出さないようになりました (Gil Pedersen)</dd>
+            <dd>windows: process.on('SIGXYZ') によるシグナル監視を有効化しました (Bert Belder)</dd>
+            <dd>node: 削除した MakeCallback を復帰しました (Trevor Norris)</dd>
+            <dd>node: fd getter の処理において中止なしの時にのみ Unwrap するようになりました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.1/node-v0.10.1.tar.gz">http://nodejs.org/dist/v0.10.1/node-v0.10.1.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.1/node-v0.10.1.pkg">http://nodejs.org/dist/v0.10.1/node-v0.10.1.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.1/node-v0.10.1-x86.msi">http://nodejs.org/dist/v0.10.1/node-v0.10.1-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.1/x64/node-v0.10.1-x64.msi">http://nodejs.org/dist/v0.10.1/x64/node-v0.10.1-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.1/x64/">http://nodejs.org/dist/v0.10.1/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.1/node-v0.10.1-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.1/node-v0.10.1-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.1/node-v0.10.1-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.1/node-v0.10.1-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.1/node-v0.10.1-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.1/node-v0.10.1-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.1/node-v0.10.1-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.1/node-v0.10.1-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.1/">http://nodejs.org/dist/v0.10.1/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.1/">http://nodejs.org/docs/v0.10.1/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.1/api/">http://nodejs.org/docs/v0.10.1/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.10.0">Node v0.10.0</h3>
