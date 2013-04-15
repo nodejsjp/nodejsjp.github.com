@@ -38,8 +38,8 @@
           <h2>日本語訳ドキュメント</h2>
           <ul>
             <li><a href="nodejs.org_ja/api/">v0.11.0 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.2 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.22 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.4 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.23 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li>
@@ -86,6 +86,74 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.0/">http://nodejs.org/dist/v0.11.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.0/">http://nodejs.org/docs/v0.11.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.0/api/">http://nodejs.org/docs/v0.11.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.4">Node v0.10.4</h3>
+          <dl>
+            <dt>2013.04.11, バージョン 0.10.4 (安定版)</dt>
+            <dd>uv: 0.10.4 に更新しました</dd>
+            <dd>npm: 1.2.18 に更新しました</dd>
+            <dd>v8: JSON.parse 時に極端にメモリー使用が増加するのを防ぐようにしました (Fedor Indutny)</dd>
+            <dd>child_process, cluster: cms 文字列の O(n*m) スキャンを修正しました (Ben Noordhuis)</dd>
+            <dd>net: socket.bytesWritten の Buffer サポートを修正しました (Fedor Indutny)</dd>
+            <dd>buffer: オフセットの確認処理を修正しました (Łukasz Walukiewicz)</dd>
+            <dd>stream: finish イベントの前に write の cb を実行するようになりました (isaacs)</dd>
+            <dd>http: write(data, 'hex') をサポートしました (isaacs)</dd>
+            <dd>crypto: dh シークレットが left-padded になるようにしました (Fedor Indutny)</dd>
+            <dd>process: process.versions に NODE_MODULE_VERSION を割り当てました (Rod Vagg)</dd>
+            <dd>crypto: crypto streams でのコンストラクタ呼び出しを修正しました (Andreas Madsen)</dd>
+            <dd>net: .byteLength において encoding を考慮するようになりました (Fedor Indutny)</dd>
+            <dd>net: bytesWritten でのバッファの反復処理を修正しました (Fedor Indutny)</dd>
+            <dd>crypto: 0バイトが書きこまれた場合では zero is not an error となるようにしました (Fedor Indutny)</dd>
+            <dd>tls: 証明書確認での CN-ID チェックを再度有効化しました (Tobias Müllerleile)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz">http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.4/node-v0.10.4.pkg">http://nodejs.org/dist/v0.10.4/node-v0.10.4.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.4/node-v0.10.4-x86.msi">http://nodejs.org/dist/v0.10.4/node-v0.10.4-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.4/x64/node-v0.10.4-x64.msi">http://nodejs.org/dist/v0.10.4/x64/node-v0.10.4-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.4/x64/">http://nodejs.org/dist/v0.10.4/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.4/node-v0.10.4-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.4/node-v0.10.4-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.4/node-v0.10.4-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.4/node-v0.10.4-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.4/node-v0.10.4-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.4/node-v0.10.4-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.4/node-v0.10.4-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.4/node-v0.10.4-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.4/">http://nodejs.org/dist/v0.10.4/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.4/">http://nodejs.org/docs/v0.10.4/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.4/api/">http://nodejs.org/docs/v0.10.4/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.3">Node v0.10.3</h3>
+          <dl>
+            <dt>2013.04.03, バージョン 0.10.3 (安定版)</dt>
+            <dd>npm: 1.2.17 に更新しました</dd>
+            <dd>child_process: 送信ハンドルを確認するようにしました (Fedor Indutny)</dd>
+            <dd>etw: dtrace プロバイダにあわせてプロトタイプを更新しました (Timothy J Fontaine)</dd>
+            <dd>dtrace: probe により多くの引数を渡すようにしました (Dave Pacheco)</dd>
+            <dd>build: osx 上で dtrace と共にビルドすることが可能になりました (Dave Pacheco)</dd>
+            <dd>http: 古い ECONNRESET 関連のコードを削除しました (isaacs)</dd>
+            <dd>http: クライアントレスポンスの終了時に確実にソケットを終了するようにしました (isaacs)</dd>
+            <dd>tls: 暗号化側が終了した時にソケットを削除するようにしました (isaacs)</dd>
+            <dd>repl: isSyntaxError() が "strict mode" エラーを扱うようになりました (Nathan Rajlich)</dd>
+            <dd>crypto: ctor の呼び出しにオプションを渡すようになりました (isaacs)</dd>
+            <dd>src: process.versions.uv を uv_version_string() に割り当てました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.3/node-v0.10.3.tar.gz">http://nodejs.org/dist/v0.10.3/node-v0.10.3.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.3/node-v0.10.3.pkg">http://nodejs.org/dist/v0.10.3/node-v0.10.3.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.3/node-v0.10.3-x86.msi">http://nodejs.org/dist/v0.10.3/node-v0.10.3-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.3/x64/node-v0.10.3-x64.msi">http://nodejs.org/dist/v0.10.3/x64/node-v0.10.3-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.3/x64/">http://nodejs.org/dist/v0.10.3/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.3/node-v0.10.3-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.3/node-v0.10.3-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.3/node-v0.10.3-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.3/node-v0.10.3-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.3/node-v0.10.3-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.3/node-v0.10.3-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.3/node-v0.10.3-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.3/node-v0.10.3-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.3/">http://nodejs.org/dist/v0.10.3/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.3/">http://nodejs.org/docs/v0.10.3/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.3/api/">http://nodejs.org/docs/v0.10.3/api/</a></li>
           </ul>
         </div>
 
@@ -677,6 +745,34 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.9.0/">http://nodejs.org/dist/v0.9.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.9.0/">http://nodejs.org/docs/v0.9.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.9.0/api/">http://nodejs.org/docs/v0.9.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.8.23">Node v0.8.23</h3>
+          <dl>
+            <dt>2013.04.09, バージョン 0.8.23 (メンテナンス版)</dt>
+            <dd>npm: v1.2.18 に更新しました</dd>
+            <dd>http: ECONNREFUSED 処理時の EE 警告を無効にしました (isaacs)</dd>
+            <dd>tls: 証明書確認での CN-ID チェックを再度有効化しました (Tobias Müllerleile)</dd>
+            <dd>child_process: 子プロセスに対する utf-8 の送信処理を修正しました (Ben Noordhuis)</dd>
+            <dd>crypto: GetPeerCertificate() で鍵の種類を確認するようになりました (Ben Noordhuis)</dd>
+            <dd>win/openssl: アセンブルされたオブジェクトファイルを seh セーフとしてマークしました (Bert Belder)</dd>
+            <dd>windows/msi: WiX 3.7/3.8 での msi ビルド問題を修正しました (Raymond Feng)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.23/node-v0.8.23.tar.gz">http://nodejs.org/dist/v0.8.23/node-v0.8.23.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.23/node-v0.8.23.pkg">http://nodejs.org/dist/v0.8.23/node-v0.8.23.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.23/node-v0.8.23-x86.msi">http://nodejs.org/dist/v0.8.23/node-v0.8.23-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.23/x64/node-v0.8.23-x64.msi">http://nodejs.org/dist/v0.8.23/x64/node-v0.8.23-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.23/x64/">http://nodejs.org/dist/v0.8.23/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.23/node-v0.8.23-linux-x86.tar.gz">http://nodejs.org/dist/v0.8.23/node-v0.8.23-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.23/node-v0.8.23-linux-x64.tar.gz">http://nodejs.org/dist/v0.8.23/node-v0.8.23-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.23/node-v0.8.23-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.23/node-v0.8.23-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.23/node-v0.8.23-sunos-x64.tar.gz">http://nodejs.org/dist/v0.8.23/node-v0.8.23-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.23/">http://nodejs.org/dist/v0.8.23/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.23/">http://nodejs.org/docs/v0.8.23/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.23/api/">http://nodejs.org/docs/v0.8.23/api/</a></li>
           </ul>
         </div>
 
