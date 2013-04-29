@@ -37,8 +37,8 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.11.0 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.4 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.11.1 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.5 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.23 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
@@ -51,6 +51,39 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.11.1">Node v0.11.1</h3>
+          <dl>
+            <dt>2013.04.19, バージョン 0.11.1 (開発版)</dt>
+            <dd>V8: 3.18.0 に更新しました</dd>
+            <dd>uv: v0.11.1 に更新しました</dd>
+            <dd>http: 複数の分離したモジュールに分割しました (Timothy J Fontaine)</dd>
+            <dd>http: リクエストパスにおける安全でない文字をエスケープするようになりました (Ben Noordhuis)</dd>
+            <dd>url: 適切でない全ての文字をエスケープするようになりました (isaacs)</dd>
+            <dd>build: v8 の postmortem-metadata が有効な場合はそれに依存するようになりました (Paddy Byers)</dd>
+            <dd>etw: DTrace プロバインダーにあうようにプロトタイプを更新しました (Timothy J Fontaine)</dd>
+            <dd>buffer: Buffer.prototype.toJSON() の出力を変更しました (David Braun)</dd>
+            <dd>dtrace: _handle.fd の値を適切に使うようになりました (Timothy J Fontaine)</dd>
+            <dd>dtrace: プローブにより多くの引数を渡すようになりました (Dave Pacheco)</dd>
+            <dd>build: osx 上で DTrace と共にビルドすることが可能になりました (Dave Pacheco)</dd>
+            <dd>zlib: 一部の便利なメソッドにオプションを渡すことができるようになりました (Kyle Robinson Young)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.11.1/node-v0.11.1.tar.gz">http://nodejs.org/dist/v0.11.1/node-v0.11.1.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.11.1/node-v0.11.1.pkg">http://nodejs.org/dist/v0.11.1/node-v0.11.1.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.11.1/node-v0.11.1-x86.msi">http://nodejs.org/dist/v0.11.1/node-v0.11.1-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.11.1/x64/node-v0.11.1-x64.msi">http://nodejs.org/dist/v0.11.1/x64/node-v0.11.1-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.11.1/x64/">http://nodejs.org/dist/v0.11.1/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.1/node-v0.11.1-linux-x86.tar.gz">http://nodejs.org/dist/v0.11.1/node-v0.11.1-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.1/node-v0.11.1-linux-x64.tar.gz">http://nodejs.org/dist/v0.11.1/node-v0.11.1-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.1/node-v0.11.1-sunos-x86.tar.gz">http://nodejs.org/dist/v0.11.1/node-v0.11.1-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.1/node-v0.11.1-sunos-x64.tar.gz">http://nodejs.org/dist/v0.11.1/node-v0.11.1-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.1/">http://nodejs.org/dist/v0.11.1/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.1/">http://nodejs.org/docs/v0.11.1/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.1/api/">http://nodejs.org/docs/v0.11.1/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.11.0">Node v0.11.0</h3>
@@ -86,6 +119,36 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.0/">http://nodejs.org/dist/v0.11.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.0/">http://nodejs.org/docs/v0.11.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.0/api/">http://nodejs.org/docs/v0.11.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.5">Node v0.10.5</h3>
+          <dl>
+            <dt>2013.04.23, バージョン 0.10.5 (安定版)</dt>
+            <dd>uv: 0.10.5 に更新しました (isaacs)</dd>
+            <dd>build: Visual Studio 2012 のサポートを追加しました (Miroslav Bajtoš)</dd>
+            <dd>http: 存在しないソケットを destroy しないようになりました (isaacs)</dd>
+            <dd>crypto: LazyTransform をメソッドではなくプロパティに変更しました (isaacs)</dd>
+            <dd>assert: err.name を err.message に変更しました (Ryan Doenges)</dd>
+            <dd>dgram: アドレスのない bind() を修正しました (Ben Noordhuis)</dd>
+            <dd>handle_wrap: NULL ポインタからの値の取得を修正しました (Ben Noordhuis)</dd>
+            <dd>os: os.type() における通常は考えられないバッファオーバーフローを修正しました (Ben Noordhuis)</dd>
+            <dd>stream: unshift() での競合を修正しました (isaacs)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.5/node-v0.10.5.tar.gz">http://nodejs.org/dist/v0.10.5/node-v0.10.5.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.5/node-v0.10.5.pkg">http://nodejs.org/dist/v0.10.5/node-v0.10.5.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.5/node-v0.10.5-x86.msi">http://nodejs.org/dist/v0.10.5/node-v0.10.5-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.5/x64/node-v0.10.5-x64.msi">http://nodejs.org/dist/v0.10.5/x64/node-v0.10.5-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.5/x64/">http://nodejs.org/dist/v0.10.5/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.5/node-v0.10.5-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.5/node-v0.10.5-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.5/node-v0.10.5-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.5/node-v0.10.5-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.5/node-v0.10.5-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.5/node-v0.10.5-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.5/node-v0.10.5-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.5/node-v0.10.5-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.5/">http://nodejs.org/dist/v0.10.5/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.5/">http://nodejs.org/docs/v0.10.5/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.5/api/">http://nodejs.org/docs/v0.10.5/api/</a></li>
           </ul>
         </div>
 
