@@ -37,8 +37,8 @@
         <div id="docs"> 
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.11.4 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.13 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.11.6 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.17 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.25 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
@@ -51,6 +51,91 @@
       <div id="changelog">
         <h2>変更履歴</h2> 
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
+
+        <div class="section">
+          <h3 id="v0.11.6">Node v0.11.6</h3>
+          <dl>
+            <dt>2013.08.21, バージョン 0.11.6 (開発版)</dt>
+            <dd>uv: v0.11.8 に更新しました</dd>
+            <dd>v8: 3.20.14.1 に更新しました</dd>
+            <dd>build: SSLv2 をデフォルトで無効にしました (Ben Noordhuis)</dd>
+            <dd>build: 既存の設定を自動削除しないようにしました (Ben Noordhuis)</dd>
+            <dd>crypto: secureProtocol リストに TLS 1.1 と 1.2 を追加しました (Matthias Bartelmeß)</dd>
+            <dd>crypto: randomBytes() エラーパスにおけるメモリーリークを修正しました (Ben Noordhuis)</dd>
+            <dd>dgram: send cb が省略された時に js 内で実行しないようにしました (Ben Noordhuis)</dd>
+            <dd>dgram: 文字列引数の扱いにおけるリグレッションを修正しました (Ben Noordhuis)</dd>
+            <dd>domains: パフォーマンスを向上しました (Trevor Norris)</dd>
+            <dd>events: EventEmitter = require('events') (Jake Verbaten)</dd>
+            <dd>http: write()/end() コールバックを追加しました (isaacs)</dd>
+            <dd>http: 持続的な 'finish' イベントセマンティクス (isaacs)</dd>
+            <dd>http: 'ascii' よりも 'binary' を使用するようにしました (isaacs)</dd>
+            <dd>http: 古い agent.addRequest API をサポートしました (isaacs)</dd>
+            <dd>http: hex/base64 chunk を適切に書き込むようにしました (isaacs)</dd>
+            <dd>http: agent.maxFreeSockets オプションを追加しました (isaacs)</dd>
+            <dd>http: raw headers/trailers へのアクセスを提供しました (isaacs)</dd>
+            <dd>http: 削除済みヘッダーを削除済みのままにしました (James Halliday)</dd>
+            <dd>http,timers: コールバックのパフォーマンスを改善しました (Ben Noordhuis)</dd>
+            <dd>net: net.connect に family オプションを追加しました (Vsevolod Strukchinsky)</dd>
+            <dd>readline: terminal raw モードが無効になる前に stdin を一時停止するようにしました (Daniel Chatfield)</dd>
+            <dd>smalloc: 他の外部配列タイプを利用可能にしました (Trevor Norris)</dd>
+            <dd>smalloc: ExternalArraySize にアクセス可能にしました (Trevor Norris)</dd>
+            <dd>stream: データが流れている時は Short-circuit buffer にプッシュするようにしました (isaacs)</dd>
+            <dd>tls: Socket が開放される前に Socket のエラーを処理するようにしました (Fedor Indutny)</dd>
+            <dd>util: isPrimitive チェックを修正しました (Trevor Norris)</dd>
+            <dd>util: isObject 常に戻り値が真偽値になるようにしました (Trevor Norris)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.11.6/node-v0.11.6.tar.gz">http://nodejs.org/dist/v0.11.6/node-v0.11.6.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.11.6/node-v0.11.6.pkg">http://nodejs.org/dist/v0.11.6/node-v0.11.6.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.11.6/node-v0.11.6-x86.msi">http://nodejs.org/dist/v0.11.6/node-v0.11.6-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.11.6/x64/node-v0.11.6-x64.msi">http://nodejs.org/dist/v0.11.6/x64/node-v0.11.6-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.11.6/x64/">http://nodejs.org/dist/v0.11.6/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.6/node-v0.11.6-linux-x86.tar.gz">http://nodejs.org/dist/v0.11.6/node-v0.11.6-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.6/node-v0.11.6-linux-x64.tar.gz">http://nodejs.org/dist/v0.11.6/node-v0.11.6-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.6/node-v0.11.6-sunos-x86.tar.gz">http://nodejs.org/dist/v0.11.6/node-v0.11.6-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.6/node-v0.11.6-sunos-x64.tar.gz">http://nodejs.org/dist/v0.11.6/node-v0.11.6-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.6/">http://nodejs.org/dist/v0.11.6/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.6/">http://nodejs.org/docs/v0.11.6/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.6/api/">http://nodejs.org/docs/v0.11.6/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.11.5">Node v0.11.5</h3>
+          <dl>
+            <dt>2013.08.06, バージョン 0.11.5 (開発版)</dt>
+            <dd>v8: 3.20.11 に更新しました</dd>
+            <dd>uv: v0.11.7 に更新しました</dd>
+            <dd>buffer: 最後に書き込んだ位置のオフセットを返すようにしました (Trevor Norris)</dd>
+            <dd>build: mdb_v8.so をバイナリに組み込みました (Timothy J Fontaine)</dd>
+            <dd>build: --without-ssl ビルドを修正しました (Ben Noordhuis)</dd>
+            <dd>child_process: .exec() に 'shell' オプションを追加しました (Ben Noordhuis)</dd>
+            <dd>dgram: バイト数を渡さず、送信エラーを cb に伝えるようにしました (Ben Noordhuis)</dd>
+            <dd>fs: 文字列を直接ディスクに書き込むようにしました (Trevor Norris)</dd>
+            <dd>https: デフォルトポートを変更しました (Koichi Kobayashi)</dd>
+            <dd>openssl: sha、md5、rmd について asm を使用するようにしました (Fedor Indutny)</dd>
+            <dd>os: networkInterfaces() の出力に MAC アドレスを追加しました (Brian White)</dd>
+            <dd>smalloc: smalloc モジュールを導入しました (Trevor Norris)</dd>
+            <dd>stream: フローを単純化し、受動的なデータ受信にしました (streams3) (isaacs)</dd>
+            <dd>tls: SNICallback を非同期化しました (Fedor Indutny)</dd>
+            <dd>tls: cluster ワーカー間で TLS チケット鍵を共有するようにしました (Fedor Indutny)</dd>
+            <dd>util: format() に対して、循環する %j について例外を発生しないようにしました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.11.5/node-v0.11.5.tar.gz">http://nodejs.org/dist/v0.11.5/node-v0.11.5.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.11.5/node-v0.11.5.pkg">http://nodejs.org/dist/v0.11.5/node-v0.11.5.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.11.5/node-v0.11.5-x86.msi">http://nodejs.org/dist/v0.11.5/node-v0.11.5-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.11.5/x64/node-v0.11.5-x64.msi">http://nodejs.org/dist/v0.11.5/x64/node-v0.11.5-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.11.5/x64/">http://nodejs.org/dist/v0.11.5/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.5/node-v0.11.5-linux-x86.tar.gz">http://nodejs.org/dist/v0.11.5/node-v0.11.5-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.5/node-v0.11.5-linux-x64.tar.gz">http://nodejs.org/dist/v0.11.5/node-v0.11.5-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.5/node-v0.11.5-sunos-x86.tar.gz">http://nodejs.org/dist/v0.11.5/node-v0.11.5-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.5/node-v0.11.5-sunos-x64.tar.gz">http://nodejs.org/dist/v0.11.5/node-v0.11.5-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.5/">http://nodejs.org/dist/v0.11.5/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.5/">http://nodejs.org/docs/v0.11.5/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.5/api/">http://nodejs.org/docs/v0.11.5/api/</a></li>
+          </ul>
+        </div>
 
         <div class="section">
           <h3 id="v0.11.4">Node v0.11.4</h3>
@@ -237,6 +322,113 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.0/">http://nodejs.org/dist/v0.11.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.0/">http://nodejs.org/docs/v0.11.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.0/api/">http://nodejs.org/docs/v0.11.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.17">Node v0.10.17</h3>
+          <dl>
+            <dt>2013.08.21, バージョン 0.10.17 (安定版)</dt>
+            <dd>uv: v0.10.14 に更新しました</dd>
+            <dd>http_parser: PUN/GEM メソッドを PUT/GET として処理しないようにしました (Chris Dickinson)</dd>
+            <dd>tls: 読み込み時に ssl が破棄されていた場合のアサーションを修正しました (Fedor Indutny)</dd>
+            <dd>stream: イベントリスナーが削除されていても、'error' が発生するようにしました (isaacs)</dd>
+            <dd>dgram: 不正な引数での send() におけるアサーションを修正しました (Ben Noordhuis)</dd>
+            <dd>readline: terminal raw モードが無効になる前に stdin を一時停止するようにしました (Daniel Chatfield)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.17/node-v0.10.17.tar.gz">http://nodejs.org/dist/v0.10.17/node-v0.10.17.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.17/node-v0.10.17.pkg">http://nodejs.org/dist/v0.10.17/node-v0.10.17.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.17/node-v0.10.17-x86.msi">http://nodejs.org/dist/v0.10.17/node-v0.10.17-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.17/x64/node-v0.10.17-x64.msi">http://nodejs.org/dist/v0.10.17/x64/node-v0.10.17-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.17/x64/">http://nodejs.org/dist/v0.10.17/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.17/node-v0.10.17-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.17/node-v0.10.17-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.17/node-v0.10.17-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.17/node-v0.10.17-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.17/node-v0.10.17-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.17/node-v0.10.17-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.17/node-v0.10.17-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.17/node-v0.10.17-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.17/">http://nodejs.org/dist/v0.10.17/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.17/">http://nodejs.org/docs/v0.10.17/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.17/api/">http://nodejs.org/docs/v0.10.17/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.16">Node v0.10.16</h3>
+          <dl>
+            <dt>2013.08.16, バージョン 0.10.16 (安定版)</dt>
+            <dd>v8: CVE-2013-2882 に対応するバックポートをおこないました</dd>
+            <dd>npm: 1.3.8 に更新しました</dd>
+            <dd>crypto: 不正な Hex 入力時の assert() を修正しました (Ben Noordhuis)</dd>
+            <dd>crypto: randomBytes() エラーパスにおけるメモリーリークを修正しました (Ben Noordhuis)</dd>
+            <dd>events: イベント名がリークしないようにメモリーリークを修正しました (Ben Noordhuis)</dd>
+            <dd>http: hex/base64 エンコードを適切に扱うようにしました (isaacs)</dd>
+            <dd>http: chunked res.write(buf) のパフォーマンスを向上しました (Ben Noordhuis)</dd>
+            <dd>stream: pipe エラーが2重に emit される問題を修正しました (Eran Hammer)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.16/node-v0.10.16.tar.gz">http://nodejs.org/dist/v0.10.16/node-v0.10.16.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.16/node-v0.10.16.pkg">http://nodejs.org/dist/v0.10.16/node-v0.10.16.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.16/node-v0.10.16-x86.msi">http://nodejs.org/dist/v0.10.16/node-v0.10.16-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.16/x64/node-v0.10.16-x64.msi">http://nodejs.org/dist/v0.10.16/x64/node-v0.10.16-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.16/x64/">http://nodejs.org/dist/v0.10.16/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.16/node-v0.10.16-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.16/node-v0.10.16-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.16/node-v0.10.16-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.16/node-v0.10.16-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.16/node-v0.10.16-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.16/node-v0.10.16-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.16/node-v0.10.16-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.16/node-v0.10.16-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.16/">http://nodejs.org/dist/v0.10.16/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.16/">http://nodejs.org/docs/v0.10.16/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.16/api/">http://nodejs.org/docs/v0.10.16/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.15">Node v0.10.15</h3>
+          <dl>
+            <dt>2013.07.25, バージョン 0.10.15 (安定版)</dt>
+            <dd>src: process.getuid() の戻り値を修正しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.15/node-v0.10.15.tar.gz">http://nodejs.org/dist/v0.10.15/node-v0.10.15.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.15/node-v0.10.15.pkg">http://nodejs.org/dist/v0.10.15/node-v0.10.15.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.15/node-v0.10.15-x86.msi">http://nodejs.org/dist/v0.10.15/node-v0.10.15-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.15/x64/node-v0.10.15-x64.msi">http://nodejs.org/dist/v0.10.15/x64/node-v0.10.15-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.15/x64/">http://nodejs.org/dist/v0.10.15/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.15/node-v0.10.15-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.15/node-v0.10.15-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.15/node-v0.10.15-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.15/node-v0.10.15-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.15/node-v0.10.15-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.15/node-v0.10.15-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.15/node-v0.10.15-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.15/node-v0.10.15-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.15/">http://nodejs.org/dist/v0.10.15/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.15/">http://nodejs.org/docs/v0.10.15/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.15/api/">http://nodejs.org/docs/v0.10.15/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.14">Node v0.10.14</h3>
+          <dl>
+            <dt>2013.07.25, バージョン 0.10.14 (安定版)</dt>
+            <dd>uv: v0.10.13 に更新しました</dd>
+            <dd>npm: v1.3.5 に更新しました</dd>
+            <dd>os: cpu info において負の時間を報告しないようにしました (Ben Noordhuis)</dd>
+            <dd>fs: 大きい値の UID と GID を扱うようにしました (Ben Noordhuis)</dd>
+            <dd>url: プロトコルが小文字でないようなエッジケースについて修正しました (Shuan Wang)</dd>
+            <dd>doc: Stream API のドキュメントを書き直しました (isaacs)</dd>
+            <dd>node: 全ての Domain ケース MakeDomainCallback を呼ぶようになりました (Trevor Norris)</dd>
+            <dd>crypto: LoadPKCS12 でのメモリーリークを修正しました (Fedor Indutny)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.14/node-v0.10.14.tar.gz">http://nodejs.org/dist/v0.10.14/node-v0.10.14.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.14/node-v0.10.14.pkg">http://nodejs.org/dist/v0.10.14/node-v0.10.14.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.14/node-v0.10.14-x86.msi">http://nodejs.org/dist/v0.10.14/node-v0.10.14-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.14/x64/node-v0.10.14-x64.msi">http://nodejs.org/dist/v0.10.14/x64/node-v0.10.14-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.14/x64/">http://nodejs.org/dist/v0.10.14/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.14/node-v0.10.14-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.14/node-v0.10.14-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.14/node-v0.10.14-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.14/node-v0.10.14-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.14/node-v0.10.14-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.14/node-v0.10.14-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.14/node-v0.10.14-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.14/node-v0.10.14-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.14/">http://nodejs.org/dist/v0.10.14/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.14/">http://nodejs.org/docs/v0.10.14/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.14/api/">http://nodejs.org/docs/v0.10.14/api/</a></li>
           </ul>
         </div>
 
