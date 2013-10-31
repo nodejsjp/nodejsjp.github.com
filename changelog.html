@@ -1,17 +1,17 @@
 <!doctype html>
 <html>
-  <head> 
+  <head>
     <meta charset="UTF-8">
     <title>Node.js 日本ユーザグループ</title>
     <link type="image/x-icon" rel="icon" href="favicon.ico" />
     <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="style.css" /> 
-    <link type="text/css" rel="stylesheet" href="nodejs.org_ja/sh_vim-dark.css" /> 
-    <script src="nodejs.org_ja/sh_main.js"></script> 
-    <script src="nodejs.org_ja/sh_javascript.min.js"></script> 
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="nodejs.org_ja/sh_vim-dark.css" />
+    <script src="nodejs.org_ja/sh_main.js"></script>
+    <script src="nodejs.org_ja/sh_javascript.min.js"></script>
   </head>
 
-  <body onload="sh_highlightDocument();"> 
+  <body onload="sh_highlightDocument();">
     <div id="content">
       <div id="header">
         <a href="index.html">
@@ -34,25 +34,66 @@
           </ul>
         </div>
 
-        <div id="docs"> 
+        <div id="docs">
           <h2>日本語訳ドキュメント</h2>
           <ul>
-            <li><a href="nodejs.org_ja/api/">v0.11.7 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.20 マニュアル</a></li>
-            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.25 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/api/">v0.11.8 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.10/api/">v0.10.21 マニュアル</a></li>
+            <li><a href="nodejs.org_ja/docs/v0.8/api/">v0.8.26 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.6/api/">v0.6.21 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.4/api/">v0.4.12 マニュアル</a></li>
             <li><a href="nodejs.org_ja/docs/v0.2/api.html">v0.2.6 マニュアル</a></li>
             <li><a href="changelog.html">ChangeLog</a></li>
-          </ul> 
-        </div> 
+          </ul>
+        </div>
       </div>
 
       <div id="changelog">
-        <h2>変更履歴</h2> 
+        <h2>変更履歴</h2>
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
 
-        <div class="section">       
+        <div class="section">
+          <h3 id="v0.11.8">Node v0.11.8</h3>
+          <dl>
+            <dt>2013.10.30, バージョン 0.11.8 (開発版)</dt>
+            <dd>uv: v0.11.14 に更新しました</dd>
+            <dd>v8: 3.21.18.3 に更新しました</dd>
+            <dd>assert: 例外メッセージが生成されたものかどうかを表示するようにしました (Glen Mailer)</dd>
+            <dd>buffer: buf.toArrayBuffer() API を追加しました (Trevor Norris)</dd>
+            <dd>cluster: 早期に 'disconnect' イベントが発生してしまう問題を修正しました (Ben Noordhuis)</dd>
+            <dd>crypto: SPKAC サポートを追加しました (Jason Gerfen)</dd>
+            <dd>debugger: 行番号のための空白を適切にしました (Alex Kocharin)</dd>
+            <dd>debugger: busy loop でも SIGUSR1 が割り込みできるようにしました (Ben Noordhuis)</dd>
+            <dd>debugger: 最後のコマンドを繰り返すようにしました (Alex Kocharin)</dd>
+            <dd>debugger: #6150 の修正のため現在行を表示するようにしました (Alex Kocharin)</dd>
+            <dd>dgram: send() が文字列を受け付けるようになりました (Trevor Norris)</dd>
+            <dd>dns: domain を hostname に名前を変更しました (Ben Noordhuis)</dd>
+            <dd>dns: エラーオブジェクトに hostname プロパティを設定するようにしました (Ben Noordhuis)</dd>
+            <dd>dtrace, mdb_v8: 文字列やフレームタイプのサポートを改善しました (Dave Pacheco)</dd>
+            <dd>http: statusMessage を追加しました (Patrik Stutz)</dd>
+            <dd>http: サポートする HTTP メソッドを公開しました (Ben Noordhuis)</dd>
+            <dd>http: パイプライン溢れに対するバックプレッシャーを提供しました (isaacs)</dd>
+            <dd>process: exitCode プロパティを追加しました (isaacs)</dd>
+            <dd>tls: socket.renegotiate(options, callback) (Fedor Indutny)</dd>
+            <dd>util: instanceof エラーをエラーとしてフォーマットするようにしました (Rod Vagg)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.11.8/node-v0.11.8.tar.gz">http://nodejs.org/dist/v0.11.8/node-v0.11.8.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.11.8/node-v0.11.8.pkg">http://nodejs.org/dist/v0.11.8/node-v0.11.8.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.11.8/node-v0.11.8-x86.msi">http://nodejs.org/dist/v0.11.8/node-v0.11.8-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.11.8/x64/node-v0.11.8-x64.msi">http://nodejs.org/dist/v0.11.8/x64/node-v0.11.8-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.11.8/x64/">http://nodejs.org/dist/v0.11.8/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.8/node-v0.11.8-linux-x86.tar.gz">http://nodejs.org/dist/v0.11.8/node-v0.11.8-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.8/node-v0.11.8-linux-x64.tar.gz">http://nodejs.org/dist/v0.11.8/node-v0.11.8-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.8/node-v0.11.8-sunos-x86.tar.gz">http://nodejs.org/dist/v0.11.8/node-v0.11.8-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.8/node-v0.11.8-sunos-x64.tar.gz">http://nodejs.org/dist/v0.11.8/node-v0.11.8-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.8/">http://nodejs.org/dist/v0.11.8/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.8/">http://nodejs.org/docs/v0.11.8/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.8/api/">http://nodejs.org/docs/v0.11.8/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
           <h3 id="v0.11.7">Node v0.11.7</h3>
           <dl>
             <dt>2013.08.21, バージョン 0.11.7 (開発版)</dt>
@@ -91,7 +132,7 @@
           </ul>
         </div>
 
-        <div class="section">       
+        <div class="section">
           <h3 id="v0.11.6">Node v0.11.6</h3>
           <dl>
             <dt>2013.08.21, バージョン 0.11.6 (開発版)</dt>
@@ -361,6 +402,33 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.0/">http://nodejs.org/dist/v0.11.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.0/">http://nodejs.org/docs/v0.11.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.0/api/">http://nodejs.org/docs/v0.11.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.21">Node v0.10.21</h3>
+          <dl>
+            <dt>2013.10.18, バージョン 0.10.21 (安定版)</dt>
+            <dd>uv: v0.10.18 に更新しました</dd>
+            <dd>crypto: verify 失敗時にエラーを初期化するようにしました (Timothy J Fontaine)</dd>
+            <dd>dtrace: 2バイト文字を解釈するようにしました (Dave Pacheco)</dd>
+            <dd>fs: fs.truncate() におけるファイル内容のゼロ化に関するバグを修正しました (Ben Noordhuis)</dd>
+            <dd>http: パイプライン溢れに対するバックプレッシャーを提供しました (isaacs)</dd>
+            <dd>tls: 早期に接続終了してしまうバグを修正しました (Ben Noordhuis)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.21/node-v0.10.21.tar.gz">http://nodejs.org/dist/v0.10.21/node-v0.10.21.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.21/node-v0.10.21.pkg">http://nodejs.org/dist/v0.10.21/node-v0.10.21.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.21/node-v0.10.21-x86.msi">http://nodejs.org/dist/v0.10.21/node-v0.10.21-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.21/x64/node-v0.10.21-x64.msi">http://nodejs.org/dist/v0.10.21/x64/node-v0.10.21-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.21/x64/">http://nodejs.org/dist/v0.10.21/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.21/node-v0.10.21-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.21/node-v0.10.21-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.21/node-v0.10.21-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.21/node-v0.10.21-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.21/node-v0.10.21-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.21/node-v0.10.21-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.21/node-v0.10.21-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.21/node-v0.10.21-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.21/">http://nodejs.org/dist/v0.10.21/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.21/">http://nodejs.org/docs/v0.10.21/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.21/api/">http://nodejs.org/docs/v0.10.21/api/</a></li>
           </ul>
         </div>
 
@@ -1458,6 +1526,33 @@
         </div>
 
         <div class="section">
+          <h3 id="v0.8.26">Node v0.8.26</h3>
+            <dt>2013.10.13, バージョン 0.8.26 (メンテナンス版)</dt>
+            <dd>v8: 3.11.10.26 に更新しました</dd>
+            <dd>crypto: 処理された OpenSSL エラースタックを初期化するようにしました (Ben Noordhuis)</dd>
+            <dd>crypto: verify 失敗時にエラーを初期化するようにしました (Timothy J Fontaine)</dd>
+            <dd>crypto: LoadPKCS12 におけるメモリーリークを修正しました (Fedor Indutny)</dd>
+            <dd>http: パイプライン溢れに対するバックプレッシャーを提供しました (isaacs)</dd>
+            <dd>http_parser: パーサーのための pause/resume メソッドを公開しました (Timothy J Fontaine)</dd>
+            <dd>readline: ターミナルの raw モードがオフになる前に stdin を停止するようにしました (Daniel Chatfield)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.8.26/node-v0.8.26.tar.gz">http://nodejs.org/dist/v0.8.26/node-v0.8.26.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.8.26/node-v0.8.26.pkg">http://nodejs.org/dist/v0.8.26/node-v0.8.26.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.8.26/node-v0.8.26-x86.msi">http://nodejs.org/dist/v0.8.26/node-v0.8.26-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.8.26/x64/node-v0.8.26-x64.msi">http://nodejs.org/dist/v0.8.26/x64/node-v0.8.26-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.8.26/x64/">http://nodejs.org/dist/v0.8.26/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.26/node-v0.8.26-linux-x86.tar.gz">http://nodejs.org/dist/v0.8.26/node-v0.8.26-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.26/node-v0.8.26-linux-x64.tar.gz">http://nodejs.org/dist/v0.8.26/node-v0.8.26-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.26/node-v0.8.26-sunos-x86.tar.gz">http://nodejs.org/dist/v0.8.26/node-v0.8.26-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.8.26/node-v0.8.26-sunos-x64.tar.gz">http://nodejs.org/dist/v0.8.26/node-v0.8.26-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.8.26/">http://nodejs.org/dist/v0.8.26/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.8.26/">http://nodejs.org/docs/v0.8.26/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.8.26/api/">http://nodejs.org/docs/v0.8.26/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
           <h3 id="v0.8.25">Node v0.8.25</h3>
           <dl>
             <dt>2013.06.13, バージョン 0.8.25 (メンテナンス版)</dt>
@@ -2529,7 +2624,7 @@
             <dd>Windows において x64 ビルドをサポートしました (Igor Zinkovsky)</dd>
           </dl>
           <ul>
-            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.tar.gz">http://nodejs.org/dist/v0.7.4/node-v0.7.4.tar.gz</a></li> 
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.tar.gz">http://nodejs.org/dist/v0.7.4/node-v0.7.4.tar.gz</a></li>
             <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.msi">http://nodejs.org/dist/v0.7.4/node-v0.7.4.msi</a></li>
             <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.4/node-v0.7.4.pkg">http://nodejs.org/dist/v0.7.4/node-v0.7.4.pkg</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.7.4/">http://nodejs.org/docs/v0.7.4/</a></li>
@@ -2548,7 +2643,7 @@
             <dd>http モジュールの http-parser が2回解放されてしまう場合があるのを修正しました (koichik)</dd>
             <dd>Windows 環境で RTTI と例外処理が無効化されました (Bert Belder)</dd>
           </dl>
-          <ul> 
+          <ul>
             <li>ソースコード: <a href="http://nodejs.org/dist/v0.7.3/node-v0.7.3.tar.gz">http://nodejs.org/dist/v0.7.3/node-v0.7.3.tar.gz</a></li>
             <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.7.3/node-v0.7.3.msi">http://nodejs.org/dist/v0.7.3/node-v0.7.3.msi</a></li>
             <li>Mac インストーラー: <a href="http://nodejs.org/dist/v0.7.3/node-v0.7.3.pkg">http://nodejs.org/dist/v0.7.3/node-v0.7.3.pkg</a></li>
@@ -2583,7 +2678,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.7.1">Node v0.7.1</h3>
           <dl>
             <dt>2012.01.23, バージョン 0.7.1 (開発版)</dt>
@@ -2605,7 +2700,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.7.0">Node v0.7.0</h3>
           <dl>
             <dt>2012.01.16, バージョン 0.7.0 (開発版)</dt>
@@ -2624,9 +2719,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.7.0/api/">http://nodejs.org/docs/v0.7.0/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.21">Node v0.6.21</h3> 
+          <h3 id="v0.6.21">Node v0.6.21</h3>
           <dl>
             <dt>2012.08.03, バージョン 0.6.21 (メンテナンス版)</dt>
             <dd>SunOS において OS のバグにより fs.watch() が発動してしまうのを防ぐようになりました (Bryan Cantrill)</dd>
@@ -2642,9 +2737,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.21/api/">http://nodejs.org/docs/v0.6.21/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.20">Node v0.6.20</h3> 
+          <h3 id="v0.6.20">Node v0.6.20</h3>
           <dl>
             <dt>2012.07.10, バージョン 0.6.20 (メンテナンス版)</dt>
             <dd>npm を 1.1.37 に更新しました (isaacs)</dd>
@@ -2664,9 +2759,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.20/api/">http://nodejs.org/docs/v0.6.20/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.19">Node v0.6.19</h3> 
+          <h3 id="v0.6.19">Node v0.6.19</h3>
           <dl>
             <dt>2012.06.06 バージョン 0.6.19 (安定版)</dt>
             <dd>npm を 1.1.24 に更新しました</dd>
@@ -2687,9 +2782,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.19/api/">http://nodejs.org/docs/v0.6.19/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.18">Node v0.6.18</h3> 
+          <h3 id="v0.6.18">Node v0.6.18</h3>
           <dl>
             <dt>2012.05.15, バージョン 0.6.18 (安定版)</dt>
             <dd>Windows 環境において、ファイルを開く際の GetFileAttributes の呼び出しをスキップするようになりました (Bert Belder)</dd>
@@ -2716,9 +2811,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.18/api/">http://nodejs.org/docs/v0.6.18/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.17">Node v0.6.17</h3> 
+          <h3 id="v0.6.17">Node v0.6.17</h3>
           <dl>
             <dt>2012.05.04, バージョン 0.6.17 (安定版)</dt>
             <dd>npm を 1.1.21 に更新しました</dd>
@@ -2739,9 +2834,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.17/api/">http://nodejs.org/docs/v0.6.17/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.16">Node v0.6.16</h3> 
+          <h3 id="v0.6.16">Node v0.6.16</h3>
           <dl>
             <dt>2012.04.30, バージョン 0.6.16 (安定版)</dt>
             <dd>V8 を 3.6.6.25 に更新しました</dd>
@@ -2767,9 +2862,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.16/api/">http://nodejs.org/docs/v0.6.16/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.15">Node v0.6.15</h3> 
+          <h3 id="v0.6.15">Node v0.6.15</h3>
           <dl>
             <dt>2012.04.09 バージョン 0.6.15 (安定版)</dt>
             <dd>npm を 1.1.16 に更新しました</dd>
@@ -2793,9 +2888,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.15/api/">http://nodejs.org/docs/v0.6.15/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.14">Node v0.6.14</h3> 
+          <h3 id="v0.6.14">Node v0.6.14</h3>
           <dl>
             <dt>2012.03.22, バージョン 0.6.14 (安定版)</dt>
             <dd>net モジュールが、キューへの出力に失敗した場合にクラッシュしないようになりました (Igor Zinkovsky)</dd>
@@ -2825,9 +2920,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.14/api/">http://nodejs.org/docs/v0.6.14/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.13">Node v0.6.13</h3> 
+          <h3 id="v0.6.13">Node v0.6.13</h3>
           <dl>
             <dt>2012.03.15 バージョン 0.6.13 (安定版)</dt>
             <dd>Windows 向けに libuv の多くのテストを修正しました (Bert Belder)</dd>
@@ -2857,9 +2952,9 @@
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.6.13/api/">http://nodejs.org/docs/v0.6.13/api/</a></li>
           </ul>
         </div>
-        
+
         <div class="section">
-          <h3 id="v0.6.12">Node v0.6.12</h3> 
+          <h3 id="v0.6.12">Node v0.6.12</h3>
           <dl>
             <dt>2012.03.02 バージョン 0.6.12 (安定版)</dt>
             <dd>V8 を 3.6.6.24 に更新しました</dd>
@@ -2898,7 +2993,7 @@
         </div>
 
         <div class="section">
-          <h3 id="v0.6.11">Node v0.6.11</h3> 
+          <h3 id="v0.6.11">Node v0.6.11</h3>
           <dl>
             <dt>2012.02.17, バージョン 0.6.11 (安定版)</dt>
             <dd>http モジュールにおいて、複数の WebSocket RFC6455 ヘッダーに対応しました (Einar Otto Stangvik)</dd>
@@ -2935,7 +3030,7 @@
         </div>
 
         <div class="section">
-          <h3 id="v0.6.10">Node v0.6.10</h3> 
+          <h3 id="v0.6.10">Node v0.6.10</h3>
           <dl>
             <dt>2012.02.02, バージョン 0.6.10 (安定版)</dt>
             <dd>V8 を 3.6.6.20 に更新しました</dd>
@@ -2958,7 +3053,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.9">Node v0.6.9</h3>
           <dl>
             <dt>2012.01.27, バージョン 0.6.9 (安定版)</dt>
@@ -2982,7 +3077,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.8">Node v0.6.8</h3>
           <dl>
             <dt>2012.01.19, バージョン 0.6.8 (安定版)</dt>
@@ -3007,7 +3102,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.7">Node v0.6.7</h3>
           <dl>
             <dt>2012.01.06, バージョン 0.6.7 (安定版)</dt>
@@ -3039,7 +3134,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.6">Node v0.6.6</h3>
           <dl>
             <dt>2011.12.14, バージョン 0.6.6 (安定版)</dt>
@@ -3063,7 +3158,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.5">Node v0.6.5</h3>
           <dl>
             <dt>2011.12.04, バージョン 0.6.5 (安定版)</dt>
@@ -3079,7 +3174,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.4">Node v0.6.4</h3>
           <dl>
             <dt>2011.12.02, バージョン 0.6.4 (安定版)</dt>
@@ -3104,7 +3199,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.3">Node v0.6.3</h3>
           <dl>
             <dt>2011.11.25, バージョン 0.6.3 (安定版)</dt>
@@ -3128,7 +3223,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.2">Node v0.6.2</h3>
           <dl>
             <dt>2011.11.18, バージョン 0.6.2 (安定版)</dt>
@@ -3153,7 +3248,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.1">Node v0.6.1</h3>
           <dl>
             <dt>2011.11.11, バージョン 0.6.1 (安定版)</dt>
@@ -3180,7 +3275,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.6.0">Node v0.6.0</h3>
           <dl>
             <dt>2011.11.04, バージョン 0.6.0 (安定版)</dt>
@@ -3218,7 +3313,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.5.10">Node v0.5.10</h3>
           <dl>
             <dt>2011.10.21, バージョン 0.5.10 (開発版)</dt>
@@ -3253,7 +3348,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.5.9">Node v0.5.9</h3>
           <dl>
             <dt>2011.10.10, バージョン 0.5.9 (開発版)</dt>
@@ -3275,7 +3370,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.5.8">Node v0.5.8</h3>
           <dl>
             <dt>2011.09.30, バージョン 0.5.8 (開発版)</dt>
@@ -3326,7 +3421,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.5.6">Node v0.5.6</h3>
           <dl>
             <dt>2011.09.08, バージョン 0.5.6 (開発版)</dt>
@@ -3370,7 +3465,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.5.5">Node v0.5.5</h3>
           <dl>
             <dt>2011.08.26, バージョン 0.5.5 (開発版)</dt>
@@ -3408,7 +3503,7 @@
           </p>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.5.4">Node v0.5.4</h3>
           <dl>
             <dt>2011.08.12, バージョン 0.5.4 (開発版)</dt>
@@ -3430,10 +3525,10 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.5.3">Node v0.5.3</h3>
           <dl>
-            <dt>2011.08.01, バージョン 0.5.3 (開発版)</dt>     
+            <dt>2011.08.01, バージョン 0.5.3 (開発版)</dt>
             <dd>crypto モジュールでの Base64 を用いた暗号化/復号化機能を修正しました (SAWADA Tadashi)</dd>
             <dd><a href="https://github.com/joyent/node/issues/243">#243</a> Buffer.write() にオプションの length 引数を追加しました (koichik)</dd>
             <dd><a href="https://github.com/joyent/node/issues/657">#657</a> fs.writeFile/Sync において、バッファでないデータを文字列に変換するようになりました (Daniel Pihlström)</dd>
@@ -3460,7 +3555,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.5.2">Node v0.5.2</h3>
           <dl>
             <dt>2011.07.22, バージョン 0.5.2 (開発版)</dt>
@@ -3483,7 +3578,7 @@
           </ul>
         </div>
 
-        <div class="section">            
+        <div class="section">
           <h3 id="v0.5.1">Node v0.5.1</h3>
           <dl>
             <dt>2011.07.14, バージョン 0.5.1 (開発版)</dt>
@@ -3506,7 +3601,7 @@
           </ul>
         </div>
 
-        <div class="section">              
+        <div class="section">
           <h3 id="v0.5.0">Node v0.5.0</h3>
           <dl>
             <dt>2011.07.05, バージョン 0.5.0 (開発版)</dt>
@@ -3542,7 +3637,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.4.12">Node v0.4.12</h3>
           <dl>
             <dt>2011.09.15, バージョン 0.4.12 (安定版)</dt>
@@ -3564,7 +3659,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.4.11">Node v0.4.11</h3>
           <dl>
             <dt>2011.08.17, バージョン 0.4.11 (安定版)</dt>
@@ -3587,7 +3682,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.4.10">Node v0.4.10</h3>
           <dl>
             <dt>2011.07.19, バージョン 0.4.10 (安定版)</dt>
@@ -3611,7 +3706,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.4.9">Node v0.4.9</h3>
           <dl>
             <dt>2011.06.29, パージョン 0.4.9 (安定版)</dt>
@@ -3637,7 +3732,7 @@
           </ul>
         </div>
 
-        <div class="section">      
+        <div class="section">
           <h3 id="v0.4.8">Node v0.4.8</h3>
           <dl>
             <dt>2011.05.20, パージョン 0.4.8 (安定版)</dt>
