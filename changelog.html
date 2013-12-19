@@ -53,6 +53,45 @@
         <p><a href="https://github.com/joyent/node/blob/master/ChangeLog">ChangeLog</a> の日本語訳です。</p>
 
         <div class="section">
+          <h3 id="v0.11.9">Node v0.11.9</h3>
+          <dl>
+            <dt>2013.11.20, バージョン 0.11.9 (開発版)</dt>
+            <dd>uv: v0.11.15に更新しました (Timothy J Fontaine)</dd>
+            <dd>v8: 3.22.24.5に更新しました (Timothy J Fontaine)</dd>
+            <dd>buffer: エンコーディング未指定時の警告を除去しました (Trevor Norris)</dd>
+            <dd>build: v8がハッシュテーブルにランダムシードを使うようにしました (Ben Noordhuis)</dd>
+            <dd>crypto: NPNなしのshared opensslで構築するようにしました (Ben Noordhuis)</dd>
+            <dd>crypto: ルート証明書を更新しました (Ben Noordhuis)</dd>
+            <dd>debugger: v8デバッグスイッチを渡すようにしました (Ben Noordhuis)</dd>
+            <dd>domain: AsyncListener APIを使うようにしました (Trevor Norris)</dd>
+            <dd>fs: 再起的なサブディレクトリのサポートをfs.watchに追加しました (Nick Simmons)</dd>
+            <dd>fs: fs.watch()をデフォルトで非再起的にしました (Ben Noordhuis)</dd>
+            <dd>http: ソケット破壊時にfreeSocketsを一掃するようにしました (fengmk2)</dd>
+            <dd>http: socketエンコーディングを強制的にnullにするようにしました (isaacs)</dd>
+            <dd>http: DELETEリクエストが`req.method`を設定するようにしました (Nathan Rajlich)</dd>
+            <dd>node: AsyncListenerサポートを追加しました (Trevor Norris)</dd>
+            <dd>src: メモリーリークを隠蔽していたグローバルのHandleScopeを取り除きました (Ben Noordhuis)</dd>
+            <dd>tls: ECDH暗号化サポートを追加しました (Erik Dubbelboer)</dd>
+            <dd>tls: servernameの初期値を'localhost'にしないようにしました (Fedor Indutny)</dd>
+            <dd>tls: ソケット接続のラッピングをより正確にしました (Fedor Indutny)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.11.9/node-v0.11.9.tar.gz">http://nodejs.org/dist/v0.11.9/node-v0.11.9.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.11.9/node-v0.11.9.pkg">http://nodejs.org/dist/v0.11.9/node-v0.11.9.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.11.9/node-v0.11.9-x86.msi">http://nodejs.org/dist/v0.11.9/node-v0.11.9-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.11.9/x64/node-v0.11.9-x64.msi">http://nodejs.org/dist/v0.11.9/x64/node-v0.11.9-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.11.9/x64/">http://nodejs.org/dist/v0.11.9/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.9/node-v0.11.9-linux-x86.tar.gz">http://nodejs.org/dist/v0.11.9/node-v0.11.9-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.9/node-v0.11.9-linux-x64.tar.gz">http://nodejs.org/dist/v0.11.9/node-v0.11.9-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.9/node-v0.11.9-sunos-x86.tar.gz">http://nodejs.org/dist/v0.11.9/node-v0.11.9-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.11.9/node-v0.11.9-sunos-x64.tar.gz">http://nodejs.org/dist/v0.11.9/node-v0.11.9-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.9/">http://nodejs.org/dist/v0.11.9/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.9/">http://nodejs.org/docs/v0.11.9/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.9/api/">http://nodejs.org/docs/v0.11.9/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
           <h3 id="v0.11.8">Node v0.11.8</h3>
           <dl>
             <dt>2013.10.30, バージョン 0.11.8 (開発版)</dt>
@@ -402,6 +441,72 @@
             <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.11.0/">http://nodejs.org/dist/v0.11.0/</a></li>
             <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.11.0/">http://nodejs.org/docs/v0.11.0/</a></li>
             <li>ドキュメント: <a href="http://nodejs.org/docs/v0.11.0/api/">http://nodejs.org/docs/v0.11.0/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.23">Node v0.10.23</h3>
+          <dl>
+            <dt>2013.12.12, バージョン 0.10.23 (安定版)</dt>
+            <dd>uv: v0.10.20に更新しました (Timothy J Fontaine)</dd>
+            <dd>npm: 1.3.17に更新しました (isaacs)</dd>
+            <dd>gyp: 78b26f7に更新しました (Timothy J Fontaine)</dd>
+            <dd>build: Linuxにおいてpostmortem symbolsを含めるようにしました (Timothy J Fontaine)</dd>
+            <dd>crypto: Decipher._flush()がエラーを発生させるようにしました (Kai Groner)</dd>
+            <dd>dgram: closed dgramの`fd`取得時の途中停止を修正しました (Fedor Indutny)</dd>
+            <dd>events: setMaxListenersにてNaNを許容しないようにしました (Fedor Indutny)</dd>
+            <dd>events: `once`関数が二度呼び出されないようにしました (Tim Wood)</dd>
+            <dd>events: removeAllListenersにおけるTypeErrorを修正しました (Jeremy Martin)</dd>
+            <dd>fs: EEXISTのときに正しいパスを報告するようにしました (Fedor Indutny)</dd>
+            <dd>process: 許可されたkillシグナルを実行するようにしました (Sam Roberts)</dd>
+            <dd>tls: .receivedShutdownにて'end'を発火させるようにしました (Fedor Indutny)</dd>
+            <dd>tls: 潜在的なデータ破損を修正しました (Fedor Indutny)</dd>
+            <dd>tls: `ssl.start()`のエラーを適切に処理するようにしました  (Fedor Indutny)</dd>
+            <dd>tls: SNIの後のNPN callbacksをリセットするようにしました (Fedor Indutny)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.23/node-v0.10.23.tar.gz">http://nodejs.org/dist/v0.10.23/node-v0.10.23.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.23/node-v0.10.23.pkg">http://nodejs.org/dist/v0.10.23/node-v0.10.23.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.23/node-v0.10.23-x86.msi">http://nodejs.org/dist/v0.10.23/node-v0.10.23-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.23/x64/node-v0.10.23-x64.msi">http://nodejs.org/dist/v0.10.23/x64/node-v0.10.23-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.23/x64/">http://nodejs.org/dist/v0.10.23/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.23/node-v0.10.23-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.23/node-v0.10.23-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.23/node-v0.10.23-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.23/node-v0.10.23-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.23/node-v0.10.23-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.23/node-v0.10.23-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.23/node-v0.10.23-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.23/node-v0.10.23-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.23/">http://nodejs.org/dist/v0.10.23/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.23/">http://nodejs.org/docs/v0.10.23/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.23/api/">http://nodejs.org/docs/v0.10.23/api/</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 id="v0.10.22">Node v0.10.22</h3>
+          <dl>
+            <dt>2013.11.12, バージョン 0.10.22 (安定版)</dt>
+            <dd>npm: 1.3.14に更新しました</dd>
+            <dd>uv: v0.10.19に更新しました</dd>
+            <dd>child_process: stale file descriptorイベントでアサートしないようにしました (Fedor Indutny)</dd>
+            <dd>darwin: Mavericksアクティビティモニタでの"Not Responding"を修正しました (Fedor Indutny)</dd>
+            <dd>debugger: 名前のないスクリプトでのsb()のバグを修正しました (Maxim Bogushevich)</dd>
+            <dd>repl: 終了時に複製を挿入しないようにしました (Maciej Małecki)</dd>
+            <dd>src: closedハンドルでのメモリーリークを修正しました (Timothy J Fontaine)</dd>
+            <dd>tls: read(0)使用時に失速しないようにしました (Fedor Indutny)</dd>
+            <dd>v8: Solarisで正しいタイムゾーン情報を使用するようにしました (Maciej Małecki)</dd>
+          </dl>
+          <ul>
+            <li>ソースコード: <a href="http://nodejs.org/dist/v0.10.22/node-v0.10.22.tar.gz">http://nodejs.org/dist/v0.10.22/node-v0.10.22.tar.gz</a></li>
+            <li>Mac インストーラー (Universal): <a href="http://nodejs.org/dist/v0.10.22/node-v0.10.22.pkg">http://nodejs.org/dist/v0.10.22/node-v0.10.22.pkg</a></li>
+            <li>Windows インストーラー: <a href="http://nodejs.org/dist/v0.10.22/node-v0.10.22-x86.msi">http://nodejs.org/dist/v0.10.22/node-v0.10.22-x86.msi</a></li>
+            <li>Windows x64 インストーラー: <a href="http://nodejs.org/dist/v0.10.22/x64/node-v0.10.22-x64.msi">http://nodejs.org/dist/v0.10.22/x64/node-v0.10.22-x64.msi</a></li>
+            <li>Windows x64 ファイル: <a href="http://nodejs.org/dist/v0.10.22/x64/">http://nodejs.org/dist/v0.10.22/x64/</a></li>
+            <li>Linux 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.22/node-v0.10.22-linux-x86.tar.gz">http://nodejs.org/dist/v0.10.22/node-v0.10.22-linux-x86.tar.gz</a></li>
+            <li>Linux 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.22/node-v0.10.22-linux-x64.tar.gz">http://nodejs.org/dist/v0.10.22/node-v0.10.22-linux-x64.tar.gz</a></li>
+            <li>Solaris 32-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.22/node-v0.10.22-sunos-x86.tar.gz">http://nodejs.org/dist/v0.10.22/node-v0.10.22-sunos-x86.tar.gz</a></li>
+            <li>Solaris 64-bit バイナリパッケージ: <a href="http://nodejs.org/dist/v0.10.22/node-v0.10.22-sunos-x64.tar.gz">http://nodejs.org/dist/v0.10.22/node-v0.10.22-sunos-x64.tar.gz</a></li>
+            <li>その他のリリースファイル: <a href="http://nodejs.org/dist/v0.10.22/">http://nodejs.org/dist/v0.10.22/</a></li>
+            <li>ウェブサイト: <a href="http://nodejs.org/docs/v0.10.22/">http://nodejs.org/docs/v0.10.22/</a></li>
+            <li>ドキュメント: <a href="http://nodejs.org/docs/v0.10.22/api/">http://nodejs.org/docs/v0.10.22/api/</a></li>
           </ul>
         </div>
 
