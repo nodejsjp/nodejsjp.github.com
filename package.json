@@ -1,0 +1,35 @@
+{
+  "name": "nodejs.jp",
+  "private": true,
+  "version": "0.1.0",
+  "description": "nodejs.jp website",
+  "homepage": "http://nodejs.jp",
+  "main": "index.js",
+  "scripts": {
+    "test": "bulbo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kt3k/nodejs.jp.git"
+  },
+  "keywords": [
+    "nodejs.jp",
+    "nodejs",
+    "node",
+    "jp",
+    "japan",
+    "website"
+  ],
+  "author": "Yoshiya Hinosawa <stibium121@gmail.com> (https://twitter.com/kt3k)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kt3k/nodejs.jp/issues"
+  },
+  "dependencies": {
+    "bulbo": "^6.2.5",
+    "gulp-front-matter": "^1.3.0",
+    "layout-wrapper": "^1.1.1",
+    "nunjucks": "^2.5.2",
+    "vinyl-accumulate": "^1.1.2"
+  }
+}
