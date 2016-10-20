@@ -3,6 +3,5 @@
 - ABOUT - nodejs.jp について
 - EVENTS - node学園情報
 - CONTACT - irc, ml, groups など
-- RESOURCES - 記事など
-- DOC - 公式ドキュメント
+- DOCS - 公式ドキュメントリンク, その他記事へリンク
 - NEWS - 書籍 LTS リリースなど
