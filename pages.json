@@ -1,0 +1,26 @@
+[
+  {
+    "name": "HOME",
+    "path": "index.html"
+  },
+  {
+    "name": "ABOUT",
+    "path": "about.html"
+  },
+  {
+    "name": "EVENTS",
+    "path": "events.html"
+  },
+  {
+    "name": "CONTACT",
+    "path": "contact.html"
+  },
+  {
+    "name": "DOCS",
+    "path": "docs.html"
+  },
+  {
+    "name": "NEWS",
+    "path": "news.html"
+  }
+]

@@ -1,0 +1,21 @@
+<title>{{ orgName }}</title>
+<link rel="stylesheet" href="{{ basepath }}/css/tacit.min.css"/>
+<link rel="stylesheet" href="{{ basepath }}/css/style.css"/>
+
+<nav>
+<img width="150" src="{{ basepath }}/images/nodejs-logo.svg" />
+<br />
+<ul>
+{% for page in pages %}
+  <li><a href="{{ basepath }}/{{ page.path }}">{{ page.name }}</a>
+{% endfor %}
+</ul>
+<section>
+
+{{ contents | safe }}
+
+<hr/>
+<footer>
+Copyright (C) {{ orgName }}
+</footer>
+</section>
