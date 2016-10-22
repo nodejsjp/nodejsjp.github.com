@@ -1,21 +1,28 @@
 <title>{{ orgName }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{ basepath }}/css/tacit.min.css"/>
 <link rel="stylesheet" href="{{ basepath }}/css/style.css"/>
+<link rel="icon" href="{{ basepath }}/images/favicon.png" />
 
 <nav>
 <img width="150" src="{{ basepath }}/images/nodejs-logo.svg" />
 <br />
 <ul>
 {% for page in pages %}
-  <li><a href="{{ basepath }}/{{ page.path }}">{{ page.name }}</a>
+  {% if page.path == file.relative %}
+    <li>{{ page.name }}
+  {% else %}
+    <li><a href="{{ basepath }}/{{ page.path }}">{{ page.name }}</a>
+  {% endif %}
 {% endfor %}
 </ul>
+</nav>
 <section>
 
 {{ contents | safe }}
 
 <hr/>
 <footer>
-Copyright (C) {{ orgName }}
+<small>© 2016 {{ orgName }}</small>
 </footer>
 </section>
