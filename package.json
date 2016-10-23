@@ -34,6 +34,7 @@
     "gulp-nunjucks": "^2.3.0",
     "layout-wrapper": "^1.1.1",
     "nunjucks": "^2.5.2",
+    "nunjucks-date": "^1.2.0",
     "vinyl-accumulate": "^1.1.2"
   }
 }
