@@ -179,7 +179,7 @@ builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
 
-bulbo:
+bulbo@^6.2.5:
   version "6.2.5"
   resolved "https://registry.yarnpkg.com/bulbo/-/bulbo-6.2.5.tgz#8d13608878dffb9053ef1dc4a85fed2493739e5a"
   dependencies:
@@ -723,7 +723,7 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.2:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-gulp-front-matter:
+gulp-front-matter@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/gulp-front-matter/-/gulp-front-matter-1.3.0.tgz#5ee466fbfafb33420bcd5e0267bb6819444ab06d"
   dependencies:
@@ -734,7 +734,7 @@ gulp-front-matter:
     tryit "^1.0.1"
     vinyl-bufferstream "^1.0.1"
 
-gulp-marked:
+gulp-marked@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gulp-marked/-/gulp-marked-1.0.0.tgz#4d09826680a1708eff400e2711a2990a63f43229"
   dependencies:
@@ -743,7 +743,7 @@ gulp-marked:
     lodash "^2.4.1"
     marked "~0.3.2"
 
-gulp-nunjucks:
+gulp-nunjucks@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/gulp-nunjucks/-/gulp-nunjucks-2.3.0.tgz#44f0763babdd325a26b4d3bfaaa99e1d9e9ac480"
   dependencies:
@@ -1126,7 +1126,7 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.0.2"
 
-layout-wrapper:
+layout-wrapper@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/layout-wrapper/-/layout-wrapper-1.1.1.tgz#c773b0430cb48ca4c63f6e18801f3bca73ffc31e"
   dependencies:
@@ -1564,19 +1564,19 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nunjucks, nunjucks@^2.5.2:
+nunjucks-date@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/nunjucks-date/-/nunjucks-date-1.2.0.tgz#187a2821984cfa7c2fba5ad3ed81d2249691a9ff"
+  dependencies:
+    moment "^2.8.4"
+
+nunjucks@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/nunjucks/-/nunjucks-2.5.2.tgz#ea7d346e785b8a4874666c3cca9e18c577fba22c"
   dependencies:
     asap "^2.0.3"
     chokidar "^1.6.0"
     yargs "^3.32.0"
-
-nunjucks-date:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/nunjucks-date/-/nunjucks-date-1.2.0.tgz#187a2821984cfa7c2fba5ad3ed81d2249691a9ff"
-  dependencies:
-    moment "^2.8.4"
 
 oauth-sign@~0.8.1:
   version "0.8.2"
@@ -2136,12 +2136,13 @@ verror@1.3.6:
   dependencies:
     extsprintf "1.0.2"
 
-vinyl-accumulate:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/vinyl-accumulate/-/vinyl-accumulate-1.1.2.tgz#15156acfa4732fb5a0fe4a7145dab36678f676ad"
+vinyl-accumulate@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vinyl-accumulate/-/vinyl-accumulate-1.2.0.tgz#7732c6b198e9739f1d92d77c0842d77f2a2c715f"
   dependencies:
     debounce "^1.0.0"
     duplexer2 "^0.1.4"
+    gulp-front-matter "^1.3.0"
     vinyl "^2.0.0"
 
 vinyl-bufferstream@^1.0.1:
