@@ -6,5 +6,6 @@
 - CONTACT - irc, ml, email など
 - DOCS - 公式ドキュメントリンク, その他記事へリンク
 - NEWS - 書籍 LTS リリースなど
+- JOBBOARDS - node.js 求人
 
 EVENTS と NEWS は定期的に追加する. その他は不定期更新.
