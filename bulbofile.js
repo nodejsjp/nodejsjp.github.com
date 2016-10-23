@@ -47,7 +47,7 @@ asset('source/events/**/*.md')
   .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
-  .pipe(layout('events'))
+  .pipe(layout('event'))
 
 asset('source/css/*.css')
   .base('source')
