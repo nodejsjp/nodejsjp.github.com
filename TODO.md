@@ -1,10 +1,12 @@
 # TODO
+- HOME に最新の event が1件表示される
 - circle ci で gh-pages にデプロイされるように
 - NEWS - 書籍 LTS リリースなど
-- JOBBOARD - node.js 求人
-- sort accumulated files
+- JOBBOARD - もう一件ついか (jobboard.html のみため確認のため)
 
 # DONE
+- sort accumulated files
+- JOBBOARD - node.js 求人
 - events
 - HOME - ダウンロードリンク, 本家リンク, 直近イベント1件
 - ABOUT - nodejs.jp について
