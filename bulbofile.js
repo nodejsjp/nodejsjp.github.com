@@ -39,7 +39,10 @@ asset('source/events/**/*.md')
   .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
-  .pipe(accumulate('events.html', {debounce: true}))
+  .pipe(accumulate('events.html', {
+    debounce: true,
+    sort: (x, y) => y.fm.date[0].valueOf() - x.fm.date[0].valueOf()
+  }))
   .pipe(layout('event-index'))
 
 asset('source/events/**/*.md')
