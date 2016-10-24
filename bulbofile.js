@@ -14,7 +14,6 @@ const data = {
   layoutDir: path.join(__dirname, 'source/layout')
 }
 
-// const nunjucksDate = require('nunjucks-date')
 require('nunjucks').configure().addFilter('date', require('nunjucks-date'))
 
 bulbo.dest('build') // Sets the destination
@@ -27,7 +26,7 @@ const layout = defaultLayout => wrapper.nunjucks({
   extname: '.njk'
 })
 
-asset('source/**/*.md', '!source/events/**/*')
+asset('source/**/*.md', '!source/{events,jobs}/**/*')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(nunjucks.compile(data))
@@ -45,6 +44,24 @@ asset('source/events/**/*.md')
   }))
   .pipe(layout('event-index'))
 
+asset('source/jobs/**/*.md')
+  .watch('source/**/*.{md,njk}')
+  .base('source')
+  .pipe(frontMatter({property: 'fm'}))
+  .pipe(marked())
+  .pipe(accumulate('jobboard.html', {
+    debounce: true,
+    //sort: (x, y) => y.fm.date.valueOf() - x.fm.date.valueOf()
+  }))
+  .pipe(layout('jobboard'))
+
+asset('source/jobs/**/*.md')
+  .watch('source/**/*.{md,njk}')
+  .base('source')
+  .pipe(frontMatter({property: 'fm'}))
+  .pipe(marked())
+  .pipe(layout('job'))
+
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
   .base('source')
@@ -55,5 +72,5 @@ asset('source/events/**/*.md')
 asset('source/css/*.css')
   .base('source')
 
-asset('source/images/**/*')
+asset('source/images/**/*.{png,svg}')
   .base('source')

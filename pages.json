@@ -22,5 +22,9 @@
   {
     "name": "NEWS",
     "path": "news.html"
+  },
+  {
+    "name": "JOBBOARD",
+    "path": "jobboard.html"
   }
 ]

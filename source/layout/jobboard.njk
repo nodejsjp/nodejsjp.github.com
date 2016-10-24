@@ -1,0 +1,14 @@
+{% extends layoutDir + '/layout.njk' %}
+
+{% block main %}
+<h1>ジョブボード</h1>
+
+{% for file in file.files %}
+<hr />
+<h2><a href="{{ basepath }}/{{ file.relative }}">{{ file.fm.name }}</a></h2>
+{% if file.fm.image %}
+  <img src="{{ basepath }}/{{ file.fm.image }}" width="120" style="margin: 15px;">
+{% endif %}
+{% endfor %}
+
+{% endblock %}
