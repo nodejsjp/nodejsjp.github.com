@@ -11,7 +11,7 @@
     <li>日時
     <ul>
     {% for date in file.fm.date %}
-      <li>{{ date }}
+      <li>{{ date | date('YYYY年MM月DD日') }}
     {% endfor %}
     </ul>
     <li>会場

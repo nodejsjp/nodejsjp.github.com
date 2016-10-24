@@ -13,7 +13,7 @@ ticket:
   - url: http://nodejs.connpass.com/event/42182/
     name: 東京Node学園祭2016 (2日目)
 site:
-  name: オフィシャルページ
+  name: オフィシャルサイト
   url: http://nodefest.jp/2016/
 ---
 
