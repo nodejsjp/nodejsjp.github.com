@@ -1,5 +1,5 @@
 ---
-date: 2016-10-10
+postedAt: 2016-10-10
 name: 株式会社リンクリンク
 image: images/company-logo/linklink.svg
 kind:

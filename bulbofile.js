@@ -44,6 +44,13 @@ asset('source/events/**/*.md')
   }))
   .pipe(layout('event-index'))
 
+asset('source/events/**/*.md')
+  .watch('source/**/*.{md,njk}')
+  .base('source')
+  .pipe(frontMatter({property: 'fm'}))
+  .pipe(marked())
+  .pipe(layout('event'))
+
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
   .base('source')
@@ -51,7 +58,7 @@ asset('source/jobs/**/*.md')
   .pipe(marked())
   .pipe(accumulate('jobboard.html', {
     debounce: true,
-    //sort: (x, y) => y.fm.date.valueOf() - x.fm.date.valueOf()
+    sort: (x, y) => y.fm.postedAt.valueOf() - x.fm.postedAt.valueOf()
   }))
   .pipe(layout('jobboard'))
 
@@ -61,13 +68,6 @@ asset('source/jobs/**/*.md')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(layout('job'))
-
-asset('source/events/**/*.md')
-  .watch('source/**/*.{md,njk}')
-  .base('source')
-  .pipe(frontMatter({property: 'fm'}))
-  .pipe(marked())
-  .pipe(layout('event'))
 
 asset('source/css/*.css')
   .base('source')

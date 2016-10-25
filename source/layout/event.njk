@@ -4,7 +4,11 @@
   <h1>{{ file.fm.name }}</h1>
   <hr />
   {% if file.fm.image %}
-    <img src="{{ basepath }}/{{ file.fm.image }}" />
+    {% if file.fm.site %}
+      <a href="{{ file.fm.site.url }}"><img src="{{ basepath }}/{{ file.fm.image }}" /></a>
+    {% else %}
+      <img src="{{ basepath }}/{{ file.fm.image }}" />
+    {% endif %}
     <br/>
   {% endif %}
   <ul>
@@ -34,5 +38,8 @@
     <article>
     {{ file.contents | safe }}
     </article>
+  {% endif %}
+  {% if file.fm.site %}
+    <h2><a href="{{ file.fm.site.url }}">{{ file.fm.site.name}}</a></h2>
   {% endif %}
 {% endblock %}

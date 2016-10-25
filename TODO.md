@@ -3,6 +3,7 @@
 - circle ci で gh-pages にデプロイされるように
 - NEWS - 書籍 LTS リリースなど
 - JOBBOARD - もう一件ついか (jobboard.html のみため確認のため)
+- 実施済みマークをつける (frontend)
 
 # DONE
 - sort accumulated files

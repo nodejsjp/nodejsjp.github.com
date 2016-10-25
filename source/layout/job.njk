@@ -17,4 +17,6 @@
 </ul>
 <hr />
 {{ file.contents | safe }}
+<hr />
+<p>(掲載日: {{ file.fm.postedAt | date('YYYY年MM月DD日') }})
 {% endblock %}
