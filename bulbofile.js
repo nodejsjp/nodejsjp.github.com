@@ -11,7 +11,8 @@ const accumulate = require('vinyl-accumulate')
 const data = {
   orgName: 'Node.js 日本ユーザーグループ',
   pages: require('./pages'),
-  layoutDir: path.join(__dirname, 'source/layout')
+  layoutDir: path.join(__dirname, 'source/layout'),
+  basepath: process.env.BASEPATH || ''
 }
 
 require('nunjucks').configure().addFilter('date', require('nunjucks-date'))
