@@ -1,10 +1,10 @@
 # TODO
-- HOME に最新の event が1件表示される
+- HOME に未実施の event が全て表示される
 - circle ci で gh-pages にデプロイされるように
   - ./build に gh-pages 最新が checkout された状態で build して、build 以下を commit push する
 - NEWS - 書籍 LTS リリースなど
 - JOBBOARD - もう一件ついか (jobboard.html のみため確認のため)
-- 実施済みマークをつける (frontend)
+- 実施済みイベントになんらかの表示 (frontend)
 
 # DONE
 - sort accumulated files
