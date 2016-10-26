@@ -2,15 +2,12 @@
 
 ---
 
-## メーリングリスト
+## Slack
 
-- [Node.js jp](http://groups.google.co.jp/group/nodejs_jp) (日本語)
-- [Node.js](http://groups.google.co.jp/group/nodejs) (英語)
-- [Node.js dev](http://groups.google.co.jp/group/nodejs-dev) (英語)
+- [https://iojs-jp.slack.com](https://iojs-jp.slack.com)
 
 ## IRC
 
-- irc.freenode.net #node.js-ja (日本語)
 - irc.freenode.net #node.js (英語)
 
 ## ブログ
