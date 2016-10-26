@@ -2,7 +2,7 @@
 postedAt: 2016-10-10
 name: 株式会社リンクリンク
 image: images/company-logo/linklink.svg
-kind:
+role:
   - Node.js プログラマ
   - ディレクター
 url: https://www.google.com/
