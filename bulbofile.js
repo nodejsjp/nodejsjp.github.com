@@ -39,6 +39,17 @@ asset('source/events/**/*.md')
   .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
+  .pipe(accumulate('index.html', {
+    debounce: true,
+    sort: (x, y) => y.fm.date[0].valueOf() - x.fm.date[0].valueOf()
+  }))
+  .pipe(layout('index'))
+
+asset('source/events/**/*.md')
+  .watch('source/**/*.{md,njk}')
+  .base('source')
+  .pipe(frontMatter({property: 'fm'}))
+  .pipe(marked())
   .pipe(accumulate('events.html', {
     debounce: true,
     sort: (x, y) => y.fm.date[0].valueOf() - x.fm.date[0].valueOf()
