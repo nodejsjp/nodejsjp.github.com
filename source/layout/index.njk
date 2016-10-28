@@ -18,17 +18,17 @@
 {% for eventFile in file.files %}
   {% if loop.first %}
     <h2>イベント情報</h2>
-  {% endif %}
 
-  <h3><a href="{{ eventFile.relative }}">{{ eventFile.fm.name }}</a></h3>
-  {% if eventFile.fm.image %}
-    <p><img src="{{ eventFile.fm.image }}">
+    <h3><a href="{{ eventFile.relative }}">{{ eventFile.fm.name }}</a></h3>
+    {% if eventFile.fm.image %}
+      <p><img src="{{ eventFile.fm.image }}">
+    {% endif %}
+    <p>日時:
+    {% for date in eventFile.fm.date %}
+      {% if not loop.first %}/{% endif %}
+      {{ date | date('YYYY年MM月DD日') }}
+    {% endfor %}
   {% endif %}
-  <p>日時:
-  {% for date in eventFile.fm.date %}
-    {% if not loop.first %}/{% endif %}
-    {{ date | date('YYYY年MM月DD日') }}
-  {% endfor %}
 {% endfor %}
 
 {% endblock %}
