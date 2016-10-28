@@ -6,4 +6,4 @@ npm run build
 cd build
 git add .
 git commit -m 'chore(site): update build'
-git push origin head
+git push origin HEAD
