@@ -27,7 +27,7 @@ const layout = defaultLayout => wrapper.nunjucks({
   extname: '.njk'
 })
 
-asset('source/**/*.md', '!source/{events,jobs}/**/*')
+asset('source/**/*.md', '!source/{events,jobs,news}/**/*')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(nunjucks.compile(data))
@@ -63,6 +63,24 @@ asset('source/events/**/*.md')
   .pipe(marked())
   .pipe(layout('event'))
 
+asset('source/news/**/*.md')
+  .watch('source/**/*.{md,njk}')
+  .base('source')
+  .pipe(frontMatter({property: 'fm'}))
+  .pipe(marked())
+  .pipe(accumulate('news.html', {
+    debounce: true,
+    sort: (x, y) => y.fm.date.valueOf() - x.fm.date.valueOf()
+  }))
+  .pipe(layout('news-index'))
+
+asset('source/news/**/*.md')
+  .watch('source/**/*.{md,njk}')
+  .base('source')
+  .pipe(frontMatter({property: 'fm'}))
+  .pipe(marked())
+  .pipe(layout('news'))
+
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
   .base('source')
@@ -84,5 +102,5 @@ asset('source/jobs/**/*.md')
 asset('source/css/*.css')
   .base('source')
 
-asset('source/images/**/*.{png,svg}')
+asset('source/images/**/*.{png,svg,jpg,jpeg,gif}')
   .base('source')

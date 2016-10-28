@@ -8,14 +8,14 @@
 <h2><a href="{{ basepath }}/{{ file.relative }}">{{ file.fm.name }}</a></h2>
 {% if file.fm.image %}
   <p><img src="{{ basepath }}/{{ file.fm.image }}" width="120" style="margin: 15px;"></p>
-  <p>
-  募集職種:
-  {% for role in file.fm.role %}
-    {% if not loop.first %}/{% endif %}
-    {{ role }}
-  {% endfor %}
-  </p>
 {% endif %}
+<p>
+募集職種:
+{% for role in file.fm.role %}
+  {% if not loop.first %}/{% endif %}
+  {{ role }}
+{% endfor %}
+</p>
 {% endfor %}
 
 {% endblock %}
