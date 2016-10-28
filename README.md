@@ -10,14 +10,7 @@
 
     npm run server
 
-`localhost:3100` に開発用サーバが立ち上がります。
-
-# 開発用ドキュメント
-
-- SITEMAP.md
-  - サイトマップ
-- TODO.md
-  - TODO リスト (不要になったら消してください)
+`localhost:3100` に開発用ローカルサイトが立ち上がります。
 
 # Event を追加する
 
