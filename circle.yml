@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 4
+deployment:
+  publish:
+    branch: master
+    commands:
+      - ./update.sh

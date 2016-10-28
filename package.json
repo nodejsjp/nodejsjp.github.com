@@ -37,5 +37,8 @@
     "nunjucks": "^2.5.2",
     "nunjucks-date": "^1.2.0",
     "vinyl-accumulate": "^1.2.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.4"
   }
 }
