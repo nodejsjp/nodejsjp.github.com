@@ -19,6 +19,7 @@ require('nunjucks').configure().addFilter('date', require('nunjucks-date'))
 
 bulbo.dest('build') // Sets the destination
 bulbo.port(3100) // Sets the dev server's port
+bulbo.base('source')
 
 const layout = defaultLayout => wrapper.nunjucks({
   data,
@@ -36,7 +37,6 @@ asset('source/**/*.md', '!source/{events,jobs,news}/**/*')
 
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
-  .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(accumulate('index.html', {
@@ -47,7 +47,6 @@ asset('source/events/**/*.md')
 
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
-  .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(accumulate('events.html', {
@@ -58,14 +57,12 @@ asset('source/events/**/*.md')
 
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
-  .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(layout('event'))
 
 asset('source/news/**/*.md')
   .watch('source/**/*.{md,njk}')
-  .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(accumulate('news.html', {
@@ -76,14 +73,12 @@ asset('source/news/**/*.md')
 
 asset('source/news/**/*.md')
   .watch('source/**/*.{md,njk}')
-  .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(layout('news'))
 
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
-  .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(accumulate('jobboard.html', {
@@ -94,13 +89,10 @@ asset('source/jobs/**/*.md')
 
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
-  .base('source')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(layout('job'))
 
 asset('source/css/*.css')
-  .base('source')
 
 asset('source/images/**/*.{png,svg,jpg,jpeg,gif}')
-  .base('source')
