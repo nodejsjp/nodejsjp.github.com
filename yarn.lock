@@ -2160,14 +2160,14 @@ verror@1.3.6:
   dependencies:
     extsprintf "1.0.2"
 
-vinyl-accumulate@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/vinyl-accumulate/-/vinyl-accumulate-1.2.0.tgz#7732c6b198e9739f1d92d77c0842d77f2a2c715f"
+vinyl-accumulate@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/vinyl-accumulate/-/vinyl-accumulate-1.3.2.tgz#5c49d7b7566aa6e99ac62c2799d8e95f6a8f1f6a"
   dependencies:
     debounce "^1.0.0"
     duplexer2 "^0.1.4"
-    gulp-front-matter "^1.3.0"
     vinyl "^2.0.0"
+    vinyl-fs "^2.4.4"
 
 vinyl-bufferstream@^1.0.1:
   version "1.0.1"
@@ -2175,7 +2175,7 @@ vinyl-bufferstream@^1.0.1:
   dependencies:
     bufferstreams "1.0.1"
 
-vinyl-fs@^2.2.1:
+vinyl-fs@^2.2.1, vinyl-fs@^2.4.4:
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/vinyl-fs/-/vinyl-fs-2.4.4.tgz#be6ff3270cb55dfd7d3063640de81f25d7532239"
   dependencies:
