@@ -96,3 +96,5 @@ asset('source/jobs/**/*.md')
 asset('source/css/*.css')
 
 asset('source/images/**/*.{png,svg,jpg,jpeg,gif}')
+
+asset('./old/*.*').base('./')
