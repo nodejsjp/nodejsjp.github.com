@@ -8,7 +8,7 @@
   "scripts": {
     "test": "bulbo build",
     "serve": "bulbo serve",
-    "build": "cross-env BASEPATH=https://kt3k.github.io/asdfghjs.jp bulbo build"
+    "build": "cross-env BASEPATH=http://nodejs.jp bulbo build"
   },
   "repository": {
     "type": "git",
