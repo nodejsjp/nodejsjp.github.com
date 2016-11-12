@@ -131,9 +131,14 @@ url: https://www.google.com/
 
 bulbo の各パイプラインは gulp-plugin (vinyl stream の duplex) の連鎖で成り立ってます (gulp の各タスクと同様)。各パイプラインの各ノードの挙動については各 gulp-plugin のドキュメントを参照してください。
 
+# リリースの仕組み
+
+master にマージされると [CircleCI][CircleCI] 上で `circle.yml` の publish タスクが走り自動的に publish されます。具体的な内容は、`circle.yml` と `update.sh` の内容を確認してください。
+
 ビルドがうまくいかない/何かが分からないなどの場合は @kt3k まで問い合わせてください。( https://twitter.com/kt3k )
 
 [homepage]: http://nodejs.jp
 [bulbo]: https://github.com/kt3k/bulbo
 [nunjucks]: http://mozilla.github.io/nunjucks/
 [nunjucks-tmpl-doc]: https://mozilla.github.io/nunjucks/templating.html
+[CircleCI]: https://circleci.com/
