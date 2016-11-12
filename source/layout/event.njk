@@ -1,0 +1,45 @@
+{% extends layoutDir + '/default.njk' %}
+
+{% block main %}
+  <h1>{{ file.fm.name }}</h1>
+  <hr />
+  {% if file.fm.image %}
+    {% if file.fm.site %}
+      <a href="{{ file.fm.site.url }}"><img src="{{ basepath }}/{{ file.fm.image }}" /></a>
+    {% else %}
+      <img src="{{ basepath }}/{{ file.fm.image }}" />
+    {% endif %}
+    <br/>
+  {% endif %}
+  <ul>
+    <li>日時
+    <ul>
+    {% for date in file.fm.date %}
+      <li>{{ date | date('YYYY年MM月DD日') }}
+    {% endfor %}
+    </ul>
+    <li>会場
+    <ul>
+    {% for venue in file.fm.venue %}
+      <li>{{ venue }}
+    {% endfor %}
+    </ul>
+    <li>チケット
+    <ul>
+    {% for ticket in file.fm.ticket %}
+      <li><a href="{{ ticket.url }}">{{ ticket.name }}</a>
+    {% endfor %}
+    </ul>
+  </ul>
+  <!-- FIXME: 5文字以下だった場合本文なしと見なす.
+       本当は「whitespace のみだった場合」のような判定をしたいが
+       上手くいかないため、一旦この対応 -->
+  {% if file.contents.length > 5 %}
+    <article>
+    {{ file.contents | safe }}
+    </article>
+  {% endif %}
+  {% if file.fm.site %}
+    <h2><a href="{{ file.fm.site.url }}">{{ file.fm.site.name}}</a></h2>
+  {% endif %}
+{% endblock %}

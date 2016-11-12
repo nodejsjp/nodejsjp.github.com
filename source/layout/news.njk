@@ -1,0 +1,13 @@
+{% extends layoutDir + '/layout.njk' %}
+
+{% block main %}
+<h1>{{ file.fm.title }}</h1>
+<p>
+  {% if file.fm.author %}
+    by {{ file.fm.author }},
+  {% endif %}
+  {{ file.fm.date | date('YYYY年MM月DD日') }}
+</p>
+<hr />
+{{ file.contents | safe }}
+{% endblock %}
