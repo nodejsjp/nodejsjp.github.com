@@ -3,6 +3,6 @@ machine:
     version: 4
 deployment:
   publish:
-    branch: master
+    branch: source
     commands:
       - ./update.sh

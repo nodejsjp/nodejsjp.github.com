@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ./node_modules/.bin/rimraf build
-git clone -b gh-pages https://github.com/kt3k/asdfghjs.jp.git build
+git clone -b master https://github.com/nodejsjp/nodejsjp.github.com.git build
 npm run build
 cd build
 git add .
