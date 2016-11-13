@@ -1,0 +1,24 @@
+{% extends layoutDir + '/layout.njk' %}
+
+{% block main %}
+<h1>{{ file.fm.name }}</h1>
+{% if file.fm.image %}
+  <a href="{{ file.fm.url }}">
+    <img src="{{ basepath }}/{{ file.fm.image }}" width="165" style="margin: 15px;"/>
+  </a>
+{% endif %}
+{% if file.fm.role %}
+<ul>
+  <li>募集職種
+  <ul>
+  {% for role in file.fm.role %}
+    <li>{{ role }}
+  {% endfor %}
+  </ul>
+</ul>
+{% endif %}
+<hr />
+{{ file.contents | safe }}
+<hr />
+<p>(掲載日: {{ file.fm.postedAt | date('YYYY年MM月DD日') }})
+{% endblock %}
