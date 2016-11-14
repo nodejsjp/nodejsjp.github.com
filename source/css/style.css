@@ -5,3 +5,7 @@ body {
 a {
   color: #43853d;
 }
+
+.title {
+  line-height: 1.5;
+}
