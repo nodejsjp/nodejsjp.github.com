@@ -3,8 +3,8 @@
 ---
 
 ## Slack
-
-- [https://iojs-jp.slack.com](https://iojs-jp.slack.com)
+- 未登録の方: [https://iojs-jp-slack.herokuapp.com](https://iojs-jp-slack.herokuapp.com)
+- 登録済みの方: [https://iojs-jp.slack.com](https://iojs-jp.slack.com)
 
 ## IRC
 
