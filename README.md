@@ -8,7 +8,7 @@
 
 # 開発サーバ起動
 
-    npm run serve
+    npm start
 
 `localhost:3100` に開発用ローカルサイトが立ち上がります。
 
