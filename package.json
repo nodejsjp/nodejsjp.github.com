@@ -7,6 +7,7 @@
   "main": "index.js",
   "scripts": {
     "test": "bulbo build",
+    "start": "npm run serve",
     "serve": "bulbo serve",
     "build": "cross-env BASEPATH=http://nodejs.jp bulbo build"
   },
