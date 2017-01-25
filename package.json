@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nodejsjp/nodejs.jp.git"
+    "url": "git+https://github.com/nodejsjp/nodejsjp.github.com.git"
   },
   "keywords": [
     "nodejs.jp",
@@ -26,7 +26,7 @@
   "author": "Yoshiya Hinosawa <stibium121@gmail.com> (https://twitter.com/kt3k)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nodejsjp/nodejs.jp/issues"
+    "url": "https://github.com/nodejsjp/nodejsjp.github.com/issues"
   },
   "dependencies": {
     "bulbo": "^6.3.0",
