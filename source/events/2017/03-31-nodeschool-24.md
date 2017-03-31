@@ -16,5 +16,5 @@ Node.js日本ユーザグループ 主催による、Node.jsの勉強会です�
 - 「HyperApp - 1kbのビューライブラリ」 by Jorge Bucaran
 - 「node-whatwg-url」 by abouthiroppy
 - 「llnode」 by kysnm
-- 「OSS翻訳と GitLocalize」by sotayamashita
+- 「OSS翻訳と GitLocalize」 by sotayamashita
 - 「glitch.comでnode.jsのアプリを作る話」 by kosamari
