@@ -1,14 +1,22 @@
 # [nodejs.jp][homepage]
 
-# ビルド
+# インストール
+```sh
+$ yarn install
+```
 
-    npm run build
+# ビルド
+```sh
+$ npm run build # or yarn run build
+```
 
 `build/` 以下にサイトが生成されます。
 
 # 開発サーバ起動
-
-    npm start
+```sh
+$ npm start # or yarn start
+$ open http://localhost:3100/index.html
+```
 
 `localhost:3100` に開発用ローカルサイトが立ち上がります。
 
