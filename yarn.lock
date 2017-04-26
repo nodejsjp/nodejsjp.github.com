@@ -185,9 +185,9 @@ builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
 
-bulbo@^6.6.0:
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/bulbo/-/bulbo-6.6.0.tgz#d8ba46362e2574db9aa9fd010d7921d16ffdc24b"
+bulbo@^6.9.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/bulbo/-/bulbo-6.9.0.tgz#d268402f6f97e3813a8c2d8f99ad489fd5b2a2d3"
   dependencies:
     chalk "^1.1.1"
     chokidar "^1.4.2"
@@ -198,7 +198,7 @@ bulbo@^6.6.0:
     minirocket "^2.0.0"
     stream-splicer "^2.0.0"
     vinyl-fs "^2.2.1"
-    vinyl-serve "^2.6.1"
+    vinyl-serve "^2.7.0"
 
 callsite@^1.0.0:
   version "1.0.0"
@@ -2213,9 +2213,9 @@ vinyl-fs@^2.2.1, vinyl-fs@^2.4.4:
     vali-date "^1.0.0"
     vinyl "^1.0.0"
 
-vinyl-serve@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/vinyl-serve/-/vinyl-serve-2.6.1.tgz#98d7b959b5bc88a1174941e0364e2ae8fa7c9d8f"
+vinyl-serve@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/vinyl-serve/-/vinyl-serve-2.7.0.tgz#ae1fef3ffb32264a1ba738c0abf4219b850c367f"
   dependencies:
     es6-promise "^4.0.3"
     mime "^1.3.4"

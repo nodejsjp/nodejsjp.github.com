@@ -20,6 +20,7 @@ require('nunjucks').configure().addFilter('date', require('nunjucks-date'))
 bulbo.dest('build') // Sets the destination
 bulbo.port(3100) // Sets the dev server's port
 bulbo.base('source')
+bulbo.loggerTitle('nodejsjp')
 
 const layout = defaultLayout => wrapper.nunjucks({
   data,
