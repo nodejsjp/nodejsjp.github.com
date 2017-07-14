@@ -36,16 +36,19 @@ asset('source/**/*.md', '!source/{events,jobs,news}/**/*')
   .pipe(marked())
   .pipe(layout('default'))
 
+// Index page
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(accumulate('index.html', {
     debounce: true,
-    sort: (x, y) => y.fm.date[0].valueOf() - x.fm.date[0].valueOf()
+    sort: (x, y) => y.fm.date[0].valueOf() - x.fm.date[0].valueOf(),
+    filter: (x) => x.fm.date[0].valueOf() > Date.now() // filter the past events
   }))
   .pipe(layout('index'))
 
+// Event index pages
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
@@ -56,12 +59,14 @@ asset('source/events/**/*.md')
   }))
   .pipe(layout('event-index'))
 
+// Single event page
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(layout('event'))
 
+// News index page
 asset('source/news/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
@@ -72,12 +77,14 @@ asset('source/news/**/*.md')
   }))
   .pipe(layout('news-index'))
 
+// Single news pages
 asset('source/news/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
   .pipe(layout('news'))
 
+// Job index page
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
@@ -88,6 +95,7 @@ asset('source/jobs/**/*.md')
   }))
   .pipe(layout('jobboard'))
 
+// Single job page
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
@@ -95,7 +103,7 @@ asset('source/jobs/**/*.md')
   .pipe(layout('job'))
 
 asset('source/css/*.css')
-
 asset('source/images/**/*.{png,svg,jpg,jpeg,gif}')
 
+// Old site is available under http://nodejs.jp/old/
 asset('./old/*.*').base('./')
