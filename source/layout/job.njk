@@ -4,7 +4,7 @@
 <h1>{{ file.fm.name }}</h1>
 {% if file.fm.image %}
   <a href="{{ file.fm.url }}">
-    <img src="{{ basepath }}/{{ file.fm.image }}" width="165" style="margin: 15px;"/>
+    <img src="{{ basepath(file) }}/{{ file.fm.image }}" width="165" style="margin: 15px;"/>
   </a>
 {% endif %}
 {% if file.fm.role %}

@@ -7,7 +7,7 @@
 <hr />
 <h2>
   <small>{{ file.fm.date | date('YYYY/MM/DD') }}</small>
-  <a href="{{ basepath }}/{{ file.relative }}">{{ file.fm.title }}</a>
+  <a href="{{ basepath(file) }}/{{ file.relative }}">{{ file.fm.title }}</a>
 </h2>
 {% endfor %}
 
