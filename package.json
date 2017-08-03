@@ -6,10 +6,10 @@
   "homepage": "http://nodejs.jp",
   "main": "index.js",
   "scripts": {
-    "test": "bulbo build",
+    "test": "npm run build",
     "start": "npm run serve",
     "serve": "bulbo serve",
-    "build": "cross-env BASEPATH=http://nodejs.jp bulbo build"
+    "build": "bulbo build"
   },
   "repository": {
     "type": "git",
