@@ -12,7 +12,8 @@ const data = {
   orgName: 'Node.js 日本ユーザーグループ',
   pages: require('./pages'),
   layoutDir: path.join(__dirname, 'source/layout'),
-  basepath: process.env.BASEPATH || ''
+  // file を受け取って root への相対パスを返す関数
+  basepath: file => path.dirname(path.relative(file.relative, ''))
 }
 
 require('nunjucks').configure().addFilter('date', require('nunjucks-date'))

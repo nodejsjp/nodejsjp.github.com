@@ -5,9 +5,9 @@
   <hr />
   {% if file.fm.image %}
     {% if file.fm.site %}
-      <a href="{{ file.fm.site.url }}"><img src="{{ basepath }}/{{ file.fm.image }}" /></a>
+      <a href="{{ file.fm.site.url }}"><img src="{{ basepath(file) }}/{{ file.fm.image }}" /></a>
     {% else %}
-      <img src="{{ basepath }}/{{ file.fm.image }}" />
+      <img src="{{ basepath(file) }}/{{ file.fm.image }}" />
     {% endif %}
     <br/>
     <br/>

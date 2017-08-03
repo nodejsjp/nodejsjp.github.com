@@ -1,19 +1,19 @@
 <title>{{ orgName }}</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{ basepath }}/css/tacit.min.css"/>
-<link rel="stylesheet" href="{{ basepath }}/css/style.css"/>
-<link rel="icon" href="{{ basepath }}/images/favicon.png" />
+<link rel="stylesheet" href="{{ basepath(file) }}/css/tacit.min.css"/>
+<link rel="stylesheet" href="{{ basepath(file) }}/css/style.css"/>
+<link rel="icon" href="{{ basepath(file) }}/images/favicon.png" />
 
 <nav>
-<img width="150" src="{{ basepath }}/images/nodejs-logo.svg" />
+<img width="150" src="{{ basepath(file) }}/images/nodejs-logo.svg" />
 <br />
 <ul>
 {% for page in pages %}
   {% if page.path == file.relative %}
     <li>{{ page.name }}
   {% else %}
-    <li><a href="{{ basepath }}/{{ page.path }}">{{ page.name }}</a>
+    <li><a href="{{ basepath(file) }}/{{ page.path }}">{{ page.name }}</a>
   {% endif %}
 {% endfor %}
 </ul>
