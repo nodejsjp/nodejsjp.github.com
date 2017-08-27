@@ -7,6 +7,7 @@ const nunjucks = require('gulp-nunjucks')
 const marked = require('gulp-marked')
 const wrapper = require('layout-wrapper')
 const accumulate = require('vinyl-accumulate')
+const branch = require('branch-pipe')
 
 const data = {
   orgName: 'Node.js 日本ユーザーグループ',
@@ -49,59 +50,53 @@ asset('source/events/**/*.md')
   }))
   .pipe(layout('index'))
 
-// Event index pages
+// Event pages
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
-  .pipe(accumulate('events.html', {
-    debounce: true,
-    sort: (x, y) => y.fm.date[0].valueOf() - x.fm.date[0].valueOf()
-  }))
-  .pipe(layout('event-index'))
+  .pipe(branch.obj(src => [
+    src
+      .pipe(accumulate('events.html', {
+        debounce: true,
+        sort: (x, y) => y.fm.date[0].valueOf() - x.fm.date[0].valueOf()
+      }))
+      .pipe(layout('event-index')), // Event index page
+    src
+      .pipe(layout('event')) // Single event page
+  ]))
 
-// Single event page
-asset('source/events/**/*.md')
-  .watch('source/**/*.{md,njk}')
-  .pipe(frontMatter({property: 'fm'}))
-  .pipe(marked())
-  .pipe(layout('event'))
-
-// News index page
+// News pages
 asset('source/news/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
-  .pipe(accumulate('news.html', {
-    debounce: true,
-    sort: (x, y) => y.fm.date.valueOf() - x.fm.date.valueOf()
-  }))
-  .pipe(layout('news-index'))
+  .pipe(branch.obj(src => [
+    src
+      .pipe(accumulate('news.html', {
+        debounce: true,
+        sort: (x, y) => y.fm.date.valueOf() - x.fm.date.valueOf()
+      }))
+      .pipe(layout('news-index')), // News index page
+    src
+      .pipe(layout('news')) // Single news page
+  ]))
 
-// Single news pages
-asset('source/news/**/*.md')
-  .watch('source/**/*.{md,njk}')
-  .pipe(frontMatter({property: 'fm'}))
-  .pipe(marked())
-  .pipe(layout('news'))
-
-// Job index page
+// Jobboard pages
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(marked())
-  .pipe(accumulate('jobboard.html', {
-    debounce: true,
-    sort: (x, y) => y.fm.postedAt.valueOf() - x.fm.postedAt.valueOf()
-  }))
-  .pipe(layout('jobboard'))
-
-// Single job page
-asset('source/jobs/**/*.md')
-  .watch('source/**/*.{md,njk}')
-  .pipe(frontMatter({property: 'fm'}))
-  .pipe(marked())
-  .pipe(layout('job'))
+  .pipe(branch.obj(src => [
+    src
+      .pipe(accumulate('jobboard.html', {
+        debounce: true,
+        sort: (x, y) => y.fm.postedAt.valueOf() - x.fm.postedAt.valueOf()
+      }))
+      .pipe(layout('jobboard')), // Job index page
+    src
+      .pipe(layout('job')) // Single job page
+  ]))
 
 asset('source/css/*.css')
 asset('source/images/**/*.{png,svg,jpg,jpeg,gif}')

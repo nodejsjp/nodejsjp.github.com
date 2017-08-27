@@ -14,7 +14,7 @@
       {{ date | date('YYYY年MM月DD日') }}
     {% endfor %}
     {% if event.fm.image %}
-      <p><a href="{{ basepath(file) }}{{ event.relative }}"><img src="{{ event.fm.image }}" /></a></p>
+      <p><a href="{{ basepath(file) }}/{{ event.relative }}"><img src="{{ event.fm.image }}" /></a></p>
     {% endif %}
     </ul>
   {% endfor %}

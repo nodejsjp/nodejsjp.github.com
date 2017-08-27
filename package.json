@@ -39,6 +39,7 @@
     "vinyl-accumulate": "^1.4.1"
   },
   "devDependencies": {
+    "branch-pipe": "^1.0.1",
     "rimraf": "^2.5.4"
   }
 }
