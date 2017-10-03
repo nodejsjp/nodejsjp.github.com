@@ -19,16 +19,16 @@
 </ul>
 </nav>
 <section>
-
-{% block main %}{% endblock %}
-
-<hr/>
-<footer>
-<p>
-  <small>© 2016 {{ orgName }}</small>
-  <small><a href="https://github.com/nodejsjp/nodejsjp.github.com">GitHub</a></small>
-</p>
-</footer>
+  <article>
+    {% block main %}{% endblock %}
+    <hr/>
+    <footer>
+    <p>
+      <small>© 2016 {{ orgName }}</small>
+      <small><a href="https://github.com/nodejsjp/nodejsjp.github.com">GitHub</a></small>
+    </p>
+    </footer>
+  </article>
 </section>
 <script type="text/javascript">
   var _gaq = _gaq || [];

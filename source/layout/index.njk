@@ -22,7 +22,11 @@
 
   <h3><a href="{{ eventFile.relative }}">{{ eventFile.fm.name }}</a></h3>
   {% if eventFile.fm.image %}
-    <p><img src="{{ eventFile.fm.image }}">
+    <figure>
+      <a href="{{ eventFile.relative }}">
+        <img src="{{ eventFile.fm.image }}">
+      </a>
+    </figure>
   {% endif %}
   <p>日時:
   {% for date in eventFile.fm.date %}

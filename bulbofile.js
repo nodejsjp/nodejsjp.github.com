@@ -82,6 +82,7 @@ asset('source/news/**/*.md')
       .pipe(layout('news')) // Single news page
   ]))
 
+const postedAt = x => x.fm.postedAt ? x.fm.postedAt.valueOf() : 0
 // Jobboard pages
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
@@ -91,7 +92,7 @@ asset('source/jobs/**/*.md')
     src
       .pipe(accumulate('jobboard.html', {
         debounce: true,
-        sort: (x, y) => y.fm.postedAt.valueOf() - x.fm.postedAt.valueOf()
+        sort: (x, y) => postedAt(y) - postedAt(x)
       }))
       .pipe(layout('jobboard')), // Job index page
     src
