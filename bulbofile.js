@@ -10,7 +10,7 @@ const accumulate = require('vinyl-accumulate')
 const branch = require('branch-pipe')
 
 const data = {
-  orgName: 'Node.js 日本ユーザーグループ',
+  orgName: 'Japan Node.js Association',
   pages: require('./pages'),
   layoutDir: path.join(__dirname, 'source/layout'),
   // file を受け取って root への相対パスを返す関数
