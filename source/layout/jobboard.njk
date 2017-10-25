@@ -5,7 +5,13 @@
 
 {% for file in file.files %}
 <hr />
-<h2><a href="{{ basepath(file) }}/{{ file.relative }}">{{ file.fm.name }}</a></h2>
+{% if file.fm.class == 'platinum' %}
+  <h1><a href="{{ basepath(file) }}/{{ file.relative }}">{{ file.fm.name }}</a></h1>
+{% elif file.fm.class == 'gold' %}
+  <h2><a href="{{ basepath(file) }}/{{ file.relative }}">{{ file.fm.name }}</a></h2>
+{% else %}
+  <h3><a href="{{ basepath(file) }}/{{ file.relative }}">{{ file.fm.name }}</a></h3>
+{% endif %}
 {% if file.fm.image %}
   <figure>
     <a href="{{ basepath(file) }}/{{ file.relative }}">

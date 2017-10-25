@@ -82,7 +82,29 @@ asset('source/news/**/*.md')
       .pipe(layout('news')) // Single news page
   ]))
 
-const postedAt = x => x.fm.postedAt ? x.fm.postedAt.valueOf() : 0
+/**
+ * 求人の掲載日の unixtime を返す
+ * @param {Vinyl} file
+ * @return {number}
+ */
+const postedAt = file => file.fm.postedAt ? file.fm.postedAt.valueOf() : 0
+
+// 各スポンサークラスの重み付け
+const classWeight = { platinum: 3, gold: 2, silver: 1 }
+
+/**
+ * 求人のクラスの重み付けを返す
+ * @param {Vinyl} file
+ * @return {number}
+ */
+const getClassWeight = file => classWeight[file.fm.class] || 0
+
+/**
+ * ジョブボードのソート関数
+ * class (platinum/gold/silver) で並べた上で掲載順で並べる
+ */
+const jobboardSort = (x, y) => getClassWeight(y) - getClassWeight(x) || postedAt(y) - postedAt(x)
+
 // Jobboard pages
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
@@ -92,7 +114,7 @@ asset('source/jobs/**/*.md')
     src
       .pipe(accumulate('jobboard.html', {
         debounce: true,
-        sort: (x, y) => postedAt(y) - postedAt(x)
+        sort: jobboardSort
       }))
       .pipe(layout('jobboard')), // Job index page
     src

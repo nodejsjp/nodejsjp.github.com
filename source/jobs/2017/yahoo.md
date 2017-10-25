@@ -1,6 +1,7 @@
 ---
 name: 株式会社ヤフー
 url: https://www.yahoo.co.jp/
+class: gold
 image: images/company-logo/yahoo.png
 postedAt: 2017-09-22
 ---

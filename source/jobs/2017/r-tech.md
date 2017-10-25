@@ -1,6 +1,7 @@
 ---
 name: リクルートテクノロジーズ
 url: http://recruit-tech.co.jp/
+class: gold
 image: images/company-logo/r-tech.png
 postedAt: 2017-09-22
 ---

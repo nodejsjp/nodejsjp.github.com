@@ -1,6 +1,7 @@
 ---
 name: 日産自動車株式会社
 url: https://www.wantedly.com/projects/156247
+class: gold
 image: images/company-logo/nissan.png
 postedAt: 2017-09-22
 ---
