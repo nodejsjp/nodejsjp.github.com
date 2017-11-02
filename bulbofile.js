@@ -12,7 +12,8 @@ const branch = require('branch-pipe')
 const data = {
   orgName: 'Japan Node.js Association',
   pages: require('./pages'),
-  layoutDir: path.join(__dirname, 'source/layout'),
+  layoutDir: path.join(__dirname, 'source', 'layout'),
+  partialsDir: path.join(__dirname, 'source', 'layout', 'partials'),
   // file を受け取って root への相対パスを返す関数
   basepath: file => path.dirname(path.relative(file.relative, ''))
 }
