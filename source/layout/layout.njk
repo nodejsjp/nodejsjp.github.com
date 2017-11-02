@@ -12,28 +12,34 @@
   <body>
     {% include partialsDir + '/github-corner.njk' %}
     <nav>
-    <img width="150" src="{{ basepath(file) }}/images/nodejs-logo.svg" />
-    <br />
-    <ul>
-    {% for page in pages %}
-      {% if page.path == file.relative %}
-        <li>{{ page.name }}
-      {% else %}
-        <li><a href="{{ basepath(file) }}/{{ page.path }}">{{ page.name }}</a>
-      {% endif %}
-    {% endfor %}
-    </ul>
+      <img width="150" src="{{ basepath(file) }}/images/nodejs-logo.svg" />
+      <br />
+      <ul>
+      {% for page in pages %}
+        {% if page.path == file.relative %}
+          <li>{{ page.name }}
+        {% else %}
+          <li><a href="{{ basepath(file) }}/{{ page.path }}">{{ page.name }}</a>
+        {% endif %}
+      {% endfor %}
+      </ul>
     </nav>
     <section>
       <article>
         {% block main %}{% endblock %}
-        <hr/>
-        <footer>
-        <p>
-          <small>© 2016 {{ orgName }}</small>
-          <small><a href="https://github.com/nodejsjp/nodejsjp.github.com">GitHub</a></small>
-        </p>
-        </footer>
+      </article>
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <small>© 2016 {{ orgName }}</small>
+            </li>
+          </ul>
+          <ul>
+            <li><small><a target="_blank" href="https://github.com/nodejsjp/nodejsjp.github.com">GitHub</a></small></li>
+            <li><small><a target="_blank" href="https://twitter.com/nodejsjp">Twitter</a></small></li>
+          </ul>
+        </nav>
       </article>
     </section>
     {% include partialsDir + '/analytics.njk' %}
