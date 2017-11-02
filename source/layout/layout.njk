@@ -1,42 +1,47 @@
-<title>{{ orgName }}</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{ basepath(file) }}/css/tacit.min.css"/>
-<link rel="stylesheet" href="{{ basepath(file) }}/css/style.css"/>
-<link rel="icon" href="{{ basepath(file) }}/images/favicon.png" />
-
-<nav>
-<img width="150" src="{{ basepath(file) }}/images/nodejs-logo.svg" />
-<br />
-<ul>
-{% for page in pages %}
-  {% if page.path == file.relative %}
-    <li>{{ page.name }}
-  {% else %}
-    <li><a href="{{ basepath(file) }}/{{ page.path }}">{{ page.name }}</a>
-  {% endif %}
-{% endfor %}
-</ul>
-</nav>
-<section>
-  <article>
-    {% block main %}{% endblock %}
-    <hr/>
-    <footer>
-    <p>
-      <small>© 2016 {{ orgName }}</small>
-      <small><a href="https://github.com/nodejsjp/nodejsjp.github.com">GitHub</a></small>
-    </p>
-    </footer>
-  </article>
-</section>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-2570409-8']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+{# 全ページ共通レイアウトファイル #}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ orgName }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ basepath(file) }}/css/tacit.min.css"/>
+    <link rel="stylesheet" href="{{ basepath(file) }}/css/style.css"/>
+    <link rel="icon" href="{{ basepath(file) }}/images/favicon.png" />
+  </head>
+  <body>
+    {% include partialsDir + '/github-corner.njk' %}
+    <nav>
+      <img width="150" src="{{ basepath(file) }}/images/nodejs-logo.svg" />
+      <br />
+      <ul>
+      {% for page in pages %}
+        {% if page.path == file.relative %}
+          <li>{{ page.name }}
+        {% else %}
+          <li><a href="{{ basepath(file) }}/{{ page.path }}">{{ page.name }}</a>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </nav>
+    <section>
+      <article>
+        {% block main %}{% endblock %}
+      </article>
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <small>© 2016 {{ orgName }}</small>
+            </li>
+          </ul>
+          <ul>
+            <li><small><a target="_blank" href="https://github.com/nodejsjp/nodejsjp.github.com">GitHub</a></small></li>
+            <li><small><a target="_blank" href="https://twitter.com/nodejsjp">Twitter</a></small></li>
+          </ul>
+        </nav>
+      </article>
+    </section>
+    {% include partialsDir + '/analytics.njk' %}
+  </body>
+</html>
