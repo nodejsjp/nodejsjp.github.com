@@ -1,6 +1,7 @@
 ---
 name: 株式会社メルカリ
 url: https://www.mercari.com/jp/
+class: gold
 image: images/company-logo/mercari.png
 postedAt: 2017-09-22
 ---
