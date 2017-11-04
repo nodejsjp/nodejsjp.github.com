@@ -5,6 +5,7 @@
 ## 公式ドキュメント
 
 - [Node.js 最新](https://nodejs.org/api/)
+- [Node.js v8.x](https://nodejs.org/dist/latest-v8.x/docs/api/)
 - [Node.js v6.x](https://nodejs.org/dist/latest-v6.x/docs/api/)
 - [Node.js v4.x](https://nodejs.org/dist/latest-v4.x/docs/api/)
 
