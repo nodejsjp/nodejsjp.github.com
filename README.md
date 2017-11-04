@@ -1,5 +1,7 @@
 # [nodejs.jp][homepage]
 
+[![](https://img.shields.io/badge/SLACK-JOIN_CHAT_%E2%86%92-551a8b.svg?style=flat-square)](https://iojs-jp-slack.herokuapp.com/)
+
 # インストール
 ```sh
 $ yarn install
