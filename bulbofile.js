@@ -104,7 +104,7 @@ const getClassWeight = file => classWeight[file.fm.class] || 0
  * ジョブボードのソート関数
  * class (platinum/gold/silver) で並べた上で掲載順で並べる
  */
-const jobboardSort = (x, y) => getClassWeight(y) - getClassWeight(x) || postedAt(y) - postedAt(x)
+const jobboardSort = (x, y) => getClassWeight(y) - getClassWeight(x) || postedAt(x) - postedAt(y)
 
 // Jobboard pages
 asset('source/jobs/**/*.md')
