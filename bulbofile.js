@@ -4,7 +4,7 @@ const asset = bulbo.asset
 const path = require('path')
 const frontMatter = require('gulp-front-matter')
 const nunjucks = require('gulp-nunjucks')
-const marked = require('gulp-marked')
+const markdown = require('gulp-markdown')
 const wrapper = require('layout-wrapper')
 const accumulate = require('vinyl-accumulate')
 const branch = require('branch-pipe')
@@ -36,14 +36,14 @@ asset('source/**/*.md', '!source/{events,jobs,news}/**/*')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(nunjucks.compile(data))
-  .pipe(marked())
+  .pipe(markdown())
   .pipe(layout('default'))
 
 // Index page
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
-  .pipe(marked())
+  .pipe(markdown())
   .pipe(accumulate('index.html', {
     debounce: true,
     sort: (x, y) => y.fm.date[0].valueOf() - x.fm.date[0].valueOf(),
@@ -55,7 +55,7 @@ asset('source/events/**/*.md')
 asset('source/events/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
-  .pipe(marked())
+  .pipe(markdown())
   .pipe(branch.obj(src => [
     src
       .pipe(accumulate('events.html', {
@@ -71,7 +71,7 @@ asset('source/events/**/*.md')
 asset('source/news/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
-  .pipe(marked())
+  .pipe(markdown())
   .pipe(branch.obj(src => [
     src
       .pipe(accumulate('news.html', {
@@ -110,7 +110,7 @@ const jobboardSort = (x, y) => getClassWeight(y) - getClassWeight(x) || postedAt
 asset('source/jobs/**/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
-  .pipe(marked())
+  .pipe(markdown())
   .pipe(branch.obj(src => [
     src
       .pipe(accumulate('jobboard.html', {
