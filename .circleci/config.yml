@@ -17,6 +17,7 @@ jobs:
       - store_artifacts:
           path: build
           destination: preview
+      - run: 'npx status-back -s -c circleci/preview -r nodejsjp/nodejsjp.github.com "preview build success!" "https://${CIRCLE_BUILD_NUM}-856151-gh.circle-artifacts.com/0/preview/index.html"'
   deploy:
     docker:
       - image: circleci/node:8
