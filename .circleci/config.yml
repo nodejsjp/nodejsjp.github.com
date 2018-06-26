@@ -7,12 +7,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-{{ checksum "package.json" }}
+            - v{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "package.json" }}
       - run: npm i
       - save_cache:
           paths:
             - node_modules
-          key: v1-{{ checksum "package.json" }}
+          key: v{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "package.json" }}
       - run: npm run build
       - store_artifacts:
           path: build
