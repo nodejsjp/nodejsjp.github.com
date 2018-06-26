@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "branch-pipe": "^1.0.1",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "status-back": "^1.1.0"
   }
 }
