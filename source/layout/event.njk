@@ -1,6 +1,7 @@
 {% extends layoutDir + '/default.njk' %}
 
 {% block main %}
+  <button style="float: right" onclick="location.href='https://github.com/nodejsjp/nodejsjp.github.com/edit/source/source/{{ file.relative.replace('.html', '.md') }}'">&lt;/&gt;</button>
   <h1>{{ file.fm.name }}</h1>
   <hr />
   {% if file.fm.image %}
