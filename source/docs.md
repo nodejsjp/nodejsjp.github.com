@@ -11,6 +11,8 @@
 
 ## Node.js 関連
 
+- [Node.js入門：初心者でも10分でWebサービスを作れる！](https://paiza.hatenablog.com/entry/2018/06/08/paizacloud_nodejs)
+  - ブラウザ上で、Node.jsでの開発を行う方法を解説しています。
 - [Node.js ハンズオン](http://d.hatena.ne.jp/t_43z/20101021/1287655787) by [@meso](http://twitter.com/meso)
   - Node.js のインストールから WebSocket を使った簡単なサンプルが動かせるところまでを解説しています。
 - [Node.js とは何か (1)](http://d.hatena.ne.jp/badatmath/20101020/1287587240), [(2)](http://d.hatena.ne.jp/badatmath/20101022/1287701281), [(3)](http://d.hatena.ne.jp/badatmath/20101026/1288109275), [(4)](http://d.hatena.ne.jp/badatmath/20101101/1288644245) by [@bad_at_math](http://twitter.com/bad_at_math)
