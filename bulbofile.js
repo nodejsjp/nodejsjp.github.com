@@ -91,7 +91,7 @@ asset('source/news/**/*.md')
 const postedAt = file => file.fm.postedAt ? file.fm.postedAt.valueOf() : 0
 
 // 各スポンサークラスの重み付け
-const classWeight = { platinum: 3, gold: 2, silver: 1 }
+const classWeight = { platinum: 4, gold: 3, silver: 2, bronze: 1, venue: 0 }
 
 /**
  * 求人のクラスの重み付けを返す
@@ -102,12 +102,12 @@ const getClassWeight = file => classWeight[file.fm.class] || 0
 
 /**
  * ジョブボードのソート関数
- * class (platinum/gold/silver) で並べた上で掲載順で並べる
+ * class (platinum/gold/silver/bronze/venue) で並べた上で掲載順で並べる
  */
 const jobboardSort = (x, y) => getClassWeight(y) - getClassWeight(x) || postedAt(x) - postedAt(y)
 
 // Jobboard pages
-asset('source/jobs/**/*.md')
+asset('source/jobs/2018/*.md')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
   .pipe(markdown())
