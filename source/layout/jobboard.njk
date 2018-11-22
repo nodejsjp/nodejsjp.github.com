@@ -3,26 +3,26 @@
 {% block main %}
 <h1>ジョブボード</h1>
 
-{% for file in file.files %}
+{% for job in file.files %}
 <hr />
-{% if file.fm.class == 'platinum' %}
-  <h1><a href="{{ basepath(file) }}/{{ file.relative }}">{{ file.fm.name }}</a></h1>
+{% if job.fm.class == 'platinum' %}
+  <h1><a href="{{ basepath(file) }}/{{ job.relative }}">{{ job.fm.name }}</a></h1>
 {% elif file.fm.class == 'gold' %}
-  <h2><a href="{{ basepath(file) }}/{{ file.relative }}">{{ file.fm.name }}</a></h2>
+  <h2><a href="{{ basepath(file) }}/{{ job.relative }}">{{ job.fm.name }}</a></h2>
 {% else %}
-  <h3><a href="{{ basepath(file) }}/{{ file.relative }}">{{ file.fm.name }}</a></h3>
+  <h3><a href="{{ basepath(file) }}/{{ job.relative }}">{{ job.fm.name }}</a></h3>
 {% endif %}
-{% if file.fm.image %}
+{% if job.fm.image %}
   <figure>
-    <a href="{{ basepath(file) }}/{{ file.relative }}">
-      <img src="{{ basepath(file) }}/{{ file.fm.image }}" class="job-logo">
+    <a href="{{ basepath(file) }}/{{ job.relative }}">
+      <img src="{{ basepath(file) }}/{{ job.fm.image }}" class="job-logo">
     </a>
   </figure>
 {% endif %}
 <p>
-{% if file.fm.role %}
+{% if job.fm.role %}
   募集職種:
-  {% for role in file.fm.role %}
+  {% for role in job.fm.role %}
     {% if not loop.first %}/{% endif %}
     {{ role }}
   {% endfor %}
