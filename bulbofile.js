@@ -124,6 +124,7 @@ asset('source/jobs/2018/*.md')
 
 asset('source/css/*.css')
 asset('source/images/**/*.{png,svg,jpg,jpeg,gif}')
+asset('source/pdfs/**/*.pdf')
 
 // Old site is available under http://nodejs.jp/old/
 asset('./old/*.*').base('./')

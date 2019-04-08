@@ -26,5 +26,9 @@
   {
     "name": "JOBBOARD",
     "path": "jobboard.html"
+  },
+  {
+    "name": "BLANCE SHEET",
+    "path": "balancesheet.html"
   }
 ]
