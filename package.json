@@ -34,7 +34,7 @@
     "gulp-markdown": "^2.0.1",
     "gulp-nunjucks": "^2.3.0",
     "layout-wrapper": "^1.1.1",
-    "nunjucks": "^3.0.0",
+    "nunjucks": "^3.2.4",
     "nunjucks-date": "^1.2.0",
     "vinyl-accumulate": "^1.4.1"
   },
