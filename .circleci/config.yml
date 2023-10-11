@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:18
+      - image: circleci/node:lts
     steps:
       - checkout
       - restore_cache:
@@ -20,7 +20,7 @@ jobs:
       - run: 'npx status-back -s -c circleci/preview -r nodejsjp/nodejsjp.github.com "preview build success!" "https://${CIRCLE_BUILD_NUM}-856151-gh.circle-artifacts.com/0/preview/index.html"'
   deploy:
     docker:
-      - image: circleci/node:18
+      - image: circleci/node:lts
     steps:
       - checkout
       - restore_cache:
