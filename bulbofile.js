@@ -131,5 +131,6 @@ asset('source/pdfs/**/*.pdf')
 // Old site is available under http://nodejs.jp/old/
 asset('./old/*.*').base('./')
 
-// The custom domain needs to be part of the published artifact
+// Keep CNAME in the published output rather than relying on the copy that
+// happens to sit in master
 asset('./CNAME').base('./')
