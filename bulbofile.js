@@ -3,8 +3,10 @@ const asset = bulbo.asset
 
 const path = require('path')
 const frontMatter = require('gulp-front-matter')
-const nunjucks = require('gulp-nunjucks')
-const markdown = require('gulp-markdown')
+// gulp-nunjucks v6 / gulp-markdown v8 are ESM. require() of ESM is supported
+// on Node 22.12+ so we read the named / default exports off the namespace.
+const {nunjucksCompile} = require('gulp-nunjucks')
+const markdown = require('gulp-markdown').default
 const wrapper = require('layout-wrapper')
 const accumulate = require('vinyl-accumulate')
 const branch = require('branch-pipe')
@@ -35,7 +37,7 @@ const layout = defaultLayout => wrapper.nunjucks({
 asset('source/**/*.md', '!source/{events,jobs,news}/**/*')
   .watch('source/**/*.{md,njk}')
   .pipe(frontMatter({property: 'fm'}))
-  .pipe(nunjucks.compile(data))
+  .pipe(nunjucksCompile(data))
   .pipe(markdown())
   .pipe(layout('default'))
 
@@ -128,3 +130,6 @@ asset('source/pdfs/**/*.pdf')
 
 // Old site is available under http://nodejs.jp/old/
 asset('./old/*.*').base('./')
+
+// The custom domain needs to be part of the published artifact
+asset('./CNAME').base('./')
